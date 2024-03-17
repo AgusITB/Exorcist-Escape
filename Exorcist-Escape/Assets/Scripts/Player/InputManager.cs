@@ -6,6 +6,8 @@ public class InputManager : MonoBehaviour
 
     private static InputManager instance;
 
+    private bool isFlashingActive = false; 
+
     public static InputManager Instance
     {
         get { return instance; }
@@ -21,6 +23,7 @@ public class InputManager : MonoBehaviour
 
 
         playerControls = new PlayerControls();
+        playerControls.Player.Flashlight.started += ctx => ToggleFlashlight(); 
     }
 
     private void OnEnable()
@@ -43,5 +46,13 @@ public class InputManager : MonoBehaviour
     public bool PlayerCrouchedThisFrame()
     {
         return playerControls.Player.Crouch.WasPressedThisFrame();
+    }
+    public bool IsFlashing()
+    {
+        return isFlashingActive;
+    }
+    private void ToggleFlashlight()
+    {
+        isFlashingActive = !isFlashingActive;
     }
 }
