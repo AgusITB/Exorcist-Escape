@@ -350,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 321096056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.053, y: 1.774, z: 0.434}
+  m_LocalPosition: {x: 0.053, y: 2.84, z: -1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 1738131393}
   - component: {fileID: 1738131394}
   - component: {fileID: 1738131395}
+  - component: {fileID: 1738131396}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -898,10 +899,10 @@ MonoBehaviour:
   m_RecenterTarget: 0
   m_VerticalAxis:
     Value: 0
-    m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_SpeedMode: 1
+    m_MaxSpeed: 1
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.2
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
     m_InvertInput: 1
@@ -922,10 +923,10 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
     Value: 0
-    m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_SpeedMode: 1
+    m_MaxSpeed: 1
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.2
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -958,6 +959,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damping: 0
+--- !u!114 &1738131396
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738131389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: ee9131e9c53aa2c4b914f07dd09a06e3, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &8600265424385226
 Transform:
   m_ObjectHideFlags: 0
@@ -1207,7 +1225,7 @@ Transform:
   m_GameObject: {fileID: 919132148149009800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.053, y: 1.774, z: 0.434}
+  m_LocalPosition: {x: 0.053, y: 2.84, z: -1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1307,11 +1325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368d5188951f6d94386b8437500a1020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 2
   gravityValue: -9.81
   cameraTransform: {fileID: 396433928}
-  rotationSpeed: 15
-  armsTransform: {fileID: 0}
 --- !u!143 &919132148149009802
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3827,7 +3843,6 @@ GameObject:
   - component: {fileID: 2634067157281583675}
   - component: {fileID: 7869483220813845768}
   - component: {fileID: 7869483220813845769}
-  - component: {fileID: 7869483220813845770}
   m_Layer: 6
   m_Name: PlayerArms
   m_TagString: Untagged
@@ -3850,7 +3865,7 @@ MonoBehaviour:
   targetTransform: {fileID: 62155495}
   offset: {x: 0, y: 0, z: 0}
   Amount: 0.1
-  maxAmount: 0.1
+  maxAmount: 0.065
   SmoothAmount: 2
 --- !u!114 &7869483220813845769
 MonoBehaviour:
@@ -3865,20 +3880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectIntensity: 0.02
-  effectIntensityX: 1
-  effectSpeed: 4
---- !u!114 &7869483220813845770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869483220813845767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3200612e460010498a78d30ff23c4bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  effectIntensityX: 0.065
+  effectSpeed: 2
 --- !u!4 &7894945365617198625
 Transform:
   m_ObjectHideFlags: 0

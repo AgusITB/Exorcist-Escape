@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PositionFollower))]
+[RequireComponent(typeof(HandBobbingController))]
 public class ViewBobbing : MonoBehaviour
 {
-
+    [Header("On move")]
     [SerializeField] private float effectIntensity;
     [SerializeField] private float effectIntensityX;
     [SerializeField] private float effectSpeed;
 
-    private PositionFollower followerInstance;
+    private HandBobbingController bobbingController;
     private Vector3 originalOffset;
     private float sinTime;
 
@@ -18,9 +18,9 @@ public class ViewBobbing : MonoBehaviour
 
     void Start()
     {
-        followerInstance = GetComponent<PositionFollower>();
+        bobbingController = GetComponent<HandBobbingController>();
         inputManager = InputManager.Instance;
-        originalOffset = followerInstance.offset;
+        originalOffset = bobbingController.offset;
     }
     void Update()
     {
@@ -36,9 +36,9 @@ public class ViewBobbing : MonoBehaviour
         }
 
         float sinAmountY = -Mathf.Abs(effectIntensity * Mathf.Sin(sinTime));
-        Vector3 sinAmountX = followerInstance.transform.right * effectIntensity * Mathf.Cos(sinTime) * effectIntensityX;
+        Vector3 sinAmountX = effectIntensity * effectIntensityX * Mathf.Cos(sinTime) * bobbingController.transform.right;
 
-        followerInstance.offset = new Vector3
+        bobbingController.offset = new Vector3
         {
             x = originalOffset.x,
             y = originalOffset.y + sinAmountY,
@@ -46,6 +46,6 @@ public class ViewBobbing : MonoBehaviour
         };
 
 
-        followerInstance.offset += sinAmountX;
+        bobbingController.offset += sinAmountX;
     }
 }

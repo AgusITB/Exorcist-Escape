@@ -1,4 +1,3 @@
-using Cinemachine.Utility;
 using UnityEngine;
 
 
@@ -6,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
+   
     private bool groundedPlayer;
 
     private Vector3 playerVelocity;
@@ -14,16 +14,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityValue;
 
     [SerializeField] Transform cameraTransform;
-    [Tooltip("Speed at which the player rotates following the mouse")]
-    [SerializeField] private float rotationSpeed;
 
     private InputManager inputManager;
-    [SerializeField] private Transform armsTransform;
+
+    private CameraBobbing cameraBobbing;
+
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         inputManager = InputManager.Instance;
         if (inputManager == null) Debug.LogWarning("There's not an instance of an Input Manager in the scene");
+
     }
 
     void Update()
@@ -45,10 +47,5 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-
-        ////// Rotate towards camera direction     
-        //Quaternion targetRotation = Quaternion.Euler(0, cameraTransform.eulerAngles.y, 0);
-        //transform.rotation = targetRotation;
-
     }
 }
