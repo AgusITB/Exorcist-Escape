@@ -16,10 +16,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform cameraTransform;
 
     private InputManager inputManager;
-
-    private CameraBobbing cameraBobbing;
-
-
     private void Start()
     {
         controller = GetComponent<CharacterController>();
