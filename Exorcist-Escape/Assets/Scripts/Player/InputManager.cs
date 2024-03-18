@@ -51,7 +51,7 @@ public class InputManager : MonoBehaviour
     {
         return isFlashingActive;
     }
-    private void ToggleFlashlight()
+    public void ToggleFlashlight()
     {
         isFlashingActive = !isFlashingActive;
     }
