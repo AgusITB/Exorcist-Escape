@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -6,8 +7,9 @@ public class InputManager : MonoBehaviour
 
     private static InputManager instance;
 
-    private bool isFlashingActive = false;
-    private bool isUVActive = false;
+    public Action toggleLight;
+    public Action changeLight;
+
 
 
     public static InputManager Instance
@@ -22,11 +24,9 @@ public class InputManager : MonoBehaviour
         else 
             instance = this;
         
-
-
         playerControls = new PlayerControls();
-        playerControls.Player.Flashlight.started += ctx => ToggleFlashlight();
-        playerControls.Player.ToggleLights.started += ctx => ToggleLights();
+        playerControls.Player.Flashlight.performed += _ => toggleLight.Invoke();
+        playerControls.Player.ToggleLights.started += _ => changeLight.Invoke();
     }
 
     private void OnEnable()
@@ -50,18 +50,7 @@ public class InputManager : MonoBehaviour
     {
         return playerControls.Player.Crouch.WasPressedThisFrame();
     }
-    public bool IsFlashing()
-    {
-        return isFlashingActive;
-    }
-    public void ToggleFlashlight()
-    {
-        isFlashingActive = !isFlashingActive;
 
-    }
-    public void ToggleLights()
-    {
-        isUVActive = !isUVActive;
-    }
+
 
 }
