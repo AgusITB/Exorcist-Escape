@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
 
     public Action toggleLight;
     public Action changeLight;
+    public Action activateObject;
 
 
 
@@ -27,6 +28,8 @@ public class InputManager : MonoBehaviour
         playerControls = new PlayerControls();
         playerControls.Player.Flashlight.performed += _ => toggleLight.Invoke();
         playerControls.Player.ToggleLights.started += _ => changeLight.Invoke();
+        playerControls.Player.CameraObject.performed += _ => activateObject.Invoke();
+
     }
 
     private void OnEnable()

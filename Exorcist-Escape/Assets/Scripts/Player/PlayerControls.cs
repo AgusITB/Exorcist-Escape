@@ -71,6 +71,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fd17f70-a95a-4cbc-8d80-97e6a1acf5ee"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""ToggleLights"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77ea20e1-637a-4f6d-9f0a-23f3cba2bd9c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Flashlight = m_Player.FindAction("Flashlight", throwIfNotFound: true);
         m_Player_ToggleLights = m_Player.FindAction("ToggleLights", throwIfNotFound: true);
+        m_Player_CameraObject = m_Player.FindAction("CameraObject", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Flashlight;
     private readonly InputAction m_Player_ToggleLights;
+    private readonly InputAction m_Player_CameraObject;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -260,6 +282,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Flashlight => m_Wrapper.m_Player_Flashlight;
         public InputAction @ToggleLights => m_Wrapper.m_Player_ToggleLights;
+        public InputAction @CameraObject => m_Wrapper.m_Player_CameraObject;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +307,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ToggleLights.started += instance.OnToggleLights;
             @ToggleLights.performed += instance.OnToggleLights;
             @ToggleLights.canceled += instance.OnToggleLights;
+            @CameraObject.started += instance.OnCameraObject;
+            @CameraObject.performed += instance.OnCameraObject;
+            @CameraObject.canceled += instance.OnCameraObject;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -303,6 +329,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ToggleLights.started -= instance.OnToggleLights;
             @ToggleLights.performed -= instance.OnToggleLights;
             @ToggleLights.canceled -= instance.OnToggleLights;
+            @CameraObject.started -= instance.OnCameraObject;
+            @CameraObject.performed -= instance.OnCameraObject;
+            @CameraObject.canceled -= instance.OnCameraObject;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -327,5 +356,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnCrouch(InputAction.CallbackContext context);
         void OnFlashlight(InputAction.CallbackContext context);
         void OnToggleLights(InputAction.CallbackContext context);
+        void OnCameraObject(InputAction.CallbackContext context);
     }
 }
