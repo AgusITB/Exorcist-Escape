@@ -1,25 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Image rawImage;
-    private RawImage image;
+    [SerializeField] private RawImage rawImage;
 
     public float scrollSpeed = 0.5f;
+    public float directionChangeInterval = 0.2f; // Interval at which direction changes
+
+    private int[] ints = { -1, 1 };
+    private float currentScrollSpeed = 0;
+
+    private float nextDirectionChangeTime;
+    private Vector2 currentOffset;
 
     void Start()
     {
-        image = rawImage.GetComponent<RawImage>();
+        nextDirectionChangeTime = Time.time + directionChangeInterval;
     }
 
     void Update()
     {
-        float offset = Time.time * scrollSpeed;
-        Vector2 newOffset = new Vector2(0, offset);
-        image.uvRect = new Rect(newOffset, image.uvRect.size);
+        float offset;
+
+        // Check if it's time to change direction
+        if (Time.time >= nextDirectionChangeTime)
+        {
+            // Invert the direction randomly
+            currentScrollSpeed = scrollSpeed * ints[Random.Range(0,ints.Length)];
+            nextDirectionChangeTime = Time.time + directionChangeInterval;
+     
+        }
+
+        // Update the offset based on scroll speed
+        offset = Time.time * currentScrollSpeed;
+        
+        currentOffset.y = offset;
+
+        Vector2 newOffset = new(offset, offset);
+
+        // Apply the offset to the material
+        rawImage.material.SetTextureOffset("_MainTex", newOffset);
+
+
+     
     }
 }
