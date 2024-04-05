@@ -31,7 +31,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""be3efb84-a906-4a33-8d90-f29d2fbf1de8"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -49,6 +49,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""Crouch"",
                     ""type"": ""Button"",
                     ""id"": ""f265a113-0cf6-45b1-89e9-27fa13a6228e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Flashlight"",
+                    ""type"": ""Button"",
+                    ""id"": ""19a6034d-9c9f-4e19-946a-18b4023a11d8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleLights"",
+                    ""type"": ""Button"",
+                    ""id"": ""9f7f4e31-8f32-464b-9134-d253a7fe54a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fd17f70-a95a-4cbc-8d80-97e6a1acf5ee"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -132,6 +159,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b3341d6a-71b9-40cf-8c27-8945b58df19f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flashlight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b794a5aa-84b0-401f-b6cb-b1b6b002612e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleLights"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77ea20e1-637a-4f6d-9f0a-23f3cba2bd9c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +203,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
+        m_Player_Flashlight = m_Player.FindAction("Flashlight", throwIfNotFound: true);
+        m_Player_ToggleLights = m_Player.FindAction("ToggleLights", throwIfNotFound: true);
+        m_Player_CameraObject = m_Player.FindAction("CameraObject", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +270,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Crouch;
+    private readonly InputAction m_Player_Flashlight;
+    private readonly InputAction m_Player_ToggleLights;
+    private readonly InputAction m_Player_CameraObject;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -214,6 +280,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
+        public InputAction @Flashlight => m_Wrapper.m_Player_Flashlight;
+        public InputAction @ToggleLights => m_Wrapper.m_Player_ToggleLights;
+        public InputAction @CameraObject => m_Wrapper.m_Player_CameraObject;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +301,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @Flashlight.started += instance.OnFlashlight;
+            @Flashlight.performed += instance.OnFlashlight;
+            @Flashlight.canceled += instance.OnFlashlight;
+            @ToggleLights.started += instance.OnToggleLights;
+            @ToggleLights.performed += instance.OnToggleLights;
+            @ToggleLights.canceled += instance.OnToggleLights;
+            @CameraObject.started += instance.OnCameraObject;
+            @CameraObject.performed += instance.OnCameraObject;
+            @CameraObject.canceled += instance.OnCameraObject;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -245,6 +323,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @Flashlight.started -= instance.OnFlashlight;
+            @Flashlight.performed -= instance.OnFlashlight;
+            @Flashlight.canceled -= instance.OnFlashlight;
+            @ToggleLights.started -= instance.OnToggleLights;
+            @ToggleLights.performed -= instance.OnToggleLights;
+            @ToggleLights.canceled -= instance.OnToggleLights;
+            @CameraObject.started -= instance.OnCameraObject;
+            @CameraObject.performed -= instance.OnCameraObject;
+            @CameraObject.canceled -= instance.OnCameraObject;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -267,5 +354,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnFlashlight(InputAction.CallbackContext context);
+        void OnToggleLights(InputAction.CallbackContext context);
+        void OnCameraObject(InputAction.CallbackContext context);
     }
 }

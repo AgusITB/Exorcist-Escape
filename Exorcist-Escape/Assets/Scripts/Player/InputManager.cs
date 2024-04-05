@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -5,6 +6,12 @@ public class InputManager : MonoBehaviour
     private PlayerControls playerControls;
 
     private static InputManager instance;
+
+    public Action toggleLight;
+    public Action changeLight;
+    public Action activateObject;
+
+
 
     public static InputManager Instance
     {
@@ -18,9 +25,11 @@ public class InputManager : MonoBehaviour
         else 
             instance = this;
         
-
-
         playerControls = new PlayerControls();
+        playerControls.Player.Flashlight.performed += _ => toggleLight.Invoke();
+        playerControls.Player.ToggleLights.started += _ => changeLight.Invoke();
+        playerControls.Player.CameraObject.performed += _ => activateObject.Invoke();
+
     }
 
     private void OnEnable()
@@ -44,4 +53,7 @@ public class InputManager : MonoBehaviour
     {
         return playerControls.Player.Crouch.WasPressedThisFrame();
     }
+
+
+
 }
