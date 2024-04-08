@@ -14,7 +14,6 @@ public class CameraObject : MonoBehaviour/*, IInspectable*/
         objectCanvas.SetActive(false);
         inspection.SetActive(false);
         inputManager = InputManager.Instance;
-        inputManager.activateObject += ToggleUI;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,28 +45,4 @@ public class CameraObject : MonoBehaviour/*, IInspectable*/
             objectCanvas.SetActive(true);
         }
     }
-    //private void Start()
-    //{
-    //    objectCanvas.SetActive(false);
-    //    inputManager = InputManager.Instance;
-    //    inputManager.activateObject += ActivateObject;
-    //}
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.TryGetComponent<IInspectable>(out IInspectable inspectable))
-    //    {
-    //        Debug.Log("ajsijasi");
-    //        objectCanvas.SetActive(true);
-    //        inspectable.ActivateObject();
-    //    }
-    //}
-    //public void ActivateObject()
-    //{
-    //    //if(objectCanvas.activeSelf == true)
-    //    //{
-    //        thirdPersonCamera.SetActive(false);
-    //        firstPersonCamera.SetActive(true);
-
-    //    //}
-    //}
 }
