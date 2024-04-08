@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private InputManager inputManager;
 
     [SerializeField] private Door currentDoor;
+    [SerializeField] private LightSwitch currentLightSwitch;
 
 
     private void Start()
@@ -63,12 +64,21 @@ public class PlayerController : MonoBehaviour
         {
            currentDoor = interactable.GetComponent<Door>();
         }
+
+        if (other.TryGetComponent(out LightSwitch lightSwitch))
+        {
+            currentLightSwitch = lightSwitch.GetComponent<LightSwitch>();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.TryGetComponent(out Door _))
         {
             currentDoor = null;
+        }
+        if (other.TryGetComponent(out LightSwitch _))
+        {
+            currentLightSwitch = null;
         }
     }
     private void Interact()
@@ -77,6 +87,11 @@ public class PlayerController : MonoBehaviour
         {
             currentDoor.Interact();
             currentDoor = null;
+        }
+        if (currentLightSwitch != null)
+        {
+            currentLightSwitch.Interact();
+            currentLightSwitch = null;
         }
     }
 

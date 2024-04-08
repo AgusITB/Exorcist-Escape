@@ -41,6 +41,7 @@ public class Door : MonoBehaviour, IInteractable
         }
         Debug.Log("Door interacte0");
         doorState = doorState == DoorState.Opened ? DoorState.Closed : DoorState.Opened;
+
         if (doorState == DoorState.Opened)
         {
             animator.SetTrigger("Open");
