@@ -56,17 +56,15 @@ public class CameraObject : MonoBehaviour/*, IInspectable*/
     //{
     //    if (other.TryGetComponent<IInspectable>(out IInspectable inspectable))
     //    {
-    //        Debug.Log("ajsijasi");
     //        objectCanvas.SetActive(true);
     //        inspectable.ActivateObject();
     //    }
     //}
     //public void ActivateObject()
     //{
-    //    //if(objectCanvas.activeSelf == true)
+    //    //if(objectCanvas.activeSelf)
     //    //{
-    //        thirdPersonCamera.SetActive(false);
-    //        firstPersonCamera.SetActive(true);
+    //        
 
     //    //}
     //}
