@@ -5,7 +5,7 @@
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
-   
+
     private bool groundedPlayer;
 
     private Vector3 playerVelocity;
@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
 
     private InputManager inputManager;
 
-    [SerializeField] private Door currentDoor;
-    [SerializeField] private LightSwitch currentLightSwitch;
+    [SerializeField] private PickableObject pickableObject;
+    [SerializeField] private NonPickableObject nonPickableObject;
 
 
     private void Start()
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         inputManager.interacted += Interact;
 
         if (inputManager == null) Debug.LogWarning("There's not an instance of an Input Manager in the scene");
-        
+
     }
 
     void Update()
@@ -58,40 +58,41 @@ public class PlayerController : MonoBehaviour
         if (other.TryGetComponent(out ICollectable collectable))
         {
             collectable.Collect();
-        }      
-
-        if (other.TryGetComponent(out Door interactable))
-        {
-           currentDoor = interactable.GetComponent<Door>();
         }
 
-        if (other.TryGetComponent(out LightSwitch lightSwitch))
+        if (other.TryGetComponent(out PickableObject interactable))
         {
-            currentLightSwitch = lightSwitch.GetComponent<LightSwitch>();
+            pickableObject = interactable.GetComponent<PickableObject>();
+        }
+
+        if (other.TryGetComponent(out NonPickableObject lightSwitch))
+        {
+            nonPickableObject = lightSwitch.GetComponent<NonPickableObject>();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out Door _))
+        if (other.TryGetComponent(out PickableObject _))
         {
-            currentDoor = null;
+            pickableObject = null;
         }
-        if (other.TryGetComponent(out LightSwitch _))
+        if (other.TryGetComponent(out NonPickableObject _))
         {
-            currentLightSwitch = null;
+            nonPickableObject = null;
         }
     }
     private void Interact()
     {
-        if (currentDoor != null)
+        if (pickableObject != null)
         {
-            currentDoor.Interact();
-            currentDoor = null;
+            pickableObject.Interact();
+            pickableObject = null;
         }
-        if (currentLightSwitch != null)
+        if (nonPickableObject != null)
         {
-            currentLightSwitch.Interact();
-            currentLightSwitch = null;
+            nonPickableObject.Interact();
+            nonPickableObject = null;
+
         }
     }
 

@@ -1,8 +1,9 @@
 using UnityEngine;
 
 
-public class Door : MonoBehaviour, IInteractable
-{
+public class Door : NonPickableObject 
+{ 
+
     public Animator animator;
 
     [SerializeField] private Key llave;
@@ -31,7 +32,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         lockState = LockState.Unlocked;
     }
-    public void Interact()
+    public override void Interact()
     {
         if (lockState == LockState.Locked)
         {
@@ -53,6 +54,4 @@ public class Door : MonoBehaviour, IInteractable
             doorCollider.enabled = false;
         }
     }
-    
-
 }

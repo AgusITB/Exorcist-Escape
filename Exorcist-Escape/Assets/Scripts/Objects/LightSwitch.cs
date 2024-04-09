@@ -1,8 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using static Door;
-
-public class LightSwitch : MonoBehaviour, IInteractable
+public class LightSwitch : NonPickableObject
 {
     [SerializeField] private Light[] lights;
 
@@ -11,6 +8,8 @@ public class LightSwitch : MonoBehaviour, IInteractable
     private Collider switchCollider;
 
     private Animator animator;
+
+
     public enum SwitchState
     {
         On,
@@ -21,7 +20,7 @@ public class LightSwitch : MonoBehaviour, IInteractable
         switchCollider = GetComponent<Collider>();
         animator = GetComponent<Animator>();
     }
-    public void Interact()
+    public override void Interact()
     {
         switchState = switchState == SwitchState.On ? SwitchState.Off : SwitchState.On;
 

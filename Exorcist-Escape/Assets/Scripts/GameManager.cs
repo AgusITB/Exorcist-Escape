@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour
     private float nextDirectionChangeTime;
     private Vector2 currentOffset;
 
+    [Header("Interact UI")]
+    [SerializeField] public GameObject interactText;
+    [SerializeField] public GameObject icon;
+
+    public static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         nextDirectionChangeTime = Time.time + directionChangeInterval;
