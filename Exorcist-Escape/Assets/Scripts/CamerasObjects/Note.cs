@@ -3,12 +3,10 @@ using UnityEngine;
 public class Note : NonPickableObject
 {
     public GameObject objectCanvas;
-    private bool enable = false;
 
     private void ToggleUI()
     {
-       enable = !enable;
-       objectCanvas.SetActive(enable);        
+       objectCanvas.SetActive(true);        
     }
 
     public override void Interact()
