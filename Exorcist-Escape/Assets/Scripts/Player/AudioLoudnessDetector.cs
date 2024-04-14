@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioLoudnessDetector : MonoBehaviour
@@ -7,6 +5,7 @@ public class AudioLoudnessDetector : MonoBehaviour
     public int sampleWindow = 64;
 
     private AudioClip microphoneClip;
+    private string microphoneName;
 
     private void Start()
     {
@@ -14,14 +13,15 @@ public class AudioLoudnessDetector : MonoBehaviour
     }
     private void MicrophoneToAudioClip(int microphoneIndex)
     {
-        foreach (var name in Microphone.devices)
-        {
-            Debug.Log(name);
-        }
-
-        //string microphoneName = Microphone.devices[1];
-        Debug.Log("No hay na");
+        microphoneName = Microphone.devices[microphoneIndex];
+        microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
     }
+
+    public float GetLoudnessFromMicrohpone()
+    {
+        return GetLoudnessFromAudioClip(Microphone.GetPosition(microphoneName), microphoneClip);
+    }
+
     public float GetLoudnessFromAudioClip(int clipPosition, AudioClip clip)
     {
         int startPosition = clipPosition - sampleWindow;
