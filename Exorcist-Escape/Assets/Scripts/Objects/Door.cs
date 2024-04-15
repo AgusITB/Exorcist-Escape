@@ -53,5 +53,6 @@ public class Door : NonPickableObject
             animator.SetTrigger("Close");
             doorCollider.enabled = false;
         }
+        DeactivateObject();
     }
 }
