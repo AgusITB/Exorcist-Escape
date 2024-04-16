@@ -8,8 +8,6 @@ public class Door : NonPickableObject
 
     [SerializeField] private Key llave;
 
-    [SerializeField ]private BoxCollider doorCollider;
-
     public enum LockState
     {
         Locked,
@@ -46,12 +44,10 @@ public class Door : NonPickableObject
         if (doorState == DoorState.Opened)
         {
             animator.SetTrigger("Open");
-            doorCollider.enabled = false;
         }
         else
         {
-            animator.SetTrigger("Close");
-            doorCollider.enabled = false;
+            animator.SetTrigger("Close");       
         }
         DeactivateObject();
     }
