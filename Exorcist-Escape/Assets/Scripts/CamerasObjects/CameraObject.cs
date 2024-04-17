@@ -14,7 +14,7 @@ public class CameraObject : MonoBehaviour/*, IInspectable*/
         objectCanvas.SetActive(false);
         inspection.SetActive(false);
         inputManager = InputManager.Instance;
-        inputManager.activateObject += ToggleUI;
+       
     }
 
     private void OnTriggerEnter(Collider other)

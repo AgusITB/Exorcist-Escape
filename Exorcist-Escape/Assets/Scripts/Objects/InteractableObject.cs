@@ -14,7 +14,7 @@ public abstract class InteractableObject : MonoBehaviour, IInteractable, IInspec
 
     protected void Start()
     {
-        interactText = GameManager.instance.interactText;
+        //interactText = GameManager.instance.interactText;
         icon = GameManager.instance.icon;
 
 
