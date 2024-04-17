@@ -15,12 +15,12 @@ public abstract class InteractableObject : MonoBehaviour, IInteractable, IInspec
     protected void Start()
     {
         //interactText = GameManager.instance.interactText;
-        icon = GameManager.instance.icon;
+        //icon = GameManager.instance.icon;
 
 
-        interactText.SetActive(false);
-        icon.SetActive(false);
-        MeshGui = interactText.GetComponentInChildren<TextMeshProUGUI>();
+        //interactText.SetActive(false);
+        //icon.SetActive(false);
+        //MeshGui = interactText.GetComponentInChildren<TextMeshProUGUI>();
     }
     public abstract void Interact();
     public void ActivateObject()
