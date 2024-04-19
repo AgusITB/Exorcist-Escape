@@ -13,9 +13,4 @@ public class Note : NonPickableObject
     {
         ToggleUI();
     }
-    protected override void OnTriggerExit(Collider other)
-    {
-        base.OnTriggerExit(other);
-        objectCanvas.SetActive(false);
-    }
 }

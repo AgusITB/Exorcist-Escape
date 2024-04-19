@@ -25,23 +25,23 @@ public abstract class InteractableObject : MonoBehaviour, IInteractable, IInspec
     public abstract void Interact();
     public void ActivateObject()
     {
-        interactText.SetActive(true);
-        icon.SetActive(true);
-        MeshGui.text = description;
+        //interactText.SetActive(true);
+        //icon.SetActive(true);
+        //MeshGui.text = description;
     }
     public void DeactivateObject()
     {
-        interactText.SetActive(false);
-        icon.SetActive(false);
-        MeshGui.text = "";
+        //interactText.SetActive(false);
+        //icon.SetActive(false);
+        //MeshGui.text = "";
     }
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        ActivateObject();
+        //ActivateObject();
     }
     protected virtual void OnTriggerExit(Collider other)
     {
-        DeactivateObject();
+        //DeactivateObject();
     }
 }
