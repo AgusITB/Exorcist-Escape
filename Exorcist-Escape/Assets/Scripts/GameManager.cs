@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour
     private float nextDirectionChangeTime;
     private Vector2 currentOffset;
 
+    [Header("Interact UI")]
+    [SerializeField] public GameObject interactText;
+    [SerializeField] public GameObject icon;
+
+    public static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         nextDirectionChangeTime = Time.time + directionChangeInterval;
@@ -21,26 +30,26 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        float offset;
+        //float offset;
 
-        // Check if it's time to change direction
-        if (Time.time >= nextDirectionChangeTime)
-        {
-            // Invert the direction randomly
-            currentScrollSpeed = scrollSpeed * ints[Random.Range(0,ints.Length)];
-            nextDirectionChangeTime = Time.time + directionChangeInterval;
+        //// Check if it's time to change direction
+        //if (Time.time >= nextDirectionChangeTime)
+        //{
+        //    // Invert the direction randomly
+        //    currentScrollSpeed = scrollSpeed * ints[Random.Range(0,ints.Length)];
+        //    nextDirectionChangeTime = Time.time + directionChangeInterval;
      
-        }
+        //}
 
-        // Update the offset based on scroll speed
-        offset = Time.time * currentScrollSpeed;
+        //// Update the offset based on scroll speed
+        //offset = Time.time * currentScrollSpeed;
         
-        currentOffset.y = offset;
+        //currentOffset.y = offset;
 
-        Vector2 newOffset = new(offset, offset);
+        //Vector2 newOffset = new(offset, offset);
 
-        // Apply the offset to the material
-        rawImage.material.SetTextureOffset("_MainTex", newOffset);
+        //// Apply the offset to the material
+        //rawImage.material.SetTextureOffset("_MainTex", newOffset);
 
 
      
