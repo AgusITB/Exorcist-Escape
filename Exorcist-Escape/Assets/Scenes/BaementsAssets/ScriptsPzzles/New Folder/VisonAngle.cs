@@ -1,45 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class VisonAngle : MonoBehaviour
+public class ControlEnemigoDesdeCamara : MonoBehaviour
 {
-    public GameObject objetivo;
+    public Camera camaraJugador; 
+    public LayerMask capaEnemigo;
 
-    [Range(0, 180)]
-    public int conoVisual;
-    public int rangoVisual;
-    public GameObject indicadorVisual;
-
-    [Header("Read Only")]
-    public bool estoyViendoAlObjetivo;
-    public bool objetivoDentroDelRangoVisual;
-
-    public void FuncionConoVisual()
+    private void Update()
     {
-        Vector3 dirDeAaB = (objetivo.transform.position - transform.position).normalized;
-        float prodPunto = Vector3.Dot(dirDeAaB, transform.forward);
-        float anguloTransformado = (1 - (conoVisual * 0.005555f));
-        if(anguloTransformado <= 0)
+        Ray rayo = camaraJugador.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+        if (Physics.Raycast(rayo, out hit, Mathf.Infinity, capaEnemigo))
         {
-            anguloTransformado = 0;
+            ComportamientoEnemigo comportamientoEnemigo = hit.collider.GetComponent<ComportamientoEnemigo>();
+            if (comportamientoEnemigo != null)
+            {
+                comportamientoEnemigo.SetQuedarseQuieto(true);
+            }
         }
-        float distanciaAlObjetivo;
-        distanciaAlObjetivo = Vector3.Distance(objetivo.transform.position, transform.position);
-        if (distanciaAlObjetivo <= rangoVisual)
+        else
         {
-            objetivoDentroDelRangoVisual = true;
+            ComportamientoEnemigo[] enemigos = FindObjectsOfType<ComportamientoEnemigo>();
+            foreach (ComportamientoEnemigo enemigo in enemigos)
+            {
+                enemigo.SetQuedarseQuieto(false);
+            }
         }
-        else { objetivoDentroDelRangoVisual = false; }
-        if(objetivoDentroDelRangoVisual && prodPunto > anguloTransformado)
-        {
-            estoyViendoAlObjetivo = true;
-            indicadorVisual.SetActive(true);
-        }
-        else { estoyViendoAlObjetivo = false; indicadorVisual.SetActive(false); }
-    }
-   void Update()
-    {
-        FuncionConoVisual();
     }
 }
