@@ -7,6 +7,7 @@ public class PlayerAim : MonoBehaviour
 
     private void Awake()
     {
+        headPos = Camera.main.transform;
         Instance = this;
     }
     private void Update()
