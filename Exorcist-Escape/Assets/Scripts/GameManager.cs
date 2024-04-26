@@ -1,18 +1,19 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private RawImage rawImage;
+    //[SerializeField] private RawImage rawImage;
 
-    public float scrollSpeed = 0.5f;
-    public float directionChangeInterval = 0.2f; // Interval at which direction changes
+    //public float scrollSpeed = 0.5f;
+    //public float directionChangeInterval = 0.2f; // Interval at which direction changes
 
-    private int[] ints = { -1, 1 };
-    private float currentScrollSpeed = 0;
+    //private int[] ints = { -1, 1 };
+    //private float currentScrollSpeed = 0;
 
-    private float nextDirectionChangeTime;
-    private Vector2 currentOffset;
+    //private float nextDirectionChangeTime;
+    //private Vector2 currentOffset;
 
     [Header("Interact UI")]
     [SerializeField] public GameObject interactText;
@@ -23,10 +24,24 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-    void Start()
+
+
+    public void ActivateHud(string text)
     {
-        nextDirectionChangeTime = Time.time + directionChangeInterval;
+        interactText.GetComponentInChildren <TextMeshProUGUI>().text = text;
+        interactText.SetActive(true);
+        icon.SetActive(true);
     }
+    public void DeactivateHud()
+    {
+        interactText.SetActive(false);
+        icon.SetActive(false);
+
+    }
+    //void Start()
+    //{
+    //    nextDirectionChangeTime = Time.time + directionChangeInterval;
+    //}
 
     void Update()
     {

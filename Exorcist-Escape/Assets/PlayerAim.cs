@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-    public Transform headPos;
+    [SerializeField] private Transform headPos;
     public static PlayerAim Instance;
 
     private void Awake()
     {
-        headPos = Camera.main.transform;
         Instance = this;
     }
     private void Update()
