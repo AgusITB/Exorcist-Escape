@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 538233350468208365}
   - component: {fileID: 7475461100649217346}
   - component: {fileID: 7696558948632035919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,9 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d78b83606bac641b53c36a0fe444b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 
-  _name: 
-  description: Open Door
   animator: {fileID: 538233350468208365}
   llave: {fileID: 0}
   lockState: 0

@@ -25,7 +25,6 @@ public class PlayerAim : MonoBehaviour
             Debug.DrawRay(headPos.position, headPos.TransformDirection(Vector3.forward) * hit.distance, Color.red);
 
             float distance = Vector3.Distance(transform.position, hit.transform.position);
-            Debug.Log(hit.collider.name);
             if (distance <= 1.5f)
             {
                     if (hit.transform.TryGetComponent(out IInteractable gameobject))
