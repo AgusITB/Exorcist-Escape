@@ -5,9 +5,7 @@ public class LightSwitch : NonPickableObject
 
     private SwitchState switchState;
 
-    private Collider switchCollider;
-
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
 
     public enum SwitchState
@@ -15,27 +13,25 @@ public class LightSwitch : NonPickableObject
         On,
         Off
     }
+
     private void Awake()
     {
-        switchCollider = GetComponent<Collider>();
-        animator = GetComponent<Animator>();
+        switchState = SwitchState.Off;
     }
     public override void Interact()
     {
-        switchState = switchState == SwitchState.On ? SwitchState.Off : SwitchState.On;
 
         if (switchState == SwitchState.On)
         {
             animator.SetTrigger("TurnOff");
-            switchCollider.enabled = false;
             TurnOFFLights();
-
+            switchState = SwitchState.Off;
         }
         else
         {
             animator.SetTrigger("TurnOn");
-            switchCollider.enabled = false;
             TurnOnLights();
+            switchState = SwitchState.On;
         }
     }
     private void TurnOnLights()
