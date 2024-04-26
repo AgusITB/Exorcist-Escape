@@ -24,7 +24,11 @@ public class Door : NonPickableObject
 
     private void Awake()
     {
-        llave.keyCollected += UnlockDoor;
+        if (llave != null)
+        {
+            llave.keyCollected += UnlockDoor;
+        }
+       
     }
     private void UnlockDoor()
     {
@@ -32,13 +36,14 @@ public class Door : NonPickableObject
     }
     public override void Interact()
     {
-        if (lockState == LockState.Locked)
-        {
-            Debug.Log("Door locked");
-            return;
+            Debug.Log("Door interacted");
+            if (lockState == LockState.Locked)
+            {
+                Debug.Log("Door locked");
+                return;
 
-        }
-        Debug.Log("Door interacte0");
+            }
+ 
         doorState = doorState == DoorState.Opened ? DoorState.Closed : DoorState.Opened;
 
         if (doorState == DoorState.Opened)
