@@ -53,47 +53,4 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out ICollectable collectable))
-        {
-            collectable.Collect();
-        }
-
-        //if (other.TryGetComponent(out PickableObject interactable))
-        //{
-        //    pickableObject = interactable.GetComponent<PickableObject>();
-        //}
-
-        //if (other.TryGetComponent(out NonPickableObject lightSwitch))
-        //{
-        //    nonPickableObject = lightSwitch.GetComponent<NonPickableObject>();
-        //}
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        //if (other.TryGetComponent(out PickableObject _))
-        //{
-        //    pickableObject = null;
-        //}
-        //if (other.TryGetComponent(out NonPickableObject _))
-        //{
-        //    nonPickableObject = null;
-        //}
-    }
-    private void Interact()
-    {
-        //if (pickableObject != null)
-        //{
-        //    pickableObject.Interact();
-        //    pickableObject = null;
-        //}
-        //if (nonPickableObject != null)
-        //{
-        //    nonPickableObject.Interact();
-        //    nonPickableObject = null;
-
-        //}
-    }
-
 }

@@ -1,13 +1,26 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Key : MonoBehaviour, ICollectable
+public class Key : PickableObject
 {
     public Action keyCollected;
-
-    public void Collect()
+    AudioClip openClip;
+    protected override void Awake()
     {
-        keyCollected.Invoke();
-        Destroy(gameObject);
+        base.Awake();
+        DeactivateOutLine();
+        openClip = Resources.Load<AudioClip>("SFX/PickKey");
+    }
+    protected override void Collect()
+    {
+        
+        AudioSource.PlayClipAtPoint(openClip,this.transform.position);
+        keyCollected?.Invoke();
+        Destroy(this.gameObject);
+    }
+    public override void Interact()
+    {
+        this.Collect();
     }
 }
