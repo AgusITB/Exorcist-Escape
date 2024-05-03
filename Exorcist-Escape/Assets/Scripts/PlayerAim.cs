@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
@@ -5,6 +6,8 @@ public class PlayerAim : MonoBehaviour
     [SerializeField] private Transform headPos;
     public static PlayerAim Instance;
     private PickableObject currentPickable;
+
+    public static Action playerInteracted;
     private void Awake()
     {
         Instance = this;
@@ -46,6 +49,7 @@ public class PlayerAim : MonoBehaviour
     }
     public void Interact()
     {
+        playerInteracted.Invoke();
         RaycastHit hit;
         Debug.DrawLine(headPos.position, headPos.TransformDirection(Vector3.forward) * Mathf.Infinity, Color.red);
         int layerMask = 1 << 8;
