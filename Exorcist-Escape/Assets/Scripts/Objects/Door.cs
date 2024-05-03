@@ -6,9 +6,9 @@ public class Door : NonPickableObject
 
     public Animator animator;
     private AudioSource audioSource;
-    private AudioClip openClip;
-    private AudioClip closeClip;
-
+    [SerializeField] private AudioClip openClip;
+    [SerializeField] private AudioClip closeClip;
+    [SerializeField] private AudioClip lockedClip;
     [SerializeField] private Key llave;
 
     public enum LockState
@@ -32,9 +32,7 @@ public class Door : NonPickableObject
             llave.keyCollected += UnlockDoor;
         }
         audioSource = GetComponent<AudioSource>();
-        audioSource.Pause();
-        openClip = Resources.Load<AudioClip>("SFX/OpenDoor");
-        closeClip = Resources.Load<AudioClip>("SFX/CloseDoor");
+        audioSource.Pause();    
     }
     private void UnlockDoor()
     {
@@ -42,10 +40,11 @@ public class Door : NonPickableObject
     }
     public override void Interact()
     {
-        Debug.Log("Door interacted");
+
         if (lockState == LockState.Locked)
         {
-            Debug.Log("Door locked");
+            audioSource.clip = lockedClip;
+            audioSource.Play();
             return;
 
         }
