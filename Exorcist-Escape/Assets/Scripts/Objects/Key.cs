@@ -5,7 +5,9 @@ using UnityEngine;
 public class Key : PickableObject
 {
     public Action keyCollected;
-    AudioClip openClip;
+
+    protected AudioClip openClip;
+
     protected override void Awake()
     {
         base.Awake();
@@ -14,8 +16,8 @@ public class Key : PickableObject
     }
     protected override void Collect()
     {
-        
-        AudioSource.PlayClipAtPoint(openClip,this.transform.position);
+
+        AudioSource.PlayClipAtPoint(openClip, this.transform.position);
         keyCollected?.Invoke();
         Destroy(this.gameObject);
     }
