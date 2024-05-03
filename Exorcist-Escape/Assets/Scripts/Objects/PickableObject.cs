@@ -1,5 +1,24 @@
-﻿public abstract class PickableObject : InteractableObject
+﻿using System;
+
+public abstract class PickableObject : InteractableObject
 {
-    public abstract void Throw();
+    private Outline gameObjectOutline; 
+    protected virtual void Awake()
+    {
+        gameObjectOutline = GetComponent<Outline>();
+    }
+    public void ActivateOutLine()
+    {
+        gameObjectOutline.enabled = true;
+    }
+    public void DeactivateOutLine()
+    {
+        gameObjectOutline.enabled = false;
+    }
+
+    protected abstract void Collect();
+
+
+
 
 }
