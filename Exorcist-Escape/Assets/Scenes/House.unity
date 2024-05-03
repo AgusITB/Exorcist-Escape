@@ -3765,6 +3765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 180036395}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -17147,6 +17150,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker
       objectReference: {fileID: 0}
+    - target: {fileID: 6833212468862287734, guid: d6a2877d37e4766489ff5343ac5a35ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833212468862287734, guid: d6a2877d37e4766489ff5343ac5a35ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833212468862287734, guid: d6a2877d37e4766489ff5343ac5a35ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833212468862287734, guid: d6a2877d37e4766489ff5343ac5a35ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833212468862287734, guid: d6a2877d37e4766489ff5343ac5a35ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17659,6 +17687,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 794639354}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -25757,6 +25788,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1100266516}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -40078,6 +40112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1753258000}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -42081,6 +42118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1834119049}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -48686,6 +48726,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2116800113}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
@@ -49711,6 +49754,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 538233348968294905}
+  openClip: {fileID: 0}
+  closeClip: {fileID: 0}
+  lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
   doorState: 0
