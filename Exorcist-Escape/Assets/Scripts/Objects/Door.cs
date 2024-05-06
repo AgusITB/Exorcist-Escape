@@ -29,7 +29,7 @@ public class Door : NonPickableObject
     {
         if (llave != null)
         {
-            llave.keyCollected += UnlockDoor;
+            llave.onPickUp += UnlockDoor;
         }
         audioSource = GetComponent<AudioSource>();
         audioSource.Pause();

@@ -2,10 +2,13 @@
 
 public abstract class PickableObject : InteractableObject
 {
-    private Outline gameObjectOutline; 
+    private Outline gameObjectOutline;
+    public Action onPickUp;
+
     protected virtual void Awake()
     {
         gameObjectOutline = GetComponent<Outline>();
+        DeactivateOutLine();
     }
     public void ActivateOutLine()
     {
