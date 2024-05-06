@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 2456633932204654377}
   - component: {fileID: 2196592053682923145}
   - component: {fileID: 5338515672551364232}
+  - component: {fileID: 6174887023473602363}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 415628512427138848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000011920929, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000834465, y: 0.000000059604645, z: -0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -399,6 +400,23 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5338515672551364232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415628512427138848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 19b23b2605f26e1419a2986309115119, type: 2}
+--- !u!114 &6174887023473602363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1344,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 2077436621551474363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.45946, y: 0.2134726, z: -0.31715345}
+  m_LocalPosition: {x: 1.4594593, y: 0.21347266, z: -0.31715393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1580,8 +1598,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 30
-  m_Range: 15.946816
+  m_Intensity: 5.34
+  m_Range: 15.94682
   m_SpotAngle: 53.99073
   m_InnerSpotAngle: 31.91157
   m_CookieSize: 10
@@ -3067,6 +3085,7 @@ MonoBehaviour:
   normalLight: {fileID: 1561460468491671278}
   uvLight: {fileID: 5831410071397621987}
   insidePurple: 0
+  activateLight: {fileID: 8300000, guid: 3a3dd79dad30d424b8c623163f011693, type: 3}
 --- !u!1 &6969515006333412709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3670,7 +3689,7 @@ Transform:
   m_GameObject: {fileID: 8127098692244151394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.052, y: 0.022, z: -0.106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3688,10 +3707,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.67912865, g: 0, b: 1, a: 1}
-  m_Intensity: 100
-  m_Range: 20
-  m_SpotAngle: 37.73803
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 5.34
+  m_Range: 15.94682
+  m_SpotAngle: 53.99073
+  m_InnerSpotAngle: 31.91157
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -4035,6 +4054,7 @@ GameObject:
   - component: {fileID: 467528467244204230}
   - component: {fileID: 330184447611394636}
   - component: {fileID: 1681086847152125640}
+  - component: {fileID: 18196392491412374}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4082,7 +4102,7 @@ CharacterController:
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: -0.22, z: 0}
 --- !u!114 &467528467244204230
 MonoBehaviour:
@@ -4112,8 +4132,12 @@ MonoBehaviour:
   playerSpeed: 2
   gravityValue: -9.81
   cameraTransform: {fileID: 2702896759107161862}
-  pickableObject: {fileID: 0}
-  nonPickableObject: {fileID: 0}
+  m_StepInterval: 4
+  m_FootstepSounds:
+  - {fileID: 8300000, guid: fb0a491f17061cb47aa3a2e65e0c2ecd, type: 3}
+  - {fileID: 8300000, guid: 21bd3b8c44bd7b54596ba738c07f2b78, type: 3}
+  - {fileID: 8300000, guid: 0d8bfc3009e76974582c0980e9a60f87, type: 3}
+  - {fileID: 8300000, guid: a1833e29095209c4ca4d3d1e839752ed, type: 3}
 --- !u!65 &1681086847152125640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4135,6 +4159,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &18196392491412374
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788648627067921773}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8799854926178582525
 GameObject:
   m_ObjectHideFlags: 0

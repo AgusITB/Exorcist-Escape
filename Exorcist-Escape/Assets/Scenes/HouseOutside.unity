@@ -15229,8 +15229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 736173200}
-  openClip: {fileID: 0}
-  closeClip: {fileID: 0}
+  openClip: {fileID: 8300000, guid: aeab03b266cfa42419275258bab3e817, type: 3}
+  closeClip: {fileID: 8300000, guid: 012528356d3b7034c9cc5f16ba021249, type: 3}
   lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
@@ -29400,8 +29400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8699177174488786179}
-  openClip: {fileID: 0}
-  closeClip: {fileID: 0}
+  openClip: {fileID: 8300000, guid: aeab03b266cfa42419275258bab3e817, type: 3}
+  closeClip: {fileID: 8300000, guid: 012528356d3b7034c9cc5f16ba021249, type: 3}
   lockedClip: {fileID: 0}
   llave: {fileID: 0}
   lockState: 1
@@ -31807,6 +31807,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 330184447611394636, guid: d1fecc687a531e8478cf1709d4890733,
+        type: 3}
+      propertyPath: m_StepInterval
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 577418908225875124, guid: d1fecc687a531e8478cf1709d4890733,
         type: 3}
       propertyPath: m_Name

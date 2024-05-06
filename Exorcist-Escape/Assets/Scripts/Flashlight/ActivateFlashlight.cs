@@ -10,7 +10,7 @@ public class ActivateFlashlight : MonoBehaviour
     public bool insidePurple;
 
     InputManager inputManager;
-
+    [SerializeField] private AudioClip activateLight;
     private void Start()
     {
         inputManager = InputManager.Instance;
@@ -30,6 +30,7 @@ public class ActivateFlashlight : MonoBehaviour
             currentLight = uvLight;
 
         currentLight.gameObject.SetActive(true);
+        AudioSource.PlayClipAtPoint(activateLight, this.transform.position);
     }
            
     private void ToggleLight()
@@ -39,6 +40,7 @@ public class ActivateFlashlight : MonoBehaviour
         else
             currentLight.gameObject.SetActive(false);
 
+        AudioSource.PlayClipAtPoint(activateLight,this.transform.position);
 
     }
 }

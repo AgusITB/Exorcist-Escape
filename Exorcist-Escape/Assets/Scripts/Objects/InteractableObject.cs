@@ -1,5 +1,4 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class InteractableObject : MonoBehaviour, IInteractable
 {

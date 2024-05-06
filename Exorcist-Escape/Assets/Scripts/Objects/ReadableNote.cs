@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 
 public class ReadableNote : PickableObject
 {
@@ -17,12 +18,12 @@ public class ReadableNote : PickableObject
     }
     public override void Interact()
     {
-        this.Collect();
+        this.Collect();     
     }
     protected override void Collect()
     {
         notesManager.ChangeText(text.text);
-
+        AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position);
     }
 }
 
