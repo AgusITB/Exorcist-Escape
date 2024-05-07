@@ -44,7 +44,7 @@ public class KeypadController : MonoBehaviour
     public void Clear()
     {
         passwordText.text = "";
-        passwordText.color = Color.black;
+        passwordText.color = Color.white;
     }
 
     private void Enter()
