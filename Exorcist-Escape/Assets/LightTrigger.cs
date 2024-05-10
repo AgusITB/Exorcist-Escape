@@ -10,14 +10,16 @@ public class LightTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController controller))
         {
-            turnOnLight.SetActive(true);
+            turnOnLight.SetActive(false);
 
             if (turnOffLight != null)
             {
                 turnOffLight.SetActive(false);
             }
-
-
+            else
+            {
+                turnOffLight.SetActive(false);
+            }
         }
     }
 }
