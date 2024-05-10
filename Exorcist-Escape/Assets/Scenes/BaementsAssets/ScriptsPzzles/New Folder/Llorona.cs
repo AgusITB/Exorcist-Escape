@@ -21,14 +21,14 @@ public class Llorona : MonoBehaviour
         if (!quedarseQuieto)
         {  
             float distanciaAlJugador = Vector3.Distance(transform.position, jugador.position);
-            if (distanciaAlJugador < distanciaPersecucion)
+            /*if (distanciaAlJugador < distanciaPersecucion)
             {  
                 Vector3 direccionPersecucion = jugador.position - transform.position;
                 direccionPersecucion.y = 0f; 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);*/
                 agent.destination = jugador.position;
                 //transform.Translate(Time.deltaTime * velocidadPersecucion * Vector3.forward);
-            }
+            //}
         }
     }
     public void SetQuedarseQuieto(bool estado)
@@ -40,6 +40,7 @@ public class Llorona : MonoBehaviour
         }
         else
         {
+            agent.isStopped = false;
             lloronaAnimator.SetBool("IsWalking", true);
         }
 
