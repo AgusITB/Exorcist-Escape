@@ -34,7 +34,7 @@ public class Door : NonPickableObject
         audioSource = GetComponent<AudioSource>();
         audioSource.Pause();    
     }
-    private void UnlockDoor()
+    public void UnlockDoor()
     {
         lockState = LockState.Unlocked;
     }

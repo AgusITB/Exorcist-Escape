@@ -9,14 +9,14 @@ public class KeypadController : MonoBehaviour
     public int passwordLimit;
     public Text passwordText;
 
-    [SerializeField] private NonPickableObject linkedObject;
+    [SerializeField] protected NonPickableObject linkedObject;
 
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip correctSound;
     public AudioClip wrongSound;
 
-    private void Start()
+    protected void Start()
     {
         passwordText.text = "";
     }
@@ -47,7 +47,7 @@ public class KeypadController : MonoBehaviour
         passwordText.color = Color.white;
     }
 
-    private void Enter()
+    protected virtual void Enter()
     {
         if (passwordText.text == password)
         {
@@ -72,7 +72,7 @@ public class KeypadController : MonoBehaviour
         }
     }
 
-    IEnumerator waitAndClear()
+    protected IEnumerator waitAndClear()
     {
         yield return new WaitForSeconds(0.75f);
         Clear();

@@ -1670,7 +1670,6 @@ Transform:
   m_Children:
   - {fileID: 254998984}
   - {fileID: 1350146291}
-  - {fileID: 918438994}
   - {fileID: 819435166}
   - {fileID: 1507034678}
   m_Father: {fileID: 961858041}
@@ -26606,6 +26605,7 @@ Transform:
   - {fileID: 2004791518}
   - {fileID: 1730435295}
   - {fileID: 961858041}
+  - {fileID: 918438994}
   - {fileID: 1968756359}
   - {fileID: 2099111261}
   - {fileID: 260566217}
@@ -30678,7 +30678,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 43374575}
+    m_TransformParent: {fileID: 832546446}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 46a70ba0ee6adf94e8e23da92de5b690,
         type: 3}
@@ -30708,7 +30708,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 46a70ba0ee6adf94e8e23da92de5b690,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46a70ba0ee6adf94e8e23da92de5b690,
         type: 3}
@@ -30718,7 +30718,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 46a70ba0ee6adf94e8e23da92de5b690,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 46a70ba0ee6adf94e8e23da92de5b690,
         type: 3}
@@ -51798,7 +51798,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.89914566, b: 0.84436905, a: 1}
-  m_Intensity: 100
+  m_Intensity: 20
   m_Range: 10
   m_SpotAngle: 45
   m_InnerSpotAngle: 21.80208
@@ -75283,6 +75283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnOnLight: {fileID: 0}
   turnOffLight: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!65 &919132148488076385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75366,6 +75367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnOnLight: {fileID: 7964905783337247380}
   turnOffLight: {fileID: 7964905784313066505}
+  clip: {fileID: 0}
 --- !u!65 &919132149463886532
 BoxCollider:
   m_ObjectHideFlags: 0
