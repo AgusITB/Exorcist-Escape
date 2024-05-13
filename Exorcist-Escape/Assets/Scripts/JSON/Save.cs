@@ -10,6 +10,7 @@ public class Save : NonPickableObject
     private void Awake()
     {
         gameManager = GameManager.instance;
+       
     }
     public override void Interact()
     {
@@ -19,7 +20,6 @@ public class Save : NonPickableObject
     {
 
         gameManager.ActivateHud("Save Game....");
-        DataController.instance.SavePlayerPosition();
 
     }
     private void OnTriggerExit(Collider other)
