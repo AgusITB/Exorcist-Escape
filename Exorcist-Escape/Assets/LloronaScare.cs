@@ -31,16 +31,23 @@ public class LloronaScare : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        // Toggle Lights fast
-        for (float i = 0.1f; i < 0.5f; i += 0.1f)
-        {
-            SpotLight.SetActive(false);
-            yield return new WaitForSeconds(i);
-            SpotLight.SetActive(true);
-        }
-        SpotLight.SetActive(false);
 
+        SpotLight.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        SpotLight.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        SpotLight.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        SpotLight.SetActive(false);
+        yield return new WaitForSeconds(0.4f);
+        SpotLight.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        SpotLight.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        SpotLight.SetActive(true);
         yield return new WaitForSeconds(2f);
+
+        SpotLight.SetActive(false);
         Llorona.SetActive(false);
 
         yield return new WaitForSeconds(1f);
