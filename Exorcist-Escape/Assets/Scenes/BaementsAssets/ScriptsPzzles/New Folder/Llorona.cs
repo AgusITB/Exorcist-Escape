@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Llorona : MonoBehaviour
 {
@@ -6,12 +7,13 @@ public class Llorona : MonoBehaviour
     public float velocidadPersecucion = 5f; 
     public float distanciaPersecucion = 10f; 
     private bool quedarseQuieto = false;
-
     private Animator lloronaAnimator;
 
+    [SerializeField] private NavMeshAgent agent;
     private void Awake()
     {
         lloronaAnimator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -19,23 +21,26 @@ public class Llorona : MonoBehaviour
         if (!quedarseQuieto)
         {  
             float distanciaAlJugador = Vector3.Distance(transform.position, jugador.position);
-            if (distanciaAlJugador < distanciaPersecucion)
+            /*if (distanciaAlJugador < distanciaPersecucion)
             {  
                 Vector3 direccionPersecucion = jugador.position - transform.position;
                 direccionPersecucion.y = 0f; 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);
-                transform.Translate(Time.deltaTime * velocidadPersecucion * Vector3.forward);
-            }
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);*/
+                agent.destination = jugador.position;
+                //transform.Translate(Time.deltaTime * velocidadPersecucion * Vector3.forward);
+            //}
         }
     }
     public void SetQuedarseQuieto(bool estado)
     {
         if (estado)
         {
+            agent.isStopped = true;
             lloronaAnimator.SetBool("IsWalking", false);
         }
         else
         {
+            agent.isStopped = false;
             lloronaAnimator.SetBool("IsWalking", true);
         }
 
