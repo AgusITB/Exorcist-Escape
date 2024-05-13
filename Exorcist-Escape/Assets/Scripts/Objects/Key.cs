@@ -8,7 +8,11 @@ public class Key : PickableObject
     }
     protected override void Collect()
     {
-        AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position);
+        if (pickUpClip != null)
+        {
+            AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position);
+        }
+    
         onPickUp?.Invoke();
         Destroy(this.gameObject);
     }
