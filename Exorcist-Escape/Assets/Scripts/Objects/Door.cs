@@ -38,6 +38,10 @@ public class Door : NonPickableObject
     {
         lockState = LockState.Unlocked;
     }
+    public void LockDoor()
+    {
+        lockState = LockState.Locked;
+    } 
     public override void Interact()
     {
 
