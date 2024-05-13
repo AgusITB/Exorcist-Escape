@@ -24,11 +24,9 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-
-
     public void ActivateHud(string text)
     {
-        interactText.GetComponentInChildren <TextMeshProUGUI>().text = text;
+        interactText.GetComponentInChildren<TextMeshProUGUI>().text = text;
         interactText.SetActive(true);
         icon.SetActive(true);
     }
