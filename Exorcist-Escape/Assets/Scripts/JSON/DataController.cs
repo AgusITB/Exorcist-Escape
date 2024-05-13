@@ -6,6 +6,7 @@ using UnityEngine;
 public class DataController : MonoBehaviour
 {
     private Transform playerTransform;
+    public static DataController instance;
     //Ruta relativa del Data.json
     private string saveFilePath = "./Assets/Scripts/JSON/Data.json";
    

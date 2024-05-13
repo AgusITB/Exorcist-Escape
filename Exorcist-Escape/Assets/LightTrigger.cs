@@ -9,13 +9,13 @@ public class LightTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController controller))
         {
-
             turnOnLight.SetActive(true);
-
+            
             if (turnOffLight != null)
             {
                 turnOffLight.SetActive(false);
             }
+            
             AudioSource.PlayClipAtPoint(clip, this.transform.position);
             this.gameObject.SetActive(false);
           
