@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Spherized Ping Pong
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;928,-256;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;22;768,-256;Inherit;False;Color;5;2;False;1;0;COLOR;1,1,1,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionNode;15;704,-144;Inherit;False;DESF
+    Pattern Ellipse;-1;;10;5879149f841932d47aaaef71a9c46e7b;1,22,1;5;13;FLOAT2;0,0;False;9;FLOAT;0.5;False;8;FLOAT;0.5;False;20;FLOAT;2;False;21;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;12;448,-144;Inherit;False;DESF
+    UV Spherize;-1;;11;e2491837617dda5498fb2b63fbbd87af;0;4;4;FLOAT2;0,0;False;2;FLOAT2;0.5,0.5;False;8;FLOAT2;10,10;False;12;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;14;192,-256;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DynamicAppendNode;9;256,-64;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.FunctionInput;21;192,96;Inherit;False;Spherize
+    Strength;1;1;False;1;0;FLOAT;10;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;6;64,-64;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;23;-368,-176;Inherit;False;212;116;Offset
+    Amount;;0,0,0,1;Range 0 _ 0.99;0;0\nNode;AmplifyShaderEditor.FunctionInput;20;-320,-48;Inherit;False;Offset
+    Amount;1;3;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NegateNode;7;-112,-80;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;5;-128,48;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;4;-256,48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-416,48;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;1;-608,32;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;18;-640,112;Inherit;False;Ping
+    Pong Speed;1;0;False;1;0;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1088,-256;Inherit;True;True;-1;Output;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;16;0;22;0\nWireConnection;16;1;15;0\nWireConnection;15;13;12;0\nWireConnection;12;4;14;0\nWireConnection;12;8;21;0\nWireConnection;12;12;9;0\nWireConnection;9;0;6;0\nWireConnection;6;0;7;0\nWireConnection;6;1;20;0\nWireConnection;6;2;5;0\nWireConnection;7;0;20;0\nWireConnection;5;0;4;0\nWireConnection;4;0;3;0\nWireConnection;3;0;1;0\nWireConnection;3;1;18;0\nWireConnection;0;0;16;0\nASEEND*/\n//CHKSM=80FFC265962C915AECACBAC48CE7CF7368B2E968"
+  m_functionName: 
+  m_description: 'UV Spherized Ping Pong
+
+
+    Teaching Sample'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

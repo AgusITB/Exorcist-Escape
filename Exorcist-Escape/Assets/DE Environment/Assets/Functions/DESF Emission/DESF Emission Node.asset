@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Emission Node
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;40;111.063,-844.4685;Inherit;False;1028.129;189.5564;_EmissionColor(\"Color\",
+    Color) = (1, 1, 1);;0,0,0,1;in HDRP$// Caution: C# code in BaseLitUI.cs call
+    LightmapEmissionFlagsProperty() which assume that there is an existing \"_EmissionColor\"$//
+    value that exist to identify if the GI emission need to be enabled.$// In our
+    case we don't use such a mechanism but need to keep the code quiet. We declare
+    the value and always enable it.$// Unity TODO: Fix the code in legacy unity so
+    we can customize the beahvior for GI$;0;0\nNode;AmplifyShaderEditor.LerpOp;9;55.24948,-182.347;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;44;-15.11084,-268.9172;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;58;5.775391,-245.2527;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;36;-88.22949,-94.30357;Inherit;False;is
+    Global;1;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;6;-252.4164,-157.3759;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;55;-310.1521,-247.128;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;46;-331.1108,-268.9172;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;13;-423.3384,-158.4976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;21;-591.634,-306.7046;Inherit;False;Intensity;1;1;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.HDEmissionNode;25;278.5017,-325.5978;Inherit;False;Luminance;False;3;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;26;284.7419,-416.1969;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;27;541.708,-420.8801;Inherit;False;4;0;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.HDEmissionNode;1;283.6369,-534.2335;Inherit;False;Luminance;False;3;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;2;287.8972,-623.9327;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;17;545.8026,-625.5959;Inherit;False;4;0;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;19;99.36447,-629.8781;Inherit;False;RGB;3;0;False;1;0;FLOAT3;0.003921569,0.003921569,0.003921569;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;59;166.7754,-273.2527;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;60;184.7754,-296.2527;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;12;51.5874,-44.48399;Inherit;False;Exposure
+    Weight;1;2;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;53;-768,-128;Inherit;False;DESF
+    Global Parameters Emission;-1;;3;615a7e4d73bdd934f99c9f8e69426a7d;0;0;2;FLOAT;5;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;22;767.8155,-421.8477;Inherit;False;True;-1;Emission;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;29;773.4378,-627.251;Inherit;False;False;-1;Emission
+    Global;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;9;0;58;0\nWireConnection;9;1;6;0\nWireConnection;9;2;36;0\nWireConnection;44;0;21;0\nWireConnection;58;0;44;0\nWireConnection;6;0;55;0\nWireConnection;6;1;13;0\nWireConnection;6;2;53;4\nWireConnection;55;0;46;0\nWireConnection;46;0;21;0\nWireConnection;13;0;21;0\nWireConnection;13;1;53;5\nWireConnection;25;0;19;0\nWireConnection;25;1;21;0\nWireConnection;25;2;12;0\nWireConnection;26;0;19;0\nWireConnection;26;1;60;0\nWireConnection;27;0;26;0\nWireConnection;27;3;26;0\nWireConnection;27;1;26;0\nWireConnection;27;2;25;0\nWireConnection;1;0;19;0\nWireConnection;1;1;9;0\nWireConnection;1;2;12;0\nWireConnection;2;0;19;0\nWireConnection;2;1;9;0\nWireConnection;17;0;2;0\nWireConnection;17;3;2;0\nWireConnection;17;1;2;0\nWireConnection;17;2;1;0\nWireConnection;59;0;21;0\nWireConnection;60;0;59;0\nWireConnection;22;0;27;0\nWireConnection;29;0;17;0\nASEEND*/\n//CHKSM=46EB2AC067B9E32918AD0105E91B8EADE4A9E8BA"
+  m_functionName: 
+  m_description: ' Emission Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.38039216, g: 0.24705882, b: 0.4627451, a: 1}
+  m_customNodeCategory: DESF Emission
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

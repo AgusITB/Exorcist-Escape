@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Module Emission Sonar Scan
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;2;-1992.232,-94.561;Inherit;False;1344.52;344.5171;Sonar
+    range of effect;11;50;34;45;14;42;43;41;52;51;35;53;;0.1415094,0.1415094,0.1415094,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;1;-1993.121,-407.9976;Inherit;False;1343.749;299.5156;Sonar
+    pulse;10;18;3;6;15;4;5;8;11;16;13;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;128;-2196.911,-1054.043;Inherit;False;1356.725;523.2183;_EmissiveColor;10;130;135;133;137;150;138;144;141;136;154;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.ScreenDepthNode;5;-1773.997,-240.2431;Inherit;False;1;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-1757.461,-347.9976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;45;-1111.771,10.0438;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;51;-1244.083,-47.71535;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;141;-1403.7,-808.6782;Half;False;Property;_SonarEmissiveRenderFace;Emissive
+    Render Face;5;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerFloatEnum(Front _Back _Both);False;2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;8;-1585.361,-347.8975;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;4;-1945.461,-278.9976;Half;False;Property;_SonarSpeed;Sonar
+    Speed;11;0;Create;False;0;0;0;False;0;False;0.6;-0.25;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;13;-1452.372,-206.7099;Half;False;Property;_SonarBrightness;Sonar
+    Brightness;10;0;Create;False;0;0;0;False;0;False;0.25;0.71;0;1.5;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;15;-995.3727,-253.7099;Half;False;Property;_SonarCurve;Sonar
+    Curve;12;0;Create;False;0;0;0;False;0;False;18;20;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;53;-1691.933,61.03413;Half;False;Property;_SonarFadeDistance;Sonar
+    Fade Distance;15;0;Create;False;0;0;0;False;0;False;4;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;50;-1454.076,59.89346;Half;False;Property;_SonarFadeRange;Sonar
+    Fade Range;14;0;Create;False;0;0;0;False;0;False;4.5;1.7;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;34;-1162.993,96.1525;Half;False;Property;_SonarFadeMode;Sonar
+    Fade Mode;13;1;[Enum];Create;False;0;2;Fade In;0;Fade Out;1;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;62;-425.5807,-364.1691;Half;False;Constant;_UVMappingMaskEmissive1;Mask
+    Emissive;9;1;[HideInInspector];Create;False;1;;0;0;False;0;False;0.003921569,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;144;-1148.263,-977.1021;Inherit;False;DESF
+    Emission Render Face;-1;;41816;932421da1efedbf48828003540526a76;0;2;7;FLOAT3;0,0,0;False;8;FLOAT;2;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;52;-1450.452,-45.68743;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;22;32.23331,-225.3206;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SaturateNode;14;-790.9749,-48.53277;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;20;-602.2616,-180.9286;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;69;7.107272,-409.8519;Inherit;False;MaskEmissive;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FractNode;11;-1442.245,-349.0584;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;102;-782.9179,-979.3614;Inherit;False;EMISSION_TINT;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;42;-1963.087,-48.6336;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SwizzleNode;140;-177.7373,-365.0862;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;23;234.7406,-364.5387;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;35;-949.5493,-46.66706;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;138;-1587.006,-1000.821;Inherit;False;DESF
+    Emission Node;-1;;41820;be83a58da3289584d9f5faa7c4e70928;0;4;19;FLOAT3;0.003921569,0.003921569,0.003921569;False;21;FLOAT;1;False;12;FLOAT;1;False;36;FLOAT;0;False;2;FLOAT3;22;FLOAT3;29\nNode;AmplifyShaderEditor.PowerNode;18;-812.673,-342.51;Inherit;False;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;41;-1898.087,89.36636;Float;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.GetLocalVarNode;96;-227.8378,-213.5701;Inherit;False;102;EMISSION_TINT;1;0;OBJECT;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleTimeNode;3;-1947.461,-350.9976;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;139;-782.6094,-759.3915;Inherit;False;376.2728;298.0619;;;0,0,0,1;**SONAR
+    SCAN$_SonarEnable$_SonarEmissiveisGlobal$_SonarEmissiveRenderFace$_SonarEmissiveColor$_SonarEmissiveIntensity$_SonarEmissiveIntensityHDRP$_SonarEmissiveExposureWeight$_SonarBrightness$_SonarSpeed$_SonarCurve$_SonarFadeMode$_SonarFadeRange$_SonarFadeDistance$$$$$;0;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;16;-1152.412,-344.3144;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;43;-1692.252,-47.09868;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;150;-1920.992,-837.8508;Inherit;False;DESF
+    Emission Flags;3;;44344;3dfe3c4d6149b6c48b5287e33c05b24f;0;3;15;FLOAT;0;False;2;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;137;-2154.037,-836.6437;Half;False;Property;_SonarEmissiveIntensity;Emissive
+    Intensity;7;0;Create;False;1;;0;0;False;0;False;1.25;86.9;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector4Node;133;-2157.986,-763.1562;Half;False;Property;_SonarEmissiveIntensityHDRP;Emissive
+    Intensity;8;0;Create;False;0;0;0;False;1;DE_DrawerEmissiveIntensity;False;1,1,1,0;0.125,0,0,1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;135;-1919.411,-716.1858;Half;False;Property;_SonarEmissiveExposureWeight;Emissive
+    Exposure Weight;9;0;Create;False;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;130;-1849.216,-640.522;Half;False;Property;_SonarEmissiveisGlobal;Emissive
+    is Global;2;0;Create;False;0;0;0;False;1;DE_DrawerToggleNoKeyword;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;152;21.78223,-75.55908;Inherit;False;DESF
+    Utility Register Inline;-1;;44960;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;24;-218.1857,-73.47449;Half;False;Property;_SonarEnable;ENABLE
+    SONAR SCAN;1;0;Create;False;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;153;-117.8896,7.498474;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;149;-399.627,0.7509141;Inherit;False;Property;_CATEGORY_SONARSCAN;CATEGORY_SONAR
+    SCAN;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(SONAR SCAN,true,_SonarEnable,0,0);False;0;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;151;-375.5128,75.13091;Inherit;False;Property;_SPACE_SONARSCAN;SPACE_SONAR
+    SCAN;16;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;136;-2148.989,-1004.969;Half;False;Property;_SonarEmissiveColor;Emissive
+    Color;6;1;[HDR];Create;False;0;0;0;False;0;False;1,0.3666667,0,0;1,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwizzleNode;154;-1897.991,-1005.985;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;420.5999,-368.9;Inherit;False;True;-1;Emission;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;6;0;3;0\nWireConnection;6;1;4;0\nWireConnection;45;0;51;0\nWireConnection;51;0;52;0\nWireConnection;51;1;50;0\nWireConnection;8;0;6;0\nWireConnection;8;1;5;0\nWireConnection;144;7;138;29\nWireConnection;144;8;141;0\nWireConnection;52;0;43;0\nWireConnection;52;1;53;0\nWireConnection;22;0;140;0\nWireConnection;22;1;96;0\nWireConnection;22;2;20;0\nWireConnection;14;0;35;0\nWireConnection;20;0;18;0\nWireConnection;20;1;14;0\nWireConnection;69;0;140;0\nWireConnection;11;0;8;0\nWireConnection;102;0;144;0\nWireConnection;140;0;62;0\nWireConnection;23;0;140;0\nWireConnection;23;1;22;0\nWireConnection;23;2;152;0\nWireConnection;35;0;51;0\nWireConnection;35;1;45;0\nWireConnection;35;2;34;0\nWireConnection;138;19;154;0\nWireConnection;138;21;150;0\nWireConnection;138;12;135;0\nWireConnection;138;36;130;0\nWireConnection;18;0;16;0\nWireConnection;18;1;15;0\nWireConnection;16;0;11;0\nWireConnection;16;1;13;0\nWireConnection;43;0;42;0\nWireConnection;43;1;41;0\nWireConnection;150;15;137;0\nWireConnection;150;2;137;0\nWireConnection;150;8;133;1\nWireConnection;152;1;24;0\nWireConnection;152;2;153;0\nWireConnection;153;0;149;0\nWireConnection;153;1;151;0\nWireConnection;154;0;136;0\nWireConnection;0;0;23;0\nASEEND*/\n//CHKSM=18CD7332248B5A8C63FFAA7AD335011DD5D9DDA8"
+  m_functionName: 
+  m_description: 'Module Emission Sonar Scan Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Module Emission
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

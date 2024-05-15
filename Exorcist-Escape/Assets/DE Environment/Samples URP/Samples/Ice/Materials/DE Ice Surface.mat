@@ -1,0 +1,424 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Ice Surface
+  m_Shader: {fileID: 4800000, guid: 103203eacea34ca4b80564ce19dba659, type: 3}
+  m_ShaderKeywords: _ADD_PRECOMPUTED_VELOCITY _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT
+    _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 69d1a7e1796d3914ca0170e82ed9ddd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 2800000, guid: d0761f33a5da42647978a99cf046f108, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMask:
+        m_Texture: {fileID: 2800000, guid: 25eb54810ec6da74a9f95c19330c8b02, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Hole:
+        m_Texture: {fileID: 2800000, guid: df8cd63c10a8c0340962ae0b5ab466ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_Layer01_Mask:
+        m_Texture: {fileID: 2800000, guid: c6362dbb3dd738b42b7958f54c30700e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_Layer02_Mask:
+        m_Texture: {fileID: 2800000, guid: c6362dbb3dd738b42b7958f54c30700e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_Layer03_Mask:
+        m_Texture: {fileID: 2800000, guid: c6362dbb3dd738b42b7958f54c30700e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_Layer04_Mask:
+        m_Texture: {fileID: 2800000, guid: 09a3d1d86f87504418f10876ce460df8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_MapLayer01:
+        m_Texture: {fileID: 2800000, guid: 4177054a6a2fc65489900ec19111a5c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_MapLayer02:
+        m_Texture: {fileID: 2800000, guid: 8280ae6037505f54ba58e2dc66ab3c60, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_Mask:
+        m_Texture: {fileID: 2800000, guid: 27127545775166246b527ab88b7e5669, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ICE_MaskPulse:
+        m_Texture: {fileID: 2800000, guid: 3c32269171a000d4f9904193192e8630, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 17f617f96b2e6fc4595744d94c243c6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceBaseMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceFlowMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceMap:
+        m_Texture: {fileID: 2800000, guid: 7842f04861b9465429c303e0a6e9dd21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceMaskMap:
+        m_Texture: {fileID: 2800000, guid: 850358b71d9a4db43aedecab28ba8739, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceNormalMap:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ice_Map:
+        m_Texture: {fileID: 2800000, guid: 3f7584140166a4148970031939947f68, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ice_Normal:
+        m_Texture: {fileID: 2800000, guid: 3961e84f00807b24b8c3f874ae70fcf8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 17f617f96b2e6fc4595744d94c243c6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_NormalMap:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer1_FlowMap:
+        m_Texture: {fileID: 2800000, guid: 17f617f96b2e6fc4595744d94c243c6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a0997e56a45fca848b806a3f782c5004, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: e3cbcbc21ec5a674a81fa2239f9c094a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 850358b71d9a4db43aedecab28ba8739, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMask1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1.34, y: -0.03}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: -0.41
+    - _AlphaCutoff: 0.5
+    - _AlphatoCoverage: 0
+    - _AmbientBoost: 0
+    - _AmbientBoostMode: 0
+    - _BlendFactor: 2.75
+    - _BlendFalloff: -0.12
+    - _BlendFalloff1: 0.704
+    - _BlendOffset1: -0.14
+    - _Brightness: 0.876
+    - _BumpNormalCompute: 0
+    - _CATEGORY_ICEFLOW: 0
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_OPACITY: 0
+    - _CATEGORY_PARALLAX: 0
+    - _CATEGORY_REFRACTION: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 0
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_TRANSMISSION: 0
+    - _CATEGORY_WETNESS: 0
+    - _Chromatic: 0.066
+    - _ChromaticAberration: 0.206
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _Cutoff: 0.5
+    - _DisplacementStrength: 0
+    - _Displacement_Mode: 0
+    - _EmissionFlags: 0
+    - _EnableIceFlow: 1
+    - _EnableTranslucency: 1
+    - _EnableTransmission: 1
+    - _EnvironmentReflections: 1
+    - _Float0: 1.3
+    - _Float1: 0.41
+    - _Float2: 0.71
+    - _GlobalEnableGlobalWetness: 1
+    - _GlobalWetnessStrength: 0
+    - _Global_EnableGlobalWetness: 1
+    - _Global_GlobalWetnessMode: 0
+    - _Global_Wetness: 1.17
+    - _GlossyReflections: 1
+    - _Heght: 6.61
+    - _Height: 1.41
+    - _HeightIterations: 1
+    - _HeightIterations1: 1
+    - _HeightIterationsLayer0: 1.51
+    - _HeightReferencePlane: 1.282
+    - _HeightScaleSurface: 0.0434
+    - _HoleFuzziness: 1
+    - _HolePower: 0.25
+    - _HoleRadius: 1.44
+    - _HoleThickness: -1.31
+    - _ICE_Layer01_FlowSpeedX: -0.02
+    - _ICE_Layer01_FlowSpeedY: 0.01
+    - _ICE_Layer01_Strength: 1.25
+    - _ICE_Layer02_FlowSpeedX: 0
+    - _ICE_Layer02_FlowSpeedY: 1
+    - _ICE_Layer02_Offset: 1.72
+    - _ICE_Layer02_Strength: 4.7
+    - _ICE_Layer03_FlowSpeedX: 1.28
+    - _ICE_Layer03_FlowSpeedY: 0.54
+    - _ICE_Layer03_Offset: 8.47
+    - _ICE_Layer03_Strength: 5.19
+    - _ICE_Layer04_Offset: -0.1
+    - _ICE_Layer04_Strength: 1.68
+    - _ICE_Offset01: 1.23
+    - _ICE_Offset02: 1.06
+    - _ICE_ParallaxEffect: 1
+    - _ICE_PulseStrength: 20.29
+    - _ICE_Strength01: 0.708
+    - _ICE_Strength02: 0.978
+    - _IceBrightness: 1
+    - _IceFlowEnable: 0
+    - _IceFlowHeightIterations: 1
+    - _IceFlowHeightReferencePlane: 1
+    - _IceFlowHeightScale: 0.15
+    - _IceFlowSpeedX: 0.01
+    - _IceFlowSpeedY: 0.01
+    - _IceFlowStrength: 1
+    - _IceFlowTilingX: 1
+    - _IceFlowTilingY: 1
+    - _IceHeightIterations: 1
+    - _IceHeightReferencePlane: 0.02
+    - _IceHeightScale: 0.0264
+    - _IceMetallicStrength: 0.769
+    - _IceNormalCompute: 0
+    - _IceNormalStrength: 1
+    - _IceOcclusionSource: 0
+    - _IceOcclusionStrength: 0
+    - _IceOpacity: 0.939
+    - _IceSmoothnessPower: 10
+    - _IceSmoothnessScale: 0.76
+    - _IceSmoothnessSource: 1
+    - _IceSmoothnessStrength: 0.85
+    - _IceTilingX: 2
+    - _IceTilingY: 2
+    - _IceWetnessEnable: 1
+    - _IceWetnesssStrength: 0.75
+    - _Ice_Depth01: 0.87
+    - _Ice_Depth02: 3.86
+    - _Ice_Depth03: 0.89
+    - _Ice_FlowSpeedX: 0.1
+    - _Ice_FlowSpeedY: 0.1
+    - _Ice_FlowSpeedYLayer1: 0.01
+    - _Ice_Mode: 1
+    - _Ice_Strength01: 2.79
+    - _Ice_Strength02: 0.808
+    - _Ice_Strength03: 0.88
+    - _Ice_Tilin: 1
+    - _Ice_Tilin1: 1
+    - _Ice_TilingX: 1
+    - _Ice_TilingY: 1
+    - _IndexofRefraction1: 0.29
+    - _Int0: 2.05
+    - _Layer0_Brightness: 1
+    - _Layer0_HeightIterations: 1
+    - _Layer0_HeightReferencePlane: 0.596
+    - _Layer0_HeightScale: 0.0243
+    - _Layer0_MetallicStrength: 0.342
+    - _Layer0_NormalStrength: 0.25
+    - _Layer0_OcclusionSourceMode: 0
+    - _Layer0_OcclusionStrength: 0.564
+    - _Layer0_Opacity: 0.43
+    - _Layer0_Shininess: 0.605
+    - _Layer0_SpecularMode: 1
+    - _Layer0_SpecularWrap: 0.385
+    - _Layer0_Strength: 1
+    - _Layer0_TilingX: 2
+    - _Layer0_TilingY: 2
+    - _Layer1FlowSpeedX: 0.01
+    - _Layer1HeightReferencePlane: 1.939
+    - _Layer1HeightScale: 0.762
+    - _Layer1_FlowSpeedX: 0.01
+    - _Layer1_FlowSpeedY: 0.01
+    - _Layer1_HeightIterations: 3.06
+    - _Layer1_HeightReferencePlane: 1.077
+    - _Layer1_HeightScale: 0.064
+    - _Layer1_TilingX: 3
+    - _Layer1_TilingY: 3
+    - _LayerWeight: 2.71
+    - _MaskClipValue: 0.45
+    - _MaskClipValue2: 0.5
+    - _MaskOpacity_OpacityStrength: 0.385
+    - _MaskOpacity_OpacityStrength1: 0
+    - _MaskOpacity_OpacityStrength2: 0
+    - _Metalic1: 0
+    - _Metallic: 1.04
+    - _MetallicStrength: 0.238
+    - _NormalStrength: 2
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.011
+    - _OcclusionStrengthAORemapMax: 0.50763357
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Opacity: 0.66294247
+    - _Opacity1: 0
+    - _Opacity2: 0.104
+    - _ParallaxHeightScale1: 0.0753
+    - _ParallaxIterations1: 1.04
+    - _ParallaxMaskPower1: -0.94
+    - _ParallaxReferencePlane1: 0.304
+    - _ReceiveShadows: 1
+    - _Refraction: 0.41
+    - _RefractionIndex: 0.077
+    - _RefractionScale: 0.5
+    - _SPACE_ICEFLOW: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_OPACITY: 0
+    - _SPACE_PARALLAX: 0
+    - _SPACE_REFRACTION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _SPACE_WETNESS: 0
+    - _Shininess: 0.702
+    - _Smooth1: 0
+    - _Smoothness: 0.96
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessMax: 0.779
+    - _SmoothnessMin: 0.248
+    - _SmoothnessModeSurface: 0
+    - _SmoothnessPower: 1
+    - _SmoothnessScale: 1
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.65
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0.015267176
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 2
+    - _SmoothnessVariance: 0
+    - _Snow_Height: 0.363
+    - _Snow_HeightClipFar: 0.328
+    - _Snow_HeightDepth: 0
+    - _Snow_HeightNoiseScale: 3
+    - _Snow_HeightNoiseShift: 5
+    - _Snow_HeightWeight: 0
+    - _SpecularHighlights: 1
+    - _SpecularWrap: 0.07
+    - _Specular_Mode: 2
+    - _TilingX: 1
+    - _TilingY: 1
+    - _TransAmbient: 0.812
+    - _TransDirect: 0.772
+    - _TransNormalDistortion: 0.589
+    - _TransScattering: 20.3
+    - _TransShadow: 0.042
+    - _Translucency: 0.2
+    - _TransmissionStrength: 0.32
+    - _UVMode_Bicubic: 1
+    - _UVMode_Stochastic: 1
+    - _UVMode_StochasticTriplanar: 1
+    - _Wetness: 0.95
+    - _WetnessEnable: 1
+    - _WetnessEnableGlobalWetness: 1
+    - _WetnessGlobalEnablel: 0
+    - _WetnessGlobalInfluenceEnable: 0
+    - _WetnessGlobalStrength: 0
+    - _WetnessMask: 0.75
+    - _WetnesssStrength: 0.75
+    - _ZWriteMode: 1
+    - __dirty: 1
+    - _alpha: 9.23
+    - _test: 0.51
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 0, g: 0.43137255, b: 0.87058824, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ICE_IceMovement: {r: 0.06, g: -0.03, b: 0, a: 0}
+    - _ICE_MaskMovement: {r: 0.15, g: 0.18, b: 0, a: 0}
+    - _ICE_PulseScrollDirection: {r: 0.03, g: 0.01, b: 0, a: 0}
+    - _ICE_Tint01: {r: 0, g: 0.44323626, b: 0.7264151, a: 0}
+    - _ICE_Tint02: {r: 0, g: 0.20591679, b: 0.8594782, a: 0.4}
+    - _IceColor: {r: 0.3160377, g: 0.9923625, b: 1, a: 1}
+    - _IceFlowColor0: {r: 0, g: 0.9018693, b: 1, a: 1}
+    - _IceFlowColor1: {r: 0, g: 0.6293888, b: 1, a: 1}
+    - _IceFlowUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _IceUVs: {r: 2, g: 2, b: 0, a: 0}
+    - _Ice_Tint01: {r: 0, g: 0.3233118, b: 1, a: 1}
+    - _Ice_Tint02: {r: 1, g: 1, b: 1, a: 0}
+    - _Layer0_Color: {r: 0, g: 1, b: 0.73990655, a: 1}
+    - _Layer0_SpecularColor: {r: 0, g: 0.51014924, b: 1, a: 0}
+    - _Layer1_Color: {r: 0, g: 1, b: 0.3482921, a: 1}
+    - _Layer2_Color: {r: 0, g: 0.48077476, b: 0.6, a: 1}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0.50763357, b: 0, a: 0}
+    - _OffsetLayer1: {r: 1, g: 1, b: 0, a: 0}
+    - _ParallaxColour1: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.4117647}
+    - _RefractionColor: {r: 0.2941177, g: 0.2941177, b: 0.2941177, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0.015267176, g: 1, b: 0, a: 0}
+    - _SpecularColor: {r: 0, g: 0.1329875, b: 1, a: 0}
+    - _Tint: {r: 0, g: 0.19543839, b: 1, a: 1}
+    - _Tint1: {r: 0, g: 0.6509434, b: 0.2882317, a: 1}
+    - _TranslucencyTint: {r: 0, g: 362.03867, b: 11.358076, a: 1}
+    - _TransmissionTint: {r: 0, g: 0.14901961, b: 1.4980392, a: 1}
+    - _Vector0: {r: 1.6, g: 0.61, b: -0.54, a: 0}
+  m_BuildTextureStacks: []

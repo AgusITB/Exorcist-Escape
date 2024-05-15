@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Blend Dither
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleAddOpNode;14;208,-304;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DitheringNode;13;0,-304;Inherit;False;1;False;4;0;FLOAT;0;False;1;SAMPLER2D;;False;2;FLOAT4;0,0,0,0;False;3;SAMPLERSTATE;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-160,-304;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;21;-320,-304;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;4;-320,-224;Inherit;False;3;0;FLOAT;-1;False;1;FLOAT;20;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;2;-512,-224;Inherit;False;Constant;_A;A;6;0;Create;True;0;0;0;False;0;False;-0.1;-1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;3;-512,-144;Inherit;False;Constant;_B;B;7;0;Create;True;0;0;0;False;0;False;25;20;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;26;-544,-64;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.LerpOp;19;528,-384;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;352,-320;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;27;384,-672;Inherit;False;382.9823;166.2401;Blend
+    Dither Node;;0.0471698,0.0471698,0.0471698,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;28;100.6124,-496;Inherit;False;209.3876;100;Alpha
+    Mask;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;29;288,-128;Inherit;False;209.3876;100;Enable
+    Dither Toggel;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;30;-48,-144;Inherit;False;209.3876;100;Dithering
+    Offset;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;-544,-416;Inherit;False;209.3876;100;Dithering
+    Scale;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;22;-544,-304;Inherit;False;Dithering
+    Scale;1;2;False;1;0;FLOAT;0.82;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;23;0,-224;Inherit;False;Dithering
+    Offset;1;3;False;1;0;FLOAT;-0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;24;288,-208;Inherit;False;Enable
+    Dither Toggel;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;17;144,-384;Inherit;False;Alpha
+    Mask;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;704,-384;Inherit;False;True;-1;Alpha
+    Mask;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;14;0;13;0\nWireConnection;14;1;23;0\nWireConnection;13;0;6;0\nWireConnection;6;0;21;0\nWireConnection;6;1;4;0\nWireConnection;21;0;22;0\nWireConnection;4;0;2;0\nWireConnection;4;1;3;0\nWireConnection;4;2;26;2\nWireConnection;19;0;17;0\nWireConnection;19;1;16;0\nWireConnection;19;2;24;0\nWireConnection;16;0;17;0\nWireConnection;16;1;14;0\nWireConnection;0;0;19;0\nASEEND*/\n//CHKSM=966DA24BCFA4F5DB4EEAB0C62622C31B9FB12277"
+  m_functionName: 
+  m_description: 'Blend Dither Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4392157, g: 0.34509805, b: 0.015686275, a: 1}
+  m_customNodeCategory: DESF Blend
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Fresnel Equation
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;70;-1321.434,531.7524;Inherit;False;1580.855;563.0383;
+    Fresnel Effect;11;71;65;60;59;63;64;62;61;68;67;66;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;75;-1339.901,1314.745;Inherit;False;1604.476;736.8242;
+    Fresnel Effect;15;84;83;103;101;100;99;86;85;82;81;80;78;77;76;104;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;37;-381.9517,-447.8981;Inherit;False;555.2915;193.5288;Fresnel
+    Equation Node;;0,0,0,1;The Fresnel Equation Node adds equations that affect Material
+    interactions to the Fresnel Component. You can select an equation in the Mode
+    dropdown$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;66;-441.7347,800.9966;Inherit;False;255.9122;100;;;0,0,0,1;Raising
+    the result to a power controls the falloff curve.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;67;-1056.668,794.9153;Inherit;False;244.1442;130.8911;;;0.03773582,0.03773582,0.03773582,1;The
+    dot product is white where the normal and view vector are parallel and black
+    where they're perpendicular.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;68;-697.9417,795.5078;Inherit;False;236.7892;117.652;;;0,0,0,1;Most
+    use-cases call for the mask to be inverted so we do that with the One Minus node.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;69;309.7044,-15.18414;Inherit;False;733.1704;322.8808;Mode;;0,0,0,1;Schlick$This
+    mode produces an approximation based on Schlick's Approximation. Use the Schlick
+    mode for interactions between air and dielectric materials.$$Dielectric$Use this
+    mode for interactions between two dielectric Materials. For example, air to glass,
+    glass to water, or water to air.$$DielectricGeneric$This mode computes a Fresnel
+    equation for interactions between a dielectric and a metal. For example, clear-coat-
+    to metal, glass to metal, or water to metal.$$$Note$if the IORMediumK value is
+    0, DielectricGeneric behaves in the same way as the Dielectric mode.\t$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;71;-693.6722,907.7225;Inherit;False;526.1356;184.8061;Fresnel
+    Effect Node;;0,0,0,1;Creates a mask based on the relationship between the view
+    direction and the surface normal.  When the mesh's surface is facing the camera,
+    the mask is black.  When it's facing away, the mask is white.$$The Power input
+    can be used to control the falloff curve of the effect. Values higher than 1
+    push the black toward the glancing angles. Values lower than 1 pull the white
+    toward the camera-facing angles.;0;0\nNode;AmplifyShaderEditor.FunctionInput;55;-1384.303,-223.0032;Inherit;False;DotVector;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;56;-1363.709,-149.4531;Inherit;False;f0;1;1;False;1;0;FLOAT;0.04;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;57;-1376.948,-62.66387;Inherit;False;IOR
+    Source;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;58;-1396.071,19.71229;Inherit;False;IOR
+    MediumK;1;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;72;-1083.08,-245.6122;Inherit;False;751.7119;118.8035;Schlick;;0,0,0,1;void
+    Unity_FresnelEquation_Schlick(out float Fresnel, float cos0, float f0)${$   
+    Fresnel = F_Schlick(f0, cos0)@$};0;0\nNode;AmplifyShaderEditor.StickyNoteNode;73;-1091.627,-69.54309;Inherit;False;761.9684;123.9318;Dielectric;;0,0,0,1;void
+    Unity_FresnelEquation_Dielectric(out float3 Fresnel, float cos0, float3 iorSource,
+    float3 iorMedium)${$    FresnelValue = F_FresnelDielectric(iorMedium/iorSource,
+    cos0)@$};0;0\nNode;AmplifyShaderEditor.StickyNoteNode;74;-1086.499,123.6201;Inherit;False;756.8402;144.4446;DielectricGeneric;;0,0,0,1;void
+    Unity_FresnelEquation_DielectricGeneric(out float3 Fresnel, float cos0, float3
+    iorSource, float3 iorMedium, float3 iorMediumK)${$    FresnelValue = F_FresnelConductor(iorMedium/iorSource,
+    iorMediumK/iorSource, cos0)@$};0;0\nNode;AmplifyShaderEditor.FunctionSwitch;38;307.5342,-150.2231;Inherit;False;Mode;False;0;3;-1;Schlick;Dielectric;DielectricGeneric;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT3;0,0,0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT3;0,0,0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;61;-1049.769,586.131;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;62;-837.8726,586.8254;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;63;-693.2292,585.2234;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;65;-451.4814,716.6829;Inherit;False;Constant;_falloffcurve;falloff
+    curve;0;0;Create;True;0;0;0;False;0;False;2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;64;-255.0813,586.6503;Inherit;True;True;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;60;-1247.072,726.5139;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldNormalVector;59;-1271.781,586.4617;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.StickyNoteNode;76;-155.2926,1586.803;Inherit;False;255.9122;100;;;0,0,0,1;Raising
+    the result to a power controls the falloff curve.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;77;-1075.135,1577.907;Inherit;False;244.1442;130.8911;;;0.03773582,0.03773582,0.03773582,1;The
+    dot product is white where the normal and view vector are parallel and black
+    where they're perpendicular.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;78;-716.4082,1578.5;Inherit;False;236.7892;117.652;;;0,0,0,1;Most
+    use-cases call for the mask to be inverted so we do that with the One Minus node.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;79;288,1584;Inherit;False;526.1356;184.8061;Fresnel
+    Effect Node;;0,0,0,1;Creates a mask based on the relationship between the view
+    direction and the surface normal.  When the mesh's surface is facing the camera,
+    the mask is black.  When it's facing away, the mask is white.$$The Power input
+    can be used to control the falloff curve of the effect. Values higher than 1
+    push the black toward the glancing angles. Values lower than 1 pull the white
+    toward the camera-facing angles.;0;0\nNode;AmplifyShaderEditor.DotProductOpNode;80;-1068.236,1369.123;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;81;-856.3391,1369.818;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;82;-711.6957,1368.216;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldNormalVector;86;-1290.248,1369.454;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;99;-514.9915,1733.504;Inherit;False;2;2;0;FLOAT;-1;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;100;-353.5598,1767.241;Inherit;False;3;0;FLOAT;-5;False;1;FLOAT;5;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FaceVariableNode;101;-509.0598,1855.442;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;104;-351.4857,1884.796;Inherit;False;255.9122;100;;;0,0,0,1;Fresnel
+    Double Sided;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;103;-699.7377,1708.421;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;-1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;83;-708.8772,1788.349;Inherit;False;Constant;_falloffcurve1;falloff
+    curve;0;0;Create;True;0;0;0;False;0;False;1.65;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;85;-1280,1520;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleAddOpNode;118;640,1296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;117;640,1200;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;109;336,1200;Float;False;Property;_SMOOTHNESS_Strength1;Smoothness
+    Strength;0;1;[Header];Create;False;1;SMOOTHNESS;0;0;False;0;False;0.1687155;1;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;112;816,1312;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;107;448,1360;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;105;304,1360;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;84;-144,1360;Inherit;True;True;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;106;96,1424;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;20;80,-144;Inherit;False;Schlick;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;19;80,-64;Inherit;False;Dielectric;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;18;16,16;Inherit;False;DielectricGeneric;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;659.2902,-141.8876;Inherit;False;True;-1;Fresnel;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;38;0;20;0\nWireConnection;38;1;19;0\nWireConnection;38;2;18;0\nWireConnection;61;0;59;0\nWireConnection;61;1;60;0\nWireConnection;62;0;61;0\nWireConnection;63;0;62;0\nWireConnection;64;0;63;0\nWireConnection;64;1;65;0\nWireConnection;80;0;86;0\nWireConnection;80;1;85;0\nWireConnection;81;0;80;0\nWireConnection;82;0;81;0\nWireConnection;99;0;103;0\nWireConnection;99;1;83;0\nWireConnection;100;0;99;0\nWireConnection;100;1;83;0\nWireConnection;100;2;101;0\nWireConnection;118;0;109;0\nWireConnection;118;1;107;0\nWireConnection;117;0;109;0\nWireConnection;117;1;109;0\nWireConnection;112;0;117;0\nWireConnection;112;1;118;0\nWireConnection;112;2;107;0\nWireConnection;107;0;105;0\nWireConnection;105;0;84;0\nWireConnection;105;1;106;0\nWireConnection;84;0;82;0\nWireConnection;84;1;100;0\nWireConnection;106;0;84;0\nWireConnection;0;0;38;0\nASEEND*/\n//CHKSM=40DBD8FE0B1E975C758E8360425C128E3F9083E4"
+  m_functionName: 
+  m_description: 'Fresnel Equation Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Vector
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

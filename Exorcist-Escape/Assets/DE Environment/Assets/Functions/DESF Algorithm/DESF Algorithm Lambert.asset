@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Algorithm Lambert
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;37;48,-48;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;208,-160;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;14;-1120,-160;Inherit;False;Normal;3;0;False;1;0;FLOAT3;0,0,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.VertexToFragmentNode;49;384,-224;Inherit;False;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;5;-464,-160;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;146;-528,-96;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;147;-528,176;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;150;848,-80;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;141;1216,-96;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;151;1216,0;Inherit;False;FLOAT;3;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;140;1376,-192;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;3;-688,-160;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldNormalVector;58;-960,-160;Inherit;False;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMaxOpNode;6;-320,-160;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;153;-128,32;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;154;-256,96;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LightColorNode;88;-464,16;Inherit;False;0;3;COLOR;0;FLOAT3;1;FLOAT;2\nNode;AmplifyShaderEditor.WireNode;149;848,192;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;148;816,224;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;155;896,-384;Inherit;False;515.2369;123.6647;Lambert;;0,0,0,1;Generates
+    a lighting model using Blinn-Phong reflectance model and closely resembles Unity
+    legacy shaders.;0;0\nNode;AmplifyShaderEditor.IndirectDiffuseLighting;11;-448,208;Inherit;False;World;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;116;992,0;Inherit;False;Diffuse
+    Color;5;1;False;1;0;COLOR;0.3921569,0.3921569,0.3921569,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;119;-784,-64;Inherit;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.NormalizeNode;93;-704,96;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;94;-848,96;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;92;-1072,96;Float;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;95;-1136,256;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.LightAttenuation;156;-192,-48;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;56;624,-192;Inherit;False;Per
+    Pixel;True;0;2;0;Per Vertex;Per Pixel;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;138;928,-192;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;152;1536,0;Inherit;True;False;-1;Alpha;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;12;1536,-192;Inherit;True;True;-1;RGB;1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;37;0;156;0\nWireConnection;37;1;153;0\nWireConnection;8;0;6;0\nWireConnection;8;1;37;0\nWireConnection;49;0;8;0\nWireConnection;5;0;3;0\nWireConnection;5;1;119;0\nWireConnection;146;0;3;0\nWireConnection;147;0;146;0\nWireConnection;150;0;149;0\nWireConnection;141;0;116;0\nWireConnection;151;0;116;0\nWireConnection;140;0;138;0\nWireConnection;140;1;141;0\nWireConnection;3;0;58;0\nWireConnection;58;0;14;0\nWireConnection;6;0;5;0\nWireConnection;153;0;88;1\nWireConnection;153;1;154;0\nWireConnection;154;0;88;2\nWireConnection;149;0;148;0\nWireConnection;148;0;11;0\nWireConnection;11;0;147;0\nWireConnection;93;0;94;0\nWireConnection;94;0;92;0\nWireConnection;94;1;95;0\nWireConnection;56;0;49;0\nWireConnection;56;1;8;0\nWireConnection;138;0;56;0\nWireConnection;138;1;150;0\nWireConnection;152;0;151;0\nWireConnection;12;0;140;0\nASEEND*/\n//CHKSM=CD0FEA1357D4ACA7D7DEAFBAF09FFE0A635BAA53"
+  m_functionName: 
+  m_description: 'Algorithm Lambert Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7529412, g: 0.6784314, b: 0, a: 1}
+  m_customNodeCategory: DESF Algorithm
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

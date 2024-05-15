@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Includes VSP_InstancedIndirect
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18935\n134;89;1636;839;1026.5;300;1;True;True\nNode;AmplifyShaderEditor.StickyNoteNode;1;-456,73.5;Inherit;False;723;143;ReadMe
+    Nature Renderer;;0,0,0,1;\u25CF Pass/Additional Directives  $    #Pragma instancing_options
+    procedural:setupVSPro forwardadd$    #Pragma multi_compile GPU_FRUSTUM_ON __$   
+    #Include DESF Includes VSP_InstancedIndirect.cginc$;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;0,0;Inherit;False;True;-1;Output;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nASEEND*/\n//CHKSM=E5DB762BA026E4070A9761B11B64D98C859E488A"
+  m_functionName: 
+  m_description: 'Last Changed: DE v5.0.0
+
+
+    DESF Includes VSP_InstancedIndirect'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 2
+      LineValue: instancing_options procedural:setupVSPro forwardadd
+      GUIDToggle: 0
+      GUIDValue: 
+      Origin: 2
+    - LineType: 2
+      LineValue: 'multi_compile GPU_FRUSTUM_ON __ '
+      GUIDToggle: 0
+      GUIDValue: 
+      Origin: 2
+    - LineType: 0
+      LineValue: Nature Renderer.cginc
+      GUIDToggle: 1
+      GUIDValue: 98d0b89ad6ecb72489989ff95e259957
+      Origin: 2
+  m_nodeCategory: 0
+  m_customHeader: 0
+  m_customHeaderColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Includes
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

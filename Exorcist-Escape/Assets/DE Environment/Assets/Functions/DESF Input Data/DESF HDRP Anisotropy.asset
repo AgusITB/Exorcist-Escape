@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF HDRP Anisotropy
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.1.5\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19105\nNode;AmplifyShaderEditor.StickyNoteNode;41;-306.117,-103.9786;Inherit;False;220.101;123.2739;;;0,0,0,1;_AnisotropyEnable$_AnisotropyMap$_AnisotropyStrength;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;53;-302.2993,-421.9332;Inherit;False;335.2;182.7;HDRP
+    Anisotropy Node;;0,0,0,1;The highlights of Anisotropic surfaces change in appearance
+    as you view the Material from different angles. $;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;55;-740.09,-428.7433;Inherit;False;337.6001;203.4999;Anisotropy;;0,0,0,1;Use
+    the float to set the direction of the anisotropy effect. $$Negative values make
+    the effect vertical, and positive values make the effect horizontal. $$This stretches
+    the specular highlights in the given direction.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;56;-1280.153,-384.6821;Inherit;False;261;140;Anisotropy
+    Map;;0,0,0,1;The highlights of Anisotropic surfaces change in appearance as you
+    view the Material from different angles;0;0\nNode;AmplifyShaderEditor.SamplerNode;49;-1032.102,-227.2904;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;8;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;57;-507.7154,-198.3957;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;32;-727.4295,-134.981;Half;False;Property;_AnisotropyStrength;AnisotropyStrength;4;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;24;-305.6451,-221.6738;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-122.0514,-221.5414;Inherit;False;True;-1;Anisotropy;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;47;-725.3374,44.99397;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;46;-594.6776,-32.83758;Inherit;False;DESF
+    Utility Register Inline;-1;;44098;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;23;-954.2493,-31.46807;Half;False;Property;_AnisotropyEnable;ENABLE
+    ANISOTROPY;1;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;44;-981.7901,40.27936;Inherit;False;Property;_CATEGORY_ANISOTROPY;CATEGORY_ANISOTROPY;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(ANISOTROPY,true,_AnisotropyEnable,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;45;-955.3666,111.1685;Inherit;False;Property;_SPACE_ANISOTROPY;SPACE_ANISOTROPY;6;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexturePropertyNode;48;-1284.279,-227.2306;Inherit;True;Property;_AnisotropyMap;Anisotropy
+    Map;2;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nWireConnection;49;0;48;0\nWireConnection;49;7;48;1\nWireConnection;57;0;49;1\nWireConnection;57;1;32;0\nWireConnection;24;1;57;0\nWireConnection;24;2;46;0\nWireConnection;0;0;24;0\nWireConnection;47;0;44;0\nWireConnection;47;1;45;0\nWireConnection;46;1;23;0\nWireConnection;46;2;47;0\nASEEND*/\n//CHKSM=7005625BE9227B68D7B7E52AFA28E8ACF574EFCB"
+  m_functionName: 
+  m_description: HDRP Anisotropy Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

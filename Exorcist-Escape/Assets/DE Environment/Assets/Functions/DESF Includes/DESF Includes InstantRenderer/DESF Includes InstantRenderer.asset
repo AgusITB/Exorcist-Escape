@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Includes InstantRenderer
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18935\n283.5;142;1636;835;1286.5;152;1;True;True\nNode;AmplifyShaderEditor.StickyNoteNode;1;-608,60.5;Inherit;False;700;161;ReadMe
+    InstantRenderer;;0,0,0,1;$\u25CF Pass/Additional Directives  $    #Pragma instancing_options
+    procedural:setupInstantRenderer$    #Include InstantRendererInclude.cginc$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;2;-598.5005,237;Inherit;False;416;106;Note;;0,0.5730131,1,1;Note
+    #pragma multi_compile_instancing is already inluded from other shader DESF Includes;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;0,0;Inherit;False;True;-1;Output;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nASEEND*/\n//CHKSM=0837CA00E060D98C545ABFA46C43C336E94B198B"
+  m_functionName: 
+  m_description: 'Last Changed: DE v5.0.0
+
+
+    InstantRenderer'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives:
+    - {fileID: 0}
+    - {fileID: 0}
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems:
+    - LineType: 2
+      LineValue: instancing_options procedural:setupQuadroRenderer
+      GUIDToggle: 0
+      GUIDValue: 
+      Origin: 2
+    - LineType: 0
+      LineValue: Nature Renderer.cginc
+      GUIDToggle: 1
+      GUIDValue: ba928f9e27af5094db502994d31955cc
+      Origin: 2
+  m_nodeCategory: 0
+  m_customHeader: 0
+  m_customHeaderColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Includes
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

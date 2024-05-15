@@ -1,0 +1,378 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Digital Display Cutout
+  m_Shader: {fileID: 4800000, guid: 10599f6ec1f2446f916315726aa27d8d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _GLITCHHALOVERTICALHORIZONTAL1_ON
+  - _HUD_OPACITYSHAKE1_ON
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo1:
+        m_Texture: {fileID: 2800000, guid: fb5938b69ee3b944486c043cdf998547, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 08dd87915147ea3458e99dd43ae4c1a8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorShift_MaskMap:
+        m_Texture: {fileID: 2800000, guid: 8f6c448a39169b44eae7369a3f4ec6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_DisplayEmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_DisplayMap:
+        m_Texture: {fileID: 2800000, guid: 225e0dbe511ed9e4c8dfbb1770356cb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_DisplayMaskMap:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_GlitchMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_GlitchNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 74082dda369008f42a9492dcd339e85f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DISPLAY_GlitchPixelMap:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DigitalPixellateMap:
+        m_Texture: {fileID: 2800000, guid: 7667d14a6f168c840a37c709d714be54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DisplayTexture1:
+        m_Texture: {fileID: 2800000, guid: a9cb7a91894d9824a81bc85dd4bd9e6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission1:
+        m_Texture: {fileID: 2800000, guid: 6b5d07457e7425649b15d03b4548fe21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchFlash_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 8f6c448a39169b44eae7369a3f4ec6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchHalo1:
+        m_Texture: {fileID: 2800000, guid: a7fa549003083f34eb26df969a26875b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchPixel1:
+        m_Texture: {fileID: 2800000, guid: bd8a9ac7e9260624fa1e379192e9d20b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchPixel_Map:
+        m_Texture: {fileID: 2800000, guid: 5ce531d042698104c84833b54697247d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0a6a958f66f05fb4eb5172d98fccfd58, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: 52eb51954a084ed44b31098df555792b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metallic1:
+        m_Texture: {fileID: 2800000, guid: fdbef6804febfed4bb241deba89dd6fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseFlash_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 7e8cd7dbc73ce61468ee246fdc1c5910, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal1:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pixel_Map:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pixel_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 7667d14a6f168c840a37c709d714be54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pixel_NoiseMap1:
+        m_Texture: {fileID: 2800000, guid: e036aac427a23cd4a92d378acbe912f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 22
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.407
+    - _AlphaCutoffBiasShadow: 0.102
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _AlphatoCoverage: 1
+    - _Brightness: 1
+    - _CATEGORY_ALPHACLIP: 1
+    - _CATEGORY_ALPHACLIPPING: 1
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_FLICKER: 1
+    - _CATEGORY_PIXELLATE: 1
+    - _CATEGORY_POSTERIZE: 1
+    - _CATEGORY_SHADOW: 1
+    - _CATEGORY_SHAKE: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _Cerulean_Mode: 0
+    - _Cerulean_Speed: 5.54
+    - _ColorMask: 15
+    - _ColorPosterize_Mode: 0
+    - _ColorShift_DynamicDistance: 5
+    - _ColorShift_DynamicNoiseShift: 3.22
+    - _ColorShift_DynamicOffset: 0.175
+    - _ColorShift_MaskFuzziness: 0.711
+    - _ColorShift_MaskMode: 0
+    - _ColorShift_Mode: 1
+    - _ColorShift_NoiseScale: 1.151
+    - _ColorShift_ShiftInfluence: 0.763
+    - _ColorShift_ShiftSaturation: 0.257
+    - _ColorShift_ShiftVariation: 0.632
+    - _ColorShift_ShiftVariationRGB: -0.027
+    - _Color_ModePosterize: 0
+    - _Color_PosterizePower: 1
+    - _Cull: 0
+    - _CullMode: 0
+    - _DISPLAY_FlashColorMode: 0
+    - _DISPLAY_FlashPlaletteIntensity: 46.3
+    - _DISPLAY_FlashPlaletteSpeed: 0.404
+    - _DISPLAY_GlitchIntensity: 1.05
+    - _DISPLAY_GlitchInterval: 0.218
+    - _DISPLAY_GlitchPixelAmount: 1
+    - _DISPLAY_GlitchPixelColorMode: 0
+    - _DISPLAY_GlitchPixelPlaletteIntensity: 5.8
+    - _DISPLAY_GlitchPixelPlaletteSpeed: 0
+    - _DISPLAY_GlitchPixelTiling: 5
+    - _DISPLAY_GlitchPixelationIntensity: 0
+    - _DISPLAY_GlitchShakeIntensity: 0.3
+    - _DISPLAY_GlitchSpeed: 0.76
+    - _DISPLAY_GlitchWidth: 2.8
+    - _DISPLAY_GlithIntensity: 0
+    - _DISPLAY_GlithShakeIntensity: 0.01
+    - _DISPLAY_ImagePanX: -0.11
+    - _DISPLAY_ImagePanY: 0
+    - _DISPLAY_NoiseColorMode: 0
+    - _DISPLAY_NoiseDirection: 1
+    - _DISPLAY_NoiseFlashSpeed: 2.48
+    - _DISPLAY_NoiseIntensity: 0.23
+    - _DISPLAY_NoisePlaletteIntensity: 0
+    - _DISPLAY_NoisePlaletteSpeed: 0
+    - _DISPLAY_NoisePlaletteSpeed1: 0.044
+    - _DISPLAY_NoiseSpeed: 0.56
+    - _DISPLAY_NoiseWidth: 41.6
+    - _DISPLAY_OffsetX: -0.69
+    - _DISPLAY_OffsetY: 0
+    - _DISPLAY_PanX: 0
+    - _DISPLAY_PanY: 0.04
+    - _DISPLAY_Posterize: 1
+    - _DISPLAY_Rotation: 0
+    - _DISPLAY_TilingX: 6.84
+    - _DISPLAY_TilingY: 1.52
+    - _DigitalBrightness: 0.78
+    - _DigitalFlickerEnable: 1
+    - _DigitalFlickerFrequency: 5
+    - _DigitalFlickerFrequencyScale: 0.5
+    - _DigitalFlickerIsInverted: 0
+    - _DigitalFlickerSpeed: 1
+    - _DigitalOffsetX: 0
+    - _DigitalOffsetY: 0.6
+    - _DigitalPanningSpeedX: 0
+    - _DigitalPanningSpeedY: 0.17
+    - _DigitalPixellateEmissiveIntensity: 1
+    - _DigitalPixellateEmissiveIsRandom: 1
+    - _DigitalPixellateEmissiveRandomSpeed: 0.35
+    - _DigitalPixellateEnable: 1
+    - _DigitalPixellateIntensity: 0.5
+    - _DigitalPixellateIsInverted: 1
+    - _DigitalPixellateSize: 0.15
+    - _DigitalPixellateTiling: 25
+    - _DigitalRotation: 0
+    - _DigitalShakeEnable: 1
+    - _DigitalShakeIntensity: 0.5
+    - _DigitalShakeInterval: 1
+    - _DigitalTilingX: 3
+    - _DigitalTilingY: 3
+    - _DisplayGlitchInterval1: 0.146
+    - _DisplayGlithIntensity1: 0
+    - _DisplayGlithShakeIntensity1: -0.3
+    - _DisplayImagePanX1: 0.11
+    - _DisplayImagePanY1: 0
+    - _DisplayRotation1: 180
+    - _EmissionFlags: 3
+    - _EmissiveEnable: 1
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_Pixel: 1
+    - _EmissiveIsRandom: 1
+    - _EmissiveRandomSpeed: 0.718
+    - _EmissiveRandomSpeed_Pixel: 0.35
+    - _EmissiveRenderFace: 0
+    - _EmissiveisGlobal: 0
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 1
+    - _Flicker_Speed: 0.185
+    - _Float0: 1
+    - _Float1: 10
+    - _GlancingClipMode: 0
+    - _GlitchBanding_Direction: 0
+    - _GlitchBanding_Intensity: 2.08
+    - _GlitchBanding_Mode: 0
+    - _GlitchBanding_Speed: 3.08
+    - _GlitchBanding_Width: 56.9
+    - _GlitchFlash_FlashSpeed: 0.69
+    - _GlitchFlash_Mode: 0
+    - _GlitchFlash_Speed: 0.477
+    - _GlitchFlash_Time: 200
+    - _GlitchFlicker_Mode: 0
+    - _GlitchFlicker_Speed: 0.5
+    - _GlitchHaloEmissionIntensity1: 16.6
+    - _GlitchHaloIntensity1: 3.72
+    - _GlitchHaloSpeed1: 3.35
+    - _GlitchHaloVerticalHorizontal1: 1
+    - _GlitchHaloWidth1: 7.1
+    - _GlitchPixelAmount1: 0.07
+    - _GlitchPixelTiling1: 2.78
+    - _GlitchPixel_Amount: 1
+    - _GlitchPixel_Intensity: 1
+    - _GlitchPixel_Mode: 0
+    - _GlitchPixel_Tiling: 5
+    - _GlitchPixelationIntensity1: 0.289
+    - _GlitchPosterize_Mode: 0
+    - _GlitchPosterize_PosterizePower: 82
+    - _GlitchShake_Intensity: 0.3
+    - _GlitchShake_Interval: 1.09
+    - _GlitchShake_Mode: 1
+    - _GlossyReflections: 1
+    - _HUD_NoiseDirection1: 0
+    - _HUD_NoiseSpeed1: 5.28
+    - _HUD_NoiseWidth1: 47.9
+    - _HUD_OpacityShake1: 1
+    - _HUD_OpacityShift1: 0.88
+    - _MaskClipValue: 0.5
+    - _MetallicStrength: 0
+    - _MipBias: 0.76
+    - _NoiseFlash_FlashSpeed: 5
+    - _NormalStrength: 0.14
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.5
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _PALATTE_ColorMode: 0
+    - _Pixel_Amount: 0.15
+    - _Pixel_EmissionStrength: 0.588
+    - _Pixel_EmissiveStrength: 71.1
+    - _Pixel_Intensity: 0.621
+    - _Pixel_Mode: 2
+    - _Pixel_Mode1: 0
+    - _Pixel_Size: 5
+    - _Pixel_Tiling: 200
+    - _Pixel_TintSpeed: 0.098
+    - _Posterize1: 63
+    - _Posterize_Mode: 1
+    - _Posterize_Power: 56.7
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_EMISSION: 0
+    - _SPACE_FLICKER: 0
+    - _SPACE_PIXELLATE: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SHAKE: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessStrength: 0.607
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.217
+    - _SpecularHighlights: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _TillingMode: 0
+    - _UV_IntensityShake: 1
+    - _UV_IntensityShake2: 0.5
+    - _UV_IntervalShake: 0.5
+    - _UV_IntervalShake2: 1
+    - _UV_ModeShake: 1
+    - _UV_ModeShake2: 1
+    - _UV_OffsetX: 1
+    - _UV_OffsetY: 0.62
+    - _UV_PanningSpeedX: 0
+    - _UV_PanningSpeedY: 0
+    - _UV_Rotation: 0
+    - _UV_ShakeIntensity: 0.1
+    - _UV_ShakeInterval: 0.6
+    - _UV_ShakeMode: 1
+    - _UV_TilingX: 3
+    - _UV_TilingY: 3
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _Alpha: {r: 1, g: 11, b: 11, a: 11}
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 0, g: 0.273737, b: 0.94509804, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _DISPLAY_GlitchPixelTint: {r: 0, g: 0.20499441, b: 6.3706064, a: 0.7019608}
+    - _DISPLAY_GlitchTint: {r: 0, g: 0.8344827, b: 1, a: 0}
+    - _DISPLAY_NoiseFlashTint: {r: 0.8962264, g: 0.12787504, b: 0, a: 1}
+    - _DISPLAY_NoiseTint: {r: 7.0465865, g: 1.9678478, b: 0, a: 1}
+    - _DigitalPixellateEmissiveColor: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _DisplayOffset1: {r: 0, g: 0, b: 0, a: 0}
+    - _DisplayTiling1: {r: 1, g: 1, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 1.4980392, b: 0.47843137, a: 0}
+    - _EmissiveColorPixel: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _EmissiveColor_Pixel: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _GlitchBanding_Tint: {r: 0, g: 6.426869, b: 6.426869, a: 0.8039216}
+    - _GlitchFlash_Tint: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.41568628}
+    - _GlitchHaloTint1: {r: 1, g: 0, b: 0.08961105, a: 0}
+    - _GlitchPixelTint1: {r: 0.6187501, g: 0, b: 1, a: 0}
+    - _GlitchPixel_Tint: {r: 0.745283, g: 0, b: 0, a: 1}
+    - _MainUVs: {r: 5, g: 5, b: 0.45, a: 0}
+    - _NoiseFlash_Tint: {r: 0, g: 0.4615445, b: 1, a: 0.45882353}
+    - _Pixel_EmissionTint: {r: 1, g: 0.7384396, b: 0, a: 0}
+    - _PixellateUVs: {r: 25, g: 25, b: 0, a: 0}
+  m_BuildTextureStacks: []

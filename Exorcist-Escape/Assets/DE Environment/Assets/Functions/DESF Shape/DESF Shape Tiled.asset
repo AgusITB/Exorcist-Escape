@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Shape Tiled
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.FmodOpNode;13;-544.5295,-99.35304;Inherit;False;2;0;FLOAT;0;False;1;FLOAT2;1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;15;-716.3334,-219.4744;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;14;-867.4433,-222.1235;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleRemainderNode;2;-391.9129,-119.7215;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;1;-613.9071,-2.503588;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-230.9001,-215.2;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionNode;6;-39.10771,-214.4137;Inherit;False;DESF
+    Pattern Ellipse;-1;;2;5879149f841932d47aaaef71a9c46e7b;1,22,1;5;13;FLOAT2;0,0;False;9;FLOAT;0.5;False;8;FLOAT;0.5;False;20;FLOAT;2;False;21;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;19;-214.2068,-113.2001;Inherit;False;Ellipse
+    Size;1;1;False;1;0;FLOAT;0.31;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;17;-699.2759,-100.2307;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;20;-851.1038,-100.8134;Inherit;False;Tilled;1;2;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;18;0,-320;Inherit;False;Color;5;0;False;1;0;COLOR;1,1,1,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;192,-320;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.StickyNoteNode;21;-384,-544;Inherit;False;387.5208;159.8074;Shape
+    Tiled Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;384,-320;Inherit;True;True;-1;Output;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;13;0;17;0\nWireConnection;13;1;15;0\nWireConnection;15;0;14;0\nWireConnection;15;1;14;0\nWireConnection;2;0;1;0\nWireConnection;2;1;13;0\nWireConnection;4;0;15;0\nWireConnection;4;1;2;0\nWireConnection;6;13;4;0\nWireConnection;6;9;19;0\nWireConnection;6;8;19;0\nWireConnection;17;0;20;0\nWireConnection;8;0;18;0\nWireConnection;8;1;6;0\nWireConnection;0;0;8;0\nASEEND*/\n//CHKSM=E18F16A15068395D314711F41817D999BABD5D8A"
+  m_functionName: 
+  m_description: 'Shape Tiled Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6901961, g: 0.17254902, b: 0.023529412, a: 1}
+  m_customNodeCategory: DESF Shape
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

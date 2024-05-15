@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF RT LED Screen
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleTimeNode;1;-411.2851,-342.0296;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;12;1007.944,-191.5008;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;35;1365.263,-600.1978;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.LengthOpNode;10;675.2657,-339.0296;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;39;1525.244,-240.3087;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;33;860.6787,-552.619;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;30;704.1697,-553.8704;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;27;1414.549,159.8032;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SamplerNode;23;770.3312,-50.69784;Inherit;True;Property;_TextureSample2;Texture
+    Sample 2;3;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;MipLevel;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;6;108.7148,-326.0296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;1E-05;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;38;1290.244,-190.3087;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;20;770.5667,154.1841;Inherit;True;Property;_TextureSample1;Texture
+    Sample 1;3;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;MipLevel;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;53;1744,240;Inherit;False;240;226;;;0,0,0,1;_RTCamera$_RTOffsetX$_RTOffsetY$_RTBlur$_RTExposure$_EmissionFlags$_RTRGBPixelMap$_RTRGBPixelX$_RTRGBPixelY$_RTRGBPixelSpeed;0;0\nNode;AmplifyShaderEditor.ScreenParams;32;475.0397,-746.6896;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;52;249.8305,-321.473;Inherit;False;DESF
+    Wave Noise Sine;-1;;2;1d3209c60d9e820459f2436f98e0911c;0;2;6;FLOAT;0;False;14;FLOAT2;0,1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-210.2852,-265.0296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;50;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;5;-45.28518,-325.0296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;525.4773,-341.0296;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;37;1154.95,-191.2861;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;11;831.1668,-337.0296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;18;528.8002,395.8323;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.TextureCoordinatesNode;29;437.4775,-576.4081;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;16;540.8308,-19.50526;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-206.2852,-366.0296;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;34;1033.464,-580.1645;Inherit;True;Property;_RTRGBPixelMap;RGB
+    Pixel Map;8;1;[HDR];Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;19;767.355,368.2844;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;MipLevel;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;15;328.6166,180.2621;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.RangedFloatNode;24;206.6404,-193.9948;Half;False;Property;_RTBlur;Blur;4;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;36;1201.242,-671.5659;Half;False;Constant;_Float3;Float
+    3;6;0;Create;True;0;0;0;False;0;False;3;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;25;547.9641,-115.5122;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;26;1127.444,182.4073;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;2;-520.809,-268.0296;Half;False;Property;_RTRGBPixelSpeed;RGB
+    Pixel Speed;11;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexturePropertyNode;22;472.9083,498.8916;Inherit;True;Property;_RTCamera;RT
+    Camera;1;2;[HDR];[NoScaleOffset];Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.DynamicAppendNode;49;144,208;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;13;112,32;Inherit;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;50;-32,208;Half;False;Property;_RTOffsetX;Offset
+    X;2;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;51;-32,288;Half;False;Property;_RTOffsetY;Offset
+    Y;3;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;1664,-640;Inherit;False;385.6014;167.5622;RT
+    LED Screen Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;41;1760,128;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionNode;58;1104,560;Inherit;False;DESF
+    Emission Flags;6;;3;3dfe3c4d6149b6c48b5287e33c05b24f;0;3;15;FLOAT;0;False;2;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;28;816,560;Half;False;Property;_RTExposure;Exposure;5;0;Create;False;0;0;0;False;0;False;1;1;0;4;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;56;1264,0;Inherit;False;Property;_SPACE_RENDERTEXTURE;SPACE_RENDERTEXTURE;12;0;Create;True;0;0;0;True;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;55;1264,-64;Inherit;False;Property;_CATEGORY_RENDERTEXTURE;CATEGORY_RENDER
+    TEXTURE;0;0;Create;True;0;0;0;True;1;DE_DrawerCategory(RENDER TEXTURE,true,_RTCamera,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;40;1296,-288;Half;False;Constant;_Float4;Float
+    4;6;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;43;128,-512;Half;False;Property;_RTRGBPixelX;RGB
+    Pixel X;10;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;44;128,-416;Half;False;Property;_RTRGBPixelY;RGB
+    Pixel Y;9;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;42;336,-448;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1920,128;Inherit;False;True;-1;Emission;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;12;0;24;0\nWireConnection;12;1;11;0\nWireConnection;35;0;36;0\nWireConnection;35;1;34;0\nWireConnection;10;0;8;0\nWireConnection;39;0;40;0\nWireConnection;39;1;35;0\nWireConnection;39;2;38;0\nWireConnection;33;0;30;0\nWireConnection;30;0;32;4\nWireConnection;30;1;29;2\nWireConnection;27;0;58;0\nWireConnection;27;1;26;0\nWireConnection;23;0;22;0\nWireConnection;23;1;16;0\nWireConnection;23;2;25;0\nWireConnection;6;0;5;0\nWireConnection;38;0;37;0\nWireConnection;20;0;22;0\nWireConnection;20;1;15;0\nWireConnection;20;2;25;0\nWireConnection;52;6;6;0\nWireConnection;4;0;2;0\nWireConnection;5;0;3;0\nWireConnection;5;1;4;0\nWireConnection;8;0;42;0\nWireConnection;8;1;52;0\nWireConnection;37;0;12;0\nWireConnection;11;0;10;0\nWireConnection;18;0;15;0\nWireConnection;18;1;42;0\nWireConnection;16;0;15;0\nWireConnection;16;1;42;0\nWireConnection;3;0;2;0\nWireConnection;3;1;1;0\nWireConnection;34;1;33;0\nWireConnection;19;0;22;0\nWireConnection;19;1;18;0\nWireConnection;19;2;25;0\nWireConnection;15;0;13;0\nWireConnection;15;1;49;0\nWireConnection;25;0;24;0\nWireConnection;26;0;23;1\nWireConnection;26;1;20;2\nWireConnection;26;2;19;3\nWireConnection;49;0;50;0\nWireConnection;49;1;51;0\nWireConnection;41;0;39;0\nWireConnection;41;1;27;0\nWireConnection;58;15;28;0\nWireConnection;58;2;28;0\nWireConnection;58;8;28;0\nWireConnection;42;0;43;0\nWireConnection;42;1;44;0\nWireConnection;0;0;41;0\nASEEND*/\n//CHKSM=5AB2CDD26DCEDEE1EA3F9D80A80F3024778702C6"
+  m_functionName: 
+  m_description: 'RT LED Screen Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 1, g: 0.4, b: 0, a: 1}
+  m_customNodeCategory: DESF Render Texture
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Alpha Clip Threshold Shadow
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;34;97.16068,377.2424;Inherit;False;216;171;Type;;0,0,0,1;x
+    = Shadow Mask Pixel$y = Shadow Mask Inderect;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;78;512,-256;Inherit;False;635.584;201.5926;Alpha
+    Clip Threshold Shadow Node;;0.1132075,0.1132075,0.1132075,1;_AlphaCutoffShadow(\"_AlphaCutoffShadow\",
+    Range(0.0, 1.0)) = 0.5$$Hide in inspector:$this property will show in the \"Surface
+    Options\" of HD template$works with Opaue also when a texture has alpha channel$$$working
+    with surface or cutout the alpha port should be connected to the albedo alpha
+    channel \"Alpha\" in ASE templates ;0;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;42;534.762,272.9418;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;36;359.5489,275.1825;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;6;-131.2046,360.2597;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;73;844.4274,144.869;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;72;297.4274,107.869;Inherit;False;4;0;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;76;-107.5902,-13.38186;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;71;-375.208,-96.39375;Half;False;Property;_AlphaCutoffBiasShadow;Alpha
+    Cutoff Bias Shadow;1;0;Create;False;1;;0;0;False;0;False;0.5;0.9;0.01;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;77;13.2613,-96.27427;Inherit;False;DESF
+    Utility Register Inline;-1;;57693;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;75;-352,-16;Inherit;False;Property;_CATEGORY_SHADOW;CATEGORY_SHADOW;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(SHADOW,true,_AlphaCutoffBiasShadow,0,0);False;0;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;74;-320,64;Inherit;False;Property;_SPACE_SHADOW;SPACE_SHADOW;10;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;28;224,272;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;10;48,272;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;63;-128,272;Inherit;False;FLOAT2;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;37;-352,464;Float;False;Constant;_6;-0.5;49;0;Create;True;0;0;0;False;0;False;-0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;61;-448,272;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;9;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;57;-720,272;Inherit;True;Property;_ShadowMaskMap;Shadow
+    Mask Map;5;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.TextureCoordinatesNode;13;-704,128;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;1;-16,176;Half;False;Property;_AlphaCutoffShadow;_AlphaCutoffShadow;2;1;[HideInInspector];Create;False;0;0;0;False;0;False;0.5;0.851;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;29;752,272;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;27;928,176;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;32;1088,112;Inherit;False;Shadow
+    Masked;True;0;2;-1;In 0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;46;160,464;Half;False;Property;_ShadowMaskType;Type;4;1;[Header];Create;False;1;SHADOW
+    MASK;0;0;False;2;DE_DrawerFloatEnum(Shadow Mask Pixel _Shadow Mask Inderect);Space(5);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;38;-384,544;Half;False;Property;_ShadowMaskStrength;Shadow
+    Strength;6;0;Create;False;0;0;0;False;0;False;1;0.45;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;41;752,368;Half;False;Property;_EnableShadowMask;Enable;3;1;[Header];Create;False;1;SHADOW
+    MASK;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;49;-1584,-64;Half;False;Property;_ShadowMaskRange;Shadow
+    Range;7;0;Create;False;0;0;0;False;0;False;0;0.25;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;48;-1280,-144;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;17;-1152,-144;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;62;-1520,-144;Inherit;False;DESF
+    Dot NdotV;-1;;1;37647a453ee38af4d858e0b5083bbb60;3,27,0,30,1,28,1;1;24;FLOAT3;0,0,1;False;1;FLOAT;23\nNode;AmplifyShaderEditor.RangedFloatNode;20;-1424,32;Half;False;Property;_ShadowMaskSharpness;Shadow
+    Sharpness;8;0;Create;False;0;0;0;False;0;False;1;0.25;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;19;-1392,112;Half;False;Property;_ShadowMaskOffset;Shadow
+    Offset;9;0;Create;False;0;0;0;False;0;False;0;0.45;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;16;-944,-144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;15;-800,-144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;22;-864,-272;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;45;-640,-272;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1344,112;Inherit;False;True;-1;Alpha
+    Clip Threshold Shadow;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;42;0;36;0\nWireConnection;42;1;72;0\nWireConnection;42;2;72;0\nWireConnection;36;0;28;0\nWireConnection;36;1;28;1\nWireConnection;36;2;46;0\nWireConnection;6;0;37;0\nWireConnection;6;1;61;1\nWireConnection;6;2;38;0\nWireConnection;73;0;72;0\nWireConnection;72;0;77;0\nWireConnection;72;3;77;0\nWireConnection;72;1;77;0\nWireConnection;72;2;1;0\nWireConnection;76;0;75;0\nWireConnection;76;1;74;0\nWireConnection;77;1;71;0\nWireConnection;77;2;76;0\nWireConnection;28;0;10;0\nWireConnection;10;0;63;0\nWireConnection;10;1;6;0\nWireConnection;63;0;61;0\nWireConnection;61;0;57;0\nWireConnection;61;1;13;0\nWireConnection;61;7;57;1\nWireConnection;29;0;42;0\nWireConnection;27;0;73;0\nWireConnection;27;1;29;0\nWireConnection;27;2;41;0\nWireConnection;32;0;72;0\nWireConnection;32;1;27;0\nWireConnection;48;0;62;23\nWireConnection;48;1;49;0\nWireConnection;17;0;48;0\nWireConnection;17;1;20;0\nWireConnection;17;2;19;0\nWireConnection;16;0;17;0\nWireConnection;15;0;16;0\nWireConnection;45;0;22;0\nWireConnection;45;1;15;0\nWireConnection;0;0;32;0\nASEEND*/\n//CHKSM=0C9E33C0F23E011C9F708B3487800C21BB2E8F7C"
+  m_functionName: 
+  m_description: 'Alpha Clip Threshold Shadow Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Fragment
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Absolute
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;67;402.4122,224;Inherit;False;868.7358;479.1858;Bouncing;5;66;69;68;65;64;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;63;-416,224;Inherit;False;765.8608;474.7272;Turn
+    Negatives Positive;5;62;58;50;47;70;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;42;32,-144;Inherit;False;248;304;Absolute
+    X position;1;41;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;40;-434,-146;Inherit;False;440;304;World
+    X position;2;38;39;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;26;-447.1508,-480;Inherit;False;577.6412;283.7895;Absolute
+    Node;3;19;37;0;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;-224,-416;Inherit;False;323.1903;185;;;0,0,0,1;The
+    Abs Node provides the absolute value of a scalar or of the individual components
+    of vectors. $$In practice it means removing any negative sign of a value, leaving
+    only the absolute value;0;0\nNode;AmplifyShaderEditor.AbsOpNode;37;-384,-416;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;38;-384,-96;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ScaleNode;39;-192,-96;Inherit;True;2;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;41;80,-96;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;43;288,-96;Inherit;False;390.0048;176.3154;;;0,0,0,1;The
+    Absolute Node will makes all inputs positive, regardless of if they're positive
+    or negative.$$It's important to know that in most cases the shader compiler can
+    perform the absolute operation without any shader instructions - so usually,
+    you get an absolute operation for free.;0;0\nNode;AmplifyShaderEditor.WorldNormalVector;47;-336,272;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;50;-368,416;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;58;-112,272;Inherit;True;2;0;FLOAT3;1,1,1;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;62;144,272;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;64;432,272;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;65;624,272;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;68;496,480;Inherit;False;262;117;;;0,0,0,1;In
+    this example, the Sine of time gives us a value that oscilates back and forth
+    between 1 and -1.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;69;880,480;Inherit;False;343.9999;163;;;0,0,0,1;Using
+    the Absolute node, now our data goes from 1 to 0 and back to 1, so it's more
+    like a bounce than a wave.$$The same thing could also be done with vertex position
+    to actually make your model bounce.;0;0\nNode;AmplifyShaderEditor.AbsOpNode;66;944,272;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;70;0,496;Inherit;False;287;166;;;0,0,0,1;If
+    you want the result to be positive on both ends instead, you can use the Absolute
+    node to remove the negative sign from the negative values. $$Now we get 1 to
+    0 and back to 1 again.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;71;-896,-480;Inherit;False;392.3173;183.4394;Reference
+    Implementation;;0,0,0,1;abs for a float scalar could be implemented like this.$$float
+    abs(float a)${$  return max(-a, a)@$};0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;32,-272;Inherit;False;True;-1;Out;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;39;0;38;1\nWireConnection;41;0;39;0\nWireConnection;58;0;47;0\nWireConnection;58;1;50;0\nWireConnection;62;0;58;0\nWireConnection;65;0;64;0\nWireConnection;66;0;65;0\nASEEND*/\n//CHKSM=0B3C4F4C8F06C86D2D5BEE2AC0E1CA1AA3603E2C"
+  m_functionName: 
+  m_description: 'Absolute Node
+
+
+    Teaching Sample
+
+
+    Abs
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Water Refraction
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.WireNode;107;-2333.237,-224.5147;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;108;-2339.501,151.2592;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SurfaceDepthNode;33;-2598.193,159.1287;Inherit;False;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;109;-1559.77,-185.3715;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;110;-1551.941,304.7003;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;113;-1605.176,-160.3199;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;115;-576.0099,-167.4506;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;116;-565.0496,123.7743;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;118;-368.241,-62.9952;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;122;128,-384;Inherit;False;513;251;Water
+    Refraction Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;101;-1840,320;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalVertexDataNode;103;-2080,320;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwizzleNode;20;-1696,320;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;4;-1872,48;Inherit;False;Boundaries;False;0;2;-1;Continous;Discontinous;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;114;-1616,48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;8;-2080,48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;5;-2080,128;Inherit;False;Constant;_Float2;Float
+    1;0;0;Create;True;1;;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;6;-2304,48;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenDepthNode;7;-2560,48;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;100;-2128,-496;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;99;-2400,-400;Inherit;False;Property;_SPACE_REFRACTION;SPACE_REFRACTION;6;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;97;-2400,-496;Inherit;False;Property;_CATEGORY_REFRACTION;CATEGORY_REFRACTION;3;0;Create;True;0;0;0;False;1;DE_DrawerCategory(REFRACTION,true,_WaterRefractionScale,0,0);False;0;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;39;-2432,-576;Half;False;Property;_WaterRefractionScale;Refraction
+    Scale;5;0;Create;False;1;;0;0;False;0;False;0.2;0.5;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;119;-2112,-656;Inherit;False;RefractionScale;-1;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;98;-2000,-576;Inherit;False;DESF
+    Utility Register Inline;-1;;44098;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;28;-2080,-320;Inherit;False;Strength
+    Scaling;False;0;2;-1;Scale with distance;Constant;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;31;-2272,-320;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;16;-2272,-208;Inherit;False;Constant;_Float3;Float
+    2;0;0;Create;True;1;;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;29;-1688.88,-326.5113;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;21;-1488,-256;Inherit;False;3;3;0;FLOAT2;1,1;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;22;-1280,-160;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;17;-1504,-48;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenDepthNode;27;-1136,64;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;3;-896,128;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;9;-720,128;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;24;-304,-80;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;2;-512,-256;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;117;-368,-208;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;15;-160,-80;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScreenColorNode;89;48,-80;Float;False;Global;_GrabScreen3;Grab
+    Screen 0;5;0;Create;True;1;;0;0;False;0;False;Object;-1;False;False;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenColorNode;105;48,96;Float;False;Global;_GrabScreen4;Grab
+    Screen 0;5;0;Create;True;1;;0;0;False;0;False;Object;-1;False;False;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;106;272,-80;Inherit;False;4;0;COLOR;0,0,0,0;False;3;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ColorNode;123;272,80;Inherit;False;Property;_RefractionColor;Refraction
+    Color;4;0;Create;True;0;0;0;False;0;False;0.9811321,0.9811321,0.9811321,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;120;816,-80;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;124;576,0;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.GetLocalVarNode;121;576,128;Inherit;False;119;RefractionScale;1;0;OBJECT;;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;102;-2176,480;Inherit;False;DESF
+    Camera Distance Mask;0;;57893;3d302945079b1904eb60acc54cde7b6c;2,18,1,56,0;2;7;FLOAT;80;False;5;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;92;992,-80;Inherit;False;True;-1;Refraction;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;107;0;108;0\nWireConnection;108;0;33;0\nWireConnection;109;0;110;0\nWireConnection;110;0;20;0\nWireConnection;113;0;114;0\nWireConnection;115;0;116;0\nWireConnection;116;0;9;0\nWireConnection;118;0;117;0\nWireConnection;101;0;103;0\nWireConnection;101;1;102;0\nWireConnection;20;0;101;0\nWireConnection;4;0;8;0\nWireConnection;4;1;5;0\nWireConnection;114;0;4;0\nWireConnection;8;0;6;0\nWireConnection;6;0;7;0\nWireConnection;6;1;33;0\nWireConnection;100;0;97;0\nWireConnection;100;1;99;0\nWireConnection;119;0;39;0\nWireConnection;98;1;39;0\nWireConnection;98;2;100;0\nWireConnection;28;0;31;0\nWireConnection;28;1;16;0\nWireConnection;31;0;107;0\nWireConnection;29;0;98;0\nWireConnection;29;1;28;0\nWireConnection;21;0;109;0\nWireConnection;21;1;29;0\nWireConnection;21;2;113;0\nWireConnection;22;0;21;0\nWireConnection;22;1;17;0\nWireConnection;27;0;22;0\nWireConnection;3;0;27;0\nWireConnection;3;1;33;0\nWireConnection;9;0;3;0\nWireConnection;24;0;118;0\nWireConnection;24;1;17;0\nWireConnection;2;0;21;0\nWireConnection;2;1;115;0\nWireConnection;117;0;2;0\nWireConnection;15;0;24;0\nWireConnection;89;0;15;0\nWireConnection;105;0;15;0\nWireConnection;106;0;89;0\nWireConnection;106;3;89;0\nWireConnection;106;1;89;0\nWireConnection;106;2;105;0\nWireConnection;120;0;106;0\nWireConnection;120;1;121;0\nWireConnection;124;1;123;0\nWireConnection;92;0;120;0\nASEEND*/\n//CHKSM=4CA767A80D5B372BE30E84D381E67163C590ACC4"
+  m_functionName: 
+  m_description: 'Water Refraction Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Water
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

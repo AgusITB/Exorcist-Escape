@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Weather Snow Sparkles
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;189;-268.6334,938.4621;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;210;573.3066,892.2195;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;247;-1043.246,1001.104;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ClampOpNode;205;434.9656,1253.431;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.2132353;False;2;FLOAT;0.8970588;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;202;-40.88697,1250.338;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;207;-172.4237,1251.325;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StepOpNode;191;15.75744,938.0592;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;250;768,1136;Inherit;False;425.481;247.9781;**DESF
+    Sample Snow Sparkles;;0.05660379,0.05660379,0.05660379,1;_SnowSparkleColor$_SnowSparkleMap$_SnowSparkleSaturate$_SnowSparkleStrength$_SnowSparkleFlicker$_SnowSparkleCutoff$_SnowSparkleFrequency$_SnowSparkleScreenContribution$_SnowSparkleAnimation$_SnowSparkleSpeed$$;0;0\nNode;AmplifyShaderEditor.OneMinusNode;192;153.754,937.0355;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;209;-480.924,1251.504;Inherit;False;1;0;FLOAT;155;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;203;119.8293,1252.775;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;222;-1174.042,558.223;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ComponentMaskNode;49;-1375.991,404.1461;Inherit;False;True;True;False;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LerpOp;230;-867.0064,824.3624;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;225;-998.8034,787.1053;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;227;-1337.856,811.705;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SaturateNode;204;285.7654,1251.372;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;208;-305.748,1251.198;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;55;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TextureCoordinatesNode;165;-1791.211,807.2266;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;57;379.4243,912.6439;Inherit;False;3;3;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.OneMinusNode;206;-51.40501,1318.446;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;68;-869.4355,1151.804;Inherit;False;SS
+    MainTex;13;0;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.WireNode;245;-1077.246,880.1036;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LerpOp;233;-869.5834,1024.242;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;248;-1219.246,982.1036;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NegateNode;237;-1192.819,1072.959;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;236;-1399.718,1071.859;Inherit;False;1;0;FLOAT;0.1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;234;-639.4864,997.3054;Inherit;True;Property;_TextureSample4;Texture
+    Sample 3;24;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;136;-636.1566,797.5176;Inherit;True;Property;_TextureSample3;Texture
+    Sample 3;24;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WireNode;223;-734.3069,685.045;Inherit;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.WireNode;235;-754.7026,713.3606;Inherit;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;232;-1037.175,1047.898;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexturePropertyNode;157;-2060.199,657.3604;Inherit;True;Property;_SnowSparkleMap;Sparkle
+    Map;1;1;[SingleLineTexture];Create;False;0;0;0;False;0;False;None;None;False;black;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.SimpleAddOpNode;229;-1001.614,878.0191;Inherit;False;3;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;246;-934.2461,1017.104;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;244;-1067.246,861.1036;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;54;-1591.397,403.577;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;162;-1542.141,813.4734;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;216;-263.3159,1034.534;Half;False;Property;_SnowSparkleCutoff;Sparkle
+    Cutoff;5;0;Create;False;0;0;0;False;0;False;0.002;0.0001;0.002;0.005;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;215;31.8556,1035.492;Half;False;Property;_SnowSparkleStrength;Sparkle
+    Strength;3;0;Create;False;1;;0;0;False;0;False;25;5;0;25;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;217;-356.2077,1370.896;Half;False;Property;_SnowSparkleFlicker;Sparkle
+    Flicker;4;0;Create;False;1;;0;0;False;0;False;0;0.002;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;211;-652.9009,1248.23;Half;False;Constant;_GlitchFlash_Time1;Time;3;0;Create;False;0;0;0;False;0;False;200;155;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;228;-1487.086,938.123;Half;False;Constant;_Float0;Float
+    0;11;0;Create;True;0;0;0;False;0;False;1.1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;226;-1806.183,936.3019;Half;False;Property;_SnowSparkleFrequency;Sparkle
+    Frequency;6;0;Create;False;0;0;0;False;0;False;5;4;0;25;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;238;-1693.619,1068.059;Half;False;Property;_SnowSparkleSpeed;Sparkle
+    Speed;9;0;Create;False;0;0;0;False;0;False;0.001;0.002;0;0.1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;221;-1506.544,574.8102;Half;False;Property;_SnowSparkleScreenContribution;Screen
+    Contribution;7;0;Create;False;0;0;0;False;0;False;0.2;0.2;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;251;349.9948,579.5209;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;252;207.6001,753.9044;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;231;-1121.482,1182.434;Half;False;Property;_SnowSparkleAnimation;Sparkle
+    Animation;8;0;Create;False;0;0;0;False;1;DE_DrawerToggleNoKeyword;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;219;-58.41916,579.1382;Half;False;Constant;_Color2;Color
+    0;2;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WireNode;253;-1099.16,907.2108;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SaturateNode;239;758.7551,956.4569;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;240;938.1696,889.4734;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;241;765.6423,1038.079;Half;False;Property;_SnowSparkleSaturate;Saturate;2;0;Create;False;0;0;0;False;1;DE_DrawerToggleNoKeyword;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;218;-58.53926,755.0682;Half;False;Property;_SnowSparkleColor;Sparkle
+    Color;0;1;[HDR];Create;False;0;0;0;False;0;False;1,1,1,0;1,0.7779999,0.2971669,1;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;254;640,480;Inherit;False;382.8328;153.0184;Weather
+    Snow Sparkles Node ;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;70;1124.818,890.1641;Inherit;False;True;-1;Out;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;189;0;136;2\nWireConnection;189;1;234;2\nWireConnection;210;0;251;0\nWireConnection;210;1;57;0\nWireConnection;210;2;205;0\nWireConnection;247;0;245;0\nWireConnection;205;0;204;0\nWireConnection;202;0;207;0\nWireConnection;207;0;208;0\nWireConnection;191;0;189;0\nWireConnection;191;1;216;0\nWireConnection;192;0;191;0\nWireConnection;209;0;211;0\nWireConnection;203;0;202;0\nWireConnection;203;1;206;0\nWireConnection;222;0;49;0\nWireConnection;222;1;221;0\nWireConnection;49;0;54;0\nWireConnection;230;0;225;0\nWireConnection;230;1;229;0\nWireConnection;230;2;231;0\nWireConnection;225;0;222;0\nWireConnection;225;1;227;0\nWireConnection;227;0;162;0\nWireConnection;227;1;228;0\nWireConnection;204;0;203;0\nWireConnection;208;0;209;0\nWireConnection;165;2;157;0\nWireConnection;57;0;252;0\nWireConnection;57;1;192;0\nWireConnection;57;2;215;0\nWireConnection;206;0;217;0\nWireConnection;245;0;227;0\nWireConnection;233;0;246;0\nWireConnection;233;1;232;0\nWireConnection;233;2;231;0\nWireConnection;248;0;236;0\nWireConnection;237;0;236;0\nWireConnection;236;0;238;0\nWireConnection;234;0;235;0\nWireConnection;234;1;233;0\nWireConnection;234;7;68;0\nWireConnection;136;0;223;0\nWireConnection;136;1;230;0\nWireConnection;136;7;68;0\nWireConnection;223;0;157;0\nWireConnection;235;0;157;0\nWireConnection;232;0;253;0\nWireConnection;232;1;237;0\nWireConnection;229;0;222;0\nWireConnection;229;1;244;0\nWireConnection;229;2;248;0\nWireConnection;246;0;247;0\nWireConnection;244;0;227;0\nWireConnection;162;0;165;0\nWireConnection;162;1;226;0\nWireConnection;251;0;219;0\nWireConnection;252;0;218;0\nWireConnection;253;0;227;0\nWireConnection;239;0;210;0\nWireConnection;240;0;210;0\nWireConnection;240;1;239;0\nWireConnection;240;2;241;0\nWireConnection;70;0;240;0\nASEEND*/\n//CHKSM=FC4E1A17F8E46207B775861DDC48233A6EB6AD7A"
+  m_functionName: 
+  m_description: 'Weather Snow Sparkles Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0, g: 0.3764706, b: 0.30980393, a: 1}
+  m_customNodeCategory: DESF Weather
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

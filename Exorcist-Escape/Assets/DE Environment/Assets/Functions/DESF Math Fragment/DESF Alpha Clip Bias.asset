@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Alpha Clip Bias
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.1\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19301\nNode;AmplifyShaderEditor.StickyNoteNode;57;1616,-944;Inherit;False;236.676;117.9838;Alpha
+    Cutoff Bias;;0,0,0,1;Sharpens the alpha to the width of a single pixel;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;176;1184,-1264;Inherit;False;255.3574;107.2468;Alpha;;0,0,0,1;Defines
+    material's alpha value. Used for transparency and/or alpha clip. Expected range
+    0 - 1.$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;267;1546,-1152;Inherit;False;467.7227;100;Alpha
+    Cutoff Bias;;0,0,0,1;Fragments with an alpha below this value are discarded.
+    Expected range 0 - 1.$;0;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;58;1792,-1264;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;61;1920,-1264;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FWidthOpNode;59;1472,-1248;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;60;1648,-1248;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.0001;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;286;1296,-1344;Inherit;False;Alpha;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;294;1712,-1312;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;293;1744,-1296;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ClipNode;56;2080,-1360;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;288;1664,-1024;Inherit;False;Alpha
+    Cutoff Bias;1;1;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;62;2272,-1280;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;296;2033.026,-1235.089;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;297;2037.374,-1032.178;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;94;1888,-1024;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;295;2432,-1360;Inherit;False;Saturate;True;1;2;-1;In
+    0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;290;2080,-1024;Inherit;False;True;-1;Alpha
+    Cutoff Bias;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;291;2656,-1360;Inherit;False;False;-1;Alpha;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;58;0;293;0\nWireConnection;58;1;60;0\nWireConnection;61;0;58;0\nWireConnection;59;0;286;0\nWireConnection;60;0;59;0\nWireConnection;294;0;286;0\nWireConnection;293;0;294;0\nWireConnection;56;0;61;0\nWireConnection;56;1;286;0\nWireConnection;56;2;296;0\nWireConnection;62;0;56;0\nWireConnection;296;0;297;0\nWireConnection;297;0;94;0\nWireConnection;94;0;288;0\nWireConnection;295;0;56;0\nWireConnection;295;1;62;0\nWireConnection;290;0;94;0\nWireConnection;291;0;295;0\nASEEND*/\n//CHKSM=A59E5A9647E1244D35ADDFF7B80651BF06A5D9AE"
+  m_functionName: 
+  m_description: 'Alpha Clip Threshold Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Fragment
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

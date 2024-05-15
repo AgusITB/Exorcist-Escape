@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Hologram Holographic
+  m_Shader: {fileID: 4800000, guid: f69da0f0f4be407598760b0838e68fcb, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ADD_PRECOMPUTED_VELOCITY
+  - _DOUBLESIDED_ON
+  - _EMISSION
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _MASKAPPEARAXIS_DISTANCE
+  - _MASKAPPEARAXIS_Y
+  - _NORMALMAP
+  - _SPECGLOSSMAP
+  - _SURFACE_TYPE_TRANSPARENT
+  - _TRANSPARENT_WRITES_MOTION_VEC
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentBackface
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _GlitchHologram_Map:
+        m_Texture: {fileID: 2800000, guid: 420ae60a0a9388a4c876dcb8dcabfb6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _01_EmissionStrength: 1
+    - _01_Opacity: 0.359
+    - _02_EmissionStrength: 2
+    - _02_Opacity: 0.496
+    - _03_EmissionStrength: 2
+    - _03_Opacity: 0.299
+    - _AddPrecomputedVelocity: 1
+    - _AlphaCutoff: 0
+    - _AlphaCutoffBiasShadow: 0.527
+    - _AlphaCutoffEnable: 0
+    - _AlphaCutoffShadow: 0.25
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _AlphaToMaskInspectorValue: 0
+    - _AlphatoCoverage: 0
+    - _BlendMode: 0
+    - _CATEGORY_PULSATE: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedGIMode: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _EmissionFlags: 3
+    - _EmissiveExposureWeight: 0.216
+    - _EmissiveExposureWeight_02: 0.489
+    - _EmissiveExposureWeight_03: 0.244
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_02: 1
+    - _EmissiveIntensity_03: 1
+    - _EnableBlendModePreserveSpecularLighting: 0
+    - _EnableFogOnTransparent: 1
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 0
+    - _Flicker_Speed: 0.419
+    - _GlitchFlash_Mode: 1
+    - _GlitchFlash_Speed: 0.475
+    - _GlitchFlicker_Mode: 0
+    - _GlitchFlicker_Speed: 0.5
+    - _GlitchHologram_EdgeOffset: 2.33
+    - _GlitchHologram_EdgeStrength: 4.06
+    - _GlitchHologram_ScaleX: 2.49
+    - _GlitchHologram_ScaleY: 11.99
+    - _GlitchHologram_SurfaceOffset: 5.51
+    - _GlitchHologram_SurfaceStrength: -7.27
+    - _GlitchHologram_TilingX: 12.66
+    - _GlitchHologram_TilingY: 7.81
+    - _GlossyReflections: 1
+    - _HiddenPostpass: 1
+    - _HiddenPrepass: 0
+    - _Hologram_Center_EmissionStrength: 0
+    - _Hologram_Edge_EmissionStrength: 6.1
+    - _Hologram_Middle_EmissionStrength: 22.9
+    - _MaskClipValue: 0.31
+    - _OPACITY_OpacityStrength: 0.551
+    - _OpaqueCullMode: 2
+    - _PulsateEnable: 1
+    - _PulsateSize: 0.239
+    - _PulsateSpeed: 0.785
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 1
+    - _RenderQueueType: 3
+    - _RequireSplitLighting: 0
+    - _SPACE_PULSATE: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _Scanline_PulsateMode: 1
+    - _Scanline_PulsateSize: 0.458
+    - _Scanline_PulsateSpeed: 0.374
+    - _Scanline_ScreenSpaceMode: 3
+    - _Scanline_Speed: 0.542
+    - _Scanline_Tiling: 52.6
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SupportDecals: 1
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 1
+    - _TransparentDepthPrepassEnable: 1
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 1
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 1
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _01_Tint: {r: 0.06666667, g: 0.2784314, b: 0.9137255, a: 0}
+    - _02_Tint: {r: 0, g: 1, b: 0.1796296, a: 0}
+    - _03_Tint: {r: 1, g: 0, b: 0.020870686, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1.4980392, g: 0, b: 0.07255356, a: 0}
+    - _EmissiveColor_02: {r: 0.17254902, g: 0, b: 1.4980392, a: 0}
+    - _EmissiveColor_03: {r: 0, g: 0.14901961, b: 1.4980392, a: 0}
+    - _EmissiveIntensityHDRP: {r: 4, g: 1, b: 5, a: 1}
+    - _EmissiveIntensityHDRP_02: {r: 4, g: 1, b: 5, a: 1}
+    - _EmissiveIntensityHDRP_03: {r: 4, g: 1, b: 5, a: 1}
+    - _GlitchHologram_Tint01: {r: 0.100575715, g: 0.38679248, b: 0.045612313, a: 0}
+    - _GlitchHologram_Tint02: {r: 0.7490196, g: 0.2117647, b: 0, a: 0}
+    - _GlitchHologram_Tint03: {r: 0, g: 0.3456802, b: 8, a: 0}
+    - _Hologram_Center_Tint: {r: 0.7490196, g: 0.2117647, b: 0, a: 0}
+    - _Hologram_Edge_Tint: {r: 0, g: 0.3456802, b: 8, a: 0}
+    - _Hologram_Middle_Tint: {r: 0.01176471, g: 0, b: 0.7490196, a: 0}
+  m_BuildTextureStacks: []

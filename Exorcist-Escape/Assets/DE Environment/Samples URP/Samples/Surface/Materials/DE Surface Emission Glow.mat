@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Surface Emission Glow
+  m_Shader: {fileID: 4800000, guid: 6fac869673bb410e90dae69e4dcf91e0, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6985df1eeaa995c44aef915c09d19312, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 996a1eae664a665408a65107c6f8364f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMapMask:
+        m_Texture: {fileID: 2800000, guid: 996a1eae664a665408a65107c6f8364f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColor_Map:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColor_MaskMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMapMask:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMask:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveTex:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveTexMask:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3cb57d481b49b9843abbcaeb6403dc16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: e6b230abeed656f4baf11f7c4e8a2b82, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 101202d5f9566a4428ace64a01ab7604, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlbedoAffectEmissive: 1
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 2
+    - _DEAlbedoAffectEmissive: 1
+    - _DisplacementStrength: 0
+    - _Displacement_Mode: 0
+    - _EmissionDynamicBlendStrength: 3.61
+    - _EmissionDynamicDistanceLength: 0.01
+    - _EmissionDynamicOffset: -0.02
+    - _EmissionDynamicScatterScale: 0.1
+    - _EmissionDynamicScatterShift: 0.4
+    - _EmissionFlags: 3
+    - _EmissionMap_UVSet: 0
+    - _EmissionMaskMode: 1
+    - _EmissionMask_OffsetX: 1.15
+    - _EmissionMask_OffsetY: 2.09
+    - _EmissionMask_TilingX: 0.75
+    - _EmissionMask_TilingY: 0.75
+    - _EmissionMask_TillingMode: 0
+    - _EmissionMask_UVSet: 0
+    - _EmissionMode: 1
+    - _EmissionModeDynamic: 1
+    - _EmissionTintGlowStrength: 1.07
+    - _EmissionTintStrength_01: 46.4
+    - _EmissionTint_01_ColorPlaletteSpeed: 0.069
+    - _EmissionTint_01_PlaletteIntensity: 0
+    - _EmissionTint_01_PlaletteMode: 0
+    - _EmissionTint_01_PlaletteMode_Standard: 0
+    - _Emission_GLOW_ColorPlaletteSpeed: 0.1
+    - _Emission_GLOW_PlaletteIntensity: 0
+    - _Emission_GLOW_PlaletteMode_Standard: 0
+    - _Emission_OffsetX: 1
+    - _Emission_OffsetY: 1
+    - _Emission_TilingX: 1
+    - _Emission_TilingY: 1
+    - _Emission_TillingMode: 0
+    - _EmissiveAffectAlbedoBias: 0.92
+    - _EmissiveColorMapOffsetX: 0
+    - _EmissiveColorMapOffsetY: 0
+    - _EmissiveColorMapTilingX: 10
+    - _EmissiveColorMapTilingY: 10
+    - _EmissiveColor_GlowStrength: 0.82
+    - _EmissiveColor_MainMode: 1
+    - _EmissiveColor_MainStrength: 1.6
+    - _EmissiveColor_MapOffsetX: -0.31
+    - _EmissiveColor_MapOffsetY: 1
+    - _EmissiveColor_MapTilingX: 5
+    - _EmissiveColor_MapTilingY: 5
+    - _EmissiveColor_MaskIntensityAlpha: 0
+    - _EmissiveColor_MaskIntensityBlue: 0
+    - _EmissiveColor_MaskIntensityGreen: 4.08
+    - _EmissiveColor_MaskIntensityRed: 1.78
+    - _EmissiveColor_MaskMode: 1
+    - _EmissiveColor_MaskOffset: 1.28
+    - _EmissiveColor_MaskTiling: 15.9
+    - _EmissiveEnable: 1
+    - _EmissiveFlagMode: 0
+    - _EmissiveGlobalController: 1
+    - _EmissiveGlowColorGlobalController: 1
+    - _EmissiveGlowEnable: 1
+    - _EmissiveGlowIntensity: 1
+    - _EmissiveGlowisGlobal: 0
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_Glow: 1
+    - _EmissiveIntensity_MaskA: 0
+    - _EmissiveIntensity_MaskB: 1
+    - _EmissiveIntensity_MaskG: 1
+    - _EmissiveIntensity_MaskR: 1
+    - _EmissiveMapEnable: 1
+    - _EmissiveMaskAEmissiveIntensityUnit: 0
+    - _EmissiveMaskAIntensity: 1
+    - _EmissiveMaskBEmissiveIntensityUnit: 0
+    - _EmissiveMaskBIntensity: -0.36
+    - _EmissiveMaskEnable: 1
+    - _EmissiveMaskGEmissiveIntensityUnit: 0
+    - _EmissiveMaskGIntensity: 3.5
+    - _EmissiveMaskOffsetX: -0.5
+    - _EmissiveMaskOffsetY: 0.6
+    - _EmissiveMaskPanningSpeedX: 0
+    - _EmissiveMaskPanningSpeedY: 0
+    - _EmissiveMaskRIntensity: 3.85
+    - _EmissiveMaskRIntensityUnit: 0
+    - _EmissiveMaskRotation: 0
+    - _EmissiveMaskTilingX: 2
+    - _EmissiveMaskTilingY: 3.69
+    - _EmissiveRenderFace: 0
+    - _EmissiveisGlobal: 1
+    - _EmissiveisGlobal_Glow: 0
+    - _EnvironmentReflections: 1
+    - _GlossyReflections: 1
+    - _Glow_MaskIntensityAlpha: 0
+    - _Glow_MaskIntensityBlue: 0
+    - _Glow_MaskIntensityGreen: 0
+    - _Glow_MaskIntensityRed: 0
+    - _MetallicStrength: 0
+    - _Mian1_UVSet: 0
+    - _MipLevel: 0
+    - _NormalStrength: 1
+    - _OcclusionSource: 1
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 0
+    - _OcclusionStrengthAO: 0.882
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_EMISSION: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessMax: 0.248
+    - _SmoothnessMin: 0
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 1.1
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.717
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0
+    - _SpecularHighlights: 1
+    - _TilingX: 3
+    - _TilingY: 3
+    - _TillingMode: 0
+    - _UVMode_Bicubic: 1
+    - _UseEmissiveIntensity: 1
+    - _ZTestMode: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0.9622642, g: 0.10515893, b: 0, a: 1}
+    - _EmissionTintGlow: {r: 0.26364803, g: 1, b: 0, a: 1}
+    - _EmissionTint_01: {r: 0.14117648, g: 0, b: 1.4980392, a: 0.99215686}
+    - _Emission_GLOW_TintGlow: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColorA: {r: 0.3333333, g: 0.1019608, b: 0.5450981, a: 1}
+    - _EmissiveColorB: {r: 0, g: 0, b: 1, a: 1}
+    - _EmissiveColorG: {r: 0, g: 1, b: 0, a: 1}
+    - _EmissiveColorGlow: {r: 0.20744073, g: 1, b: 0, a: 1}
+    - _EmissiveColorR: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveColor_Glow: {r: 0, g: 1, b: 0.09441662, a: 0}
+    - _EmissiveColor_GlowTint: {r: 0.11643474, g: 0.8584906, b: 0, a: 1}
+    - _EmissiveColor_MainTint: {r: 0, g: 0.2627451, b: 1, a: 1}
+    - _EmissiveColor_MaskA: {r: 1, g: 0.6295948, b: 0, a: 0}
+    - _EmissiveColor_MaskAlpha: {r: 0.3333333, g: 0.1019608, b: 0.5450981, a: 1}
+    - _EmissiveColor_MaskB: {r: 0.35908294, g: 1, b: 0, a: 0}
+    - _EmissiveColor_MaskBlue: {r: 0, g: 0, b: 1, a: 1}
+    - _EmissiveColor_MaskG: {r: 0.2149545, g: 1, b: 0, a: 0}
+    - _EmissiveColor_MaskGreen: {r: 0, g: 1, b: 0, a: 1}
+    - _EmissiveColor_MaskR: {r: 1, g: 0, b: 0, a: 0}
+    - _EmissiveColor_MaskRed: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveGlowColor: {r: 0.59607846, g: 4, b: 0, a: 0}
+    - _EmissiveMaskAColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveMaskBColor: {r: 0, g: 1, b: 0.031326532, a: 0}
+    - _EmissiveMaskGColor: {r: 0, g: 0.05423951, b: 1, a: 0}
+    - _EmissiveMaskRColor: {r: 1, g: 0, b: 0, a: 0}
+    - _EmissiveMaskUVs: {r: 8, g: 8, b: 0.85, a: -1.01}
+    - _Glow_MaskTintAlphaChannel: {r: 0.3333333, g: 0.1019608, b: 0.5450981, a: 1}
+    - _Glow_MaskTintBlueChannel: {r: 0, g: 0, b: 1, a: 1}
+    - _Glow_MaskTintGreenChannel: {r: 0, g: 1, b: 0, a: 1}
+    - _Glow_MaskTintRedChannel: {r: 1, g: 0, b: 0, a: 1}
+    - _MainUVs: {r: 5, g: 5, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0.248, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

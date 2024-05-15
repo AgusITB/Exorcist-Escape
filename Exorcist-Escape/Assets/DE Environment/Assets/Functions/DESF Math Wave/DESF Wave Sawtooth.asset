@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Wave Sawtooth
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;16;-512,128;Inherit;False;1264;304;Exsample;9;11;10;8;13;12;14;9;15;17;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;7;-128,-288;Inherit;False;390;126;Wave
+    Sawtooth Node;;0,0,0,1;The Sawtooth Wave creates a sawtooth-shaped wave in the
+    range of -1 to 1 based on the input value.;0;0\nNode;AmplifyShaderEditor.FunctionInput;1;-560,-128;Inherit;False;In;1;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;5;-128,-128;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleNode;6;32,-128;Inherit;False;2;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FloorOpNode;4;-256,-32;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;2;-384,-32;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;3;-544,0;Inherit;False;Constant;_Float1;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;11;-112,256;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FloorOpNode;10;0,256;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;8;128,176;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;13;-272,176;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;14;-464,176;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleNode;9;288,176;Inherit;False;2;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;15;464,176;Inherit;True;5;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;17;144,304;Inherit;False;259.7676;107.1588;;;0,0,0,1;Here
+    we can see the sawtooth wave.  The wave ramps up slowely and then instantly drops
+    back down.;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;12;-432,288;Inherit;False;Constant;_Float2;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;192,-128;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;5;0;1;0\nWireConnection;5;1;4;0\nWireConnection;6;0;5;0\nWireConnection;4;0;2;0\nWireConnection;2;0;1;0\nWireConnection;2;1;3;0\nWireConnection;11;0;13;0\nWireConnection;11;1;12;0\nWireConnection;10;0;11;0\nWireConnection;8;0;13;0\nWireConnection;8;1;10;0\nWireConnection;13;0;14;0\nWireConnection;13;1;12;0\nWireConnection;9;0;8;0\nWireConnection;15;0;9;0\nWireConnection;0;0;6;0\nASEEND*/\n//CHKSM=FE459DCD88619ED34F3B23D7C7F79D4585DD122B"
+  m_functionName: 
+  m_description: 'Wave Sawtooth Node
+
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Wave
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

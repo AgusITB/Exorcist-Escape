@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Cutout Height Tessellation
+  m_Shader: {fileID: 4800000, guid: af1aded23ddc44c89d55d51d1b7c576a, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6985df1eeaa995c44aef915c09d19312, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClothWindMaskMap:
+        m_Texture: {fileID: 2800000, guid: daa0ecf050f3a8244976d9ecc16f8348, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClothWind_MaskMap:
+        m_Texture: {fileID: 2800000, guid: daa0ecf050f3a8244976d9ecc16f8348, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorShiftMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorShift_MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3cb57d481b49b9843abbcaeb6403dc16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: e6b230abeed656f4baf11f7c4e8a2b82, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: bd7d67204a75bcb4cb44f70b8293d867, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffAntialias: 0.58
+    - _AlphaCutoffBias: 0.082
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _AlphatoCoverage: 0
+    - _AutumnShiftNoise: 1
+    - _AutumnShiftVariation: 0.2
+    - _AutumnShift_ShiftNoise: 1
+    - _AutumnShift_ShiftVariation: 0
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _CATEGORY_ALPHACLIPPING: 1
+    - _CATEGORY_COLORSHIFT: 0
+    - _CATEGORY_DISPLACEMENT: 1
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_SHADOW: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_TESSELLATION: 0
+    - _CATEGORY_TRANSMISSION: 0
+    - _ClothWindIntensity: 0.002
+    - _ClothWindMode: 1
+    - _ClothWindSpeed: 0.6
+    - _ClothWind_Intensity: 0.002
+    - _ClothWind_Mode: 2
+    - _ClothWind_Speed: 0.6
+    - _ColorMask: 15
+    - _ColorMode: 0
+    - _ColorShiftEnable: 0
+    - _ColorShiftEnableMask: 1
+    - _ColorShiftInfluence: 0.75
+    - _ColorShiftMaskFuzziness: 0.25
+    - _ColorShiftMaskInverted: 0
+    - _ColorShiftNoiseScale: 1
+    - _ColorShiftRGBBrightness: 1
+    - _ColorShiftRGBHue: -0.2
+    - _ColorShiftRGBSaturation: 0.95
+    - _ColorShiftSaturation: 0.85
+    - _ColorShiftSource: 0
+    - _ColorShiftVariation: 0
+    - _ColorShiftVariationRGB: 0.2
+    - _ColorShiftWorldSpaceDistance: 5
+    - _ColorShiftWorldSpaceNoiseShift: 5
+    - _ColorShiftWorldSpaceOffset: 1
+    - _ColorShift_DynamicDistance: 5
+    - _ColorShift_DynamicNoiseShift: 1
+    - _ColorShift_DynamicOffset: 1
+    - _ColorShift_MaskFuzziness: 0.25
+    - _ColorShift_MaskMode: 0
+    - _ColorShift_Mode: 0
+    - _ColorShift_ModeVertexInfluence: 1
+    - _ColorShift_NoiseScale: 1.235294
+    - _ColorShift_NoiseShift: 1
+    - _ColorShift_RGBBrightness: 1
+    - _ColorShift_RGBHue: -0.2
+    - _ColorShift_RGBSaturation: 0.95
+    - _ColorShift_ShiftBlendInfluence: 1
+    - _ColorShift_ShiftHue: 0
+    - _ColorShift_ShiftInfluence: 0.75
+    - _ColorShift_ShiftNoise: 1
+    - _ColorShift_ShiftSaturation: 0
+    - _ColorShift_ShiftVariation: 0.145
+    - _ColorShift_ShiftVariationRGB: 0.15
+    - _Cull: 0
+    - _CullMode: 0
+    - _CustomCutoffAntialias: 0.1
+    - _DisplacementBlendInversion: 0.079
+    - _DisplacementEnable: 1
+    - _DisplacementFadeDepth: -25
+    - _DisplacementFadeMode: 0
+    - _DisplacementFadeStart: 500
+    - _DisplacementNormalReconstructed: 1
+    - _DisplacementReconstructMode: 0
+    - _DisplacementReconstructMode1: 0
+    - _DisplacementReconstructStrength: 0.00125
+    - _DisplacementStrength: 0.021
+    - _Displacement_Mode: 1
+    - _Displacement_Strength: 0.105
+    - _DoubleSidedNormalMode: 2
+    - _DynamicDistance: 5
+    - _DynamicOffset: 1
+    - _EdgeLength: 15
+    - _EmissionFlags: 0
+    - _EnableCustomAntialias: 0
+    - _EnableTranslucency: 0
+    - _EnvironmentReflections: 1
+    - _GlancingClipMode: 0
+    - _GlossyReflections: 1
+    - _Gradient_Contrast: 0
+    - _Gradient_Height: 17.80307
+    - _Gradient_Mode: 0
+    - _Gradient_Ramp: 0
+    - _MCoreDebugMode: 3
+    - _MCoreDebugNormalMode: 0
+    - _MCoreDebugStrengthAO: 0.84
+    - _MapInverted: 0
+    - _MaskClipValue: 0.5
+    - _MetallicStrength: 0
+    - _Mian_UVSet: 1
+    - _NormalMode: 0
+    - _NormalStrength: 1
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.871
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0.69662917
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RGBColorBrightness: 1
+    - _RGBColorHue: 0
+    - _RGBColorSaturation: 0.95
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_COLORSHIFT: 0
+    - _SPACE_DISPLACEMENT: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_TESSELLATION: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _ShiftMode: 0
+    - _ShiftNoise: 1
+    - _ShiftVariation: 0.145
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 2.69
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessMax: 0.362
+    - _SmoothnessMin: 0
+    - _SmoothnessModeCutout: 1
+    - _SmoothnessPower: 0.71
+    - _SmoothnessScale: 0.03
+    - _SmoothnessSource: 1
+    - _SmoothnessSourceTexture: 0
+    - _SmoothnessStrength: 0.094
+    - _SmoothnessStrengthRemapMax: 0.18726587
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0.348
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 1
+    - _SpecularHighlights: 1
+    - _SubsurfaceDistortion: 1.52
+    - _SubsurfaceIntensity: 5
+    - _SubsurfacePower: 4
+    - _TessellationDistanceMax: 25
+    - _TessellationDistanceMin: 0
+    - _TessellationEnable: 1
+    - _TessellationMode: 0
+    - _TessellationPhong: 0.5
+    - _TessellationStrength: 5
+    - _TilingX: 3
+    - _TilingY: 3
+    - _TranslucencyColorSource: 1
+    - _TranslucencyCullDeferred: 0
+    - _TranslucencySource: 0
+    - _TranslucencyThickness: 1.5
+    - _TranslucentScatteringStandard: 50
+    - _ZTestMode: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Gradient_Bottom: {r: 0.3877363, g: 0.5955882, b: 0.188311, a: 0}
+    - _Gradient_BottomSide: {r: 0.7058823, g: 0.2024221, b: 0.2024221, a: 0}
+    - _Gradient_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Gradient_TintCurvature: {r: 1, g: 0, b: 0.444931, a: 0}
+    - _Gradient_Top: {r: 0.7259277, g: 0.7647059, b: 0.06185123, a: 0}
+    - _Gradient_TopSide: {r: 0.2569204, g: 0.5525266, b: 0.7279412, a: 0}
+    - _MainUVs: {r: 5, g: 5, b: 0, a: 0}
+    - _MetallicStrength: {r: 0.4456929, g: 1, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0.69662917, g: 1, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0.18726587, b: 0, a: 0}
+    - _TranslucencyTint: {r: 0.575, g: 0.75, b: 0, a: 1}
+  m_BuildTextureStacks: []

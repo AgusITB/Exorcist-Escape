@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Rain Billboard
+  m_Shader: {fileID: 4800000, guid: 83e1ec70144f4d90ae39e50cb6211044, type: 3}
+  m_ValidKeywords:
+  - _SPECULARHIGHLIGHTS_OFF
+  m_InvalidKeywords:
+  - _NORMALMODE_DEFAULT
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 89e53db7369176d4390cb72f2d934bd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Horizontal_RainMap:
+        m_Texture: {fileID: 2800000, guid: 1058e7f7b3e7a3746bdabd6cd3080aeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: edce59e2bd32ee1478080c5630b90244, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: 12eee589c9d23244ab21f86497e7f4f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RainHorizontalRainMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RainStaticRainMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RainVerticalRainMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Static_RainMap:
+        m_Texture: {fileID: 2800000, guid: c0dfb880a59ab6c4a8e3618cdea10479, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Vertical_RainMap:
+        m_Texture: {fileID: 2800000, guid: 691a246faad34794b97f783b992e4c87, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.517
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _AlphatoCoverage: 0
+    - _Brightness: 1
+    - _CATEGORY_ALPHACLIPPING: 0
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_RAIN: 1
+    - _CATEGORY_SHADOW: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_WETNESS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _DoubleSidedNormalMode: 0
+    - _ENVIRONMENTREFLECTIONS_OFF: 1
+    - _EmissionFlags: 0
+    - _EnvironmentReflections: 1
+    - _GlancingClipMode: 0
+    - _GlancingClipMode1: 1
+    - _GlobalEnableGlobalWetness: 0
+    - _GlobalWetnessStrength: 0
+    - _Global_EnableGlobalWetness: 0
+    - _Global_Wetness: 0
+    - _GlossyReflections: 1
+    - _Horizontal_Columns: 8
+    - _Horizontal_Intensity: 9.21
+    - _Horizontal_ModeUV: 1
+    - _Horizontal_OffsetX: 0
+    - _Horizontal_OffsetY: 0
+    - _Horizontal_RainMode: 1
+    - _Horizontal_Rows: 8
+    - _Horizontal_ScreenContribution: 0
+    - _Horizontal_Speed: 25
+    - _Horizontal_TilingX: 8
+    - _Horizontal_TilingY: 8
+    - _MaskClipValue: 0.5
+    - _MetallicStrength: 0
+    - _NormalMode: 0
+    - _NormalStrength: 0.68
+    - _OcclusionSource: 1
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.5
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RECEIVE_SHADOWS_OFF: 0
+    - _RainEnable: 0
+    - _RainHorizontalColumns: 8
+    - _RainHorizontalEnable: 0
+    - _RainHorizontalIntensity: 9
+    - _RainHorizontalOffsetX: 0
+    - _RainHorizontalOffsetY: 0
+    - _RainHorizontalRows: 8
+    - _RainHorizontalScreenContribution: 0.001
+    - _RainHorizontalSpeed: 15
+    - _RainHorizontalTilingX: 5
+    - _RainHorizontalTilingY: 5
+    - _RainHorizontalUVTye: 0
+    - _RainStaticEnable: 0
+    - _RainStaticIntensity: 9
+    - _RainStaticOffsetX: 0
+    - _RainStaticOffsetY: 0
+    - _RainStaticScreenContribution: 0.001
+    - _RainStaticTilingX: 1
+    - _RainStaticTilingY: 1
+    - _RainStaticUVType: 0
+    - _RainVerticalColumns: 5
+    - _RainVerticalEnable: 0
+    - _RainVerticalIntensity: 6
+    - _RainVerticalRows: 5
+    - _RainVerticalScreenContribution: 0.001
+    - _RainVerticalSmoothEdge: 0
+    - _RainVerticalSpeed: 22
+    - _RainVerticalTilingX: 9
+    - _RainVerticalTilingY: 9
+    - _RainVerticalUVType: 0
+    - _RainWetnessDarken: 0.025
+    - _RainWetnessStrength: 1
+    - _RainWetnessisGlobal: 1
+    - _Rain_GlobalWetnessMode: 1
+    - _Rain_RainDarken: 0.335
+    - _Rain_WetnessDarken: 0.025
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_RAIN: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_WETNESS: 0
+    - _SPECULARHIGHLIGHTS_OFF: 0
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessMax: 0
+    - _SmoothnessMin: 0
+    - _SmoothnessModeCutout: 3
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 1.1
+    - _SmoothnessStrength: 0.1
+    - _SmoothnessStrengthRemapMax: 0
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 0
+    - _Static_Intensity: 8.569283
+    - _Static_ModeUV: 0
+    - _Static_OffsetX: 0
+    - _Static_OffsetY: 0
+    - _Static_RainMode: 1
+    - _Static_ScreenContribution: 0
+    - _Static_TilingX: 1
+    - _Static_TilingY: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _Vertical_Columns: 5
+    - _Vertical_Intensity: 5
+    - _Vertical_ModeUV: 1
+    - _Vertical_RainMode: 1
+    - _Vertical_Rows: 5
+    - _Vertical_ScreenContribution: 0
+    - _Vertical_SmoothEdge: 0
+    - _Vertical_Speed: 22
+    - _Vertical_TilingX: 9
+    - _Vertical_TilingY: 9
+    - _Vertical__ModeUV: 0
+    - _Wetness: 0.95
+    - _WetnessEnable: 1
+    - _WetnessGlobalInfluenceEnable: 0
+    - _WetnessMask: 0.75
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _RainHorizontalUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _RainStaticUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _RainVerticalUVs: {r: 9, g: 9, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

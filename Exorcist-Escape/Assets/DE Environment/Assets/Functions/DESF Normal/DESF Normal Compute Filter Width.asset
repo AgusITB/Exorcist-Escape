@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Normal Compute Filter Width
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;12;-767.7952,-96;Inherit;False;635.8539;216.3694;Normal
+    Compute Filter Width Node;;0.0754717,0.0754717,0.0754717,1;Bump Mapping Material
+    Function$$This function makes use of ddx and ddy to compute how quickly a value
+    is changing over the screen. This allows to fade out a procedural shader in the
+    distance where it would start getting noisy. The fading results in less shimmering
+    which is even more noticeable in motion and extremely important for bump mapping
+    as specularity on bumpy surfaces can produce extreme aliasing artifacts.;0;0\nNode;AmplifyShaderEditor.FunctionInput;6;-896,192;Inherit;False;In;3;0;False;1;0;FLOAT3;0,0,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DdxOpNode;13;-704,192;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;11;-576,192;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;14;-576,288;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DdyOpNode;15;-704,288;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ConditionalIfNode;17;-448,192;Inherit;False;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SqrtOpNode;18;-256,192;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;-960,272;Inherit;False;191.8623;100;In;;0,0,0,1;The
+    value to compute the filter width;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;20;-200.3071,272;Inherit;False;174.3071;106.752;out;;0.009433985,0.009433985,0.009433985,1;
+    How quickly the input changes from pixel to pixel;0;0\nNode;AmplifyShaderEditor.FunctionOutput;8;-128,192;Inherit;False;True;-1;Out;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;13;0;6;0\nWireConnection;11;0;13;0\nWireConnection;11;1;13;0\nWireConnection;14;0;15;0\nWireConnection;14;1;15;0\nWireConnection;15;0;6;0\nWireConnection;17;0;11;0\nWireConnection;17;1;14;0\nWireConnection;17;2;11;0\nWireConnection;17;3;14;0\nWireConnection;17;4;14;0\nWireConnection;18;0;17;0\nWireConnection;8;0;18;0\nASEEND*/\n//CHKSM=F7C73C14F1ED2375D43A38D79BD117F95CE28DFA"
+  m_functionName: 
+  m_description: 'Normal Compute Filter Width Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0, g: 0.18039216, b: 0.4745098, a: 1}
+  m_customNodeCategory: DESF Normal
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

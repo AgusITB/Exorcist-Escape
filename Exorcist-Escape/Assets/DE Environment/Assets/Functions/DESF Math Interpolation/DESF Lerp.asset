@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Lerp
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;17;-892.3051,304;Inherit;False;1154.945;528.6188;Range;5;14;13;15;12;16;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;10;-905.8932,-422.1263;Inherit;False;1155.832;674.6995;Lerp
+    Node;12;18;0;6;7;1;2;9;5;4;11;8;19;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;8;-752,-352;Inherit;False;552.4368;172.6427;;;0,0,0,1;The
+    Lerp Node performs linear interpolation or linear blending between the input
+    values A and B. $$The point on the line between A and B is defined by input Alpha
+    where a Alpha value of 0 will give only input A, a Alpha value of 1 will give
+    only input B, and a Alpha value of 0.5 will give a blend result that's half way
+    between A and B$;0;0\nNode;AmplifyShaderEditor.LerpOp;11;-160,-368;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;16;-480,576;Inherit;False;595.8386;177.1924;Interpolator;;0,0,0,1;Usually,
+    it works best if the Alpha value is between zero and one. $$In this example,
+    passing in Alpha value of zero would result in Red. Passing in Alpha value of
+    1 would result in Green. $$Passing in a Alpha value of 0.5 (shown here) results
+    in the 50/50 blend between Red and Green.;0;0\nNode;AmplifyShaderEditor.ColorNode;12;-752,352;Inherit;False;Constant;_Color0;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.LerpOp;15;-480,352;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ColorNode;13;-752,528;Inherit;False;Constant;_Color1;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0.1717489,1,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;14;-720,704;Inherit;False;Constant;_interpolator;interpolator;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-336,-128;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;9;-336,-32;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;2;-176,-128;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;18;64,-368;Inherit;False;151.2131;100;ASE
+    HotKey;;0.01886791,0.01886791,0.01886791,1;shortcut: L key ;0;0\nNode;AmplifyShaderEditor.FunctionInput;1;-512,48;Inherit;False;B;3;2;False;1;0;FLOAT3;1,1,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;5;-512,-128;Inherit;False;A;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.OneMinusNode;6;-512,-48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;-816,64;Inherit;False;253.1218;100;Alpha;;0,0,0,1;Alpha,
+    a.k.a Interpolator;0;0\nNode;AmplifyShaderEditor.FunctionInput;7;-688,-16;Inherit;False;Alpha;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;20;-1312,-416;Inherit;False;379.8179;198.3356;Reference
+    Implementation;;0,0,0,1;lerp for float3 vectors for a and b and a float w could
+    be implemented like this:$$float3 lerp(float3 a, float3 b, float w)${$  return
+    a + w*(b-a)@$};0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-64,-128;Inherit;False;True;-1;Out;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;15;0;12;0\nWireConnection;15;1;13;0\nWireConnection;15;2;14;0\nWireConnection;4;0;5;0\nWireConnection;4;1;6;0\nWireConnection;9;0;1;0\nWireConnection;9;1;7;0\nWireConnection;2;0;4;0\nWireConnection;2;1;9;0\nWireConnection;6;0;7;0\nWireConnection;0;0;2;0\nASEEND*/\n//CHKSM=ED77CFDACB703B19AF4ED515B46833986A43B9FA"
+  m_functionName: 
+  m_description: 'Lerp Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Interpolation
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

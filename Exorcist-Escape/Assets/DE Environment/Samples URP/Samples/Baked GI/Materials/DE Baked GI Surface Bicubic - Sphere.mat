@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Baked GI Surface Bicubic - Sphere
+  m_Shader: {fileID: 4800000, guid: 28a207280f08462c8c150450b3a2ac46, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _FLOAT0_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 3ac1fbd324cec8246b53df456d0c45da, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBiasShadow: 0.35
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _BakedGIEnable: 1
+    - _BakedGIFilterMode: 1
+    - _BakedGIIndirectDiffuse: 1
+    - _BakedGIIndirectDiffuseEnable: 1
+    - _BakedGIIndirectSpecular: 1
+    - _BakedGIIndirectSpecularEnable: 1
+    - _BakedGIIndirectSpecularOcclusion: 0.5
+    - _BakedGIIndirectSpecularSmoothness: 0.5
+    - _BakedGIShadowEnable: 1
+    - _BakedGIShadowOffset: 0.15
+    - _BakedGIShadowSharpness: 0.15
+    - _BakedGIShadowStrength: 0.25
+    - _BakedGShadowEnable: 1
+    - _Brightness: 1
+    - _CATEGORY_ALPHACLIPPING: 0
+    - _CATEGORY_BAKEDGI: 1
+    - _CATEGORY_COLOR: 1
+    - _CATEGORY_DISPLACEMENT: 0
+    - _CATEGORY_FOG: 0
+    - _CATEGORY_LIGHTING: 1
+    - _CATEGORY_METALLIC: 1
+    - _CATEGORY_OCCLUSION: 1
+    - _CATEGORY_SHADOW: 1
+    - _CATEGORY_SMOOTHNESS: 1
+    - _CATEGORY_SPECULAR: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_TRANSMISSION: 0
+    - _Cull: 0
+    - _ENABLEFOG: 0
+    - _EnvironmentReflections: 1
+    - _Float0: 5
+    - _Float02: 5.76
+    - _Float5: 0
+    - _FogFill: 0
+    - _FogHeight: 0
+    - _FogSmoothness: 0.01
+    - _GlancingClipMode: 0
+    - _IndirectDiffuse: 0.563
+    - _IndirectSpecular: 0.207
+    - _IndirectSpecularOcclusion: 0.557
+    - _IndirectSpecularRoughness: 0.818
+    - _IndirectSpecularSmoothness: 0.5
+    - _MetallicStrength: 0
+    - _NormalStrength: 2
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionStrengthAO: 0
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_BAKEDGI: 0
+    - _SPACE_COLOR: 0
+    - _SPACE_FOG: 0
+    - _SPACE_LIGHTING: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SPECULAR: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _ShadowApproxmation: 1
+    - _ShadowBrightness: 10
+    - _ShadowColorEnable: 0
+    - _ShadowIntensity: 0.261
+    - _ShadowOffset: 0.445
+    - _ShadowSharpness: 0.83
+    - _ShadowStrength: 0.167
+    - _ShadowsEnable: 1
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessSource: 0
+    - _SmoothnessStrength: 0.591
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0.47148287
+    - _SpecularEnable: 0
+    - _SpecularEnableClamped: 0
+    - _SpecularHighlights: 1
+    - _SpecularMode: 2
+    - _SpecularStrength: 0.802
+    - _SpecularStrengthDielectric: 0
+    - _SpecularStrengthDielectricIOR: 2.427
+    - _SpecularWrap: 2.58
+    - _UVMode: 0
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IndirectSpecularColor: {r: 0.99056596, g: 0, b: 0, a: 0}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 1, b: 0, a: 0}
+    - _ShadowColor: {r: 0.6462264, g: 0.6462264, b: 0.6462264, a: 0}
+    - _SmoothnessStrength: {r: 0.47148287, g: 1, b: 0, a: 0}
+    - _SpecularColor: {r: 0.011612245, g: 0.13563336, b: 0.66538745, a: 1}
+    - _Vector0: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector6: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

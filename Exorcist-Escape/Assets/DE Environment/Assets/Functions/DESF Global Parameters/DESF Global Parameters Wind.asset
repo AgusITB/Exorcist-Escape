@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Global Parameters Wind
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;25;-422.3213,-1164.044;Inherit;False;706.7668;534.5616;_GlobalWind;12;24;0;1;3;4;5;6;11;9;10;8;7;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;21;-425.5124,-620.2068;Inherit;False;713.2984;237;_GlobalWindFade;4;18;14;13;23;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;20;-428.6009,-375.094;Inherit;False;719.3157;238.465;_GlobalWindBillboard;4;15;2;16;22;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;26;-717.9174,-1163.498;Inherit;False;283.7137;280.4214;;;0.009433985,0.009433985,0.009433985,1;_GlobalWindEnabled$_GlobalWindIntensity$_GlobalWindRandomOffset$_GlobalWindDirection$_GlobalWindTurbulence$_GlobalWindPulse$$_GlobalWindFadeEnabled$_GlobalWindFadeBias$$_GlobalWindBillboardEnabled$_GlobalWindBillboardIntensity;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;3;-359.5739,-966.1265;Inherit;False;Global;_GlobalWindRandomOffset;_GlobalWindRandomOffset;0;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;4;-325.9217,-891.8365;Inherit;False;Global;_GlobalWindDirection;_GlobalWindDirection;15;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;5;-340.9667,-817.903;Inherit;False;Global;_GlobalWindTurbulence;_GlobalWindTurbulence;0;0;Create;True;1;;0;0;False;0;False;0.01;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;6;-301.0242,-743.3712;Inherit;False;Global;_GlobalWindPulse;_GlobalWindPulse;15;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;23;-344.3443,-567.9819;Half;False;Global;_GlobalWindFadeEnabled;_GlobalWindFadeEnabled;3;0;Create;False;0;6;Default;0;Layer
+    2;1;Layer 3;2;Layer 4;3;Layer 5;4;Layer 6;5;0;False;1;DE_DrawerFloatEnum(Off
+    _ActiveFadeOut _ActiveFadeIn);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;18;-323.5124,-491.632;Float;False;Global;_GlobalWindFadeBias;_GlobalWindFadeBias;3;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;22;-373.5838,-329.2241;Inherit;False;Global;_GlobalWindBillboardEnabled;_GlobalWindBillboardEnabled;0;0;Create;True;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;2;-378.6009,-251.629;Inherit;False;Global;_GlobalWindBillboardIntensity;_GlobalWindBillboardIntensity;15;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;24;-316.4509,-1114.044;Inherit;False;Global;_GlobalWindEnabled;_GlobalWindEnabled;0;0;Create;True;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1;-323.1745,-1037.266;Inherit;False;Global;_GlobalWindIntensity;_GlobalWindIntensity;15;0;Create;True;1;;0;0;False;0;False;0.01;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;8;-0.6535048,-959.829;Inherit;False;False;-1;GlobalWindRandomOffset;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;9;0.5733323,-887.5681;Inherit;False;False;-1;GlobalWindDirection;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;10;-1.540025,-814.2314;Inherit;False;False;-1;GlobalWindTurbulence;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;11;-2.464525,-736.9326;Inherit;False;False;-1;GlobalWindPulse;5;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;15;-5.28518,-322.9864;Inherit;False;False;-1;GlobalWindBillboardEnabled;8;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;16;-8.285179,-248.9864;Inherit;False;False;-1;GlobalWindBillboardIntensity;9;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;13;3.785921,-566.6745;Inherit;False;False;-1;GlobalWindFadeEnabled;6;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;14;0.629843,-489.3379;Inherit;False;False;-1;GlobalWindFadeBias;7;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-5.651507,-1107.035;Inherit;False;True;-1;GlobalWindEnabled;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;7;0.3843827,-1034.241;Inherit;False;False;-1;GlobalWindIntensity;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;8;0;3;0\nWireConnection;9;0;4;0\nWireConnection;10;0;5;0\nWireConnection;11;0;6;0\nWireConnection;15;0;22;0\nWireConnection;16;0;2;0\nWireConnection;13;0;23;0\nWireConnection;14;0;18;0\nWireConnection;0;0;24;0\nWireConnection;7;0;1;0\nASEEND*/\n//CHKSM=098CC409B9DCCA61DAC4C85479FE1931460CB908"
+  m_functionName: 
+  m_description: 'Global Parameters Wind Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Global Parameters
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

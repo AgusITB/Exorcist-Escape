@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Color Posterize
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19302\nNode;AmplifyShaderEditor.StickyNoteNode;87;948.0312,-1793.529;Inherit;False;303.8102;144.1074;ASE
+    Posterize Node;;0,0,0,1;The Posterize Node converts a continuos gradient into
+    a set of uniform steps. The number of steps can be specified with the Steps input.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;93;720,-1072;Inherit;False;201;100;Reciprocal;;0,0,0,1;The
+    Reciprocal divides one by the input value.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;99;1136.698,-1241.778;Inherit;False;218;266;Shader
+    Graph;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;100;1145.398,-1536.578;Inherit;False;208;271;Optimized;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.CeilOpNode;94;711.1621,-1544.015;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FloorOpNode;95;715.1621,-1462.015;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;96;1156.631,-1487.802;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FloorOpNode;83;995.264,-1272.37;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;80;858.2025,-1273.031;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;98;844.1622,-1614.015;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RoundOpNode;97;985.481,-1612.441;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;92;720.8802,-1170.421;Inherit;False;2;0;FLOAT;1;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;84;1154.264,-1197.37;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;105;365.4633,-1395.21;Inherit;False;245.2346;165.1831;Steps;;0,0,0,1;Value
+    between [1,256] which defines strength of the posterization effect. $$The greater
+    the value lesser are the used tones;0;0\nNode;AmplifyShaderEditor.WireNode;112;636.5449,-1768.001;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;113;657.9186,-1285.791;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;115;1835.268,-1962.149;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;120;1556.88,-1505.62;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;117;1549.456,-1760.536;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;118;1582.867,-1718.463;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;119;1591.329,-1213.431;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;121;663.7698,-1147.706;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;116;1856,-1936;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;16;480,-1472;Inherit;False;Steps;1;2;False;1;0;FLOAT;4;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PosterizeNode;91;704,-1872;Inherit;True;1;2;1;COLOR;0,0,0,0;False;0;INT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SwizzleNode;122;1232,-1872;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;107;1408,-1872;Inherit;False;Default;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;108;1408,-1488;Inherit;False;Optimized;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;109;1408,-1200;Inherit;False;Shader
+    Graph;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;106;1632,-1872;Inherit;False;Type;False;0;3;-1;Default;Optimized;Shader
+    Graph;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;111;1920,-1920;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;17;1728,-1744;Inherit;False;Switch;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;110;2080,-2000;Inherit;False;Enable
+    Switch;True;1;2;-1;In 0;In 1;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;6;496,-2000;Inherit;False;In;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;114;656,-1632;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;123;1536,-2208;Inherit;False;472.4587;170.8953;Color
+    Posterize Node;;0,0,0,1;The Posterize Node converts a continuos gradient into
+    a set of uniform steps. The number of steps can be specified with the Steps input.;0;0\nNode;AmplifyShaderEditor.FunctionOutput;1;2304,-2000;Inherit;False;True;-1;Out;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;94;0;16;0\nWireConnection;95;0;16;0\nWireConnection;96;0;97;0\nWireConnection;96;1;95;0\nWireConnection;83;0;80;0\nWireConnection;80;0;113;0\nWireConnection;80;1;92;0\nWireConnection;98;0;114;0\nWireConnection;98;1;94;0\nWireConnection;97;0;98;0\nWireConnection;92;1;121;0\nWireConnection;84;0;83;0\nWireConnection;84;1;92;0\nWireConnection;112;0;16;0\nWireConnection;113;0;6;0\nWireConnection;115;0;6;0\nWireConnection;120;0;108;0\nWireConnection;117;0;120;0\nWireConnection;118;0;119;0\nWireConnection;119;0;109;0\nWireConnection;121;0;16;0\nWireConnection;116;0;115;0\nWireConnection;91;1;6;0\nWireConnection;91;0;112;0\nWireConnection;122;0;91;0\nWireConnection;107;0;122;0\nWireConnection;108;0;96;0\nWireConnection;109;0;84;0\nWireConnection;106;0;107;0\nWireConnection;106;1;117;0\nWireConnection;106;2;118;0\nWireConnection;111;0;116;0\nWireConnection;111;1;106;0\nWireConnection;111;2;17;0\nWireConnection;110;0;6;0\nWireConnection;110;1;111;0\nWireConnection;114;0;6;0\nWireConnection;1;0;110;0\nASEEND*/\n//CHKSM=519C10115040BAFCD03D6C583DCBDDF8F083BF02"
+  m_functionName: 
+  m_description: 'Color Posterize Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.30588236, g: 0.5176471, b: 0.16078432, a: 1}
+  m_customNodeCategory: DESF Color
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

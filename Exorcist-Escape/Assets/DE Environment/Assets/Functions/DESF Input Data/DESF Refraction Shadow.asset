@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Refraction Shadow
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.1.5\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19105\nNode;AmplifyShaderEditor.OneMinusNode;8;377.9685,-67.18607;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;2;34.20651,-70.52823;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;4;233.003,-69.62518;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;531.5005,-62.58916;Inherit;False;True;-1;Opacity;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;30;-207.6609,-68.49292;Inherit;False;DESF
+    Dot NdotL;-1;;1;23d7105d6681cab42ba272a9e26e84a4;3,17,1,21,1,18,0;2;1;FLOAT3;0,0,1;False;13;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;22;-205.5618,8.39793;Inherit;False;Alpha
+    Bias Shadow;1;1;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;9;-376.9418,-71.57831;Inherit;False;Normal;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;267.0089,-240.9862;Inherit;False;371;107.8;Refraction
+    Shadow Node;;0,0,0,1;to use this in render options on template turn off defualt
+    shadow Casters;0;0\nWireConnection;8;0;4;0\nWireConnection;2;0;30;0\nWireConnection;2;1;22;0\nWireConnection;2;2;22;0\nWireConnection;4;0;2;0\nWireConnection;0;0;8;0\nWireConnection;30;1;9;0\nASEEND*/\n//CHKSM=35BBC004035A41C419AE25147D09BCC3C3B68FAC"
+  m_functionName: 
+  m_description: Refraction Shadow Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

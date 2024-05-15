@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Get Main Light
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;4;-253.4338,-256.7996;Inherit;False;505.8641;124.1461;Direction;;0,0,0,1;Light
+    light = GetMainLight()@$return Direction = light.direction@;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;13;-1196.242,-252.8311;Inherit;False;818.4078;420.5018;Get
+    Main Light;;0,0,0,1;void MainLight_half(float3 WorldPos, out half3 Direction,
+    out half3 Color, out half DistanceAtten, out half ShadowAtten)${$#if SHADERGRAPH_PREVIEW$   
+    Direction = half3(0.5, 0.5, 0)@$    Color = 1@$    DistanceAtten = 1@$    ShadowAtten
+    = 1@$#else$#if SHADOWS_SCREEN$    half4 clipPos = TransformWorldToHClip(WorldPos)@$   
+    half4 shadowCoord = ComputeScreenPos(clipPos)@$#else$    half4 shadowCoord =
+    TransformWorldToShadowCoord(WorldPos)@$#endif$    Light mainLight = GetMainLight(shadowCoord)@$   
+    Direction = mainLight.direction@$    Color = mainLight.color@$    DistanceAtten
+    = mainLight.distanceAttenuation@$    ShadowAtten = mainLight.shadowAttenuation@$#endif$};0;0\nNode;AmplifyShaderEditor.StickyNoteNode;14;-257.6461,3.780958;Inherit;False;512.3865;119.7979;Color;;0,0,0,1;Light
+    light = GetMainLight()@$return Color = light.color@;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;15;-250.0372,259.2358;Inherit;False;512.3865;119.7979;DistanceAtten;;0,0,0,1;Light
+    light = GetMainLight()@$return DistanceAtten = Light.distanceAttenuation@;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;16;-254.3854,514.6907;Inherit;False;512.3865;119.7979;ShadowAtten;;0,0,0,1;Light
+    light = GetMainLight()@$return ShadowAtten = Light.shadowAttenuation@;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;10;-188.5,131.3297;Inherit;False;Light
+    light = GetMainLight()@$return Color = light.color@;3;Create;1;True;Color;FLOAT3;0,0,0;Out;;Inherit;False;Get
+    Main Light Color Node;True;False;0;;False;1;0;FLOAT3;0,0,0;False;2;FLOAT3;0;FLOAT3;1\nNode;AmplifyShaderEditor.CustomExpressionNode;8;-241.3259,644.0421;Inherit;False;Light
+    light = GetMainLight()@$return ShadowAtten = Light.shadowAttenuation@;1;Create;1;True;ShadowAtten;FLOAT;1;Out;;Inherit;False;Get
+    Main Light ShadowAtten Node;True;False;0;;False;1;0;FLOAT;1;False;2;FLOAT;0;FLOAT;1\nNode;AmplifyShaderEditor.CustomExpressionNode;2;-212,-121.0833;Inherit;False;Light
+    light = GetMainLight()@$return Direction = light.direction@;3;Create;1;True;Direction;FLOAT3;0.5,0.5,0;Out;;Inherit;False;Get
+    Main Light Direction Node;True;False;0;;False;1;0;FLOAT3;0.5,0.5,0;False;2;FLOAT3;0;FLOAT3;1\nNode;AmplifyShaderEditor.CustomExpressionNode;7;-245.3259,388.684;Inherit;False;Light
+    light = GetMainLight()@$return DistanceAtten = Light.distanceAttenuation@;1;Create;1;True;DistanceAtten;FLOAT;1;Out;;Inherit;False;Get
+    Main Light DistanceAtten Node;True;False;0;;False;1;0;FLOAT;1;False;2;FLOAT;0;FLOAT;1\nNode;AmplifyShaderEditor.FunctionInput;18;-1327.967,205.4707;Inherit;False;WorldPos;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;19;-1524.967,210.4707;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.CustomExpressionNode;17;-1155.982,209.8848;Inherit;False;void
+    MainLight_half(float3 WorldPos, out half3 Direction, out half3 Color, out half
+    DistanceAtten, out half ShadowAtten)${$#if SHADOWS_SCREEN$    half4 clipPos =
+    TransformWorldToHClip(WorldPos)@$    half4 shadowCoord = ComputeScreenPos(clipPos)@$#else$   
+    half4 shadowCoord = TransformWorldToShadowCoord(WorldPos)@$#endif$    Light mainLight
+    = GetMainLight(shadowCoord)@$    Direction = mainLight.direction@$    Color =
+    mainLight.color@$    DistanceAtten = mainLight.distanceAttenuation@$    ShadowAtten
+    = mainLight.shadowAttenuation@$#endif$};1;Create;5;True;WorldPos;FLOAT3;0,0,0;In;;Inherit;False;True;Direction;FLOAT3;0.5,0.5,0;Out;;Inherit;False;True;Color;FLOAT3;1,1,1;Out;;Inherit;False;True;DistanceAtten;FLOAT;1;Out;;Inherit;False;True;ShadowAtten;FLOAT;1;Out;;Inherit;False;Get
+    Main Light Node;True;False;0;;False;5;0;FLOAT3;0,0,0;False;1;FLOAT3;0.5,0.5,0;False;2;FLOAT3;1,1,1;False;3;FLOAT;1;False;4;FLOAT;1;False;5;FLOAT;0;FLOAT3;2;FLOAT3;3;FLOAT;4;FLOAT;5\nNode;AmplifyShaderEditor.FunctionOutput;3;37,-97.91666;Inherit;False;True;-1;Direction;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;9;33.32591,153.4092;Inherit;False;False;-1;Color;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;18;0;19;0\nWireConnection;17;0;18;0\nWireConnection;3;0;2;1\nWireConnection;9;0;10;1\nASEEND*/\n//CHKSM=8E5717FB41996AC3AB26D954CB6A06B7B9B8BD21"
+  m_functionName: 
+  m_description: 'Get Main Light Color Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7529412, g: 0.6784314, b: 0, a: 1}
+  m_customNodeCategory: DESF Lighting
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

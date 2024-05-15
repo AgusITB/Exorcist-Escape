@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Surface Height
+  m_Shader: {fileID: 4800000, guid: 190b6c048ddb4697ad7e6c275cf6f29e, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d24f9797d60154d46b11f365e8ddfb59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: dfbd64095dd164a4f9e24e101860b65c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: b134508eff82eee4a9f4406debf33b5d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 84f8dce80bafde6408c0ba87144e5d97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphatoCoverage: 0
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _CATEGORY_DISPLACEMENT: 0
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 2
+    - _DisplacementBlendInversion: 0
+    - _DisplacementEnable: 1
+    - _DisplacementFadeDepth: -25
+    - _DisplacementFadeMode: 0
+    - _DisplacementFadeStart: 10
+    - _DisplacementNormalReconstructed: 0
+    - _DisplacementReconstructMode: 0
+    - _DisplacementReconstructStrength: 0
+    - _DisplacementStrength: 0.019
+    - _Displacement_Mode: 1
+    - _Displacement_Strength: 0.02
+    - _EmissionFlags: 0
+    - _EnvironmentReflections: 1
+    - _GlossyReflections: 1
+    - _MCoreDebugMode: 1
+    - _MCoreDebugStrengthAO: 0.95
+    - _MetallicStrength: 0.5
+    - _Mian1_UVSet: 0
+    - _NormalReconstructed: 0
+    - _NormalStrength: 1
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 0
+    - _OcclusionStrengthAO: 0.5
+    - _OcclusionStrengthAORemapMax: 0.9922179
+    - _OcclusionStrengthAORemapMin: 0.22178988
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_DISPLACEMENT: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessMax: 0.129
+    - _SmoothnessMin: 0
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessPower: 0
+    - _SmoothnessScale: 0
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 0
+    - _SmoothnessStrength: 0
+    - _SmoothnessStrengthRemapMax: 0
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0.35
+    - _SmoothnessType: 1
+    - _SmoothnessVariance: 1
+    - _SpecularHighlights: 1
+    - _TilingX: 3
+    - _TilingY: 3
+    - _TillingMode: 0
+    - _ZTestMode: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainUVs: {r: 3, g: 3, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0.22178988, g: 0.9922179, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Color Flicker
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.NoiseGeneratorNode;6;-1191.406,59.83427;Inherit;False;Simplex2D;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;-124.4032,-256;Inherit;False;416.8248;191.0567;Color
+    Flicker Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;5;-976,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NoiseGeneratorNode;7;-1200,160;Inherit;False;Simplex2D;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;0.3;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;14;-1200,256;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-768,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;31;-768,320;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;13;-608,256;Inherit;False;DESF
+    Random Range;-1;;2;599e15eb9e4f7cb4ea0d74084eaf5c10;0;3;3;FLOAT2;0,0;False;7;FLOAT;0;False;5;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;22;-288,-16;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;-448,-144;Inherit;False;193.0442;109.6849;Color;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;2;-448,-16;Inherit;False;Color;5;0;False;1;0;COLOR;0,0,1,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.StickyNoteNode;34;-1056,400;Inherit;False;233;127;Frequency;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;35;-1648,160;Inherit;False;196;116;Speed;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;36;-368,192;Inherit;False;211;164;Enable
+    Random;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;24;-368,96;Inherit;False;Enable
+    Random;True;1;2;-1;In 0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;1;-96,-16;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;20;-960,320;Inherit;False;Frequency;1;2;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-1376,160;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;26;-1424,144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;27;-1424,144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;23;-1424,288;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;25;-1392,304;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;11;-1584,80;Inherit;False;Speed;1;1;False;1;0;FLOAT;10;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;9;-1408,16;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;28;-96,96;Inherit;True;False;-1;Mask;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;128,-16;Inherit;True;True;-1;Out;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;6;0;9;0\nWireConnection;6;1;11;0\nWireConnection;5;0;6;0\nWireConnection;5;1;7;0\nWireConnection;7;0;8;0\nWireConnection;14;0;9;0\nWireConnection;14;1;25;0\nWireConnection;3;0;5;0\nWireConnection;3;1;20;0\nWireConnection;31;0;20;0\nWireConnection;13;3;14;0\nWireConnection;13;7;31;0\nWireConnection;22;0;2;0\nWireConnection;24;0;3;0\nWireConnection;24;1;13;0\nWireConnection;1;0;22;0\nWireConnection;1;1;24;0\nWireConnection;8;0;26;0\nWireConnection;26;0;11;0\nWireConnection;27;0;11;0\nWireConnection;23;0;27;0\nWireConnection;25;0;23;0\nWireConnection;28;0;24;0\nWireConnection;0;0;1;0\nASEEND*/\n//CHKSM=D0A3DD5E6D8A4D9CE2840F9AA639F58105090AC2"
+  m_functionName: 
+  m_description: 'Color Flicker Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.30588236, g: 0.5176471, b: 0.16078432, a: 1}
+  m_customNodeCategory: DESF Color
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

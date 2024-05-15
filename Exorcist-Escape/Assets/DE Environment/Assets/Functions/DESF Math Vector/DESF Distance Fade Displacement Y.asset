@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Distance Fade Displacement Y
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;126;-2368,-1392;Inherit;False;252.0676;134.0751;;;0,0,0,1;_DistanceFadeEnable$_DistanceFadeMode$_DistanceFadeRange$_DistanceFadeDisplacement;0;0\nNode;AmplifyShaderEditor.LerpOp;128;-3209.371,-1441.045;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;23;-3387.792,-1378.444;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;26;-3042.659,-1442.941;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;31;-2868.043,-1488.101;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;30;-2871.749,-1369.989;Inherit;False;Constant;_Vector0;Vector
+    0;11;0;Create;True;0;0;0;False;0;False;0,1,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleAddOpNode;32;-2684.022,-1491.438;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;-100;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;124;-2571.497,-1410.272;Inherit;False;Property;_DistanceFadeEnable;ENABLE
+    FADE;0;0;Create;False;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;125;-2375.376,-1515.91;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;29;-3046.079,-1623.646;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;21;-3531.29,-1439.398;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;132;-2688,-1792;Inherit;False;337.7756;172.3878;Distance
+    Fade Displacement Y Node;;0,0,0,1;Vertex offset down in Y Direction based on
+    distance;0;0\nNode;AmplifyShaderEditor.Vector3Node;25;-3264,-1600;Inherit;False;Constant;_Vector1;Vector
+    1;11;0;Create;True;0;0;0;False;0;False;0,1,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;27;-3360,-1680;Float;False;Property;_DistanceFadeDisplacement;Distance
+    Displacement;3;0;Create;False;0;0;0;False;0;False;-1;-93;-100;100;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;127;-3440,-1296;Half;False;Property;_DistanceFadeMode;Distance
+    Fade Mode;1;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerFloatEnum(FadeIn _FadeOut);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;19;-3712,-1440;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;131;-3936,-1424;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;18;-4000,-1584;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;129;-3856,-1264;Float;False;Property;_DistanceFadeRange;Distance
+    Fade Range;2;0;Create;False;0;0;0;False;0;False;1000;1525;0;5000;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;15;-2199.335,-1516.094;Inherit;False;True;-1;Vertex
+    Offset;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;128;0;21;0\nWireConnection;128;1;23;0\nWireConnection;128;2;127;0\nWireConnection;23;0;21;0\nWireConnection;26;0;128;0\nWireConnection;31;1;29;0\nWireConnection;31;2;26;0\nWireConnection;32;0;31;0\nWireConnection;32;1;30;2\nWireConnection;125;1;32;0\nWireConnection;125;2;124;0\nWireConnection;29;0;27;0\nWireConnection;29;1;25;0\nWireConnection;21;0;19;0\nWireConnection;21;1;129;0\nWireConnection;19;0;18;0\nWireConnection;19;1;131;0\nWireConnection;15;0;125;0\nASEEND*/\n//CHKSM=DBACB8524030376BB448D7531941AA928411B1B4"
+  m_functionName: 
+  m_description: 'Distance Fade Displacement Y Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Vector
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

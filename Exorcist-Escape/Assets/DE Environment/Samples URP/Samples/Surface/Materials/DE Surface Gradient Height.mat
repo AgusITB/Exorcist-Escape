@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Surface Gradient Height
+  m_Shader: {fileID: 4800000, guid: 02e1cfe82fe745f3af5b8b7192c51f48, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 7eec4242c5b60f448bd2d8917e421e55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 944ad1f30d538474cac9f8e070fde042, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: a48eec8fcb3a1b9498e66976f0fad156, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1.116
+    - _BumpNormalCompute: 0
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _EmissionFlags: 0
+    - _EnvironmentReflections: 1
+    - _GlossyReflections: 1
+    - _GradientContrast: 0.672
+    - _GradientEnable: 1
+    - _GradientHeight: 3.79
+    - _GradientInverted: 1
+    - _GradientRamp: 0.007
+    - _Gradient_Contrast: 0.268
+    - _Gradient_Height: 0.1
+    - _Gradient_Mode: 2
+    - _Gradient_NoiseIndex: 1.75
+    - _Gradient_NoiseScale: 0.4
+    - _Gradient_NoiseShift: 0.4
+    - _Gradient_Ramp: 0.234
+    - _MetallicStrength: 0
+    - _NormalStrength: 3
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.929
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _Smoothness: 0.887
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessMax: 0.007
+    - _SmoothnessMin: 0
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 0.32
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.204
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _TilingX: 2
+    - _TilingY: 2
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientColor: {r: 0.23511982, g: 0, b: 1, a: 0}
+    - _GradientColorBottom: {r: 1, g: 0.1749955, b: 0.0039215684, a: 0}
+    - _GradientColorBottomSide: {r: 0, g: 1, b: 0.18552995, a: 0}
+    - _GradientColorCurvature: {r: 0.8490566, g: 0, b: 0, a: 0}
+    - _GradientColorSide: {r: 1, g: 0.7748438, b: 0, a: 0}
+    - _Gradient_Bottom: {r: 0, g: 0.60874164, b: 0.7490196, a: 0}
+    - _Gradient_BottomSide: {r: 0.9811321, g: 0.3534076, b: 0.06016379, a: 0}
+    - _Gradient_Color: {r: 0, g: 1, b: 0.24642348, a: 0}
+    - _Gradient_TintCurvature: {r: 1, g: 0, b: 0.444931, a: 0}
+    - _Gradient_Top: {r: 1, g: 0, b: 0.13333334, a: 0}
+    - _Gradient_TopSide: {r: 0.69097924, g: 1, b: 0, a: 0}
+    - _MainUVs: {r: 3, g: 3, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

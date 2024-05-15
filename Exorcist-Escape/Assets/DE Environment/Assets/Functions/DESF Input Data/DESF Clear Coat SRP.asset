@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Clear Coat SRP
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.1\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19201\nNode;AmplifyShaderEditor.StickyNoteNode;92;1824,-128;Inherit;False;217.9414;166.0569;;;0,0,0,1;_ClearCoatEnable$_ClearCoat$_ClearCoatUVMode$_ClearCoatUVs$_ClearCoatMask$_ClearCoatSmoothness;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;144;2059.208,-123.0988;Inherit;False;496.3921;244.9659;Clear
+    Coat SRP Node;;0,0,0,1;Adds an extra Material layer which simulates a transparent
+    and thin coating on top of the base Material.$$Performance impact: $Rendering
+    Clear Coat has roughly twice the cost of rendering a base material, because the
+    lighting is evaluated once per layer.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;145;2352,256;Inherit;False;296.9127;129.1398;Coat
+    Mask;;0.05660379,0.05660379,0.05660379,1;This property defines the intensity
+    of the effect: 0 - no effect, 1 - maximum effect. Setting the Mask value to 0
+    does not disable the feature.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;146;1760,560;Inherit;False;285.5438;125.4144;Coat
+    Smoothness;;0,0,0,1;This property defines the spread of highlights on the surface.
+    0 gives wide, rough highlights. 1 gives sharp, glasslike highlights.;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;148;1408,256;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;99;1792,256;Inherit;False;Unity
+    Render Pipeline - HDRP;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;101;1792,176;Inherit;False;Unity
+    Render Pipeline - BIRP;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;100;1792,336;Inherit;False;Unity
+    Render Pipeline - URP;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;98;2096,176;Inherit;False;Unity
+    Render Pipeline;False;1;3;0;BIRP;HDRP;URP;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;2352,176;Inherit;False;True;-1;Coat
+    Mask;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SamplerNode;38;512,256;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;9;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;49;1280,-32;Inherit;False;DESF
+    Utility Register Inline;-1;;44967;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;62;1152,48;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;48;928,128;Inherit;False;Property;_SPACE_COATMASK;SPACE_COATMASK;10;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;147;832,512;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;33;832,256;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;83;1568,480;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;23;1568,256;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;91;1760,480;Inherit;False;False;-1;Coat
+    Smoothness;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;51;32,16;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;54;32,96;Inherit;False;FLOAT2;2;3;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;149;528,592;Inherit;False;245.5616;101.3;Clear
+    Coat Smoothness;;0,0,0,1;_ClearCoatSmoothness;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;151;1760,720;Inherit;False;669.7338;138.0293;URP;;0,0,0,1;[ToggleUI]
+    _ClearCoat(\"Clear Coat\", Float) = 0.0$        _ClearCoatMap(\"Clear Coat Map\",
+    2D) = \"white\" {}$        _ClearCoatMask(\"Clear Coat Mask\", Range(0.0, 1.0))
+    = 0.0$        _ClearCoatSmoothness(\"Clear Coat Smoothness\", Range(0.0, 1.0))
+    = 1.0;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;152;1104,400;Inherit;False;245;100;Clear
+    Coat Mask;;0,0,0,1;_ClearCoatMask;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;153;1104,320;Inherit;False;Property;_ClearCoatMask;Clear
+    Coat Mask;8;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;154;80,256;Inherit;False;150;100;Clear
+    Coat Map;;0,0,0,1;_ClearCoat;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;150;512,512;Inherit;False;Property;_ClearCoatSmoothness;Clear
+    Coat Smoothness;9;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexturePropertyNode;37;240,256;Inherit;True;Property;_ClearCoat;Clear
+    Coat Map;2;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.RangedFloatNode;20;928,-32;Half;False;Property;_ClearCoatEnable;ENABLE
+    COAT MASK;1;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;47;896,48;Inherit;False;Property;_CATEGORY_COATMASK;CATEGORY_COAT
+    MASK;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(COAT MASK,true,_ClearCoatEnable,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector4Node;41;-176,16;Inherit;False;Property;_ClearCoatUVs;CoatMask
+    UVs;4;0;Create;False;0;0;0;False;1;DE_DrawerTilingOffset;False;1,1,0,0;0,0,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;143;208,16;Inherit;False;DESF
+    UV Scale Transforms;5;;44969;3837d32c070753c479a6caae19df91f9;21,231,0,735,0,232,0,716,0,245,0,89,1,72,1,216,0,106,0,61,0,199,1,203,0,50,0,354,0,459,0,886,0,858,1,859,1,860,1,458,0,438,0;20;229;SAMPLER2D;;False;241;FLOAT;0;False;82;FLOAT;0;False;46;FLOAT2;1,1;False;47;FLOAT2;1,0;False;718;FLOAT2;3,3;False;734;FLOAT;1;False;725;FLOAT2;1,1;False;726;FLOAT2;3,3;False;724;FLOAT;-180;False;723;FLOAT;180;False;9;FLOAT2;0.5,0.5;False;6;FLOAT;180;False;52;FLOAT;0;False;202;FLOAT;0;False;351;FLOAT;0;False;396;FLOAT;0;False;342;FLOAT;1;False;341;FLOAT;1;False;433;FLOAT;0.001;False;3;FLOAT2;0;FLOAT;68;FLOAT;67\nNode;AmplifyShaderEditor.RangedFloatNode;61;32,-64;Half;False;Property;_ClearCoatUVMode;UV
+    Mode;3;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer 5;4;Layer
+    6;5;0;False;1;DE_DrawerFloatEnum(UV0 _UV1 _UV2 _UV3);False;0;0;0;0;0;1;FLOAT;0\nWireConnection;148;0;33;0\nWireConnection;148;1;153;0\nWireConnection;99;0;23;0\nWireConnection;101;0;23;0\nWireConnection;100;0;23;0\nWireConnection;98;0;101;0\nWireConnection;98;1;99;0\nWireConnection;98;2;100;0\nWireConnection;0;0;98;0\nWireConnection;38;0;37;0\nWireConnection;38;1;143;0\nWireConnection;38;7;37;1\nWireConnection;49;1;20;0\nWireConnection;49;2;62;0\nWireConnection;62;0;47;0\nWireConnection;62;1;48;0\nWireConnection;147;0;38;1\nWireConnection;147;1;150;0\nWireConnection;33;0;38;0\nWireConnection;83;1;147;0\nWireConnection;83;2;49;0\nWireConnection;23;1;148;0\nWireConnection;23;2;49;0\nWireConnection;91;0;83;0\nWireConnection;51;0;41;0\nWireConnection;54;0;41;0\nWireConnection;143;82;61;0\nWireConnection;143;46;51;0\nWireConnection;143;47;54;0\nASEEND*/\n//CHKSM=E391FA44E00EC1FA499B8784652815A62A4D8E88"
+  m_functionName: 
+  m_description: Clear Coat SRP Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

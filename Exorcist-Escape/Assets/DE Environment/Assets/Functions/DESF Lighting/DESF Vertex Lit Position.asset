@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Vertex Lit Position
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CustomExpressionNode;26;-1184,-128;Inherit;False;return
+    unity_4LightPosX0@;4;Create;0;Vertex Light Pos X;True;False;0;;False;0;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;31;-944,-128;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;10;-768,-128;Inherit;False;FLOAT4;1;0;FLOAT4;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.BreakToComponentsNode;5;-768,16;Inherit;False;FLOAT4;1;0;FLOAT4;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.BreakToComponentsNode;4;-768,160;Inherit;False;FLOAT4;1;0;FLOAT4;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;30;-944,16;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;16;-1184,16;Inherit;False;return
+    unity_4LightPosY0@;4;Create;0;Vertex Light Pos Y;True;False;0;;False;0;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;29;-944,160;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;8;-1184,160;Inherit;False;return
+    unity_4LightPosZ0@;4;Create;0;Vertex Light Pos Z;True;False;0;;False;0;1;FLOAT4;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;40;-1184,-288;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DynamicAppendNode;13;-560,-128;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;6;-560,0;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;3;-560,128;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;7;-560,256;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;35;-384,-128;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;36;-384,0;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;37;-384,128;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;38;-384,256;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;20;-192,-128;Inherit;False;False;-1;Position
+    1;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;28;-192,0;Inherit;False;False;-1;Position
+    2;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;21;-192,128;Inherit;False;False;-1;Position
+    3;2;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;18;-192,256;Inherit;False;True;-1;Position
+    4;3;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;31;0;26;0\nWireConnection;31;1;40;1\nWireConnection;10;0;31;0\nWireConnection;5;0;30;0\nWireConnection;4;0;29;0\nWireConnection;30;0;16;0\nWireConnection;30;1;40;2\nWireConnection;29;0;8;0\nWireConnection;29;1;40;3\nWireConnection;13;0;10;0\nWireConnection;13;1;5;0\nWireConnection;13;2;4;0\nWireConnection;6;0;10;1\nWireConnection;6;1;5;1\nWireConnection;6;2;4;1\nWireConnection;3;0;10;2\nWireConnection;3;1;5;2\nWireConnection;3;2;4;2\nWireConnection;7;0;10;3\nWireConnection;7;1;5;3\nWireConnection;7;2;4;3\nWireConnection;35;0;13;0\nWireConnection;36;0;6;0\nWireConnection;37;0;3;0\nWireConnection;38;0;7;0\nWireConnection;20;0;35;0\nWireConnection;28;0;36;0\nWireConnection;21;0;37;0\nWireConnection;18;0;38;0\nASEEND*/\n//CHKSM=0F1CD073C1794BB15507B5D4BB8E00A084B6C458"
+  m_functionName: 
+  m_description: 'Vertex Lit Position Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7529412, g: 0.6784314, b: 0, a: 1}
+  m_customNodeCategory: DESF Lighting
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Hologram Standard
+  m_Shader: {fileID: 4800000, guid: 2e600e4305c74df6a150d7e0d38c98f2, type: 3}
+  m_ShaderKeywords: _EMISSION _MASKAPPEARAXIS_DISTANCE _MASKAPPEARAXIS_Y _NORMALMAP
+    _SPECGLOSSMAP
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 777ab07c527f8d441993fddfa6698c6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColor_Map:
+        m_Texture: {fileID: 2800000, guid: 8f6c448a39169b44eae7369a3f4ec6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchHologram_Map:
+        m_Texture: {fileID: 2800000, guid: 48f21d0aa4ddffc4b94e0ccac0ccf73b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchRimBump_Map:
+        m_Texture: {fileID: 2800000, guid: 4d5cefa9386c0fb4db06b6fbb21568ab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _01_EmissionStrength: 30.7
+    - _01_Opacity: 0.156
+    - _02_EmissionStrength: 0.9
+    - _02_Opacity: 0.383
+    - _03_Opacity: 0.534
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphatoCoverage: 0
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _ENVIRONMENTREFLECTIONS_OFF: 1
+    - _EmissionFlags: 3
+    - _EmissionMode: 1
+    - _EmissionTintStrength_01: 62.9
+    - _EmissionTintStrength_Panning: 88.6
+    - _Emission_OffsetX: 0
+    - _Emission_OffsetY: -0.15
+    - _Emission_Rotation: 0
+    - _Emission_TilingX: 1
+    - _Emission_TilingY: 1
+    - _EmissiveColor_MainMode: 0
+    - _EmissiveColor_MainStrength: 95.7
+    - _EmissiveColor_PanningOffsetXSpeed: 0.03
+    - _EmissiveColor_PanningOffsetYSpeed: -0
+    - _EmissiveColor_PanningStrength: 62.2
+    - _EmissiveIntensity: 2.59
+    - _EmissiveIntensity_02: 1
+    - _Enable: 0
+    - _EnableGlitch: 1
+    - _EnableGrow: 0
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 0
+    - _Flicker_Speed: 0
+    - _Fresnel_Bias: 0.674
+    - _Fresnel_Mode: 2
+    - _Fresnel_ModeOpacity: 0
+    - _Fresnel_Power: 2.61
+    - _Fresnel_Scale: 0.509
+    - _GlitchBanding_Direction3: 1
+    - _GlitchFlash_Mode: 1
+    - _GlitchFlash_Speed: 0.309
+    - _GlitchFlicker_Mode: 0
+    - _GlitchFlicker_Speed: 0.5
+    - _GlitchHologram_EdgeOffset: 6.1
+    - _GlitchHologram_EdgeStrength: 11.9
+    - _GlitchHologram_ScaleX: 56.5
+    - _GlitchHologram_ScaleY: 191.8
+    - _GlitchHologram_TilingX: 7.9
+    - _GlitchHologram_TilingY: 36.9
+    - _GlitchRimBump_Mode: 1
+    - _GlitchRimBump_Speed: 0
+    - _GlitchRimBump_Strength: 0
+    - _GlitchVertex_Intensity: 0.5
+    - _GlitchVertex_Mode: 1
+    - _GlitchVertex_ModeSize: 0
+    - _GlitchVertex_OffsetX: 0
+    - _GlitchVertex_OffsetY: 0
+    - _GlitchVertex_OffsetZ: 0
+    - _GlitchVertex_SizeX: 0
+    - _GlitchVertex_SizeY: 0
+    - _GlitchVertex_SizeZ: 0
+    - _GlitchVertex_Speed: 5
+    - _GlossyReflections: 1
+    - _Line01_Opacity: 0
+    - _Line01_Strength: 1
+    - _Line02_Opacity: 0
+    - _Line02_Strength: 1
+    - _MaskClipValue: 0.45
+    - _MaskClipValue2: 0.5
+    - _OPACITY_OpacityStrength1: 0
+    - _Panning_OffsetXSpeed: 0.03
+    - _Panning_OffsetYSpeed: 0
+    - _RECEIVE_SHADOWS_OFF: 0
+    - _ReceiveShadows: 1
+    - _SMOOTHNESS_Strength1: 0.784
+    - _SPECULARHIGHLIGHTS_OFF: 0
+    - _Scanline_GlitchMode: 2
+    - _Scanline_Line: 10
+    - _Scanline_Noise: 1.19
+    - _Scanline_PulsateMode: 1
+    - _Scanline_PulsateSize: 0.845
+    - _Scanline_PulsateSpeed: 0.524
+    - _Scanline_PulsateStrength: 5
+    - _Scanline_ScreenSpaceMode: 1
+    - _Scanline_Speed: 0.77
+    - _Scanline_Tiling: 11.3
+    - _SizeXYZ: 0.64
+    - _SpecularHighlights: 1
+    - _VertexGlitchEnable: 1
+    - _VertexGlitchIntensity: 0.5
+    - _VertexGlitchOffsetX: 0.03
+    - _VertexGlitchOffsetY: 0
+    - _VertexGlitchOffsetZ: 0
+    - _VertexGlitchSpeed: 19.5
+    - _VertexGrowEnable: 0
+    - _VertexGrowX: 0
+    - _VertexGrowXYZ: 1
+    - _VertexGrowY: 0
+    - _VertexGrowZ: 0
+    - _Vertex_IntensityGlitch: 0.172
+    - _Vertex_ModeVertexGlitch: 0
+    - _Vertex_ModeVertexGrow: 0
+    - _Vertex_OffsetXGlitch: -0.1
+    - _Vertex_OffsetYGlitch: 0
+    - _Vertex_OffsetZGlitch: 0
+    - _Vertex_SizeXGrow: 0.27
+    - _Vertex_SizeYGrow: 0
+    - _Vertex_SizeZGrow: 0
+    - _Vertex_SpeedGlitch: 37.8
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _01_Tint: {r: 0.06666667, g: 0.2784314, b: 0.9137255, a: 0}
+    - _02_Tint: {r: 0, g: 1, b: 0.1796296, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionTint_01: {r: 1, g: 0, b: 0, a: 1}
+    - _Emission_PANNING_TintPanning: {r: 0.624, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 0, g: 0.55724907, b: 1, a: 0}
+    - _EmissiveColor_02: {r: 0, g: 0.9413085, b: 1, a: 0}
+    - _EmissiveColor_MainTint: {r: 0.07066631, g: 1, b: 0, a: 1}
+    - _EmissiveColor_PanningTint: {r: 1, g: 0, b: 0.15838766, a: 1}
+    - _Fresnel_Tint: {r: 0, g: 0.7539928, b: 1, a: 1}
+    - _Line01_Tint: {r: 0.47818384, g: 0.9137255, b: 0.066666685, a: 0}
+    - _Line02_Tint: {r: 0, g: 1, b: 0.1796296, a: 0}
+    - _Scanline_PulsateTint: {r: 0, g: 1, b: 0.37643623, a: 0}
+  m_BuildTextureStacks: []

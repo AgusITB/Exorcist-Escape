@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Projector Matrix
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;28;-1200,-576;Inherit;False;264.7;114.7;Matrix;;0.02830189,0.02830189,0.02830189,1;Use
+    Projector Clip Matrix for Falloff textures;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;24;-1200,-448;Inherit;False;Matrix;False;0;2;-1;Projector
+    Matrix;Projector Clip Matrix;Object;-1;10;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.UnityProjectorMatrixNode;1;-1600,-448;Inherit;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;27;-1440,-368;Inherit;False;Projector
+    Clip Matrix;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.UnityProjectorClipMatrixNode;25;-1632,-368;Inherit;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.SwizzleNode;29;-416,-448;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;30;-416,-368;Inherit;False;FLOAT;3;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;7;-256,-448;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-48,-448;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;10;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;-176,-640;Inherit;False;383.0753;153.7866;UV
+    Projector Matrix Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.VertexToFragmentNode;4;-656,-448;Inherit;False;False;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleRemainderNode;10;-32,-128;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-224,-128;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TimeNode;12;-496,-160;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;32;-224,-272;Inherit;False;150;100;Tiling;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;16;-224,-352;Inherit;False;Tiling;1;0;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;-224,64;Inherit;False;150;100;Frames;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;17;-224,-16;Inherit;False;Frames;1;1;False;1;0;FLOAT;16;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;34;-448,64;Inherit;False;150;100;FPS;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;18;-432,-16;Inherit;False;FPS;1;2;False;1;0;FLOAT;16;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-832,-448;Inherit;False;2;2;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.StickyNoteNode;35;128,-48;Inherit;False;254;133;Output
+    Index;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;36;128,-368;Inherit;False;257;119;OutPut
+    UV;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionSubtitle;26;-1440,-448;Inherit;False;Projector
+    Matrix;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.PosVertexDataNode;2;-1072,-336;Inherit;False;1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;15;128,-128;Inherit;False;False;-1;Index;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;128,-448;Inherit;False;True;-1;UV;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;24;0;26;0\nWireConnection;24;1;27;0\nWireConnection;27;0;25;0\nWireConnection;29;0;4;0\nWireConnection;30;0;4;0\nWireConnection;7;0;29;0\nWireConnection;7;1;30;0\nWireConnection;8;0;7;0\nWireConnection;8;1;16;0\nWireConnection;4;0;3;0\nWireConnection;10;0;11;0\nWireConnection;10;1;17;0\nWireConnection;11;0;12;2\nWireConnection;11;1;18;0\nWireConnection;3;0;24;0\nWireConnection;3;1;2;0\nWireConnection;26;0;1;0\nWireConnection;15;0;10;0\nWireConnection;0;0;8;0\nASEEND*/\n//CHKSM=97FDD6B21D890D28B7FE05DC4F0757D79D40DE3D"
+  m_functionName: 
+  m_description: 'UV Projector Matrix Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

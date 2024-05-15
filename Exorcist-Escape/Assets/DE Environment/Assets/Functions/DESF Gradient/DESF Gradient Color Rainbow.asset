@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Gradient Color Rainbow
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;42;-1037.558,-268.2425;Inherit;False;1031.301;800.2629;Robert
+    Cross Sampling;16;34;36;33;32;28;29;31;30;27;39;38;26;24;41;40;25;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.FractNode;20;-352,-816;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;15;-496,-816;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;12;-624,-816;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;11;-848,-816;Inherit;False;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.NormalizeNode;14;-816,-640;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;13;-992,-640;Inherit;False;Constant;_Vector0;Vector
+    0;0;0;Create;True;0;0;0;False;0;False;1,1,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleTimeNode;17;-704,-512;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;44;-848,-512;Inherit;False;Speed;1;0;False;1;0;FLOAT;0.1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.GradientSampleNode;22;-208,-896;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GradientNode;21;-448,-896;Inherit;False;0;6;2;0.0999999,0,1,0;0,0.5500002,1,0.08116274;0.00999999,1,0.2245,0.1797055;1,0.9166666,0,0.498558;1,0.03333334,0,0.6956588;0.0999999,0,1,1;1,0;1,1;0;1;OBJECT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;25;-256,-224;Inherit;True;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;40;-256,-16;Inherit;True;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;41;-256,208;Inherit;True;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;24;-512,-224;Inherit;False;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleDivideOpNode;26;-448,-48;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;38;-448,48;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;39;-448,144;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;27;-640,-48;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;30;-640,48;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;31;-640,160;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;29;-960,-144;Half;False;Property;_EdgeSize;Edge
+    Size;0;0;Create;True;0;0;0;False;0;False;1;0;1;3;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector2Node;28;-896,-64;Half;False;Constant;_Vector1;Vector
+    1;0;0;Create;True;0;0;0;False;0;False;-1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.Vector2Node;32;-896,64;Half;False;Constant;_Vector2;Vector
+    2;1;0;Create;True;0;0;0;False;0;False;1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.Vector2Node;33;-896,192;Half;False;Constant;_Vector3;Vector
+    3;1;0;Create;True;0;0;0;False;0;False;-1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.ScreenParams;36;-896,320;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DynamicAppendNode;34;-624,384;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;0;128,-896;Inherit;False;True;-1;RGBA;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionOutput;45;128,-816;Inherit;False;False;-1;R;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;46;128,-736;Inherit;False;False;-1;G;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;47;128,-656;Inherit;False;False;-1;B;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;48;128,-576;Inherit;False;False;-1;A;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;20;0;15;0\nWireConnection;15;0;12;0\nWireConnection;15;1;17;0\nWireConnection;12;0;11;0\nWireConnection;12;1;14;0\nWireConnection;14;0;13;0\nWireConnection;17;0;44;0\nWireConnection;22;0;21;0\nWireConnection;22;1;20;0\nWireConnection;25;0;24;0\nWireConnection;25;1;26;0\nWireConnection;40;0;24;0\nWireConnection;40;1;38;0\nWireConnection;41;0;24;0\nWireConnection;41;1;39;0\nWireConnection;26;0;27;0\nWireConnection;26;1;34;0\nWireConnection;38;0;30;0\nWireConnection;38;1;34;0\nWireConnection;39;0;31;0\nWireConnection;39;1;34;0\nWireConnection;27;0;29;0\nWireConnection;27;1;28;0\nWireConnection;30;0;29;0\nWireConnection;30;1;32;0\nWireConnection;31;0;29;0\nWireConnection;31;1;33;0\nWireConnection;34;0;36;3\nWireConnection;34;1;36;4\nWireConnection;0;0;22;0\nWireConnection;45;0;22;1\nWireConnection;46;0;22;2\nWireConnection;47;0;22;3\nWireConnection;48;0;22;4\nASEEND*/\n//CHKSM=FA502194D54768EBBF800B01D3459B681687518A"
+  m_functionName: 
+  m_description: 'Gradient Color Rainbow Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Gradient
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 
