@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Vertex Slope Check
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;79;-512,-1200;Inherit;False;349.2488;130.8651;;;0.05660379,0.05046281,0.05046281,1;The
+    Face Normal Node generates unsmoothed normals for the faces of the mesh. The
+    normals are generated using derivatives so these normals are completely independent
+    from the vertex normals provided by the mesh.$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;94;128,-1408;Inherit;False;380.8951;151.6477;Vertex
+    Slope Check Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;90;-128,-1104;Inherit;False;Property;_Slope;Slope;0;0;Create;True;0;0;0;False;0;False;0.1;0.1;-0.5;0.5;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;83;176,-1200;Inherit;False;FLOAT;1;1;2;3;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;96;-96,-1200;Inherit;False;DESF
+    World Normal Face;-1;;1;44178b4c45076104fa2279d476ae6612;2,100,0,86,0;0;1;FLOAT3;30\nNode;AmplifyShaderEditor.FunctionInput;95;176,-1104;Inherit;False;Slope;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Compare;91;352,-1200;Inherit;False;2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;97;544,-896;Inherit;False;323.1313;225.2924;Example
+    case use;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.WireNode;98;489.8997,-1115.52;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;99;496,-800;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;93;608,-848;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;4;528,-1200;Inherit;False;True;-1;Alpha;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;83;0;96;30\nWireConnection;95;0;90;0\nWireConnection;91;0;83;0\nWireConnection;91;1;95;0\nWireConnection;98;0;91;0\nWireConnection;99;0;98;0\nWireConnection;93;2;99;0\nWireConnection;4;0;91;0\nASEEND*/\n//CHKSM=C663CAE971DC614E45D2CC6F330E6DE86C6ACD7D"
+  m_functionName: 
+  m_description: 'Vertex Slope Check Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Vertex Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

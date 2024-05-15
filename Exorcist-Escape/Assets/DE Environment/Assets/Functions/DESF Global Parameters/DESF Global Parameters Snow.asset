@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Global Parameters Snow
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;1649;-5915.357,-3805.547;Inherit;False;635.7207;297.186;_GlobalSnow;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;1652;-6251.694,-3802.242;Inherit;False;309;126;;;0,0,0,1;_GlobalSnowEnabled$_GlobalSnowIntensityTopDown$_GlobalSnowIntensityBottomUp;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;1650;-5820.175,-3760.381;Inherit;False;Global;_GlobalSnowEnabled;_GlobalSnowEnabled;0;0;Create;True;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1640;-5889.688,-3685.305;Half;False;Global;_GlobalSnowIntensityTopDown;_GlobalSnowIntensityTopDown;2;1;[HideInInspector];Create;False;1;;0;0;False;0;False;1;0;0;10;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1641;-5892.373,-3609.573;Half;False;Global;_GlobalSnowIntensityBottomUp;_GlobalSnowIntensityBottomUp;3;1;[HideInInspector];Create;False;1;;0;0;False;0;False;1;0;0;10;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;1648;-5567.871,-3758.606;Inherit;False;True;-1;GlobalSnowEnabled;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;1646;-5571.084,-3681.158;Inherit;False;False;-1;GlobalSnowIntensityTopDown;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;1647;-5570.786,-3604.898;Inherit;False;False;-1;GlobalSnowIntensityBottomUp;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;1648;0;1650;0\nWireConnection;1646;0;1640;0\nWireConnection;1647;0;1641;0\nASEEND*/\n//CHKSM=40DF4976E4C5488083C6B659E57D82D6A9874036"
+  m_functionName: 
+  m_description: 'Global Parameters Snow Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Global Parameters
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

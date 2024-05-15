@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Specular Occlusion From AO
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;154;-3200.115,-2441.353;Inherit;False;576.9856;206.113;Roughness;4;159;151;152;150;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;160;-2016,-3136;Inherit;False;511.9948;155.6006;Specular
+    Occlusion From AO Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;161;-2816,-2944;Inherit;False;View
+    Angle Dependent;True;0;2;-1;In 0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;163;-2944,-2880;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;162;-3056,-2880;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;158;-3280,-2944;Inherit;False;Ambient
+    Occlusion;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;167;-3216,-2848;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;166;-3392,-2752;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;165;-3520,-2752;Inherit;False;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;164;-3712,-2752;Inherit;False;Smoothness;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;169;-3712,-2672;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMaxOpNode;139;-2752,-2752;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.0001;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;140;-2560,-2752;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;141;-2432,-2752;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;143;-2304,-2752;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;142;-2448,-2672;Inherit;False;Constant;_1E05;1E-05;11;0;Create;True;0;0;0;False;0;False;1E-05;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;145;-2176,-2752;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;155;-2016,-2944;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;156;-1888,-2944;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;157;-1728,-2944;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;32;-1568,-2944;Inherit;False;True;-1;Specular
+    Occlusion;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;148;-2448,-2384;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Exp2OpNode;147;-2304,-2384;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;149;-2592,-2384;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-16;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;150;-2768,-2384;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;152;-2928,-2320;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;151;-2928,-2400;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;159;-3184,-2368;Inherit;False;Perceptual
+    Smoothness;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;168;-3552,-2848;Inherit;False;Smoothness
+    View Angle Offset;1;3;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;55;-2896,-2752;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldNormalVector;60;-3120,-2752;Inherit;False;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;61;-3120,-2608;Float;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nWireConnection;161;0;158;0\nWireConnection;161;1;163;0\nWireConnection;163;0;162;0\nWireConnection;162;0;158;0\nWireConnection;162;1;167;0\nWireConnection;167;0;168;0\nWireConnection;167;1;166;0\nWireConnection;166;0;165;0\nWireConnection;165;0;164;0\nWireConnection;165;1;169;0\nWireConnection;139;0;55;0\nWireConnection;140;0;139;0\nWireConnection;140;1;161;0\nWireConnection;141;0;140;0\nWireConnection;143;0;141;0\nWireConnection;143;1;142;0\nWireConnection;145;0;143;0\nWireConnection;145;1;147;0\nWireConnection;155;0;161;0\nWireConnection;155;1;145;0\nWireConnection;156;0;155;0\nWireConnection;157;0;156;0\nWireConnection;32;0;157;0\nWireConnection;148;0;149;0\nWireConnection;147;0;148;0\nWireConnection;149;0;150;0\nWireConnection;150;0;151;0\nWireConnection;150;1;152;0\nWireConnection;152;0;159;0\nWireConnection;151;0;159;0\nWireConnection;55;0;60;0\nWireConnection;55;1;61;0\nASEEND*/\n//CHKSM=1B0F25AA2D8D986936FCC0304246D45FA5100A22"
+  m_functionName: 
+  m_description: Specular Occlusion From AO Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

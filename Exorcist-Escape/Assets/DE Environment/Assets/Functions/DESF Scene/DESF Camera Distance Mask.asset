@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Camera Distance Mask
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.3\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19303\nNode;AmplifyShaderEditor.CommentaryNode;58;-1184,-544;Inherit;False;770.3511;409.9866;Position;6;13;49;55;56;57;59;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;28;352,80;Inherit;False;1351;533;example
+    Case Use;8;22;24;23;26;21;25;27;29;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;4;304,-336;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;11;640,-512;Inherit;False;389.237;140.0281;Camera
+    Distance Mask Node;;0,0,0,1;fades out at a far distance$The Camera Distance Mask
+    Node creates a grayscale mask based on distance from the camera.$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;14;96,-176;Inherit;False;257.894;128.9424;Start
+    Distance;;0,0,0,1;subtract the Start Distance.$$the distance from the camera
+    to the point where the gradient begins;0;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;6;640,-336;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;15;480,-176;Inherit;False;262.5954;134.342;Lenght;;0,0,0,1;divide
+    by the Length$$the length of the black to white gradient;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;16;-160,-224;Inherit;False;199.9;102.6;;;0,0,0,1;Distance
+    between the camera and the current position.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;17;816,-256;Inherit;False;178.6001;101.3;;;0,0,0,1;saturate
+    the result so that the output is between 0 and 1.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;1184,-480;Inherit;False;286.6204;129.9831;Invert;;0,0,0,1;While
+    the default is for the mask to be black close to the camera and white further
+    away, you can invert this by simply using a One Minus node.;0;0\nNode;AmplifyShaderEditor.SaturateNode;8;864,-336;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;9;1024,-256;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;7;480,-256;Inherit;False;Lenght;1;0;False;1;0;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;5;96,-256;Inherit;False;Start
+    Distance;1;1;False;1;0;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;27;1184,400;Inherit;False;303.7944;120.2642;example;;0,0,0,1;fade
+    out the detail normal map based on distance from the camera.;0;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;24;416,384;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;25;672,384;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;6,6;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SamplerNode;21;832,192;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;True;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WireNode;30;1400.305,-260.1393;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;29;1392,160;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;26;1440,160;Inherit;True;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.BlendNormalsNode;23;1168,272;Inherit;False;0;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;18;1200,-336;Inherit;False;Invert;True;1;2;-1;In
+    0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;22;832,384;Inherit;True;Property;_TextureSample1;Texture
+    Sample 1;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;True;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DistanceOpNode;2;-176,-336;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;57;-896,-272;Inherit;False;218.4431;109;;;0.1037736,0.1037736,0.1037736,1;Position
+    of the Camera's GameObject in world space;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;59;-672,-400;Inherit;False;195;100;Camera
+    View Dir;;0,0,0,1;correction for view dir;0;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;3;-384,-256;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;55;-1072,-496;Inherit;False;Tangent;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;49;-864,-496;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;56;-688,-496;Inherit;False;Camera
+    View Dir;True;0;2;-1;In 0;In 1;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;1472,-256;Inherit;False;319.6888;159.2749;Out;;0,0,0,1;a
+    gradient from zero to one where values between the camera and Mask Start are
+    zero, values between Mask Start and Mask Length are between zero and one, and
+    values greater than Mask Length are one;0;0\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;13;-1136,-336;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;0;1472,-336;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;4;0;2;0\nWireConnection;4;1;5;0\nWireConnection;6;0;4;0\nWireConnection;6;1;7;0\nWireConnection;8;0;6;0\nWireConnection;9;0;8;0\nWireConnection;25;0;24;0\nWireConnection;30;0;18;0\nWireConnection;29;0;30;0\nWireConnection;26;0;23;0\nWireConnection;26;1;21;0\nWireConnection;26;2;29;0\nWireConnection;23;0;21;0\nWireConnection;23;1;22;0\nWireConnection;18;0;8;0\nWireConnection;18;1;9;0\nWireConnection;22;1;25;0\nWireConnection;2;0;13;0\nWireConnection;2;1;3;0\nWireConnection;49;0;55;0\nWireConnection;49;1;13;0\nWireConnection;56;0;49;0\nWireConnection;56;1;13;0\nWireConnection;0;0;18;0\nASEEND*/\n//CHKSM=8102416DDEACAAAE653E2B5D67FF4C4B8CE8DE38"
+  m_functionName: 
+  m_description: 'Camera Distance Mask Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

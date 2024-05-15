@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Vector Displacement Surface
+  m_Shader: {fileID: 4800000, guid: b0ea831b410b44e398ab8e09251f14e3, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapVDM:
+        m_Texture: {fileID: 2800000, guid: 2adbe06ca514d0c4a9a6963d562849cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: fb5938b69ee3b944486c043cdf998547, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexVDM:
+        m_Texture: {fileID: 2800000, guid: d75bf9843690b5543a68891639cf83fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: 48c87aa1d56fe0d4aa571c703a060065, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 2adbe06ca514d0c4a9a6963d562849cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 0728373aa4cb6db46afc19da52a17da5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: d75bf9843690b5543a68891639cf83fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 2800000, guid: 5228a04ef529d2641937cab585cc1a02, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VDM01_BumpMap:
+        m_Texture: {fileID: 2800000, guid: 2adbe06ca514d0c4a9a6963d562849cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VDM01_Map:
+        m_Texture: {fileID: 2800000, guid: d75bf9843690b5543a68891639cf83fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VDMMap:
+        m_Texture: {fileID: 2800000, guid: 0728373aa4cb6db46afc19da52a17da5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VDMMaskMap:
+        m_Texture: {fileID: 2800000, guid: d75bf9843690b5543a68891639cf83fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _disp_g168876:
+        m_Texture: {fileID: 2800000, guid: 2369d8897488dca4990e36e91befffe7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal:
+        m_Texture: {fileID: 2800000, guid: 2adbe06ca514d0c4a9a6963d562849cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DisplacementMultiplierGlobal: 1
+    - _DisplacementReconstructMode: 0
+    - _DisplacementReconstructStrength: 0
+    - _EmissionFlags: 0
+    - _EmissiveAffectAlbedoBias: 0
+    - _EmissiveEnable: 0
+    - _EmissiveGlowEnable: 0
+    - _EmissiveGlowIntensity: 1
+    - _EmissiveGlowisGlobal: 0
+    - _EmissiveIntensity: 1
+    - _EmissiveRenderFace: 2
+    - _EmissiveisGlobal: 0
+    - _EnvironmentReflections: 1
+    - _ExtrudeAmount: 0.13
+    - _Float0: 1.6747831
+    - _Float1: 1
+    - _Float2: 1
+    - _Float3: 0.43
+    - _Float4: 0.003
+    - _Float7: 1
+    - _GlossyReflections: 1
+    - _Max: 1.47
+    - _MetallicStrength: 0
+    - _Min: 0.13
+    - _NormalStrength: 1
+    - _NormalStrengthVDM: 1
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionStrengthAO: 0
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0.55213314
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.496
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 0.503
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 0
+    - _SmoothnessStrength: 0
+    - _SmoothnessStrengthRemapMax: 0.007575758
+    - _SmoothnessStrengthRemapMin: 0.007575758
+    - _SpecularHighlights: 1
+    - _TessValue: 12.6
+    - _TessellationDistanceMax: 30.26
+    - _TessellationDistanceMin: 0.54
+    - _TessellationEnable: 1
+    - _TessellationMode: 1
+    - _TessellationPhong: 0.5
+    - _TessellationStrength: 100
+    - _Tile: 1.07
+    - _TilingX: 2
+    - _TilingY: 2
+    - _VDM01_AnimationMode: 0
+    - _VDM01_DisplacementIntensity: 0.057
+    - _VDM01_EmisionMode: 0
+    - _VDM01_EmissionBackFaceIntensity: 1
+    - _VDM01_EmissionFrontFaceIntensity: 2
+    - _VDMEmissiveIntensity: 1
+    - _VDMEmissiveIntensityGlow: 1.56
+    - _VDMEmissiveisGlobal: 0
+    - _VDMEmissiveisGlow: 1
+    - _VDMEnableEmission: 0
+    - _VDMOffset: -0.84
+    - _VDMOffsetX: 0
+    - _VDMOffsetY: 0
+    - _VDMTiling: 1
+    - _VDMTilingX: 1.36
+    - _VDMTilingY: 2.52
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColorVDM: {r: 1, g: 1, b: 1, a: 0}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveGlowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _MainUVs: {r: 2, g: 2, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0.55213314, g: 1, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0.007575758, g: 0.007575758, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _VDM01_Color: {r: 1, g: 0, b: 0, a: 0}
+    - _VDM01_EmissionBackFaceTint: {r: 0, g: 0, b: 0, a: 0}
+    - _VDM01_EmissionFrontFaceTint: {r: 0, g: 0, b: 0, a: 0}
+    - _VDMEmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    - _VDMEmissiveColorGlow: {r: 0, g: 0.41232988, b: 0.7490196, a: 0}
+    - _VDMUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _Vector0: {r: 0, g: 100, b: 0, a: 5}
+  m_BuildTextureStacks: []

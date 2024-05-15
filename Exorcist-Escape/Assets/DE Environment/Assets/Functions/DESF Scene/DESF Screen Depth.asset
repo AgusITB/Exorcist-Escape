@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Screen Depth
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;72;-895.0789,-1280;Inherit;False;1206.216;517.6699;Screen
+    Depth Node;5;75;74;71;73;70;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;59;-944,896;Inherit;False;1463.982;986.7944;;15;53;47;48;42;57;56;41;51;54;50;40;52;58;55;49;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.PosVertexDataNode;37;-992,-368;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;49;-80,944;Inherit;False;319.6;194.4;Depth
+    Sampling Modes;;0,0,0,1;Linear01$Linear depth value between 0 and 1$$Raw$Raw
+    depth value$$Eye$Depth converted to eye space units;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;55;-896,1120;Inherit;False;168.2;114.3;Screen
+    Position;;0,0,0,1;Normalized screen coordinates;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;58;-48,1600;Inherit;False;405.2246;212.077;Calculate
+    depth difference;;0.02830189,0.02830189,0.02830189,1;This example shows a way
+    to calculate the depth difference (in a transparent material) between opaque
+    geometry and transparent geometry. $$This can be used to create a foam effect
+    at the intersection of the water and a rock/shore. $$We use a One Minus node
+    here so the closest part of two geometries will be 1.;0;0\nNode;AmplifyShaderEditor.ScreenDepthNode;52;-640,1184;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenDepthNode;40;-624,1024;Inherit;False;1;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenDepthNode;50;-624,944;Inherit;False;1;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;54;-896,944;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenDepthNode;51;-640,1104;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;41;-48,1376;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;56;-112,1008;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;57;-112,1376;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NegateNode;42;-272,1392;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TransformPositionNode;48;-544,1392;Inherit;False;Object;Clip;True;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.PosVertexDataNode;47;-736,1392;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionSwitch;53;-384,944;Inherit;False;Depth
+    Sampling Modes;False;2;3;-1;Linear01;Raw;Eye;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;256,-512;Inherit;False;225.1018;112.0164;Screen
+    Depth;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;61;256,-304;Inherit;False;225.1018;112.0164;Screen
+    Depth Correction;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SaturateNode;12;32,-176;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;62;256,-96;Inherit;False;225.1018;112.0164;Screen
+    Depth Behind;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;63;256,112;Inherit;False;225.1018;112.0164;Screen
+    Depth Fade;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;64;256,320;Inherit;False;225.1018;112.0164;Screen
+    Depth Distance;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;65;256,528;Inherit;False;225.1018;112.0164;Screen
+    Depth Closness;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.WireNode;66;-157.2117,-316.8921;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;67;-160,32;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;13;-128,32;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;16;-272,48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;17;-464,240;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;21;-720,160;Float;False;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenPosInputsNode;22;-960,80;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SaturateNode;30;0,448;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;27;-128,448;Inherit;False;2;0;FLOAT;1;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;29;-384,464;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;34;-608,608;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;28;-688,464;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.StickyNoteNode;68;-424.8281,-288;Inherit;False;254.8281;156.6638;Corrected
+    Linear Eye Depth;;0.03773582,0.03773582,0.03773582,1;;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;1;-400,-384;Float;False;return
+    1.f / (z / UNITY_MATRIX_P._34 + correctionFactor)@;1;Create;2;True;z;FLOAT;0;In;;Float;False;True;correctionFactor;FLOAT;0;In;;Float;False;CorrectedLinearEyeDepth;False;True;0;;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;35;-768,-368;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;38;-1088,-224;Float;False;float
+    x1 = -UNITY_MATRIX_P._31 / (UNITY_MATRIX_P._11 * UNITY_MATRIX_P._34)@$float x2
+    = -UNITY_MATRIX_P._32 / (UNITY_MATRIX_P._22 * UNITY_MATRIX_P._34)@$return float4(x1,
+    x2, 0, UNITY_MATRIX_P._33 / UNITY_MATRIX_P._34 + x1 * UNITY_MATRIX_P._13 + x2
+    * UNITY_MATRIX_P._23)@;4;Create;0;CalculateObliqueFrustumCorrection;False;True;0;;False;0;1;FLOAT4;0\nNode;AmplifyShaderEditor.StickyNoteNode;69;-1088,-144;Inherit;False;257.6613;180.746;Oblique
+    Frustum Correction;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;19;-768,-256;Float;False;return
+    UNITY_Z_0_FAR_FROM_CLIPSPACE(screenPos.z)@;1;Create;1;True;screenPos;FLOAT3;0,0,0;In;;Float;False;FROM;False;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;70;-368,-1232;Inherit;False;621.6372;151.1469;;;0,0,0,1;The
+    Screen Depth node outputs the screen depth by reading the Depth Buffer at the
+    current Screen Position or at a custom screen position if connected to the Pos
+    input port. $$The result can be either presented on a linear [0,1] range or in
+    its unscaled real distance value in View Space coordinates by selecting the View
+    Space accordingly.;0;0\nNode;AmplifyShaderEditor.ScreenDepthNode;18;-752,80;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenDepthNode;2;-640,-592;Inherit;False;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;73;-368,-1056;Inherit;False;620.5743;106.7224;View
+    Space;;0.009433985,0.009433985,0.009433985,1;Defines how the screen depth value
+    is to be presented$--- Eye Space: Real distance value in View Space$--- 0-1 Space:
+    Distance value in a linear [0,1] range where 0 is near and 1 is far.;0;0\nNode;AmplifyShaderEditor.ScreenDepthNode;71;-592,-1232;Inherit;False;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;74;-368,-928;Inherit;False;623.9354;136.9737;Convert
+    To Linear;;0,0,0,1;If toggled on, converts fetched depth value from a logarithmic
+    to a linear scale. Should only be active on Perspective projection type.$$Convert
+    To Linear toggle must be turned off if working with an orthographic camera, as
+    the values written/read on the depth buffer are already on a linear scale;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;75;-864,-1152;Inherit;False;293.0126;100;Pos;;0,0,0,1;Screen
+    space position to fetch depth value. Current screen position is used by default
+    if this port is left unconnected;0;0\nNode;AmplifyShaderEditor.FunctionOutput;32;256,448;Inherit;False;False;-1;Screen
+    Depth Closness;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;25;256,240;Inherit;False;False;-1;Screen
+    Depth Distance;5;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;24;256,32;Inherit;False;False;-1;Screen
+    Depth Fade;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;23;256,-176;Inherit;False;False;-1;Screen
+    Depth Behind;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;7;256,-384;Inherit;False;False;-1;Screen
+    Depth Correction;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;6;256,-592;Inherit;False;True;-1;Screen
+    Depth;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;52;0;54;0\nWireConnection;40;0;54;0\nWireConnection;50;0;54;0\nWireConnection;51;0;54;0\nWireConnection;41;0;57;0\nWireConnection;41;1;42;0\nWireConnection;56;0;53;0\nWireConnection;57;0;56;0\nWireConnection;42;0;48;3\nWireConnection;48;0;47;0\nWireConnection;53;0;50;0\nWireConnection;53;1;40;0\nWireConnection;53;2;51;0\nWireConnection;12;0;13;0\nWireConnection;66;0;1;0\nWireConnection;67;0;66;0\nWireConnection;13;0;67;0\nWireConnection;13;1;16;0\nWireConnection;16;0;17;0\nWireConnection;17;0;18;0\nWireConnection;17;1;21;4\nWireConnection;30;0;27;0\nWireConnection;27;1;29;0\nWireConnection;29;0;28;0\nWireConnection;29;1;34;0\nWireConnection;1;0;2;0\nWireConnection;1;1;35;0\nWireConnection;35;0;37;0\nWireConnection;35;1;38;0\nWireConnection;18;0;22;0\nWireConnection;32;0;30;0\nWireConnection;25;0;17;0\nWireConnection;24;0;13;0\nWireConnection;23;0;12;0\nWireConnection;7;0;1;0\nWireConnection;6;0;2;0\nASEEND*/\n//CHKSM=F99570DDE4F2A22DB8F0A8738D8729A61F553E82"
+  m_functionName: 
+  m_description: 'Screen Depth Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

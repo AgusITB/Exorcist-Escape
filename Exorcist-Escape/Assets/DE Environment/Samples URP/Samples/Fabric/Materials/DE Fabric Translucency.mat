@@ -1,0 +1,317 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Fabric Translucency
+  m_Shader: {fileID: 4800000, guid: 15251a7b94384eb2a5b0496383dcc961, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: ba73bc6ee3da33c48b14e5284943a2d0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClothWindMaskMap:
+        m_Texture: {fileID: 2800000, guid: dd3170d64f89f6341b33f0ace2fa4427, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClothWind_MaskMap:
+        m_Texture: {fileID: 2800000, guid: dd3170d64f89f6341b33f0ace2fa4427, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClothWind_PatternMap:
+        m_Texture: {fileID: 2800000, guid: d5056aaa773f0d94a807b148848f135c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FuzzMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 85e2d4a7b4e54c1499582ea22f68baeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: e25f3586900de6c4ebc0c6d942ba0989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 2800000, guid: 89e898026fd2ccb4ea8bfd162eb97730, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThreadMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThreadNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransmissionMaskMap:
+        m_Texture: {fileID: 2800000, guid: 89e898026fd2ccb4ea8bfd162eb97730, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindFabricPatternMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindMaskMap:
+        m_Texture: {fileID: 2800000, guid: ffabb346ab56c664882233ac4cf8bb19, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindMask_Map:
+        m_Texture: {fileID: 2800000, guid: ffabb346ab56c664882233ac4cf8bb19, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ASETranslucencyAmbient: 0.8339342
+    - _ASETranslucencyDirect: 0.9
+    - _ASETranslucencyNormalDistortion: 0.2735869
+    - _ASETranslucencyScattering: 2
+    - _ASETranslucencyShadow: 0.5
+    - _ASETranslucencyStrength: 1
+    - _ASETransmissionShadow: 0.5
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffAntialias: 0.58
+    - _AlphaCutoffBias: 0.45
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _AlphatoCoverage: 0
+    - _BaseAffectUVchannel0: 1
+    - _BaseAffectUVchannel1: 0
+    - _BaseAffectUVchannel2: 0
+    - _BaseAffectUVchannel3: 0
+    - _BaseBrightnessBackFace: 0.25
+    - _BaseBrightnessFrontFace: 1
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _CATEGORY_ALPHACLIP: 1
+    - _CATEGORY_ALPHACLIPPING: 0
+    - _CATEGORY_DISPLACEMENT: 0
+    - _CATEGORY_FUZZMASK: 0
+    - _CATEGORY_METALLIC: 1
+    - _CATEGORY_OCCLUSION: 1
+    - _CATEGORY_SMOOTHNESS: 1
+    - _CATEGORY_SPECULAR: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 0
+    - _CATEGORY_THREADMASK: 0
+    - _CATEGORY_TRANSLUCENCY: 0
+    - _CATEGORY_TRANSLUCENCYASE: 0
+    - _CATEGORY_TRANSMISSION: 0
+    - _CATEGORY_WIND: 0
+    - _ClothWindIntensity: 0.002
+    - _ClothWindMode: 1
+    - _ClothWindSpeed: 0.6
+    - _ClothWind_Intensity: 0.07
+    - _ClothWind_Mode: 1
+    - _ClothWind_Oscillating: 0
+    - _ClothWind_Speed: 0.01
+    - _ClothWind_WindDirection: -0.84
+    - _ClothWind_WindFrequency: 0.026
+    - _ClothWind_WindMask: 2
+    - _ClothWind_WindMaskMode: 3
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _CustomCutoffAntialias: 0.1
+    - _DoubleSidedNormalMode: 0
+    - _EmissionFlags: 0
+    - _EnableCustomAntialias: 0
+    - _EnableTranslucency: 1
+    - _EnableTransmission: 1
+    - _EnvironmentReflections: 1
+    - _Float9: 0.2
+    - _FuzzMaskEnable: 0
+    - _FuzzMaskStrength: 1
+    - _GlancingClipMode: 0
+    - _GlossyReflections: 1
+    - _MapInverted: 0
+    - _MaskClipValue: 0.5
+    - _MetallicStrength: 0
+    - _Mian_UVSet: 0
+    - _NormalMode: 0
+    - _NormalStrength: 1
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.944
+    - _OcclusionStrengthAORemapMax: 0.63492066
+    - _OcclusionStrengthAORemapMin: 0.009523801
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_FUZZMASK: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SPECULAR: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_THREADMASK: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _SPACE_TRANSLUCENCYASE: 0
+    - _SPACE_TRANSMISSION: 0
+    - _SPACE_WIND: 0
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessMax: 0.065
+    - _SmoothnessMin: 0
+    - _SmoothnessModeCutout: 3
+    - _SmoothnessPower: 0
+    - _SmoothnessScale: 0
+    - _SmoothnessSource: 1
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0
+    - _SmoothnessStrengthRemapMax: 0.7995963
+    - _SmoothnessStrengthRemapMin: 0.19791667
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.07
+    - _SpecularEnable: 1
+    - _SpecularEnableClamped: 1
+    - _SpecularHighlights: 1
+    - _SpecularMode: 2
+    - _SpecularStrength: 0.401
+    - _SpecularStrengthDielectric: 0
+    - _SpecularStrengthDielectricIOR: 1.993
+    - _SpecularWrap: 1.64
+    - _ThicknessFeather: 0.17
+    - _ThicknessMapInverted: 1
+    - _ThicknessStrength: 1.011
+    - _ThreadMaskEnable: 0
+    - _ThreadMaskOcclusionStrengthAO: 0
+    - _ThreadMaskOcclusionStrengthAORemapMax: 0
+    - _ThreadMaskOcclusionStrengthAORemapMin: 0
+    - _ThreadMaskSmoothnessStrength: 0
+    - _ThreadMaskSmoothnessStrengthRemapMax: 0
+    - _ThreadMaskSmoothnessStrengthRemapMin: 0
+    - _ThreadMaskUVAffectchannel0: 1
+    - _ThreadMaskUVAffectchannel1: 0
+    - _ThreadMaskUVAffectchannel2: 0
+    - _ThreadMaskUVAffectchannel3: 0
+    - _ThreadNormalStrength: 0.5
+    - _TilingX: 2
+    - _TilingY: 2
+    - _TransAmbient: 0.155
+    - _TransDirect: 0.596
+    - _TransNormalDistortion: 0.41
+    - _TransScattering: 10.7
+    - _TransShadow: 0.589
+    - _Translucency: 9.2
+    - _TranslucencyCullForward: 0
+    - _TranslucencyEnable: 1
+    - _TranslucencySource: 1
+    - _TranslucencySourceFoward: 0
+    - _TranslucencyStrength: 1
+    - _TranslucencyThickness: 0.988
+    - _TranslucencyThicknessFeather: 0.446
+    - _TranslucencyThicknessInverted: 1
+    - _TransmissionEnable: 1
+    - _TransmissionMaskFeather: 0.291
+    - _TransmissionMaskInverted: 1
+    - _TransmissionMaskStrength: 0.93
+    - _TransmissionSource: 1
+    - _TransmissionSourceFoward: 1
+    - _TransmissionStrength: 2
+    - _TransmissionThicknessInverted: 0
+    - _WindEnable: 0
+    - _WindEnableMask: 1
+    - _WindFabricDirection: -0.66
+    - _WindFabricIntensity: 0.017
+    - _WindFabricOscillating: 1
+    - _WindFabricPulseFrequency: 0.159
+    - _WindFabricSpeed: 0.035
+    - _WindMaskMapIntensity: 0.397
+    - _WindMaskProcedralBottomUp: 0
+    - _WindMaskProcedralSpherical: 0
+    - _WindMaskProcedralSphericalInverted: 0
+    - _WindMaskProcedralTopDown: 0.85
+    - _WindMaskType: 0
+    - _WindMask_Mode: 1
+    - _WindMask_Offset: 2.57
+    - _WindMask_Procedral_BottomUp: 0
+    - _WindMask_Procedral_Spherical: 0
+    - _WindMask_Procedral_SphericalInverted: 0
+    - _WindMask_Procedral_TopDown: 0
+    - _WindMask_Procedural: 0
+    - _WindMask_ProceduralVisualize: 0
+    - _WindMask_Procedural_Intensity: 0.807
+    - _WindMask_Texture: 1
+    - _WindMask_TextureVisualize: 0
+    - _WindMask_Texture_Intensity: 1
+    - _WindMask_Visualize: 0
+    - _ZTestMode: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 0.99999994, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 0.9098039, b: 0.80784315, a: 0}
+    - _BaseColorBackFace: {r: 1, g: 0.9098039, b: 0.80784315, a: 0}
+    - _BaseMainUV: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FuzzMaskColor: {r: 0.7294118, g: 0.7294118, b: 0.7294118, a: 0}
+    - _FuzzMaskUV: {r: 4, g: 4, b: 0, a: 0}
+    - _MainUVs: {r: 2, g: 2, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0.009523801, g: 0.63492066, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0.19791667, g: 0.7995963, b: 0, a: 0}
+    - _SpecularColor: {r: 0.06666667, g: 0.06666667, b: 0.05882353, a: 0}
+    - _ThreadMaskOcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _ThreadMaskSmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _ThreadMaskUV: {r: 1, g: 1, b: 0, a: 0}
+    - _TranslucencyColor: {r: 1, g: 0.906684, b: 0.7028302, a: 1}
+    - _TranslucencyTint: {r: 1.4980392, g: 0.8838403, b: 0, a: 1}
+    - _TransmissionColor: {r: 0.6630473, g: 0.77773553, b: 0.9433962, a: 1}
+    - _TransmissionTint: {r: 38.937145, g: 4.4849067, b: 0, a: 1}
+  m_BuildTextureStacks: []

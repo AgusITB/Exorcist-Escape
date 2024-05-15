@@ -1,0 +1,5865 @@
+// Made with Amplify Shader Editor v1.9.3.3
+// Available at the Unity Asset Store - http://u3d.as/y3X 
+Shader "DE Environment/Terrain/DE Demo"
+{
+	Properties
+	{
+		[HideInInspector] _EmissionColor("Emission Color", Color) = (1,1,1,1)
+		[HideInInspector] _AlphaCutoff("Alpha Cutoff ", Range(0, 1)) = 0.5
+		[Header(SURFACE OPTIONS)][DE_DrawerTextureSingleLine]_GlobalTerrainNoise("Global Terrain Noise", 2D) = "white" {}
+		_Global_Brightness("Global Brightness", Range( 0 , 2)) = 0.95
+		[Toggle(_TERRAIN_INSTANCED_PERPIXEL_NORMAL)] _EnableInstancedPerPixelNormal("Enable Instanced Per-Pixel Normal", Float) = 0
+		_TerrainWetnessBiasGlobal("Terrain Wetness Bias Global", Range( 0 , 1)) = 0
+		_TerrainWetnessIntensity("Terrain Wetness Intensity", Float) = 0.95
+		_TerrainWetnessMask("Terrain Wetness Mask", Float) = 0.75
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer0("Affect Layer 0", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer1("Affect Layer 1", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer2("Affect Layer 2", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer3("Affect Layer 3", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer4("Affect Layer 4", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer5("Affect Layer 5", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer6("Affect Layer 6", Float) = 0
+		[DE_DrawerToggleNoKeyword]_TerrainWetnessAffectLayer7("Affect Layer 7", Float) = 0
+		[HideInInspector]_Control("Control", 2D) = "white" {}
+		[Header(LAYER 0)]_Splat0_Color("Tint", Color) = (1,1,1,0)
+		[HideInInspector]_Splat0("Splat0", 2D) = "white" {}
+		_Splat0_Brightness("Brightness", Range( 0 , 2)) = 1
+		[HideInInspector]_Normal0("Normal0", 2D) = "bump" {}
+		_Splat0_NormalScale("Normal Strength", Float) = 1
+		[HideInInspector]_Mask0("Mask0", 2D) = "white" {}
+		_Splat0_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat0_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat0_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat0_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat0_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat0_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat0_NoiseInvert("Noise Invert", Float) = 0
+		_Splat0_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat0_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 1)]_Splat1_Color("Tint", Color) = (1,1,1,0)
+		[HideInInspector]_Splat1("Splat1", 2D) = "white" {}
+		_Splat1_Brightness("Brightness", Range( 0 , 2)) = 1
+		[HideInInspector]_Normal1("Normal1", 2D) = "bump" {}
+		_Splat1_NormalScale("Normal Strength", Float) = 1
+		[HideInInspector]_Mask1("Mask1", 2D) = "white" {}
+		_Splat1_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat1_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat1_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat1_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat1_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat1_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat1_NoiseInvert("Noise Invert", Float) = 0
+		_Splat1_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat1_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 2)]_Splat2_Color("Tint", Color) = (1,1,1,0)
+		[HideInInspector]_Splat2("Splat2", 2D) = "white" {}
+		_Splat2_Brightness("Brightness", Range( 0 , 2)) = 1
+		[HideInInspector]_Normal2("Normal2", 2D) = "bump" {}
+		_Splat2_NormalScale("Normal Strength", Float) = 1
+		[HideInInspector]_Mask2("Mask2", 2D) = "white" {}
+		_Splat2_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat2_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat2_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat2_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat2_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat2_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat2_NoiseInvert("Noise Invert", Float) = 0
+		_Splat2_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat2_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 3)]_Splat3_Color("Tint", Color) = (1,1,1,0)
+		[HideInInspector]_Splat3("Splat3", 2D) = "white" {}
+		_Splat3_Brightness("Brightness", Range( 0 , 2)) = 1
+		[HideInInspector]_Normal3("Normal3", 2D) = "bump" {}
+		_Splat3_NormalScale("Normal Strength", Float) = 1
+		[HideInInspector]_Mask3("Mask3", 2D) = "white" {}
+		_Splat3_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat3_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat3_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat3_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat3_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat3_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat3_NoiseInvert("Noise Invert", Float) = 0
+		_Splat3_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat3_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 4)]_Splat4_Color("Tint", Color) = (1,1,1,0)
+		_Splat4_Brightness("Brightness", Range( 0 , 2)) = 1
+		_Splat4_NormalScale("Normal Strength", Float) = 1
+		_Splat4_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat4_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat4_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat4_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat4_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat4_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat4_NoiseInvert("Noise Invert", Float) = 0
+		_Splat4_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat4_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 5)]_Splat5_Color("Tint", Color) = (1,1,1,0)
+		_Splat5_Brightness("Brightness", Range( 0 , 2)) = 1
+		_Splat5_NormalScale("Normal Strength", Float) = 1
+		_Splat5_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat5_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat5_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat5_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat5_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat5_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat5_NoiseInvert("Noise Invert", Float) = 0
+		_Splat5_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat5_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 6)]_Splat6_Color("Tint", Color) = (1,1,1,0)
+		_Splat6_Brightness("Brightness", Range( 0 , 2)) = 1
+		_Splat6_NormalScale("Normal Strength", Float) = 1
+		_Splat6_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat6_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat6_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat6_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat6_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat6_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat6_NoiseInvert("Noise Invert", Float) = 0
+		_Splat6_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat6_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(LAYER 7)]_Splat7_Color("Tint", Color) = (1,1,1,0)
+		_Splat7_Brightness("Brightness", Range( 0 , 2)) = 1
+		_Splat7_NormalScale("Normal Strength", Float) = 1
+		_Splat7_Metallic("Metallic Strength", Range( 0 , 1)) = 0
+		_Splat7_OcclusionStrengthAO("Occlusion Strength", Range( 0 , 1)) = 0
+		_Splat7_Saturation("Saturation", Range( 0 , 1)) = 1
+		[DE_DrawerFloatEnum(Smoothness _Roughness)]_Splat7_SmoothnessType("Smoothness Source", Float) = 0
+		_Splat7_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		[DE_DrawerToggleNoKeyword]_Splat7_EnableNoise("Enable Noise", Float) = 0
+		[DE_DrawerToggleNoKeyword]_Splat7_NoiseInvert("Noise Invert", Float) = 0
+		_Splat7_NoiseScale("Noise Scale", Range( 0 , 10)) = 2
+		_Splat7_NoiseDarken("Noise Darken", Range( 0 , 1)) = 0.75
+		[Header(COVER MAP)]_CoverMapTint("Cover Map Tint", Color) = (1,1,1,0)
+		_CoverMapBrightness("Brightness", Range( 0 , 5)) = 1.25
+		[DE_DrawerTextureSingleLine]_CoverMapAlbedo("Cover Map Albedo", 2D) = "white" {}
+		[Normal][DE_DrawerTextureSingleLine]_CoverMapNormal("Cover Map Normal", 2D) = "bump" {}
+		_CoverMapNormalStrength("Normal Strength", Range( 0 , 2)) = 1
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL0("Affect Layer 0", Float) = 0
+		_CoverMapRangeL0("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL0("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL1("Affect Layer 1", Float) = 0
+		_CoverMapRangeL1("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL1("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL2("Affect Layer 2", Float) = 0
+		_CoverMapRangeL2("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL2("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL3("Affect Layer 3", Float) = 0
+		_CoverMapRangeL3("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL3("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL4("Affect Layer 4", Float) = 0
+		_CoverMapRangeL4("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL4("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL5("Affect Layer 5", Float) = 0
+		_CoverMapRangeL5("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL5("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL6("Affect Layer 6", Float) = 0
+		_CoverMapRangeL6("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL6("Fuzziness", Range( 0 , 1)) = 0.5
+		[DE_DrawerToggleNoKeyword]_CoverMapAffectL7("Affect Layer 7", Float) = 0
+		_CoverMapRangeL7("Range", Range( 0 , 1)) = 0.75
+		_CoverMapFuzzinessL7("Fuzziness", Range( 0 , 1)) = 0.5
+		[HideInInspector]_TerrainHolesTexture("_TerrainHolesTexture", 2D) = "white" {}
+		[Header(BASEPASS)][DE_DrawerToggleNoKeyword]_EnableBasePassCoverMap("Enable BasePass Cover Map", Float) = 1
+		_BasePassBrightness("BasePass Brightness", Range( 0 , 2)) = 1
+		_BasePassSmoothness("BasePass Smoothness", Range( 0 , 1)) = 0
+		[HideInInspector] _texcoord( "", 2D ) = "white" {}
+
+
+		//_TransmissionShadow( "Transmission Shadow", Range( 0, 1 ) ) = 0.5
+		//_TransStrength( "Trans Strength", Range( 0, 50 ) ) = 1
+		//_TransNormal( "Trans Normal Distortion", Range( 0, 1 ) ) = 0.5
+		//_TransScattering( "Trans Scattering", Range( 1, 50 ) ) = 2
+		//_TransDirect( "Trans Direct", Range( 0, 1 ) ) = 0.9
+		//_TransAmbient( "Trans Ambient", Range( 0, 1 ) ) = 0.1
+		//_TransShadow( "Trans Shadow", Range( 0, 1 ) ) = 0.5
+		//_TessPhongStrength( "Tess Phong Strength", Range( 0, 1 ) ) = 0.5
+		//_TessValue( "Tess Max Tessellation", Range( 1, 32 ) ) = 16
+		//_TessMin( "Tess Min Distance", Float ) = 10
+		//_TessMax( "Tess Max Distance", Float ) = 25
+		//_TessEdgeLength ( "Tess Edge length", Range( 2, 50 ) ) = 16
+		//_TessMaxDisp( "Tess Max Displacement", Float ) = 25
+
+		[HideInInspector][ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
+		[HideInInspector][ToggleOff] _EnvironmentReflections("Environment Reflections", Float) = 1.0
+		[HideInInspector][ToggleOff] _ReceiveShadows("Receive Shadows", Float) = 1.0
+
+		[HideInInspector] _QueueOffset("_QueueOffset", Float) = 0
+        [HideInInspector] _QueueControl("_QueueControl", Float) = -1
+
+        [HideInInspector][NoScaleOffset] unity_Lightmaps("unity_Lightmaps", 2DArray) = "" {}
+        [HideInInspector][NoScaleOffset] unity_LightmapsInd("unity_LightmapsInd", 2DArray) = "" {}
+        [HideInInspector][NoScaleOffset] unity_ShadowMasks("unity_ShadowMasks", 2DArray) = "" {}
+	}
+
+	SubShader
+	{
+		LOD 0
+
+		
+
+		Tags { "RenderPipeline"="UniversalPipeline" "RenderType"="Opaque" "Queue"="Geometry-100" "UniversalMaterialType"="Lit" "TerrainCompatible"="True" }
+
+		Cull Back
+		ZWrite On
+		ZTest LEqual
+		Offset 0 , 0
+		AlphaToMask Off
+
+		
+
+		HLSLINCLUDE
+		#pragma target 4.5
+		#pragma prefer_hlslcc gles
+		// ensure rendering platforms toggle list is visible
+
+		#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+		#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Filtering.hlsl"
+
+		#ifndef ASE_TESS_FUNCS
+		#define ASE_TESS_FUNCS
+		float4 FixedTess( float tessValue )
+		{
+			return tessValue;
+		}
+
+		float CalcDistanceTessFactor (float4 vertex, float minDist, float maxDist, float tess, float4x4 o2w, float3 cameraPos )
+		{
+			float3 wpos = mul(o2w,vertex).xyz;
+			float dist = distance (wpos, cameraPos);
+			float f = clamp(1.0 - (dist - minDist) / (maxDist - minDist), 0.01, 1.0) * tess;
+			return f;
+		}
+
+		float4 CalcTriEdgeTessFactors (float3 triVertexFactors)
+		{
+			float4 tess;
+			tess.x = 0.5 * (triVertexFactors.y + triVertexFactors.z);
+			tess.y = 0.5 * (triVertexFactors.x + triVertexFactors.z);
+			tess.z = 0.5 * (triVertexFactors.x + triVertexFactors.y);
+			tess.w = (triVertexFactors.x + triVertexFactors.y + triVertexFactors.z) / 3.0f;
+			return tess;
+		}
+
+		float CalcEdgeTessFactor (float3 wpos0, float3 wpos1, float edgeLen, float3 cameraPos, float4 scParams )
+		{
+			float dist = distance (0.5 * (wpos0+wpos1), cameraPos);
+			float len = distance(wpos0, wpos1);
+			float f = max(len * scParams.y / (edgeLen * dist), 1.0);
+			return f;
+		}
+
+		float DistanceFromPlane (float3 pos, float4 plane)
+		{
+			float d = dot (float4(pos,1.0f), plane);
+			return d;
+		}
+
+		bool WorldViewFrustumCull (float3 wpos0, float3 wpos1, float3 wpos2, float cullEps, float4 planes[6] )
+		{
+			float4 planeTest;
+			planeTest.x = (( DistanceFromPlane(wpos0, planes[0]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos1, planes[0]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos2, planes[0]) > -cullEps) ? 1.0f : 0.0f );
+			planeTest.y = (( DistanceFromPlane(wpos0, planes[1]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos1, planes[1]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos2, planes[1]) > -cullEps) ? 1.0f : 0.0f );
+			planeTest.z = (( DistanceFromPlane(wpos0, planes[2]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos1, planes[2]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos2, planes[2]) > -cullEps) ? 1.0f : 0.0f );
+			planeTest.w = (( DistanceFromPlane(wpos0, planes[3]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos1, planes[3]) > -cullEps) ? 1.0f : 0.0f ) +
+							(( DistanceFromPlane(wpos2, planes[3]) > -cullEps) ? 1.0f : 0.0f );
+			return !all (planeTest);
+		}
+
+		float4 DistanceBasedTess( float4 v0, float4 v1, float4 v2, float tess, float minDist, float maxDist, float4x4 o2w, float3 cameraPos )
+		{
+			float3 f;
+			f.x = CalcDistanceTessFactor (v0,minDist,maxDist,tess,o2w,cameraPos);
+			f.y = CalcDistanceTessFactor (v1,minDist,maxDist,tess,o2w,cameraPos);
+			f.z = CalcDistanceTessFactor (v2,minDist,maxDist,tess,o2w,cameraPos);
+
+			return CalcTriEdgeTessFactors (f);
+		}
+
+		float4 EdgeLengthBasedTess( float4 v0, float4 v1, float4 v2, float edgeLength, float4x4 o2w, float3 cameraPos, float4 scParams )
+		{
+			float3 pos0 = mul(o2w,v0).xyz;
+			float3 pos1 = mul(o2w,v1).xyz;
+			float3 pos2 = mul(o2w,v2).xyz;
+			float4 tess;
+			tess.x = CalcEdgeTessFactor (pos1, pos2, edgeLength, cameraPos, scParams);
+			tess.y = CalcEdgeTessFactor (pos2, pos0, edgeLength, cameraPos, scParams);
+			tess.z = CalcEdgeTessFactor (pos0, pos1, edgeLength, cameraPos, scParams);
+			tess.w = (tess.x + tess.y + tess.z) / 3.0f;
+			return tess;
+		}
+
+		float4 EdgeLengthBasedTessCull( float4 v0, float4 v1, float4 v2, float edgeLength, float maxDisplacement, float4x4 o2w, float3 cameraPos, float4 scParams, float4 planes[6] )
+		{
+			float3 pos0 = mul(o2w,v0).xyz;
+			float3 pos1 = mul(o2w,v1).xyz;
+			float3 pos2 = mul(o2w,v2).xyz;
+			float4 tess;
+
+			if (WorldViewFrustumCull(pos0, pos1, pos2, maxDisplacement, planes))
+			{
+				tess = 0.0f;
+			}
+			else
+			{
+				tess.x = CalcEdgeTessFactor (pos1, pos2, edgeLength, cameraPos, scParams);
+				tess.y = CalcEdgeTessFactor (pos2, pos0, edgeLength, cameraPos, scParams);
+				tess.z = CalcEdgeTessFactor (pos0, pos1, edgeLength, cameraPos, scParams);
+				tess.w = (tess.x + tess.y + tess.z) / 3.0f;
+			}
+			return tess;
+		}
+		#endif //ASE_TESS_FUNCS
+		ENDHLSL
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "Forward"
+			Tags { "LightMode"="UniversalForwardOnly" "TerrainCompatible"="True" }
+
+			Blend One Zero, One Zero
+			ZWrite On
+			ZTest LEqual
+			Offset 0 , 0
+			ColorMask RGBA
+
+			
+
+			HLSLPROGRAM
+
+			#define _NORMAL_DROPOFF_TS 1
+			#pragma multi_compile_fog
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			#pragma shader_feature_local _RECEIVE_SHADOWS_OFF
+			#pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
+			#pragma shader_feature_local_fragment _ENVIRONMENTREFLECTIONS_OFF
+
+			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+			#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+
+			
+            #pragma multi_compile _ EVALUATE_SH_MIXED EVALUATE_SH_VERTEX
+		
+
+			#pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+			#pragma multi_compile_fragment _ _REFLECTION_PROBE_BLENDING
+			#pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
+
+			
+
+			
+			#pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+           
+
+			#pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
+			#pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
+			#pragma multi_compile _ _LIGHT_LAYERS
+			#pragma multi_compile_fragment _ _LIGHT_COOKIES
+			#pragma multi_compile _ _FORWARD_PLUS
+		
+			
+
+			
+
+			#pragma multi_compile _ LIGHTMAP_SHADOW_MIXING
+			#pragma multi_compile _ SHADOWS_SHADOWMASK
+			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
+			#pragma multi_compile _ LIGHTMAP_ON
+			#pragma multi_compile _ DYNAMICLIGHTMAP_ON
+			#pragma multi_compile_fragment _ DEBUG_DISPLAY
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#define SHADERPASS SHADERPASS_FORWARD
+
+			
+            #if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+			#endif
+		
+
+			
+			#if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+			#endif
+		
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DBuffer.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
+
+			#if defined(UNITY_INSTANCING_ENABLED) && defined(_TERRAIN_INSTANCED_PERPIXEL_NORMAL)
+				#define ENABLE_TERRAIN_PERPIXEL_NORMAL
+			#endif
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_FRAG_WORLD_POSITION
+			#define ASE_NEEDS_FRAG_SCREEN_POSITION
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma shader_feature_local _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			#if defined(ASE_EARLY_Z_DEPTH_OPTIMIZE) && (SHADER_TARGET >= 45)
+				#define ASE_SV_DEPTH SV_DepthLessEqual
+				#define ASE_SV_POSITION_QUALIFIERS linear noperspective centroid
+			#else
+				#define ASE_SV_DEPTH SV_Depth
+				#define ASE_SV_POSITION_QUALIFIERS
+			#endif
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 tangentOS : TANGENT;
+				float4 texcoord : TEXCOORD0;
+				float4 texcoord1 : TEXCOORD1;
+				float4 texcoord2 : TEXCOORD2;
+				
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				ASE_SV_POSITION_QUALIFIERS float4 positionCS : SV_POSITION;
+				float4 clipPosV : TEXCOORD0;
+				float4 lightmapUVOrVertexSH : TEXCOORD1;
+				half4 fogFactorAndVertexLight : TEXCOORD2;
+				float4 tSpace0 : TEXCOORD3;
+				float4 tSpace1 : TEXCOORD4;
+				float4 tSpace2 : TEXCOORD5;
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+					float4 shadowCoord : TEXCOORD6;
+				#endif
+				#if defined(DYNAMICLIGHTMAP_ON)
+					float2 dynamicLightmapUV : TEXCOORD7;
+				#endif
+				float4 ase_texcoord8 : TEXCOORD8;
+				float4 ase_texcoord9 : TEXCOORD9;
+				float4 ase_texcoord10 : TEXCOORD10;
+				float4 ase_texcoord11 : TEXCOORD11;
+				float4 ase_texcoord12 : TEXCOORD12;
+				float4 ase_texcoord13 : TEXCOORD13;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			TEXTURE2D(_Splat0);
+			SAMPLER(sampler_Splat0);
+			half _GlobalWetnessTerrainIntensity;
+			float _GlobalWetnessTerrainEnabled;
+			TEXTURE2D(_CoverMapAlbedo);
+			TEXTURE2D(_GlobalTerrainNoise);
+			TEXTURE2D(_Splat1);
+			TEXTURE2D(_Splat2);
+			TEXTURE2D(_Splat3);
+			TEXTURE2D(_TerrainHolesTexture);
+			SAMPLER(sampler_TerrainHolesTexture);
+			TEXTURE2D(_Normal0);
+			SAMPLER(sampler_Normal0);
+			TEXTURE2D(_CoverMapNormal);
+			TEXTURE2D(_Normal1);
+			TEXTURE2D(_Normal2);
+			TEXTURE2D(_Normal3);
+			TEXTURE2D(_Mask0);
+			SAMPLER(sampler_Mask0);
+			TEXTURE2D(_Mask1);
+			TEXTURE2D(_Mask2);
+			TEXTURE2D(_Mask3);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			void StochasticTiling( float2 UV, out float2 UV1, out float2 UV2, out float2 UV3, out float W1, out float W2, out float W3 )
+			{
+				float2 vertex1, vertex2, vertex3;
+				// Scaling of the input
+				float2 uv = UV * 3.464; // 2 * sqrt (3)
+				// Skew input space into simplex triangle grid
+				const float2x2 gridToSkewedGrid = float2x2( 1.0, 0.0, -0.57735027, 1.15470054 );
+				float2 skewedCoord = mul( gridToSkewedGrid, uv );
+				// Compute local triangle vertex IDs and local barycentric coordinates
+				int2 baseId = int2( floor( skewedCoord ) );
+				float3 temp = float3( frac( skewedCoord ), 0 );
+				temp.z = 1.0 - temp.x - temp.y;
+				if ( temp.z > 0.0 )
+				{
+					W1 = temp.z;
+					W2 = temp.y;
+					W3 = temp.x;
+					vertex1 = baseId;
+					vertex2 = baseId + int2( 0, 1 );
+					vertex3 = baseId + int2( 1, 0 );
+				}
+				else
+				{
+					W1 = -temp.z;
+					W2 = 1.0 - temp.y;
+					W3 = 1.0 - temp.x;
+					vertex1 = baseId + int2( 1, 1 );
+					vertex2 = baseId + int2( 1, 0 );
+					vertex3 = baseId + int2( 0, 1 );
+				}
+				UV1 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex1 ) ) * 43758.5453 );
+				UV2 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex2 ) ) * 43758.5453 );
+				UV3 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex3 ) ) * 43758.5453 );
+				return;
+			}
+			
+			half4 CalculateShadowMask497_g59262( half2 LightmapUV )
+			{
+				#if defined(SHADOWS_SHADOWMASK) && defined(LIGHTMAP_ON)
+				half4 shadowMask = inputData.shadowMask;
+				#elif !defined (LIGHTMAP_ON)
+				half4 shadowMask = unity_ProbesOcclusion;
+				#else
+				half4 shadowMask = half4(1, 1, 1, 1);
+				#endif
+				return shadowMask;
+			}
+			
+			float3 AdditionalLightsFlatMask14x( float3 WorldPosition, float2 ScreenUV, float4 ShadowMask )
+			{
+				float3 Color = 0;
+				#if defined(_ADDITIONAL_LIGHTS)
+					#define SUM_LIGHTFLAT(Light)\
+						Color += Light.color * ( Light.distanceAttenuation * Light.shadowAttenuation );
+					InputData inputData = (InputData)0;
+					inputData.normalizedScreenSpaceUV = ScreenUV;
+					inputData.positionWS = WorldPosition;
+					uint meshRenderingLayers = GetMeshRenderingLayer();
+					uint pixelLightCount = GetAdditionalLightsCount();	
+					#if USE_FORWARD_PLUS
+					for (uint lightIndex = 0; lightIndex < min(URP_FP_DIRECTIONAL_LIGHTS_COUNT, MAX_VISIBLE_LIGHTS); lightIndex++)
+					{
+						FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK
+						Light light = GetAdditionalLight(lightIndex, WorldPosition, ShadowMask);
+						#ifdef _LIGHT_LAYERS
+						if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+						#endif
+						{
+							SUM_LIGHTFLAT( light );
+						}
+					}
+					#endif
+					LIGHT_LOOP_BEGIN( pixelLightCount )
+						Light light = GetAdditionalLight(lightIndex, WorldPosition, ShadowMask);
+						#ifdef _LIGHT_LAYERS
+						if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+						#endif
+						{
+							SUM_LIGHTFLAT( light );
+						}
+					LIGHT_LOOP_END
+				#endif
+				return Color;
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			VertexOutput VertexFunction( VertexInput v  )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float4 appendResult10975_g59175 = (float4(cross( v.normalOS , float3(0,0,1) ) , -1.0));
+				
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord8.xy = vertexToFrag27_g59193;
+				float2 Offset235_g59194 = _Splat0_ST.zw;
+				float2 temp_output_41_0_g59194 = ( ( v.texcoord.xy * _Splat0_ST.xy ) + Offset235_g59194 );
+				float2 vertexToFrag70_g59194 = temp_output_41_0_g59194;
+				o.ase_texcoord8.zw = vertexToFrag70_g59194;
+				float2 Offset235_g59180 = float2( 1,0 );
+				float2 temp_output_41_0_g59180 = ( ( v.texcoord.xy * float2( 1,1 ) ) + Offset235_g59180 );
+				float2 vertexToFrag70_g59180 = temp_output_41_0_g59180;
+				o.ase_texcoord9.xy = vertexToFrag70_g59180;
+				float temp_output_23_0_g59216 = _Splat0_NoiseScale;
+				float2 appendResult3_g59216 = (float2(temp_output_23_0_g59216 , temp_output_23_0_g59216));
+				float2 vertexToFrag81_g59216 = ( v.texcoord.xy * appendResult3_g59216 );
+				o.ase_texcoord9.zw = vertexToFrag81_g59216;
+				float2 Offset235_g59200 = _Splat1_ST.zw;
+				float2 temp_output_41_0_g59200 = ( ( v.texcoord.xy * _Splat1_ST.xy ) + Offset235_g59200 );
+				float2 vertexToFrag70_g59200 = temp_output_41_0_g59200;
+				o.ase_texcoord10.xy = vertexToFrag70_g59200;
+				float temp_output_34_0_g59216 = _Splat1_NoiseScale;
+				float2 appendResult30_g59216 = (float2(temp_output_34_0_g59216 , temp_output_34_0_g59216));
+				float2 vertexToFrag83_g59216 = ( v.texcoord.xy * appendResult30_g59216 );
+				o.ase_texcoord10.zw = vertexToFrag83_g59216;
+				float2 Offset235_g59197 = _Splat2_ST.zw;
+				float2 temp_output_41_0_g59197 = ( ( v.texcoord.xy * _Splat2_ST.xy ) + Offset235_g59197 );
+				float2 vertexToFrag70_g59197 = temp_output_41_0_g59197;
+				o.ase_texcoord11.xy = vertexToFrag70_g59197;
+				float temp_output_50_0_g59216 = _Splat2_NoiseScale;
+				float2 appendResult43_g59216 = (float2(temp_output_50_0_g59216 , temp_output_50_0_g59216));
+				float2 vertexToFrag85_g59216 = ( v.texcoord.xy * appendResult43_g59216 );
+				o.ase_texcoord11.zw = vertexToFrag85_g59216;
+				float2 Offset235_g59203 = _Splat3_ST.zw;
+				float2 temp_output_41_0_g59203 = ( ( v.texcoord.xy * _Splat3_ST.xy ) + Offset235_g59203 );
+				float2 vertexToFrag70_g59203 = temp_output_41_0_g59203;
+				o.ase_texcoord12.xy = vertexToFrag70_g59203;
+				float temp_output_63_0_g59216 = _Splat3_NoiseScale;
+				float2 appendResult56_g59216 = (float2(temp_output_63_0_g59216 , temp_output_63_0_g59216));
+				float2 vertexToFrag87_g59216 = ( v.texcoord.xy * appendResult56_g59216 );
+				o.ase_texcoord12.zw = vertexToFrag87_g59216;
+				
+				o.ase_texcoord13.xy = v.texcoord.xy;
+				o.ase_texcoord13.zw = v.texcoord2.xy;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+				v.normalOS = v.normalOS;
+				v.tangentOS = appendResult10975_g59175;
+
+				VertexPositionInputs vertexInput = GetVertexPositionInputs( v.positionOS.xyz );
+				VertexNormalInputs normalInput = GetVertexNormalInputs( v.normalOS, v.tangentOS );
+
+				o.tSpace0 = float4( normalInput.normalWS, vertexInput.positionWS.x );
+				o.tSpace1 = float4( normalInput.tangentWS, vertexInput.positionWS.y );
+				o.tSpace2 = float4( normalInput.bitangentWS, vertexInput.positionWS.z );
+
+				#if defined(LIGHTMAP_ON)
+					OUTPUT_LIGHTMAP_UV( v.texcoord1, unity_LightmapST, o.lightmapUVOrVertexSH.xy );
+				#endif
+
+				#if !defined(LIGHTMAP_ON)
+					OUTPUT_SH( normalInput.normalWS.xyz, o.lightmapUVOrVertexSH.xyz );
+				#endif
+
+				#if defined(DYNAMICLIGHTMAP_ON)
+					o.dynamicLightmapUV.xy = v.texcoord2.xy * unity_DynamicLightmapST.xy + unity_DynamicLightmapST.zw;
+				#endif
+
+				#if defined(ENABLE_TERRAIN_PERPIXEL_NORMAL)
+					o.lightmapUVOrVertexSH.zw = v.texcoord.xy;
+					o.lightmapUVOrVertexSH.xy = v.texcoord.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+				#endif
+
+				half3 vertexLight = VertexLighting( vertexInput.positionWS, normalInput.normalWS );
+
+				#ifdef ASE_FOG
+					half fogFactor = ComputeFogFactor( vertexInput.positionCS.z );
+				#else
+					half fogFactor = 0;
+				#endif
+
+				o.fogFactorAndVertexLight = half4(fogFactor, vertexLight);
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+					o.shadowCoord = GetShadowCoord( vertexInput );
+				#endif
+
+				o.positionCS = vertexInput.positionCS;
+				o.clipPosV = vertexInput.positionCS;
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 tangentOS : TANGENT;
+				float4 texcoord : TEXCOORD0;
+				float4 texcoord1 : TEXCOORD1;
+				float4 texcoord2 : TEXCOORD2;
+				
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.tangentOS = v.tangentOS;
+				o.texcoord = v.texcoord;
+				o.texcoord1 = v.texcoord1;
+				o.texcoord2 = v.texcoord2;
+				
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.tangentOS = patch[0].tangentOS * bary.x + patch[1].tangentOS * bary.y + patch[2].tangentOS * bary.z;
+				o.texcoord = patch[0].texcoord * bary.x + patch[1].texcoord * bary.y + patch[2].texcoord * bary.z;
+				o.texcoord1 = patch[0].texcoord1 * bary.x + patch[1].texcoord1 * bary.y + patch[2].texcoord1 * bary.z;
+				o.texcoord2 = patch[0].texcoord2 * bary.x + patch[1].texcoord2 * bary.y + patch[2].texcoord2 * bary.z;
+				
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag ( VertexOutput IN
+						#ifdef ASE_DEPTH_WRITE_ON
+						,out float outputDepth : ASE_SV_DEPTH
+						#endif
+						#ifdef _WRITE_RENDERING_LAYERS
+						, out float4 outRenderingLayers : SV_Target1
+						#endif
+						 ) : SV_Target
+			{
+				UNITY_SETUP_INSTANCE_ID(IN);
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(IN);
+
+				#if defined(LOD_FADE_CROSSFADE)
+					LODFadeCrossFade( IN.positionCS );
+				#endif
+
+				#if defined(ENABLE_TERRAIN_PERPIXEL_NORMAL)
+					float2 sampleCoords = (IN.lightmapUVOrVertexSH.zw / _TerrainHeightmapRecipSize.zw + 0.5f) * _TerrainHeightmapRecipSize.xy;
+					float3 WorldNormal = TransformObjectToWorldNormal(normalize(SAMPLE_TEXTURE2D(_TerrainNormalmapTexture, sampler_TerrainNormalmapTexture, sampleCoords).rgb * 2 - 1));
+					float3 WorldTangent = -cross(GetObjectToWorldMatrix()._13_23_33, WorldNormal);
+					float3 WorldBiTangent = cross(WorldNormal, -WorldTangent);
+				#else
+					float3 WorldNormal = normalize( IN.tSpace0.xyz );
+					float3 WorldTangent = IN.tSpace1.xyz;
+					float3 WorldBiTangent = IN.tSpace2.xyz;
+				#endif
+
+				float3 WorldPosition = float3(IN.tSpace0.w,IN.tSpace1.w,IN.tSpace2.w);
+				float3 WorldViewDirection = _WorldSpaceCameraPos.xyz  - WorldPosition;
+				float4 ShadowCoords = float4( 0, 0, 0, 0 );
+
+				float4 ClipPos = IN.clipPosV;
+				float4 ScreenPos = ComputeScreenPos( IN.clipPosV );
+
+				float2 NormalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(IN.positionCS);
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+					ShadowCoords = IN.shadowCoord;
+				#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+					ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
+				#endif
+
+				WorldViewDirection = SafeNormalize( WorldViewDirection );
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord8.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				float localSplatClip1046_g59175 = ( dotResult1044_g59175 );
+				float SplatWeight1046_g59175 = dotResult1044_g59175;
+				{
+				#if !defined(SHADER_API_MOBILE) && defined(TERRAIN_SPLAT_ADDPASS)
+				clip(SplatWeight1046_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				float4 temp_output_1048_0_g59175 = ( tex2DNode3739_g59175 / ( localSplatClip1046_g59175 + 0.001 ) );
+				float4 Control00Weight403_g59175 = temp_output_1048_0_g59175;
+				float localStochasticTiling347_g59257 = ( 0.0 );
+				float2 vertexToFrag70_g59194 = IN.ase_texcoord8.zw;
+				float2 temp_output_6_0_g59252 = vertexToFrag70_g59194;
+				float2 temp_output_393_0_g59257 = temp_output_6_0_g59252;
+				float2 UV347_g59257 = temp_output_393_0_g59257;
+				float2 UV1347_g59257 = float2( 0,0 );
+				float2 UV2347_g59257 = float2( 0,0 );
+				float2 UV3347_g59257 = float2( 0,0 );
+				float W1347_g59257 = 0.0;
+				float W2347_g59257 = 0.0;
+				float W3347_g59257 = 0.0;
+				StochasticTiling( UV347_g59257 , UV1347_g59257 , UV2347_g59257 , UV3347_g59257 , W1347_g59257 , W2347_g59257 , W3347_g59257 );
+				float2 temp_output_175_332_g59252 = UV1347_g59257;
+				float2 UV1_00379_g59253 = temp_output_175_332_g59252;
+				float2 temp_output_175_331_g59252 = temp_output_393_0_g59257;
+				float2 temp_output_225_0_g59253 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59253 = ddx( temp_output_225_0_g59253 );
+				float2 UV0_00_DDX394_g59253 = temp_output_33_0_g59253;
+				float2 temp_output_65_0_g59253 = ddy( temp_output_225_0_g59253 );
+				float2 UV0_00_DDY395_g59253 = temp_output_65_0_g59253;
+				float3 appendResult361_g59257 = (float3(W1347_g59257 , W2347_g59257 , W3347_g59257));
+				float3 temp_output_175_362_g59252 = appendResult361_g59257;
+				float3 Weight_00404_g59253 = temp_output_175_362_g59252;
+				float3 break332_g59253 = Weight_00404_g59253;
+				float2 temp_output_175_333_g59252 = UV2347_g59257;
+				float2 UV2_00380_g59253 = temp_output_175_333_g59252;
+				float2 temp_output_175_334_g59252 = UV3347_g59257;
+				float2 UV3_00381_g59253 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59253 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV1_00379_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV2_00380_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV3_00381_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.z ) );
+				float3 temp_output_10901_67_g59175 = (Sample2DPlaner353_g59253).rgb;
+				float3 SPLAT_0_FINAL2805_g59175 = temp_output_10901_67_g59175;
+				float3 temp_output_3375_0_g59175 = ( (_Splat0_Color).rgb * SPLAT_0_FINAL2805_g59175 * _Splat0_Brightness );
+				float3 temp_output_12_0_g59230 = temp_output_3375_0_g59175;
+				float dotResult28_g59230 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59230 );
+				float3 temp_cast_1 = (dotResult28_g59230).xxx;
+				float temp_output_21_0_g59230 = ( 1.0 - _Splat0_Saturation );
+				float3 lerpResult31_g59230 = lerp( temp_cast_1 , temp_output_12_0_g59230 , temp_output_21_0_g59230);
+				float3 temp_output_11_0_g59190 = lerpResult31_g59230;
+				float3 temp_output_12_0_g59191 = temp_output_11_0_g59190;
+				float dotResult28_g59191 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59191 );
+				float3 temp_cast_2 = (dotResult28_g59191).xxx;
+				float temp_output_21_0_g59191 = 1.5;
+				float3 lerpResult31_g59191 = lerp( temp_cast_2 , temp_output_12_0_g59191 , temp_output_21_0_g59191);
+				float3 temp_output_4_0_g59190 = ( saturate( lerpResult31_g59191 ) * 0.2 );
+				float lerpResult23_g59190 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59190 = lerp( _TerrainWetnessIntensity , lerpResult23_g59190 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59190 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59190 = lerp( temp_output_11_0_g59190 , temp_output_4_0_g59190 , saturate( ( saturate( max( 0.0 , lerpResult22_g59190 ) ) * temp_output_29_0_g59190 ) ));
+				float temp_output_38_0_g59190 = _TerrainWetnessAffectLayer0;
+				float3 lerpResult9_g59190 = lerp( temp_output_11_0_g59190 , lerpResult6_g59190 , temp_output_38_0_g59190);
+				float2 vertexToFrag70_g59180 = IN.ase_texcoord9.xy;
+				float2 temp_output_189_0_g59176 = vertexToFrag70_g59180;
+				float3 temp_output_11_0_g59176 = ( (_CoverMapTint).rgb * (SAMPLE_TEXTURE2D( _CoverMapAlbedo, sampler_Splat0, temp_output_189_0_g59176 )).rgb * _CoverMapBrightness );
+				float3 CoverMap_Albedo8425_g59175 = temp_output_11_0_g59176;
+				float3 temp_output_27_0_g59211 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59211 = lerpResult9_g59190;
+				float3 lerpResult29_g59211 = lerp( temp_output_27_0_g59211 , temp_output_28_0_g59211 , saturate( ( ( distance( temp_output_28_0_g59211 , temp_output_27_0_g59211 ) - _CoverMapRangeL0 ) / max( _CoverMapFuzzinessL0 , 1E-05 ) ) ));
+				float3 temp_output_10877_20_g59175 = lerpResult29_g59211;
+				float3 lerpResult8455_g59175 = lerp( lerpResult9_g59190 , temp_output_10877_20_g59175 , _CoverMapAffectL0);
+				float3 temp_output_13_0_g59216 = lerpResult8455_g59175;
+				float2 vertexToFrag81_g59216 = IN.ase_texcoord9.zw;
+				float4 tex2DNode11_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag81_g59216 );
+				float lerpResult71_g59216 = lerp( tex2DNode11_g59216.r , ( 1.0 - tex2DNode11_g59216.r ) , _Splat0_NoiseInvert);
+				float3 lerpResult6_g59216 = lerp( temp_output_13_0_g59216 , ( temp_output_13_0_g59216 * ( 1.0 - _Splat0_NoiseDarken ) ) , lerpResult71_g59216);
+				float3 lerpResult4_g59216 = lerp( temp_output_13_0_g59216 , lerpResult6_g59216 , _Splat0_EnableNoise);
+				float localStochasticTiling347_g59239 = ( 0.0 );
+				float2 vertexToFrag70_g59200 = IN.ase_texcoord10.xy;
+				float2 temp_output_6_0_g59234 = vertexToFrag70_g59200;
+				float2 temp_output_393_0_g59239 = temp_output_6_0_g59234;
+				float2 UV347_g59239 = temp_output_393_0_g59239;
+				float2 UV1347_g59239 = float2( 0,0 );
+				float2 UV2347_g59239 = float2( 0,0 );
+				float2 UV3347_g59239 = float2( 0,0 );
+				float W1347_g59239 = 0.0;
+				float W2347_g59239 = 0.0;
+				float W3347_g59239 = 0.0;
+				StochasticTiling( UV347_g59239 , UV1347_g59239 , UV2347_g59239 , UV3347_g59239 , W1347_g59239 , W2347_g59239 , W3347_g59239 );
+				float2 temp_output_175_332_g59234 = UV1347_g59239;
+				float2 UV1_00379_g59235 = temp_output_175_332_g59234;
+				float2 temp_output_175_331_g59234 = temp_output_393_0_g59239;
+				float2 temp_output_225_0_g59235 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59235 = ddx( temp_output_225_0_g59235 );
+				float2 UV0_00_DDX394_g59235 = temp_output_33_0_g59235;
+				float2 temp_output_65_0_g59235 = ddy( temp_output_225_0_g59235 );
+				float2 UV0_00_DDY395_g59235 = temp_output_65_0_g59235;
+				float3 appendResult361_g59239 = (float3(W1347_g59239 , W2347_g59239 , W3347_g59239));
+				float3 temp_output_175_362_g59234 = appendResult361_g59239;
+				float3 Weight_00404_g59235 = temp_output_175_362_g59234;
+				float3 break332_g59235 = Weight_00404_g59235;
+				float2 temp_output_175_333_g59234 = UV2347_g59239;
+				float2 UV2_00380_g59235 = temp_output_175_333_g59234;
+				float2 temp_output_175_334_g59234 = UV3347_g59239;
+				float2 UV3_00381_g59235 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59235 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV1_00379_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV2_00380_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV3_00381_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.z ) );
+				float3 temp_output_10898_67_g59175 = (Sample2DPlaner353_g59235).rgb;
+				float3 SPLAT_1_FINAL2809_g59175 = temp_output_10898_67_g59175;
+				float3 temp_output_3633_0_g59175 = ( (_Splat1_Color).rgb * SPLAT_1_FINAL2809_g59175 * _Splat1_Brightness );
+				float3 temp_output_12_0_g59231 = temp_output_3633_0_g59175;
+				float dotResult28_g59231 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59231 );
+				float3 temp_cast_3 = (dotResult28_g59231).xxx;
+				float temp_output_21_0_g59231 = ( 1.0 - _Splat1_Saturation );
+				float3 lerpResult31_g59231 = lerp( temp_cast_3 , temp_output_12_0_g59231 , temp_output_21_0_g59231);
+				float3 temp_output_11_0_g59213 = lerpResult31_g59231;
+				float3 temp_output_12_0_g59214 = temp_output_11_0_g59213;
+				float dotResult28_g59214 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59214 );
+				float3 temp_cast_4 = (dotResult28_g59214).xxx;
+				float temp_output_21_0_g59214 = 1.5;
+				float3 lerpResult31_g59214 = lerp( temp_cast_4 , temp_output_12_0_g59214 , temp_output_21_0_g59214);
+				float3 temp_output_4_0_g59213 = ( saturate( lerpResult31_g59214 ) * 0.2 );
+				float lerpResult23_g59213 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59213 = lerp( _TerrainWetnessIntensity , lerpResult23_g59213 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59213 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59213 = lerp( temp_output_11_0_g59213 , temp_output_4_0_g59213 , saturate( ( saturate( max( 0.0 , lerpResult22_g59213 ) ) * temp_output_29_0_g59213 ) ));
+				float temp_output_38_0_g59213 = _TerrainWetnessAffectLayer1;
+				float3 lerpResult9_g59213 = lerp( temp_output_11_0_g59213 , lerpResult6_g59213 , temp_output_38_0_g59213);
+				float3 temp_output_27_0_g59209 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59209 = lerpResult9_g59213;
+				float3 lerpResult29_g59209 = lerp( temp_output_27_0_g59209 , temp_output_28_0_g59209 , saturate( ( ( distance( temp_output_28_0_g59209 , temp_output_27_0_g59209 ) - _CoverMapRangeL1 ) / max( _CoverMapFuzzinessL1 , 1E-05 ) ) ));
+				float3 temp_output_10875_20_g59175 = lerpResult29_g59209;
+				float3 lerpResult8463_g59175 = lerp( lerpResult9_g59213 , temp_output_10875_20_g59175 , _CoverMapAffectL1);
+				float3 temp_output_37_0_g59216 = lerpResult8463_g59175;
+				float2 vertexToFrag83_g59216 = IN.ase_texcoord10.zw;
+				float4 tex2DNode32_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag83_g59216 );
+				float lerpResult72_g59216 = lerp( tex2DNode32_g59216.r , ( 1.0 - tex2DNode32_g59216.r ) , _Splat1_NoiseInvert);
+				float3 lerpResult28_g59216 = lerp( temp_output_37_0_g59216 , ( temp_output_37_0_g59216 * ( 1.0 - _Splat1_NoiseDarken ) ) , lerpResult72_g59216);
+				float3 lerpResult38_g59216 = lerp( temp_output_37_0_g59216 , lerpResult28_g59216 , _Splat1_EnableNoise);
+				float2 vertexToFrag70_g59197 = IN.ase_texcoord11.xy;
+				float2 temp_output_6_0_g59240 = vertexToFrag70_g59197;
+				float3 temp_output_10899_32_g59175 = (SAMPLE_TEXTURE2D( _Splat2, sampler_Splat0, temp_output_6_0_g59240 )).rgb;
+				float3 SPLAT_2_FINAL2812_g59175 = temp_output_10899_32_g59175;
+				float3 temp_output_3637_0_g59175 = ( (_Splat2_Color).rgb * SPLAT_2_FINAL2812_g59175 * _Splat2_Brightness );
+				float3 temp_output_12_0_g59232 = temp_output_3637_0_g59175;
+				float dotResult28_g59232 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59232 );
+				float3 temp_cast_5 = (dotResult28_g59232).xxx;
+				float temp_output_21_0_g59232 = ( 1.0 - _Splat2_Saturation );
+				float3 lerpResult31_g59232 = lerp( temp_cast_5 , temp_output_12_0_g59232 , temp_output_21_0_g59232);
+				float3 temp_output_11_0_g59206 = lerpResult31_g59232;
+				float3 temp_output_12_0_g59207 = temp_output_11_0_g59206;
+				float dotResult28_g59207 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59207 );
+				float3 temp_cast_6 = (dotResult28_g59207).xxx;
+				float temp_output_21_0_g59207 = 1.5;
+				float3 lerpResult31_g59207 = lerp( temp_cast_6 , temp_output_12_0_g59207 , temp_output_21_0_g59207);
+				float3 temp_output_4_0_g59206 = ( saturate( lerpResult31_g59207 ) * 0.2 );
+				float lerpResult23_g59206 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59206 = lerp( _TerrainWetnessIntensity , lerpResult23_g59206 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59206 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59206 = lerp( temp_output_11_0_g59206 , temp_output_4_0_g59206 , saturate( ( saturate( max( 0.0 , lerpResult22_g59206 ) ) * temp_output_29_0_g59206 ) ));
+				float temp_output_38_0_g59206 = _TerrainWetnessAffectLayer2;
+				float3 lerpResult9_g59206 = lerp( temp_output_11_0_g59206 , lerpResult6_g59206 , temp_output_38_0_g59206);
+				float3 temp_output_27_0_g59212 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59212 = lerpResult9_g59206;
+				float3 lerpResult29_g59212 = lerp( temp_output_27_0_g59212 , temp_output_28_0_g59212 , saturate( ( ( distance( temp_output_28_0_g59212 , temp_output_27_0_g59212 ) - _CoverMapRangeL2 ) / max( _CoverMapFuzzinessL2 , 1E-05 ) ) ));
+				float3 temp_output_10878_20_g59175 = lerpResult29_g59212;
+				float3 lerpResult8469_g59175 = lerp( lerpResult9_g59206 , temp_output_10878_20_g59175 , _CoverMapAffectL2);
+				float3 temp_output_48_0_g59216 = lerpResult8469_g59175;
+				float2 vertexToFrag85_g59216 = IN.ase_texcoord11.zw;
+				float4 tex2DNode45_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag85_g59216 );
+				float lerpResult73_g59216 = lerp( tex2DNode45_g59216.r , ( 1.0 - tex2DNode45_g59216.r ) , _Splat2_NoiseInvert);
+				float3 lerpResult42_g59216 = lerp( temp_output_48_0_g59216 , ( temp_output_48_0_g59216 * ( 1.0 - _Splat2_NoiseDarken ) ) , lerpResult73_g59216);
+				float3 lerpResult46_g59216 = lerp( temp_output_48_0_g59216 , lerpResult42_g59216 , _Splat2_EnableNoise);
+				float localStochasticTiling347_g59251 = ( 0.0 );
+				float2 vertexToFrag70_g59203 = IN.ase_texcoord12.xy;
+				float2 temp_output_6_0_g59246 = vertexToFrag70_g59203;
+				float2 temp_output_393_0_g59251 = temp_output_6_0_g59246;
+				float2 UV347_g59251 = temp_output_393_0_g59251;
+				float2 UV1347_g59251 = float2( 0,0 );
+				float2 UV2347_g59251 = float2( 0,0 );
+				float2 UV3347_g59251 = float2( 0,0 );
+				float W1347_g59251 = 0.0;
+				float W2347_g59251 = 0.0;
+				float W3347_g59251 = 0.0;
+				StochasticTiling( UV347_g59251 , UV1347_g59251 , UV2347_g59251 , UV3347_g59251 , W1347_g59251 , W2347_g59251 , W3347_g59251 );
+				float2 temp_output_175_332_g59246 = UV1347_g59251;
+				float2 UV1_00379_g59247 = temp_output_175_332_g59246;
+				float2 temp_output_175_331_g59246 = temp_output_393_0_g59251;
+				float2 temp_output_225_0_g59247 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59247 = ddx( temp_output_225_0_g59247 );
+				float2 UV0_00_DDX394_g59247 = temp_output_33_0_g59247;
+				float2 temp_output_65_0_g59247 = ddy( temp_output_225_0_g59247 );
+				float2 UV0_00_DDY395_g59247 = temp_output_65_0_g59247;
+				float3 appendResult361_g59251 = (float3(W1347_g59251 , W2347_g59251 , W3347_g59251));
+				float3 temp_output_175_362_g59246 = appendResult361_g59251;
+				float3 Weight_00404_g59247 = temp_output_175_362_g59246;
+				float3 break332_g59247 = Weight_00404_g59247;
+				float2 temp_output_175_333_g59246 = UV2347_g59251;
+				float2 UV2_00380_g59247 = temp_output_175_333_g59246;
+				float2 temp_output_175_334_g59246 = UV3347_g59251;
+				float2 UV3_00381_g59247 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59247 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV1_00379_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV2_00380_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV3_00381_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.z ) );
+				float3 temp_output_10900_67_g59175 = (Sample2DPlaner353_g59247).rgb;
+				float3 SPLAT_3_FINAL2814_g59175 = temp_output_10900_67_g59175;
+				float3 temp_output_3642_0_g59175 = ( (_Splat3_Color).rgb * SPLAT_3_FINAL2814_g59175 * _Splat3_Brightness );
+				float3 temp_output_12_0_g59233 = temp_output_3642_0_g59175;
+				float dotResult28_g59233 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59233 );
+				float3 temp_cast_7 = (dotResult28_g59233).xxx;
+				float temp_output_21_0_g59233 = ( 1.0 - _Splat3_Saturation );
+				float3 lerpResult31_g59233 = lerp( temp_cast_7 , temp_output_12_0_g59233 , temp_output_21_0_g59233);
+				float3 temp_output_11_0_g59187 = lerpResult31_g59233;
+				float3 temp_output_12_0_g59188 = temp_output_11_0_g59187;
+				float dotResult28_g59188 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59188 );
+				float3 temp_cast_8 = (dotResult28_g59188).xxx;
+				float temp_output_21_0_g59188 = 1.5;
+				float3 lerpResult31_g59188 = lerp( temp_cast_8 , temp_output_12_0_g59188 , temp_output_21_0_g59188);
+				float3 temp_output_4_0_g59187 = ( saturate( lerpResult31_g59188 ) * 0.2 );
+				float lerpResult23_g59187 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59187 = lerp( _TerrainWetnessIntensity , lerpResult23_g59187 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59187 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59187 = lerp( temp_output_11_0_g59187 , temp_output_4_0_g59187 , saturate( ( saturate( max( 0.0 , lerpResult22_g59187 ) ) * temp_output_29_0_g59187 ) ));
+				float temp_output_38_0_g59187 = _TerrainWetnessAffectLayer3;
+				float3 lerpResult9_g59187 = lerp( temp_output_11_0_g59187 , lerpResult6_g59187 , temp_output_38_0_g59187);
+				float3 temp_output_27_0_g59210 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59210 = lerpResult9_g59187;
+				float3 lerpResult29_g59210 = lerp( temp_output_27_0_g59210 , temp_output_28_0_g59210 , saturate( ( ( distance( temp_output_28_0_g59210 , temp_output_27_0_g59210 ) - _CoverMapRangeL3 ) / max( _CoverMapFuzzinessL3 , 1E-05 ) ) ));
+				float3 temp_output_10876_20_g59175 = lerpResult29_g59210;
+				float3 lerpResult8475_g59175 = lerp( lerpResult9_g59187 , temp_output_10876_20_g59175 , _CoverMapAffectL3);
+				float3 temp_output_61_0_g59216 = lerpResult8475_g59175;
+				float2 vertexToFrag87_g59216 = IN.ase_texcoord12.zw;
+				float4 tex2DNode58_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag87_g59216 );
+				float lerpResult74_g59216 = lerp( tex2DNode58_g59216.r , ( 1.0 - tex2DNode58_g59216.r ) , _Splat3_NoiseInvert);
+				float3 lerpResult55_g59216 = lerp( temp_output_61_0_g59216 , ( temp_output_61_0_g59216 * ( 1.0 - _Splat3_NoiseDarken ) ) , lerpResult74_g59216);
+				float3 lerpResult59_g59216 = lerp( temp_output_61_0_g59216 , lerpResult55_g59216 , _Splat3_EnableNoise);
+				float4 weightedBlendVar7863_g59175 = Control00Weight403_g59175;
+				float3 weightedBlend7863_g59175 = ( weightedBlendVar7863_g59175.x*lerpResult4_g59216 + weightedBlendVar7863_g59175.y*lerpResult38_g59216 + weightedBlendVar7863_g59175.z*lerpResult46_g59216 + weightedBlendVar7863_g59175.w*lerpResult59_g59216 );
+				float3 temp_output_2894_0_g59175 = ( weightedBlend7863_g59175 * _Global_Brightness );
+				float3 localClipHoles4536_g59175 = ( temp_output_2894_0_g59175 );
+				float2 uv_TerrainHolesTexture = IN.ase_texcoord13.xy * _TerrainHolesTexture_ST.xy + _TerrainHolesTexture_ST.zw;
+				float Hole4536_g59175 = SAMPLE_TEXTURE2D( _TerrainHolesTexture, sampler_TerrainHolesTexture, uv_TerrainHolesTexture ).r;
+				{
+				#ifdef _ALPHATEST_ON
+				clip(Hole4536_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				
+				float2 UV1_00379_g59254 = temp_output_175_332_g59252;
+				float2 temp_output_225_0_g59254 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59254 = ddx( temp_output_225_0_g59254 );
+				float2 UV0_00_DDX394_g59254 = temp_output_33_0_g59254;
+				float2 temp_output_65_0_g59254 = ddy( temp_output_225_0_g59254 );
+				float2 UV0_00_DDY395_g59254 = temp_output_65_0_g59254;
+				float3 Weight_00404_g59254 = temp_output_175_362_g59252;
+				float3 break332_g59254 = Weight_00404_g59254;
+				float2 UV2_00380_g59254 = temp_output_175_333_g59252;
+				float2 UV3_00381_g59254 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59254 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV1_00379_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV2_00380_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV3_00381_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.z ) );
+				float4 temp_output_10901_66_g59175 = Sample2DPlaner353_g59254;
+				float4 NORMAL_0_FINAL3070_g59175 = temp_output_10901_66_g59175;
+				float3 unpack10077_g59175 = UnpackNormalScale( NORMAL_0_FINAL3070_g59175, _Splat0_NormalScale );
+				unpack10077_g59175.z = lerp( 1, unpack10077_g59175.z, saturate(_Splat0_NormalScale) );
+				float3 unpack163_g59176 = UnpackNormalScale( SAMPLE_TEXTURE2D( _CoverMapNormal, sampler_Normal0, temp_output_189_0_g59176 ), _CoverMapNormalStrength );
+				unpack163_g59176.z = lerp( 1, unpack163_g59176.z, saturate(_CoverMapNormalStrength) );
+				float3 CoverMap_Normal8436_g59175 = unpack163_g59176;
+				float3 temp_output_30_0_g59184 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59184 = unpack10077_g59175;
+				float Layer0Range10428_g59175 = _CoverMapRangeL0;
+				float Layer0Fuzziness10429_g59175 = _CoverMapFuzzinessL0;
+				float3 lerpResult38_g59184 = lerp( temp_output_30_0_g59184 , temp_output_46_0_g59184 , saturate( ( ( distance( temp_output_46_0_g59184 , temp_output_30_0_g59184 ) - Layer0Range10428_g59175 ) / max( Layer0Fuzziness10429_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10527_48_g59175 = lerpResult38_g59184;
+				float CoverMapLayer08450_g59175 = _CoverMapAffectL0;
+				float3 lerpResult8458_g59175 = lerp( unpack10077_g59175 , temp_output_10527_48_g59175 , CoverMapLayer08450_g59175);
+				float2 UV1_00379_g59236 = temp_output_175_332_g59234;
+				float2 temp_output_225_0_g59236 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59236 = ddx( temp_output_225_0_g59236 );
+				float2 UV0_00_DDX394_g59236 = temp_output_33_0_g59236;
+				float2 temp_output_65_0_g59236 = ddy( temp_output_225_0_g59236 );
+				float2 UV0_00_DDY395_g59236 = temp_output_65_0_g59236;
+				float3 Weight_00404_g59236 = temp_output_175_362_g59234;
+				float3 break332_g59236 = Weight_00404_g59236;
+				float2 UV2_00380_g59236 = temp_output_175_333_g59234;
+				float2 UV3_00381_g59236 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59236 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV1_00379_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV2_00380_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV3_00381_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.z ) );
+				float4 temp_output_10898_66_g59175 = Sample2DPlaner353_g59236;
+				float4 NORMAL_1_FINAL3071_g59175 = temp_output_10898_66_g59175;
+				float3 unpack10076_g59175 = UnpackNormalScale( NORMAL_1_FINAL3071_g59175, _Splat1_NormalScale );
+				unpack10076_g59175.z = lerp( 1, unpack10076_g59175.z, saturate(_Splat1_NormalScale) );
+				float3 temp_output_30_0_g59183 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59183 = unpack10076_g59175;
+				float Layer1Range10423_g59175 = _CoverMapRangeL1;
+				float Layer1Fuzziness10424_g59175 = _CoverMapFuzzinessL1;
+				float3 lerpResult38_g59183 = lerp( temp_output_30_0_g59183 , temp_output_46_0_g59183 , saturate( ( ( distance( temp_output_46_0_g59183 , temp_output_30_0_g59183 ) - Layer1Range10423_g59175 ) / max( Layer1Fuzziness10424_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10529_48_g59175 = lerpResult38_g59183;
+				float CoverMapLayer18465_g59175 = _CoverMapAffectL1;
+				float3 lerpResult8505_g59175 = lerp( unpack10076_g59175 , temp_output_10529_48_g59175 , CoverMapLayer18465_g59175);
+				float4 temp_output_10899_33_g59175 = SAMPLE_TEXTURE2D( _Normal2, sampler_Normal0, temp_output_6_0_g59240 );
+				float4 NORMAL_2_FINAL3072_g59175 = temp_output_10899_33_g59175;
+				float3 unpack10075_g59175 = UnpackNormalScale( NORMAL_2_FINAL3072_g59175, _Splat2_NormalScale );
+				unpack10075_g59175.z = lerp( 1, unpack10075_g59175.z, saturate(_Splat2_NormalScale) );
+				float3 temp_output_30_0_g59185 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59185 = unpack10075_g59175;
+				float Layer2Fuzziness10422_g59175 = _CoverMapFuzzinessL2;
+				float3 lerpResult38_g59185 = lerp( temp_output_30_0_g59185 , temp_output_46_0_g59185 , saturate( ( ( distance( temp_output_46_0_g59185 , temp_output_30_0_g59185 ) - Layer2Fuzziness10422_g59175 ) / max( Layer2Fuzziness10422_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10526_48_g59175 = lerpResult38_g59185;
+				float CoverMaptLayer28471_g59175 = _CoverMapAffectL2;
+				float3 lerpResult8510_g59175 = lerp( unpack10075_g59175 , temp_output_10526_48_g59175 , CoverMaptLayer28471_g59175);
+				float2 UV1_00379_g59248 = temp_output_175_332_g59246;
+				float2 temp_output_225_0_g59248 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59248 = ddx( temp_output_225_0_g59248 );
+				float2 UV0_00_DDX394_g59248 = temp_output_33_0_g59248;
+				float2 temp_output_65_0_g59248 = ddy( temp_output_225_0_g59248 );
+				float2 UV0_00_DDY395_g59248 = temp_output_65_0_g59248;
+				float3 Weight_00404_g59248 = temp_output_175_362_g59246;
+				float3 break332_g59248 = Weight_00404_g59248;
+				float2 UV2_00380_g59248 = temp_output_175_333_g59246;
+				float2 UV3_00381_g59248 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59248 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV1_00379_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV2_00380_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV3_00381_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.z ) );
+				float4 temp_output_10900_66_g59175 = Sample2DPlaner353_g59248;
+				float4 NORMAL_3_FINAL3073_g59175 = temp_output_10900_66_g59175;
+				float3 unpack10074_g59175 = UnpackNormalScale( NORMAL_3_FINAL3073_g59175, _Splat3_NormalScale );
+				unpack10074_g59175.z = lerp( 1, unpack10074_g59175.z, saturate(_Splat3_NormalScale) );
+				float3 temp_output_30_0_g59186 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59186 = unpack10074_g59175;
+				float Layer3Range10418_g59175 = _CoverMapRangeL3;
+				float Layer3Fuzziness10419_g59175 = _CoverMapFuzzinessL3;
+				float3 lerpResult38_g59186 = lerp( temp_output_30_0_g59186 , temp_output_46_0_g59186 , saturate( ( ( distance( temp_output_46_0_g59186 , temp_output_30_0_g59186 ) - Layer3Range10418_g59175 ) / max( Layer3Fuzziness10419_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10528_48_g59175 = lerpResult38_g59186;
+				float CoverMapLayer38477_g59175 = _CoverMapAffectL3;
+				float3 lerpResult8515_g59175 = lerp( unpack10074_g59175 , temp_output_10528_48_g59175 , CoverMapLayer38477_g59175);
+				float4 weightedBlendVar504_g59175 = Control00Weight403_g59175;
+				float3 weightedBlend504_g59175 = ( weightedBlendVar504_g59175.x*lerpResult8458_g59175 + weightedBlendVar504_g59175.y*lerpResult8505_g59175 + weightedBlendVar504_g59175.z*lerpResult8510_g59175 + weightedBlendVar504_g59175.w*lerpResult8515_g59175 );
+				float3 worldPosValue187_g59262 = WorldPosition;
+				float3 WorldPosition434_g59262 = worldPosValue187_g59262;
+				float4 ase_screenPosNorm = ScreenPos / ScreenPos.w;
+				ase_screenPosNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? ase_screenPosNorm.z : ase_screenPosNorm.z * 0.5 + 0.5;
+				float2 ScreenUV190_g59262 = (ase_screenPosNorm).xy;
+				float2 ScreenUV434_g59262 = ScreenUV190_g59262;
+				half2 LightmapUV497_g59262 = (IN.ase_texcoord13.zw*(unity_DynamicLightmapST).xy + (unity_DynamicLightmapST).zw);
+				half4 localCalculateShadowMask497_g59262 = CalculateShadowMask497_g59262( LightmapUV497_g59262 );
+				float4 shadowMaskValue180_g59262 = localCalculateShadowMask497_g59262;
+				float4 ShadowMask434_g59262 = shadowMaskValue180_g59262;
+				float3 localAdditionalLightsFlatMask14x434_g59262 = AdditionalLightsFlatMask14x( WorldPosition434_g59262 , ScreenUV434_g59262 , ShadowMask434_g59262 );
+				float3 Final_Normal10668_g59175 = ( weightedBlend504_g59175 + localAdditionalLightsFlatMask14x434_g59262 );
+				#ifdef _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+				float3 staticSwitch10602_g59175 = Final_Normal10668_g59175;
+				#else
+				float3 staticSwitch10602_g59175 = Final_Normal10668_g59175;
+				#endif
+				
+				float2 UV1_00379_g59255 = temp_output_175_332_g59252;
+				float2 temp_output_225_0_g59255 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59255 = ddx( temp_output_225_0_g59255 );
+				float2 UV0_00_DDX394_g59255 = temp_output_33_0_g59255;
+				float2 temp_output_65_0_g59255 = ddy( temp_output_225_0_g59255 );
+				float2 UV0_00_DDY395_g59255 = temp_output_65_0_g59255;
+				float3 Weight_00404_g59255 = temp_output_175_362_g59252;
+				float3 break332_g59255 = Weight_00404_g59255;
+				float2 UV2_00380_g59255 = temp_output_175_333_g59252;
+				float2 UV3_00381_g59255 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59255 = ( ( SAMPLE_TEXTURE2D_GRAD( _Mask0, sampler_Mask0, UV1_00379_g59255, UV0_00_DDX394_g59255, UV0_00_DDY395_g59255 ) * break332_g59255.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask0, sampler_Mask0, UV2_00380_g59255, UV0_00_DDX394_g59255, UV0_00_DDY395_g59255 ) * break332_g59255.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask0, sampler_Mask0, UV3_00381_g59255, UV0_00_DDX394_g59255, UV0_00_DDY395_g59255 ) * break332_g59255.z ) );
+				float4 temp_output_10901_63_g59175 = Sample2DPlaner353_g59255;
+				float4 break3588_g59175 = temp_output_10901_63_g59175;
+				float MASK_0_R3697_g59175 = break3588_g59175.r;
+				float temp_output_5306_0_g59175 = ( ( 1.0 - MASK_0_R3697_g59175 ) * _Splat0_Metallic );
+				float2 UV1_00379_g59237 = temp_output_175_332_g59234;
+				float2 temp_output_225_0_g59237 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59237 = ddx( temp_output_225_0_g59237 );
+				float2 UV0_00_DDX394_g59237 = temp_output_33_0_g59237;
+				float2 temp_output_65_0_g59237 = ddy( temp_output_225_0_g59237 );
+				float2 UV0_00_DDY395_g59237 = temp_output_65_0_g59237;
+				float3 Weight_00404_g59237 = temp_output_175_362_g59234;
+				float3 break332_g59237 = Weight_00404_g59237;
+				float2 UV2_00380_g59237 = temp_output_175_333_g59234;
+				float2 UV3_00381_g59237 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59237 = ( ( SAMPLE_TEXTURE2D_GRAD( _Mask1, sampler_Mask0, UV1_00379_g59237, UV0_00_DDX394_g59237, UV0_00_DDY395_g59237 ) * break332_g59237.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask1, sampler_Mask0, UV2_00380_g59237, UV0_00_DDX394_g59237, UV0_00_DDY395_g59237 ) * break332_g59237.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask1, sampler_Mask0, UV3_00381_g59237, UV0_00_DDX394_g59237, UV0_00_DDY395_g59237 ) * break332_g59237.z ) );
+				float4 temp_output_10898_63_g59175 = Sample2DPlaner353_g59237;
+				float4 break3781_g59175 = temp_output_10898_63_g59175;
+				float MASK_1_R4919_g59175 = break3781_g59175.r;
+				float temp_output_5313_0_g59175 = ( ( 1.0 - MASK_1_R4919_g59175 ) * _Splat1_Metallic );
+				float4 temp_output_10899_34_g59175 = SAMPLE_TEXTURE2D( _Mask2, sampler_Mask0, temp_output_6_0_g59240 );
+				float4 break3792_g59175 = temp_output_10899_34_g59175;
+				float MASK_2_R4938_g59175 = break3792_g59175.r;
+				float temp_output_5319_0_g59175 = ( ( 1.0 - MASK_2_R4938_g59175 ) * _Splat2_Metallic );
+				float2 UV1_00379_g59249 = temp_output_175_332_g59246;
+				float2 temp_output_225_0_g59249 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59249 = ddx( temp_output_225_0_g59249 );
+				float2 UV0_00_DDX394_g59249 = temp_output_33_0_g59249;
+				float2 temp_output_65_0_g59249 = ddy( temp_output_225_0_g59249 );
+				float2 UV0_00_DDY395_g59249 = temp_output_65_0_g59249;
+				float3 Weight_00404_g59249 = temp_output_175_362_g59246;
+				float3 break332_g59249 = Weight_00404_g59249;
+				float2 UV2_00380_g59249 = temp_output_175_333_g59246;
+				float2 UV3_00381_g59249 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59249 = ( ( SAMPLE_TEXTURE2D_GRAD( _Mask3, sampler_Mask0, UV1_00379_g59249, UV0_00_DDX394_g59249, UV0_00_DDY395_g59249 ) * break332_g59249.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask3, sampler_Mask0, UV2_00380_g59249, UV0_00_DDX394_g59249, UV0_00_DDY395_g59249 ) * break332_g59249.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Mask3, sampler_Mask0, UV3_00381_g59249, UV0_00_DDX394_g59249, UV0_00_DDY395_g59249 ) * break332_g59249.z ) );
+				float4 temp_output_10900_63_g59175 = Sample2DPlaner353_g59249;
+				float4 break3802_g59175 = temp_output_10900_63_g59175;
+				float MASK_3_R4955_g59175 = break3802_g59175.r;
+				float temp_output_5327_0_g59175 = ( ( 1.0 - MASK_3_R4955_g59175 ) * _Splat3_Metallic );
+				float4 weightedBlendVar2871_g59175 = Control00Weight403_g59175;
+				float weightedBlend2871_g59175 = ( weightedBlendVar2871_g59175.x*temp_output_5306_0_g59175 + weightedBlendVar2871_g59175.y*temp_output_5313_0_g59175 + weightedBlendVar2871_g59175.z*temp_output_5319_0_g59175 + weightedBlendVar2871_g59175.w*temp_output_5327_0_g59175 );
+				float Final_Metallic10670_g59175 = weightedBlend2871_g59175;
+				
+				float MASK_0_A5087_g59175 = break3588_g59175.a;
+				float lerpResult11001_g59175 = lerp( MASK_0_A5087_g59175 , ( 1.0 - MASK_0_A5087_g59175 ) , _Splat0_SmoothnessType);
+				float temp_output_11003_0_g59175 = ( _Splat0_Smoothness * lerpResult11001_g59175 );
+				float temp_output_32_0_g59274 = temp_output_11003_0_g59175;
+				float temp_output_29_0_g59274 = saturate( _TerrainWetnessMask );
+				float lerpResult31_g59274 = lerp( temp_output_32_0_g59274 , 0.9 , temp_output_29_0_g59274);
+				float WetnesstLayer08726_g59175 = _TerrainWetnessAffectLayer0;
+				float temp_output_38_0_g59274 = WetnesstLayer08726_g59175;
+				float lerpResult33_g59274 = lerp( temp_output_32_0_g59274 , lerpResult31_g59274 , temp_output_38_0_g59274);
+				float MASK_1_A5085_g59175 = break3781_g59175.a;
+				float lerpResult11004_g59175 = lerp( MASK_1_A5085_g59175 , ( 1.0 - MASK_1_A5085_g59175 ) , _Splat1_SmoothnessType);
+				float temp_output_11006_0_g59175 = ( _Splat1_Smoothness * lerpResult11004_g59175 );
+				float temp_output_32_0_g59271 = temp_output_11006_0_g59175;
+				float temp_output_29_0_g59271 = saturate( _TerrainWetnessMask );
+				float lerpResult31_g59271 = lerp( temp_output_32_0_g59271 , 0.9 , temp_output_29_0_g59271);
+				float WetnessLayer18788_g59175 = _TerrainWetnessAffectLayer1;
+				float temp_output_38_0_g59271 = WetnessLayer18788_g59175;
+				float lerpResult33_g59271 = lerp( temp_output_32_0_g59271 , lerpResult31_g59271 , temp_output_38_0_g59271);
+				float MASK_2_A5083_g59175 = break3792_g59175.a;
+				float lerpResult11007_g59175 = lerp( MASK_2_A5083_g59175 , ( 1.0 - MASK_2_A5083_g59175 ) , _Splat2_SmoothnessType);
+				float temp_output_11009_0_g59175 = ( _Splat2_Smoothness * lerpResult11007_g59175 );
+				float temp_output_32_0_g59277 = temp_output_11009_0_g59175;
+				float temp_output_29_0_g59277 = saturate( _TerrainWetnessMask );
+				float lerpResult31_g59277 = lerp( temp_output_32_0_g59277 , 0.9 , temp_output_29_0_g59277);
+				float WetnessLayer28790_g59175 = _TerrainWetnessAffectLayer2;
+				float temp_output_38_0_g59277 = WetnessLayer28790_g59175;
+				float lerpResult33_g59277 = lerp( temp_output_32_0_g59277 , lerpResult31_g59277 , temp_output_38_0_g59277);
+				float MASK_3_A5081_g59175 = break3802_g59175.a;
+				float lerpResult11010_g59175 = lerp( MASK_3_A5081_g59175 , ( 1.0 - MASK_3_A5081_g59175 ) , _Splat3_SmoothnessType);
+				float temp_output_11012_0_g59175 = ( _Splat3_Smoothness * lerpResult11010_g59175 );
+				float temp_output_32_0_g59280 = temp_output_11012_0_g59175;
+				float temp_output_29_0_g59280 = saturate( _TerrainWetnessMask );
+				float lerpResult31_g59280 = lerp( temp_output_32_0_g59280 , 0.9 , temp_output_29_0_g59280);
+				float WetnessLayer38792_g59175 = _TerrainWetnessAffectLayer3;
+				float temp_output_38_0_g59280 = WetnessLayer38792_g59175;
+				float lerpResult33_g59280 = lerp( temp_output_32_0_g59280 , lerpResult31_g59280 , temp_output_38_0_g59280);
+				float4 weightedBlendVar2861_g59175 = Control00Weight403_g59175;
+				float weightedBlend2861_g59175 = ( weightedBlendVar2861_g59175.x*lerpResult33_g59274 + weightedBlendVar2861_g59175.y*lerpResult33_g59271 + weightedBlendVar2861_g59175.z*lerpResult33_g59277 + weightedBlendVar2861_g59175.w*lerpResult33_g59280 );
+				float Final_Smoothness10672_g59175 = weightedBlend2861_g59175;
+				
+				float MASK_0_G3698_g59175 = break3588_g59175.g;
+				float temp_output_10983_0_g59175 = saturate( ( ( 1.0 - _Splat0_OcclusionStrengthAO ) * MASK_0_G3698_g59175 ) );
+				float MASK_1_G4917_g59175 = break3781_g59175.g;
+				float temp_output_10986_0_g59175 = saturate( ( ( 1.0 - _Splat1_OcclusionStrengthAO ) * MASK_1_G4917_g59175 ) );
+				float MASK_2_G4936_g59175 = break3792_g59175.g;
+				float temp_output_10989_0_g59175 = saturate( ( ( 1.0 - _Splat2_OcclusionStrengthAO ) * MASK_2_G4936_g59175 ) );
+				float MASK_3_G4957_g59175 = break3802_g59175.g;
+				float temp_output_10994_0_g59175 = saturate( ( ( 1.0 - _Splat3_OcclusionStrengthAO ) * MASK_3_G4957_g59175 ) );
+				float4 weightedBlendVar2880_g59175 = Control00Weight403_g59175;
+				float weightedBlend2880_g59175 = ( weightedBlendVar2880_g59175.x*temp_output_10983_0_g59175 + weightedBlendVar2880_g59175.y*temp_output_10986_0_g59175 + weightedBlendVar2880_g59175.z*temp_output_10989_0_g59175 + weightedBlendVar2880_g59175.w*temp_output_10994_0_g59175 );
+				float Final_Oclusion10671_g59175 = saturate( weightedBlend2880_g59175 );
+				
+
+				float3 BaseColor = localClipHoles4536_g59175;
+				float3 Normal = staticSwitch10602_g59175;
+				float3 Emission = 0;
+				float3 Specular = 0.5;
+				float Metallic = Final_Metallic10670_g59175;
+				float Smoothness = Final_Smoothness10672_g59175;
+				float Occlusion = Final_Oclusion10671_g59175;
+				float Alpha = dotResult1044_g59175;
+				float AlphaClipThreshold = 0.0;
+				float AlphaClipThresholdShadow = 0.5;
+				float3 BakedGI = 0;
+				float3 RefractionColor = 1;
+				float RefractionIndex = 1;
+				float3 Transmission = 1;
+				float3 Translucency = 1;
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					float DepthValue = IN.positionCS.z;
+				#endif
+
+				#ifdef _CLEARCOAT
+					float CoatMask = 0;
+					float CoatSmoothness = 0;
+				#endif
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				InputData inputData = (InputData)0;
+				inputData.positionWS = WorldPosition;
+				inputData.viewDirectionWS = WorldViewDirection;
+
+				#ifdef _NORMALMAP
+						#if _NORMAL_DROPOFF_TS
+							inputData.normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent, WorldBiTangent, WorldNormal));
+						#elif _NORMAL_DROPOFF_OS
+							inputData.normalWS = TransformObjectToWorldNormal(Normal);
+						#elif _NORMAL_DROPOFF_WS
+							inputData.normalWS = Normal;
+						#endif
+					inputData.normalWS = NormalizeNormalPerPixel(inputData.normalWS);
+				#else
+					inputData.normalWS = WorldNormal;
+				#endif
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+					inputData.shadowCoord = ShadowCoords;
+				#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+					inputData.shadowCoord = TransformWorldToShadowCoord(inputData.positionWS);
+				#else
+					inputData.shadowCoord = float4(0, 0, 0, 0);
+				#endif
+
+				#ifdef ASE_FOG
+					inputData.fogCoord = IN.fogFactorAndVertexLight.x;
+				#endif
+					inputData.vertexLighting = IN.fogFactorAndVertexLight.yzw;
+
+				#if defined(ENABLE_TERRAIN_PERPIXEL_NORMAL)
+					float3 SH = SampleSH(inputData.normalWS.xyz);
+				#else
+					float3 SH = IN.lightmapUVOrVertexSH.xyz;
+				#endif
+
+				#if defined(DYNAMICLIGHTMAP_ON)
+					inputData.bakedGI = SAMPLE_GI(IN.lightmapUVOrVertexSH.xy, IN.dynamicLightmapUV.xy, SH, inputData.normalWS);
+				#else
+					inputData.bakedGI = SAMPLE_GI(IN.lightmapUVOrVertexSH.xy, SH, inputData.normalWS);
+				#endif
+
+				#ifdef ASE_BAKEDGI
+					inputData.bakedGI = BakedGI;
+				#endif
+
+				inputData.normalizedScreenSpaceUV = NormalizedScreenSpaceUV;
+				inputData.shadowMask = SAMPLE_SHADOWMASK(IN.lightmapUVOrVertexSH.xy);
+
+				#if defined(DEBUG_DISPLAY)
+					#if defined(DYNAMICLIGHTMAP_ON)
+						inputData.dynamicLightmapUV = IN.dynamicLightmapUV.xy;
+					#endif
+					#if defined(LIGHTMAP_ON)
+						inputData.staticLightmapUV = IN.lightmapUVOrVertexSH.xy;
+					#else
+						inputData.vertexSH = SH;
+					#endif
+				#endif
+
+				SurfaceData surfaceData;
+				surfaceData.albedo              = BaseColor;
+				surfaceData.metallic            = saturate(Metallic);
+				surfaceData.specular            = Specular;
+				surfaceData.smoothness          = saturate(Smoothness),
+				surfaceData.occlusion           = Occlusion,
+				surfaceData.emission            = Emission,
+				surfaceData.alpha               = saturate(Alpha);
+				surfaceData.normalTS            = Normal;
+				surfaceData.clearCoatMask       = 0;
+				surfaceData.clearCoatSmoothness = 1;
+
+				#ifdef _CLEARCOAT
+					surfaceData.clearCoatMask       = saturate(CoatMask);
+					surfaceData.clearCoatSmoothness = saturate(CoatSmoothness);
+				#endif
+
+				#ifdef _DBUFFER
+					ApplyDecalToSurfaceData(IN.positionCS, surfaceData, inputData);
+				#endif
+
+				half4 color = UniversalFragmentPBR( inputData, surfaceData);
+
+				#ifdef ASE_TRANSMISSION
+				{
+					float shadow = _TransmissionShadow;
+
+					#define SUM_LIGHT_TRANSMISSION(Light)\
+						float3 atten = Light.color * Light.distanceAttenuation;\
+						atten = lerp( atten, atten * Light.shadowAttenuation, shadow );\
+						half3 transmission = max( 0, -dot( inputData.normalWS, Light.direction ) ) * atten * Transmission;\
+						color.rgb += BaseColor * transmission;
+
+					SUM_LIGHT_TRANSMISSION( GetMainLight( inputData.shadowCoord ) );
+
+					#if defined(_ADDITIONAL_LIGHTS)
+						uint meshRenderingLayers = GetMeshRenderingLayer();
+						uint pixelLightCount = GetAdditionalLightsCount();
+						#if USE_FORWARD_PLUS
+							for (uint lightIndex = 0; lightIndex < min(URP_FP_DIRECTIONAL_LIGHTS_COUNT, MAX_VISIBLE_LIGHTS); lightIndex++)
+							{
+								FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK
+
+								Light light = GetAdditionalLight(lightIndex, inputData.positionWS);
+								#ifdef _LIGHT_LAYERS
+								if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+								#endif
+								{
+									SUM_LIGHT_TRANSMISSION( light );
+								}
+							}
+						#endif
+						LIGHT_LOOP_BEGIN( pixelLightCount )
+							Light light = GetAdditionalLight(lightIndex, inputData.positionWS);
+							#ifdef _LIGHT_LAYERS
+							if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+							#endif
+							{
+								SUM_LIGHT_TRANSMISSION( light );
+							}
+						LIGHT_LOOP_END
+					#endif
+				}
+				#endif
+
+				#ifdef ASE_TRANSLUCENCY
+				{
+					float shadow = _TransShadow;
+					float normal = _TransNormal;
+					float scattering = _TransScattering;
+					float direct = _TransDirect;
+					float ambient = _TransAmbient;
+					float strength = _TransStrength;
+
+					#define SUM_LIGHT_TRANSLUCENCY(Light)\
+						float3 atten = Light.color * Light.distanceAttenuation;\
+						atten = lerp( atten, atten * Light.shadowAttenuation, shadow );\
+						half3 lightDir = Light.direction + inputData.normalWS * normal;\
+						half VdotL = pow( saturate( dot( inputData.viewDirectionWS, -lightDir ) ), scattering );\
+						half3 translucency = atten * ( VdotL * direct + inputData.bakedGI * ambient ) * Translucency;\
+						color.rgb += BaseColor * translucency * strength;
+
+					SUM_LIGHT_TRANSLUCENCY( GetMainLight( inputData.shadowCoord ) );
+
+					#if defined(_ADDITIONAL_LIGHTS)
+						uint meshRenderingLayers = GetMeshRenderingLayer();
+						uint pixelLightCount = GetAdditionalLightsCount();
+						#if USE_FORWARD_PLUS
+							for (uint lightIndex = 0; lightIndex < min(URP_FP_DIRECTIONAL_LIGHTS_COUNT, MAX_VISIBLE_LIGHTS); lightIndex++)
+							{
+								FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK
+
+								Light light = GetAdditionalLight(lightIndex, inputData.positionWS);
+								#ifdef _LIGHT_LAYERS
+								if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+								#endif
+								{
+									SUM_LIGHT_TRANSLUCENCY( light );
+								}
+							}
+						#endif
+						LIGHT_LOOP_BEGIN( pixelLightCount )
+							Light light = GetAdditionalLight(lightIndex, inputData.positionWS);
+							#ifdef _LIGHT_LAYERS
+							if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+							#endif
+							{
+								SUM_LIGHT_TRANSLUCENCY( light );
+							}
+						LIGHT_LOOP_END
+					#endif
+				}
+				#endif
+
+				#ifdef ASE_REFRACTION
+					float4 projScreenPos = ScreenPos / ScreenPos.w;
+					float3 refractionOffset = ( RefractionIndex - 1.0 ) * mul( UNITY_MATRIX_V, float4( WorldNormal,0 ) ).xyz * ( 1.0 - dot( WorldNormal, WorldViewDirection ) );
+					projScreenPos.xy += refractionOffset.xy;
+					float3 refraction = SHADERGRAPH_SAMPLE_SCENE_COLOR( projScreenPos.xy ) * RefractionColor;
+					color.rgb = lerp( refraction, color.rgb, color.a );
+					color.a = 1;
+				#endif
+
+				#ifdef ASE_FINAL_COLOR_ALPHA_MULTIPLY
+					color.rgb *= color.a;
+				#endif
+
+				#ifdef ASE_FOG
+					#ifdef TERRAIN_SPLAT_ADDPASS
+						color.rgb = MixFogColor(color.rgb, half3( 0, 0, 0 ), IN.fogFactorAndVertexLight.x );
+					#else
+						color.rgb = MixFog(color.rgb, IN.fogFactorAndVertexLight.x);
+					#endif
+				#endif
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					outputDepth = DepthValue;
+				#endif
+
+				#ifdef _WRITE_RENDERING_LAYERS
+					uint renderingLayers = GetMeshRenderingLayer();
+					outRenderingLayers = float4( EncodeMeshRenderingLayer( renderingLayers ), 0, 0, 0 );
+				#endif
+
+				return color;
+			}
+
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "DepthOnly"
+			Tags { "LightMode"="DepthOnly" }
+
+			ZWrite On
+			ColorMask 0
+			AlphaToMask Off
+
+			HLSLPROGRAM
+
+			
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#define SHADERPASS SHADERPASS_DEPTHONLY
+
+			
+            #if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+			#endif
+		
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			#if defined(ASE_EARLY_Z_DEPTH_OPTIMIZE) && (SHADER_TARGET >= 45)
+				#define ASE_SV_DEPTH SV_DepthLessEqual
+				#define ASE_SV_POSITION_QUALIFIERS linear noperspective centroid
+			#else
+				#define ASE_SV_DEPTH SV_Depth
+				#define ASE_SV_POSITION_QUALIFIERS
+			#endif
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				ASE_SV_POSITION_QUALIFIERS float4 positionCS : SV_POSITION;
+				float4 clipPosV : TEXCOORD0;
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+				float3 positionWS : TEXCOORD1;
+				#endif
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+				float4 shadowCoord : TEXCOORD2;
+				#endif
+				float4 ase_texcoord3 : TEXCOORD3;
+				float4 ase_texcoord4 : TEXCOORD4;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.ase_texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			VertexOutput VertexFunction( VertexInput v  )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.ase_texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord3.xy = vertexToFrag27_g59193;
+				
+				o.ase_texcoord4 = v.ase_texcoord;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord3.zw = 0;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+
+				VertexPositionInputs vertexInput = GetVertexPositionInputs( v.positionOS.xyz );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					o.positionWS = vertexInput.positionWS;
+				#endif
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					o.shadowCoord = GetShadowCoord( vertexInput );
+				#endif
+
+				o.positionCS = vertexInput.positionCS;
+				o.clipPosV = vertexInput.positionCS;
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.ase_texcoord = v.ase_texcoord;
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag(	VertexOutput IN
+						#ifdef ASE_DEPTH_WRITE_ON
+						,out float outputDepth : ASE_SV_DEPTH
+						#endif
+						 ) : SV_TARGET
+			{
+				UNITY_SETUP_INSTANCE_ID(IN);
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+				float3 WorldPosition = IN.positionWS;
+				#endif
+
+				float4 ShadowCoords = float4( 0, 0, 0, 0 );
+				float4 ClipPos = IN.clipPosV;
+				float4 ScreenPos = ComputeScreenPos( IN.clipPosV );
+
+				#if defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+						ShadowCoords = IN.shadowCoord;
+					#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+						ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
+					#endif
+				#endif
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord3.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				
+
+				float Alpha = dotResult1044_g59175;
+				float AlphaClipThreshold = 0.0;
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					float DepthValue = IN.positionCS.z;
+				#endif
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				#if defined(LOD_FADE_CROSSFADE)
+					LODFadeCrossFade( IN.positionCS );
+				#endif
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					outputDepth = DepthValue;
+				#endif
+
+				return 0;
+			}
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "Meta"
+			Tags { "LightMode"="Meta" }
+
+			Cull Off
+
+			HLSLPROGRAM
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#pragma shader_feature EDITOR_VISUALIZATION
+
+			#define SHADERPASS SHADERPASS_META
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/MetaInput.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 texcoord0 : TEXCOORD0;
+				float4 texcoord1 : TEXCOORD1;
+				float4 texcoord2 : TEXCOORD2;
+				
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				float4 positionCS : SV_POSITION;
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 positionWS : TEXCOORD0;
+				#endif
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					float4 shadowCoord : TEXCOORD1;
+				#endif
+				#ifdef EDITOR_VISUALIZATION
+					float4 VizUV : TEXCOORD2;
+					float4 LightCoord : TEXCOORD3;
+				#endif
+				float4 ase_texcoord4 : TEXCOORD4;
+				float4 ase_texcoord5 : TEXCOORD5;
+				float4 ase_texcoord6 : TEXCOORD6;
+				float4 ase_texcoord7 : TEXCOORD7;
+				float4 ase_texcoord8 : TEXCOORD8;
+				float4 ase_texcoord9 : TEXCOORD9;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			TEXTURE2D(_Splat0);
+			SAMPLER(sampler_Splat0);
+			half _GlobalWetnessTerrainIntensity;
+			float _GlobalWetnessTerrainEnabled;
+			TEXTURE2D(_CoverMapAlbedo);
+			TEXTURE2D(_GlobalTerrainNoise);
+			TEXTURE2D(_Splat1);
+			TEXTURE2D(_Splat2);
+			TEXTURE2D(_Splat3);
+			TEXTURE2D(_TerrainHolesTexture);
+			SAMPLER(sampler_TerrainHolesTexture);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			void StochasticTiling( float2 UV, out float2 UV1, out float2 UV2, out float2 UV3, out float W1, out float W2, out float W3 )
+			{
+				float2 vertex1, vertex2, vertex3;
+				// Scaling of the input
+				float2 uv = UV * 3.464; // 2 * sqrt (3)
+				// Skew input space into simplex triangle grid
+				const float2x2 gridToSkewedGrid = float2x2( 1.0, 0.0, -0.57735027, 1.15470054 );
+				float2 skewedCoord = mul( gridToSkewedGrid, uv );
+				// Compute local triangle vertex IDs and local barycentric coordinates
+				int2 baseId = int2( floor( skewedCoord ) );
+				float3 temp = float3( frac( skewedCoord ), 0 );
+				temp.z = 1.0 - temp.x - temp.y;
+				if ( temp.z > 0.0 )
+				{
+					W1 = temp.z;
+					W2 = temp.y;
+					W3 = temp.x;
+					vertex1 = baseId;
+					vertex2 = baseId + int2( 0, 1 );
+					vertex3 = baseId + int2( 1, 0 );
+				}
+				else
+				{
+					W1 = -temp.z;
+					W2 = 1.0 - temp.y;
+					W3 = 1.0 - temp.x;
+					vertex1 = baseId + int2( 1, 1 );
+					vertex2 = baseId + int2( 1, 0 );
+					vertex3 = baseId + int2( 0, 1 );
+				}
+				UV1 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex1 ) ) * 43758.5453 );
+				UV2 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex2 ) ) * 43758.5453 );
+				UV3 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex3 ) ) * 43758.5453 );
+				return;
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.texcoord0.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			VertexOutput VertexFunction( VertexInput v  )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.texcoord0.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord4.xy = vertexToFrag27_g59193;
+				float2 Offset235_g59194 = _Splat0_ST.zw;
+				float2 temp_output_41_0_g59194 = ( ( v.texcoord0.xy * _Splat0_ST.xy ) + Offset235_g59194 );
+				float2 vertexToFrag70_g59194 = temp_output_41_0_g59194;
+				o.ase_texcoord4.zw = vertexToFrag70_g59194;
+				float2 Offset235_g59180 = float2( 1,0 );
+				float2 temp_output_41_0_g59180 = ( ( v.texcoord0.xy * float2( 1,1 ) ) + Offset235_g59180 );
+				float2 vertexToFrag70_g59180 = temp_output_41_0_g59180;
+				o.ase_texcoord5.xy = vertexToFrag70_g59180;
+				float temp_output_23_0_g59216 = _Splat0_NoiseScale;
+				float2 appendResult3_g59216 = (float2(temp_output_23_0_g59216 , temp_output_23_0_g59216));
+				float2 vertexToFrag81_g59216 = ( v.texcoord0.xy * appendResult3_g59216 );
+				o.ase_texcoord5.zw = vertexToFrag81_g59216;
+				float2 Offset235_g59200 = _Splat1_ST.zw;
+				float2 temp_output_41_0_g59200 = ( ( v.texcoord0.xy * _Splat1_ST.xy ) + Offset235_g59200 );
+				float2 vertexToFrag70_g59200 = temp_output_41_0_g59200;
+				o.ase_texcoord6.xy = vertexToFrag70_g59200;
+				float temp_output_34_0_g59216 = _Splat1_NoiseScale;
+				float2 appendResult30_g59216 = (float2(temp_output_34_0_g59216 , temp_output_34_0_g59216));
+				float2 vertexToFrag83_g59216 = ( v.texcoord0.xy * appendResult30_g59216 );
+				o.ase_texcoord6.zw = vertexToFrag83_g59216;
+				float2 Offset235_g59197 = _Splat2_ST.zw;
+				float2 temp_output_41_0_g59197 = ( ( v.texcoord0.xy * _Splat2_ST.xy ) + Offset235_g59197 );
+				float2 vertexToFrag70_g59197 = temp_output_41_0_g59197;
+				o.ase_texcoord7.xy = vertexToFrag70_g59197;
+				float temp_output_50_0_g59216 = _Splat2_NoiseScale;
+				float2 appendResult43_g59216 = (float2(temp_output_50_0_g59216 , temp_output_50_0_g59216));
+				float2 vertexToFrag85_g59216 = ( v.texcoord0.xy * appendResult43_g59216 );
+				o.ase_texcoord7.zw = vertexToFrag85_g59216;
+				float2 Offset235_g59203 = _Splat3_ST.zw;
+				float2 temp_output_41_0_g59203 = ( ( v.texcoord0.xy * _Splat3_ST.xy ) + Offset235_g59203 );
+				float2 vertexToFrag70_g59203 = temp_output_41_0_g59203;
+				o.ase_texcoord8.xy = vertexToFrag70_g59203;
+				float temp_output_63_0_g59216 = _Splat3_NoiseScale;
+				float2 appendResult56_g59216 = (float2(temp_output_63_0_g59216 , temp_output_63_0_g59216));
+				float2 vertexToFrag87_g59216 = ( v.texcoord0.xy * appendResult56_g59216 );
+				o.ase_texcoord8.zw = vertexToFrag87_g59216;
+				
+				o.ase_texcoord9.xy = v.texcoord0.xy;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord9.zw = 0;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+
+				float3 positionWS = TransformObjectToWorld( v.positionOS.xyz );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					o.positionWS = positionWS;
+				#endif
+
+				o.positionCS = MetaVertexPosition( v.positionOS, v.texcoord1.xy, v.texcoord1.xy, unity_LightmapST, unity_DynamicLightmapST );
+
+				#ifdef EDITOR_VISUALIZATION
+					float2 VizUV = 0;
+					float4 LightCoord = 0;
+					UnityEditorVizData(v.positionOS.xyz, v.texcoord0.xy, v.texcoord1.xy, v.texcoord2.xy, VizUV, LightCoord);
+					o.VizUV = float4(VizUV, 0, 0);
+					o.LightCoord = LightCoord;
+				#endif
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					VertexPositionInputs vertexInput = (VertexPositionInputs)0;
+					vertexInput.positionWS = positionWS;
+					vertexInput.positionCS = o.positionCS;
+					o.shadowCoord = GetShadowCoord( vertexInput );
+				#endif
+
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 texcoord0 : TEXCOORD0;
+				float4 texcoord1 : TEXCOORD1;
+				float4 texcoord2 : TEXCOORD2;
+				
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.texcoord0 = v.texcoord0;
+				o.texcoord1 = v.texcoord1;
+				o.texcoord2 = v.texcoord2;
+				
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.texcoord0 = patch[0].texcoord0 * bary.x + patch[1].texcoord0 * bary.y + patch[2].texcoord0 * bary.z;
+				o.texcoord1 = patch[0].texcoord1 * bary.x + patch[1].texcoord1 * bary.y + patch[2].texcoord1 * bary.z;
+				o.texcoord2 = patch[0].texcoord2 * bary.x + patch[1].texcoord2 * bary.y + patch[2].texcoord2 * bary.z;
+				
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag(VertexOutput IN  ) : SV_TARGET
+			{
+				UNITY_SETUP_INSTANCE_ID(IN);
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 WorldPosition = IN.positionWS;
+				#endif
+
+				float4 ShadowCoords = float4( 0, 0, 0, 0 );
+
+				#if defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+						ShadowCoords = IN.shadowCoord;
+					#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+						ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
+					#endif
+				#endif
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord4.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				float localSplatClip1046_g59175 = ( dotResult1044_g59175 );
+				float SplatWeight1046_g59175 = dotResult1044_g59175;
+				{
+				#if !defined(SHADER_API_MOBILE) && defined(TERRAIN_SPLAT_ADDPASS)
+				clip(SplatWeight1046_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				float4 temp_output_1048_0_g59175 = ( tex2DNode3739_g59175 / ( localSplatClip1046_g59175 + 0.001 ) );
+				float4 Control00Weight403_g59175 = temp_output_1048_0_g59175;
+				float localStochasticTiling347_g59257 = ( 0.0 );
+				float2 vertexToFrag70_g59194 = IN.ase_texcoord4.zw;
+				float2 temp_output_6_0_g59252 = vertexToFrag70_g59194;
+				float2 temp_output_393_0_g59257 = temp_output_6_0_g59252;
+				float2 UV347_g59257 = temp_output_393_0_g59257;
+				float2 UV1347_g59257 = float2( 0,0 );
+				float2 UV2347_g59257 = float2( 0,0 );
+				float2 UV3347_g59257 = float2( 0,0 );
+				float W1347_g59257 = 0.0;
+				float W2347_g59257 = 0.0;
+				float W3347_g59257 = 0.0;
+				StochasticTiling( UV347_g59257 , UV1347_g59257 , UV2347_g59257 , UV3347_g59257 , W1347_g59257 , W2347_g59257 , W3347_g59257 );
+				float2 temp_output_175_332_g59252 = UV1347_g59257;
+				float2 UV1_00379_g59253 = temp_output_175_332_g59252;
+				float2 temp_output_175_331_g59252 = temp_output_393_0_g59257;
+				float2 temp_output_225_0_g59253 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59253 = ddx( temp_output_225_0_g59253 );
+				float2 UV0_00_DDX394_g59253 = temp_output_33_0_g59253;
+				float2 temp_output_65_0_g59253 = ddy( temp_output_225_0_g59253 );
+				float2 UV0_00_DDY395_g59253 = temp_output_65_0_g59253;
+				float3 appendResult361_g59257 = (float3(W1347_g59257 , W2347_g59257 , W3347_g59257));
+				float3 temp_output_175_362_g59252 = appendResult361_g59257;
+				float3 Weight_00404_g59253 = temp_output_175_362_g59252;
+				float3 break332_g59253 = Weight_00404_g59253;
+				float2 temp_output_175_333_g59252 = UV2347_g59257;
+				float2 UV2_00380_g59253 = temp_output_175_333_g59252;
+				float2 temp_output_175_334_g59252 = UV3347_g59257;
+				float2 UV3_00381_g59253 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59253 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV1_00379_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV2_00380_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV3_00381_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.z ) );
+				float3 temp_output_10901_67_g59175 = (Sample2DPlaner353_g59253).rgb;
+				float3 SPLAT_0_FINAL2805_g59175 = temp_output_10901_67_g59175;
+				float3 temp_output_3375_0_g59175 = ( (_Splat0_Color).rgb * SPLAT_0_FINAL2805_g59175 * _Splat0_Brightness );
+				float3 temp_output_12_0_g59230 = temp_output_3375_0_g59175;
+				float dotResult28_g59230 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59230 );
+				float3 temp_cast_1 = (dotResult28_g59230).xxx;
+				float temp_output_21_0_g59230 = ( 1.0 - _Splat0_Saturation );
+				float3 lerpResult31_g59230 = lerp( temp_cast_1 , temp_output_12_0_g59230 , temp_output_21_0_g59230);
+				float3 temp_output_11_0_g59190 = lerpResult31_g59230;
+				float3 temp_output_12_0_g59191 = temp_output_11_0_g59190;
+				float dotResult28_g59191 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59191 );
+				float3 temp_cast_2 = (dotResult28_g59191).xxx;
+				float temp_output_21_0_g59191 = 1.5;
+				float3 lerpResult31_g59191 = lerp( temp_cast_2 , temp_output_12_0_g59191 , temp_output_21_0_g59191);
+				float3 temp_output_4_0_g59190 = ( saturate( lerpResult31_g59191 ) * 0.2 );
+				float lerpResult23_g59190 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59190 = lerp( _TerrainWetnessIntensity , lerpResult23_g59190 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59190 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59190 = lerp( temp_output_11_0_g59190 , temp_output_4_0_g59190 , saturate( ( saturate( max( 0.0 , lerpResult22_g59190 ) ) * temp_output_29_0_g59190 ) ));
+				float temp_output_38_0_g59190 = _TerrainWetnessAffectLayer0;
+				float3 lerpResult9_g59190 = lerp( temp_output_11_0_g59190 , lerpResult6_g59190 , temp_output_38_0_g59190);
+				float2 vertexToFrag70_g59180 = IN.ase_texcoord5.xy;
+				float2 temp_output_189_0_g59176 = vertexToFrag70_g59180;
+				float3 temp_output_11_0_g59176 = ( (_CoverMapTint).rgb * (SAMPLE_TEXTURE2D( _CoverMapAlbedo, sampler_Splat0, temp_output_189_0_g59176 )).rgb * _CoverMapBrightness );
+				float3 CoverMap_Albedo8425_g59175 = temp_output_11_0_g59176;
+				float3 temp_output_27_0_g59211 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59211 = lerpResult9_g59190;
+				float3 lerpResult29_g59211 = lerp( temp_output_27_0_g59211 , temp_output_28_0_g59211 , saturate( ( ( distance( temp_output_28_0_g59211 , temp_output_27_0_g59211 ) - _CoverMapRangeL0 ) / max( _CoverMapFuzzinessL0 , 1E-05 ) ) ));
+				float3 temp_output_10877_20_g59175 = lerpResult29_g59211;
+				float3 lerpResult8455_g59175 = lerp( lerpResult9_g59190 , temp_output_10877_20_g59175 , _CoverMapAffectL0);
+				float3 temp_output_13_0_g59216 = lerpResult8455_g59175;
+				float2 vertexToFrag81_g59216 = IN.ase_texcoord5.zw;
+				float4 tex2DNode11_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag81_g59216 );
+				float lerpResult71_g59216 = lerp( tex2DNode11_g59216.r , ( 1.0 - tex2DNode11_g59216.r ) , _Splat0_NoiseInvert);
+				float3 lerpResult6_g59216 = lerp( temp_output_13_0_g59216 , ( temp_output_13_0_g59216 * ( 1.0 - _Splat0_NoiseDarken ) ) , lerpResult71_g59216);
+				float3 lerpResult4_g59216 = lerp( temp_output_13_0_g59216 , lerpResult6_g59216 , _Splat0_EnableNoise);
+				float localStochasticTiling347_g59239 = ( 0.0 );
+				float2 vertexToFrag70_g59200 = IN.ase_texcoord6.xy;
+				float2 temp_output_6_0_g59234 = vertexToFrag70_g59200;
+				float2 temp_output_393_0_g59239 = temp_output_6_0_g59234;
+				float2 UV347_g59239 = temp_output_393_0_g59239;
+				float2 UV1347_g59239 = float2( 0,0 );
+				float2 UV2347_g59239 = float2( 0,0 );
+				float2 UV3347_g59239 = float2( 0,0 );
+				float W1347_g59239 = 0.0;
+				float W2347_g59239 = 0.0;
+				float W3347_g59239 = 0.0;
+				StochasticTiling( UV347_g59239 , UV1347_g59239 , UV2347_g59239 , UV3347_g59239 , W1347_g59239 , W2347_g59239 , W3347_g59239 );
+				float2 temp_output_175_332_g59234 = UV1347_g59239;
+				float2 UV1_00379_g59235 = temp_output_175_332_g59234;
+				float2 temp_output_175_331_g59234 = temp_output_393_0_g59239;
+				float2 temp_output_225_0_g59235 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59235 = ddx( temp_output_225_0_g59235 );
+				float2 UV0_00_DDX394_g59235 = temp_output_33_0_g59235;
+				float2 temp_output_65_0_g59235 = ddy( temp_output_225_0_g59235 );
+				float2 UV0_00_DDY395_g59235 = temp_output_65_0_g59235;
+				float3 appendResult361_g59239 = (float3(W1347_g59239 , W2347_g59239 , W3347_g59239));
+				float3 temp_output_175_362_g59234 = appendResult361_g59239;
+				float3 Weight_00404_g59235 = temp_output_175_362_g59234;
+				float3 break332_g59235 = Weight_00404_g59235;
+				float2 temp_output_175_333_g59234 = UV2347_g59239;
+				float2 UV2_00380_g59235 = temp_output_175_333_g59234;
+				float2 temp_output_175_334_g59234 = UV3347_g59239;
+				float2 UV3_00381_g59235 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59235 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV1_00379_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV2_00380_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV3_00381_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.z ) );
+				float3 temp_output_10898_67_g59175 = (Sample2DPlaner353_g59235).rgb;
+				float3 SPLAT_1_FINAL2809_g59175 = temp_output_10898_67_g59175;
+				float3 temp_output_3633_0_g59175 = ( (_Splat1_Color).rgb * SPLAT_1_FINAL2809_g59175 * _Splat1_Brightness );
+				float3 temp_output_12_0_g59231 = temp_output_3633_0_g59175;
+				float dotResult28_g59231 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59231 );
+				float3 temp_cast_3 = (dotResult28_g59231).xxx;
+				float temp_output_21_0_g59231 = ( 1.0 - _Splat1_Saturation );
+				float3 lerpResult31_g59231 = lerp( temp_cast_3 , temp_output_12_0_g59231 , temp_output_21_0_g59231);
+				float3 temp_output_11_0_g59213 = lerpResult31_g59231;
+				float3 temp_output_12_0_g59214 = temp_output_11_0_g59213;
+				float dotResult28_g59214 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59214 );
+				float3 temp_cast_4 = (dotResult28_g59214).xxx;
+				float temp_output_21_0_g59214 = 1.5;
+				float3 lerpResult31_g59214 = lerp( temp_cast_4 , temp_output_12_0_g59214 , temp_output_21_0_g59214);
+				float3 temp_output_4_0_g59213 = ( saturate( lerpResult31_g59214 ) * 0.2 );
+				float lerpResult23_g59213 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59213 = lerp( _TerrainWetnessIntensity , lerpResult23_g59213 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59213 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59213 = lerp( temp_output_11_0_g59213 , temp_output_4_0_g59213 , saturate( ( saturate( max( 0.0 , lerpResult22_g59213 ) ) * temp_output_29_0_g59213 ) ));
+				float temp_output_38_0_g59213 = _TerrainWetnessAffectLayer1;
+				float3 lerpResult9_g59213 = lerp( temp_output_11_0_g59213 , lerpResult6_g59213 , temp_output_38_0_g59213);
+				float3 temp_output_27_0_g59209 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59209 = lerpResult9_g59213;
+				float3 lerpResult29_g59209 = lerp( temp_output_27_0_g59209 , temp_output_28_0_g59209 , saturate( ( ( distance( temp_output_28_0_g59209 , temp_output_27_0_g59209 ) - _CoverMapRangeL1 ) / max( _CoverMapFuzzinessL1 , 1E-05 ) ) ));
+				float3 temp_output_10875_20_g59175 = lerpResult29_g59209;
+				float3 lerpResult8463_g59175 = lerp( lerpResult9_g59213 , temp_output_10875_20_g59175 , _CoverMapAffectL1);
+				float3 temp_output_37_0_g59216 = lerpResult8463_g59175;
+				float2 vertexToFrag83_g59216 = IN.ase_texcoord6.zw;
+				float4 tex2DNode32_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag83_g59216 );
+				float lerpResult72_g59216 = lerp( tex2DNode32_g59216.r , ( 1.0 - tex2DNode32_g59216.r ) , _Splat1_NoiseInvert);
+				float3 lerpResult28_g59216 = lerp( temp_output_37_0_g59216 , ( temp_output_37_0_g59216 * ( 1.0 - _Splat1_NoiseDarken ) ) , lerpResult72_g59216);
+				float3 lerpResult38_g59216 = lerp( temp_output_37_0_g59216 , lerpResult28_g59216 , _Splat1_EnableNoise);
+				float2 vertexToFrag70_g59197 = IN.ase_texcoord7.xy;
+				float2 temp_output_6_0_g59240 = vertexToFrag70_g59197;
+				float3 temp_output_10899_32_g59175 = (SAMPLE_TEXTURE2D( _Splat2, sampler_Splat0, temp_output_6_0_g59240 )).rgb;
+				float3 SPLAT_2_FINAL2812_g59175 = temp_output_10899_32_g59175;
+				float3 temp_output_3637_0_g59175 = ( (_Splat2_Color).rgb * SPLAT_2_FINAL2812_g59175 * _Splat2_Brightness );
+				float3 temp_output_12_0_g59232 = temp_output_3637_0_g59175;
+				float dotResult28_g59232 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59232 );
+				float3 temp_cast_5 = (dotResult28_g59232).xxx;
+				float temp_output_21_0_g59232 = ( 1.0 - _Splat2_Saturation );
+				float3 lerpResult31_g59232 = lerp( temp_cast_5 , temp_output_12_0_g59232 , temp_output_21_0_g59232);
+				float3 temp_output_11_0_g59206 = lerpResult31_g59232;
+				float3 temp_output_12_0_g59207 = temp_output_11_0_g59206;
+				float dotResult28_g59207 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59207 );
+				float3 temp_cast_6 = (dotResult28_g59207).xxx;
+				float temp_output_21_0_g59207 = 1.5;
+				float3 lerpResult31_g59207 = lerp( temp_cast_6 , temp_output_12_0_g59207 , temp_output_21_0_g59207);
+				float3 temp_output_4_0_g59206 = ( saturate( lerpResult31_g59207 ) * 0.2 );
+				float lerpResult23_g59206 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59206 = lerp( _TerrainWetnessIntensity , lerpResult23_g59206 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59206 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59206 = lerp( temp_output_11_0_g59206 , temp_output_4_0_g59206 , saturate( ( saturate( max( 0.0 , lerpResult22_g59206 ) ) * temp_output_29_0_g59206 ) ));
+				float temp_output_38_0_g59206 = _TerrainWetnessAffectLayer2;
+				float3 lerpResult9_g59206 = lerp( temp_output_11_0_g59206 , lerpResult6_g59206 , temp_output_38_0_g59206);
+				float3 temp_output_27_0_g59212 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59212 = lerpResult9_g59206;
+				float3 lerpResult29_g59212 = lerp( temp_output_27_0_g59212 , temp_output_28_0_g59212 , saturate( ( ( distance( temp_output_28_0_g59212 , temp_output_27_0_g59212 ) - _CoverMapRangeL2 ) / max( _CoverMapFuzzinessL2 , 1E-05 ) ) ));
+				float3 temp_output_10878_20_g59175 = lerpResult29_g59212;
+				float3 lerpResult8469_g59175 = lerp( lerpResult9_g59206 , temp_output_10878_20_g59175 , _CoverMapAffectL2);
+				float3 temp_output_48_0_g59216 = lerpResult8469_g59175;
+				float2 vertexToFrag85_g59216 = IN.ase_texcoord7.zw;
+				float4 tex2DNode45_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag85_g59216 );
+				float lerpResult73_g59216 = lerp( tex2DNode45_g59216.r , ( 1.0 - tex2DNode45_g59216.r ) , _Splat2_NoiseInvert);
+				float3 lerpResult42_g59216 = lerp( temp_output_48_0_g59216 , ( temp_output_48_0_g59216 * ( 1.0 - _Splat2_NoiseDarken ) ) , lerpResult73_g59216);
+				float3 lerpResult46_g59216 = lerp( temp_output_48_0_g59216 , lerpResult42_g59216 , _Splat2_EnableNoise);
+				float localStochasticTiling347_g59251 = ( 0.0 );
+				float2 vertexToFrag70_g59203 = IN.ase_texcoord8.xy;
+				float2 temp_output_6_0_g59246 = vertexToFrag70_g59203;
+				float2 temp_output_393_0_g59251 = temp_output_6_0_g59246;
+				float2 UV347_g59251 = temp_output_393_0_g59251;
+				float2 UV1347_g59251 = float2( 0,0 );
+				float2 UV2347_g59251 = float2( 0,0 );
+				float2 UV3347_g59251 = float2( 0,0 );
+				float W1347_g59251 = 0.0;
+				float W2347_g59251 = 0.0;
+				float W3347_g59251 = 0.0;
+				StochasticTiling( UV347_g59251 , UV1347_g59251 , UV2347_g59251 , UV3347_g59251 , W1347_g59251 , W2347_g59251 , W3347_g59251 );
+				float2 temp_output_175_332_g59246 = UV1347_g59251;
+				float2 UV1_00379_g59247 = temp_output_175_332_g59246;
+				float2 temp_output_175_331_g59246 = temp_output_393_0_g59251;
+				float2 temp_output_225_0_g59247 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59247 = ddx( temp_output_225_0_g59247 );
+				float2 UV0_00_DDX394_g59247 = temp_output_33_0_g59247;
+				float2 temp_output_65_0_g59247 = ddy( temp_output_225_0_g59247 );
+				float2 UV0_00_DDY395_g59247 = temp_output_65_0_g59247;
+				float3 appendResult361_g59251 = (float3(W1347_g59251 , W2347_g59251 , W3347_g59251));
+				float3 temp_output_175_362_g59246 = appendResult361_g59251;
+				float3 Weight_00404_g59247 = temp_output_175_362_g59246;
+				float3 break332_g59247 = Weight_00404_g59247;
+				float2 temp_output_175_333_g59246 = UV2347_g59251;
+				float2 UV2_00380_g59247 = temp_output_175_333_g59246;
+				float2 temp_output_175_334_g59246 = UV3347_g59251;
+				float2 UV3_00381_g59247 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59247 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV1_00379_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV2_00380_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV3_00381_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.z ) );
+				float3 temp_output_10900_67_g59175 = (Sample2DPlaner353_g59247).rgb;
+				float3 SPLAT_3_FINAL2814_g59175 = temp_output_10900_67_g59175;
+				float3 temp_output_3642_0_g59175 = ( (_Splat3_Color).rgb * SPLAT_3_FINAL2814_g59175 * _Splat3_Brightness );
+				float3 temp_output_12_0_g59233 = temp_output_3642_0_g59175;
+				float dotResult28_g59233 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59233 );
+				float3 temp_cast_7 = (dotResult28_g59233).xxx;
+				float temp_output_21_0_g59233 = ( 1.0 - _Splat3_Saturation );
+				float3 lerpResult31_g59233 = lerp( temp_cast_7 , temp_output_12_0_g59233 , temp_output_21_0_g59233);
+				float3 temp_output_11_0_g59187 = lerpResult31_g59233;
+				float3 temp_output_12_0_g59188 = temp_output_11_0_g59187;
+				float dotResult28_g59188 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59188 );
+				float3 temp_cast_8 = (dotResult28_g59188).xxx;
+				float temp_output_21_0_g59188 = 1.5;
+				float3 lerpResult31_g59188 = lerp( temp_cast_8 , temp_output_12_0_g59188 , temp_output_21_0_g59188);
+				float3 temp_output_4_0_g59187 = ( saturate( lerpResult31_g59188 ) * 0.2 );
+				float lerpResult23_g59187 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59187 = lerp( _TerrainWetnessIntensity , lerpResult23_g59187 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59187 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59187 = lerp( temp_output_11_0_g59187 , temp_output_4_0_g59187 , saturate( ( saturate( max( 0.0 , lerpResult22_g59187 ) ) * temp_output_29_0_g59187 ) ));
+				float temp_output_38_0_g59187 = _TerrainWetnessAffectLayer3;
+				float3 lerpResult9_g59187 = lerp( temp_output_11_0_g59187 , lerpResult6_g59187 , temp_output_38_0_g59187);
+				float3 temp_output_27_0_g59210 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59210 = lerpResult9_g59187;
+				float3 lerpResult29_g59210 = lerp( temp_output_27_0_g59210 , temp_output_28_0_g59210 , saturate( ( ( distance( temp_output_28_0_g59210 , temp_output_27_0_g59210 ) - _CoverMapRangeL3 ) / max( _CoverMapFuzzinessL3 , 1E-05 ) ) ));
+				float3 temp_output_10876_20_g59175 = lerpResult29_g59210;
+				float3 lerpResult8475_g59175 = lerp( lerpResult9_g59187 , temp_output_10876_20_g59175 , _CoverMapAffectL3);
+				float3 temp_output_61_0_g59216 = lerpResult8475_g59175;
+				float2 vertexToFrag87_g59216 = IN.ase_texcoord8.zw;
+				float4 tex2DNode58_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag87_g59216 );
+				float lerpResult74_g59216 = lerp( tex2DNode58_g59216.r , ( 1.0 - tex2DNode58_g59216.r ) , _Splat3_NoiseInvert);
+				float3 lerpResult55_g59216 = lerp( temp_output_61_0_g59216 , ( temp_output_61_0_g59216 * ( 1.0 - _Splat3_NoiseDarken ) ) , lerpResult74_g59216);
+				float3 lerpResult59_g59216 = lerp( temp_output_61_0_g59216 , lerpResult55_g59216 , _Splat3_EnableNoise);
+				float4 weightedBlendVar7863_g59175 = Control00Weight403_g59175;
+				float3 weightedBlend7863_g59175 = ( weightedBlendVar7863_g59175.x*lerpResult4_g59216 + weightedBlendVar7863_g59175.y*lerpResult38_g59216 + weightedBlendVar7863_g59175.z*lerpResult46_g59216 + weightedBlendVar7863_g59175.w*lerpResult59_g59216 );
+				float3 temp_output_2894_0_g59175 = ( weightedBlend7863_g59175 * _Global_Brightness );
+				float3 localClipHoles4536_g59175 = ( temp_output_2894_0_g59175 );
+				float2 uv_TerrainHolesTexture = IN.ase_texcoord9.xy * _TerrainHolesTexture_ST.xy + _TerrainHolesTexture_ST.zw;
+				float Hole4536_g59175 = SAMPLE_TEXTURE2D( _TerrainHolesTexture, sampler_TerrainHolesTexture, uv_TerrainHolesTexture ).r;
+				{
+				#ifdef _ALPHATEST_ON
+				clip(Hole4536_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				
+
+				float3 BaseColor = localClipHoles4536_g59175;
+				float3 Emission = 0;
+				float Alpha = dotResult1044_g59175;
+				float AlphaClipThreshold = 0.0;
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				MetaInput metaInput = (MetaInput)0;
+				metaInput.Albedo = BaseColor;
+				metaInput.Emission = Emission;
+				#ifdef EDITOR_VISUALIZATION
+					metaInput.VizUV = IN.VizUV.xy;
+					metaInput.LightCoord = IN.LightCoord;
+				#endif
+
+				return UnityMetaFragment(metaInput);
+			}
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "Universal2D"
+			Tags { "LightMode"="Universal2D" }
+
+			Blend One Zero, One Zero
+			ZWrite On
+			ZTest LEqual
+			Offset 0 , 0
+			ColorMask RGBA
+
+			HLSLPROGRAM
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#define SHADERPASS SHADERPASS_2D
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				float4 positionCS : SV_POSITION;
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 positionWS : TEXCOORD0;
+				#endif
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					float4 shadowCoord : TEXCOORD1;
+				#endif
+				float4 ase_texcoord2 : TEXCOORD2;
+				float4 ase_texcoord3 : TEXCOORD3;
+				float4 ase_texcoord4 : TEXCOORD4;
+				float4 ase_texcoord5 : TEXCOORD5;
+				float4 ase_texcoord6 : TEXCOORD6;
+				float4 ase_texcoord7 : TEXCOORD7;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			TEXTURE2D(_Splat0);
+			SAMPLER(sampler_Splat0);
+			half _GlobalWetnessTerrainIntensity;
+			float _GlobalWetnessTerrainEnabled;
+			TEXTURE2D(_CoverMapAlbedo);
+			TEXTURE2D(_GlobalTerrainNoise);
+			TEXTURE2D(_Splat1);
+			TEXTURE2D(_Splat2);
+			TEXTURE2D(_Splat3);
+			TEXTURE2D(_TerrainHolesTexture);
+			SAMPLER(sampler_TerrainHolesTexture);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			void StochasticTiling( float2 UV, out float2 UV1, out float2 UV2, out float2 UV3, out float W1, out float W2, out float W3 )
+			{
+				float2 vertex1, vertex2, vertex3;
+				// Scaling of the input
+				float2 uv = UV * 3.464; // 2 * sqrt (3)
+				// Skew input space into simplex triangle grid
+				const float2x2 gridToSkewedGrid = float2x2( 1.0, 0.0, -0.57735027, 1.15470054 );
+				float2 skewedCoord = mul( gridToSkewedGrid, uv );
+				// Compute local triangle vertex IDs and local barycentric coordinates
+				int2 baseId = int2( floor( skewedCoord ) );
+				float3 temp = float3( frac( skewedCoord ), 0 );
+				temp.z = 1.0 - temp.x - temp.y;
+				if ( temp.z > 0.0 )
+				{
+					W1 = temp.z;
+					W2 = temp.y;
+					W3 = temp.x;
+					vertex1 = baseId;
+					vertex2 = baseId + int2( 0, 1 );
+					vertex3 = baseId + int2( 1, 0 );
+				}
+				else
+				{
+					W1 = -temp.z;
+					W2 = 1.0 - temp.y;
+					W3 = 1.0 - temp.x;
+					vertex1 = baseId + int2( 1, 1 );
+					vertex2 = baseId + int2( 1, 0 );
+					vertex3 = baseId + int2( 0, 1 );
+				}
+				UV1 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex1 ) ) * 43758.5453 );
+				UV2 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex2 ) ) * 43758.5453 );
+				UV3 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex3 ) ) * 43758.5453 );
+				return;
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.ase_texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			VertexOutput VertexFunction( VertexInput v  )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID( v );
+				UNITY_TRANSFER_INSTANCE_ID( v, o );
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO( o );
+
+				v = ApplyMeshModification(v);
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.ase_texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord2.xy = vertexToFrag27_g59193;
+				float2 Offset235_g59194 = _Splat0_ST.zw;
+				float2 temp_output_41_0_g59194 = ( ( v.ase_texcoord.xy * _Splat0_ST.xy ) + Offset235_g59194 );
+				float2 vertexToFrag70_g59194 = temp_output_41_0_g59194;
+				o.ase_texcoord2.zw = vertexToFrag70_g59194;
+				float2 Offset235_g59180 = float2( 1,0 );
+				float2 temp_output_41_0_g59180 = ( ( v.ase_texcoord.xy * float2( 1,1 ) ) + Offset235_g59180 );
+				float2 vertexToFrag70_g59180 = temp_output_41_0_g59180;
+				o.ase_texcoord3.xy = vertexToFrag70_g59180;
+				float temp_output_23_0_g59216 = _Splat0_NoiseScale;
+				float2 appendResult3_g59216 = (float2(temp_output_23_0_g59216 , temp_output_23_0_g59216));
+				float2 vertexToFrag81_g59216 = ( v.ase_texcoord.xy * appendResult3_g59216 );
+				o.ase_texcoord3.zw = vertexToFrag81_g59216;
+				float2 Offset235_g59200 = _Splat1_ST.zw;
+				float2 temp_output_41_0_g59200 = ( ( v.ase_texcoord.xy * _Splat1_ST.xy ) + Offset235_g59200 );
+				float2 vertexToFrag70_g59200 = temp_output_41_0_g59200;
+				o.ase_texcoord4.xy = vertexToFrag70_g59200;
+				float temp_output_34_0_g59216 = _Splat1_NoiseScale;
+				float2 appendResult30_g59216 = (float2(temp_output_34_0_g59216 , temp_output_34_0_g59216));
+				float2 vertexToFrag83_g59216 = ( v.ase_texcoord.xy * appendResult30_g59216 );
+				o.ase_texcoord4.zw = vertexToFrag83_g59216;
+				float2 Offset235_g59197 = _Splat2_ST.zw;
+				float2 temp_output_41_0_g59197 = ( ( v.ase_texcoord.xy * _Splat2_ST.xy ) + Offset235_g59197 );
+				float2 vertexToFrag70_g59197 = temp_output_41_0_g59197;
+				o.ase_texcoord5.xy = vertexToFrag70_g59197;
+				float temp_output_50_0_g59216 = _Splat2_NoiseScale;
+				float2 appendResult43_g59216 = (float2(temp_output_50_0_g59216 , temp_output_50_0_g59216));
+				float2 vertexToFrag85_g59216 = ( v.ase_texcoord.xy * appendResult43_g59216 );
+				o.ase_texcoord5.zw = vertexToFrag85_g59216;
+				float2 Offset235_g59203 = _Splat3_ST.zw;
+				float2 temp_output_41_0_g59203 = ( ( v.ase_texcoord.xy * _Splat3_ST.xy ) + Offset235_g59203 );
+				float2 vertexToFrag70_g59203 = temp_output_41_0_g59203;
+				o.ase_texcoord6.xy = vertexToFrag70_g59203;
+				float temp_output_63_0_g59216 = _Splat3_NoiseScale;
+				float2 appendResult56_g59216 = (float2(temp_output_63_0_g59216 , temp_output_63_0_g59216));
+				float2 vertexToFrag87_g59216 = ( v.ase_texcoord.xy * appendResult56_g59216 );
+				o.ase_texcoord6.zw = vertexToFrag87_g59216;
+				
+				o.ase_texcoord7.xy = v.ase_texcoord.xy;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord7.zw = 0;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+
+				VertexPositionInputs vertexInput = GetVertexPositionInputs( v.positionOS.xyz );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					o.positionWS = vertexInput.positionWS;
+				#endif
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					o.shadowCoord = GetShadowCoord( vertexInput );
+				#endif
+
+				o.positionCS = vertexInput.positionCS;
+
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.ase_texcoord = v.ase_texcoord;
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag(VertexOutput IN  ) : SV_TARGET
+			{
+				UNITY_SETUP_INSTANCE_ID( IN );
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 WorldPosition = IN.positionWS;
+				#endif
+
+				float4 ShadowCoords = float4( 0, 0, 0, 0 );
+
+				#if defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+						ShadowCoords = IN.shadowCoord;
+					#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+						ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
+					#endif
+				#endif
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord2.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				float localSplatClip1046_g59175 = ( dotResult1044_g59175 );
+				float SplatWeight1046_g59175 = dotResult1044_g59175;
+				{
+				#if !defined(SHADER_API_MOBILE) && defined(TERRAIN_SPLAT_ADDPASS)
+				clip(SplatWeight1046_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				float4 temp_output_1048_0_g59175 = ( tex2DNode3739_g59175 / ( localSplatClip1046_g59175 + 0.001 ) );
+				float4 Control00Weight403_g59175 = temp_output_1048_0_g59175;
+				float localStochasticTiling347_g59257 = ( 0.0 );
+				float2 vertexToFrag70_g59194 = IN.ase_texcoord2.zw;
+				float2 temp_output_6_0_g59252 = vertexToFrag70_g59194;
+				float2 temp_output_393_0_g59257 = temp_output_6_0_g59252;
+				float2 UV347_g59257 = temp_output_393_0_g59257;
+				float2 UV1347_g59257 = float2( 0,0 );
+				float2 UV2347_g59257 = float2( 0,0 );
+				float2 UV3347_g59257 = float2( 0,0 );
+				float W1347_g59257 = 0.0;
+				float W2347_g59257 = 0.0;
+				float W3347_g59257 = 0.0;
+				StochasticTiling( UV347_g59257 , UV1347_g59257 , UV2347_g59257 , UV3347_g59257 , W1347_g59257 , W2347_g59257 , W3347_g59257 );
+				float2 temp_output_175_332_g59252 = UV1347_g59257;
+				float2 UV1_00379_g59253 = temp_output_175_332_g59252;
+				float2 temp_output_175_331_g59252 = temp_output_393_0_g59257;
+				float2 temp_output_225_0_g59253 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59253 = ddx( temp_output_225_0_g59253 );
+				float2 UV0_00_DDX394_g59253 = temp_output_33_0_g59253;
+				float2 temp_output_65_0_g59253 = ddy( temp_output_225_0_g59253 );
+				float2 UV0_00_DDY395_g59253 = temp_output_65_0_g59253;
+				float3 appendResult361_g59257 = (float3(W1347_g59257 , W2347_g59257 , W3347_g59257));
+				float3 temp_output_175_362_g59252 = appendResult361_g59257;
+				float3 Weight_00404_g59253 = temp_output_175_362_g59252;
+				float3 break332_g59253 = Weight_00404_g59253;
+				float2 temp_output_175_333_g59252 = UV2347_g59257;
+				float2 UV2_00380_g59253 = temp_output_175_333_g59252;
+				float2 temp_output_175_334_g59252 = UV3347_g59257;
+				float2 UV3_00381_g59253 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59253 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV1_00379_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV2_00380_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat0, sampler_Splat0, UV3_00381_g59253, UV0_00_DDX394_g59253, UV0_00_DDY395_g59253 ) * break332_g59253.z ) );
+				float3 temp_output_10901_67_g59175 = (Sample2DPlaner353_g59253).rgb;
+				float3 SPLAT_0_FINAL2805_g59175 = temp_output_10901_67_g59175;
+				float3 temp_output_3375_0_g59175 = ( (_Splat0_Color).rgb * SPLAT_0_FINAL2805_g59175 * _Splat0_Brightness );
+				float3 temp_output_12_0_g59230 = temp_output_3375_0_g59175;
+				float dotResult28_g59230 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59230 );
+				float3 temp_cast_1 = (dotResult28_g59230).xxx;
+				float temp_output_21_0_g59230 = ( 1.0 - _Splat0_Saturation );
+				float3 lerpResult31_g59230 = lerp( temp_cast_1 , temp_output_12_0_g59230 , temp_output_21_0_g59230);
+				float3 temp_output_11_0_g59190 = lerpResult31_g59230;
+				float3 temp_output_12_0_g59191 = temp_output_11_0_g59190;
+				float dotResult28_g59191 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59191 );
+				float3 temp_cast_2 = (dotResult28_g59191).xxx;
+				float temp_output_21_0_g59191 = 1.5;
+				float3 lerpResult31_g59191 = lerp( temp_cast_2 , temp_output_12_0_g59191 , temp_output_21_0_g59191);
+				float3 temp_output_4_0_g59190 = ( saturate( lerpResult31_g59191 ) * 0.2 );
+				float lerpResult23_g59190 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59190 = lerp( _TerrainWetnessIntensity , lerpResult23_g59190 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59190 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59190 = lerp( temp_output_11_0_g59190 , temp_output_4_0_g59190 , saturate( ( saturate( max( 0.0 , lerpResult22_g59190 ) ) * temp_output_29_0_g59190 ) ));
+				float temp_output_38_0_g59190 = _TerrainWetnessAffectLayer0;
+				float3 lerpResult9_g59190 = lerp( temp_output_11_0_g59190 , lerpResult6_g59190 , temp_output_38_0_g59190);
+				float2 vertexToFrag70_g59180 = IN.ase_texcoord3.xy;
+				float2 temp_output_189_0_g59176 = vertexToFrag70_g59180;
+				float3 temp_output_11_0_g59176 = ( (_CoverMapTint).rgb * (SAMPLE_TEXTURE2D( _CoverMapAlbedo, sampler_Splat0, temp_output_189_0_g59176 )).rgb * _CoverMapBrightness );
+				float3 CoverMap_Albedo8425_g59175 = temp_output_11_0_g59176;
+				float3 temp_output_27_0_g59211 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59211 = lerpResult9_g59190;
+				float3 lerpResult29_g59211 = lerp( temp_output_27_0_g59211 , temp_output_28_0_g59211 , saturate( ( ( distance( temp_output_28_0_g59211 , temp_output_27_0_g59211 ) - _CoverMapRangeL0 ) / max( _CoverMapFuzzinessL0 , 1E-05 ) ) ));
+				float3 temp_output_10877_20_g59175 = lerpResult29_g59211;
+				float3 lerpResult8455_g59175 = lerp( lerpResult9_g59190 , temp_output_10877_20_g59175 , _CoverMapAffectL0);
+				float3 temp_output_13_0_g59216 = lerpResult8455_g59175;
+				float2 vertexToFrag81_g59216 = IN.ase_texcoord3.zw;
+				float4 tex2DNode11_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag81_g59216 );
+				float lerpResult71_g59216 = lerp( tex2DNode11_g59216.r , ( 1.0 - tex2DNode11_g59216.r ) , _Splat0_NoiseInvert);
+				float3 lerpResult6_g59216 = lerp( temp_output_13_0_g59216 , ( temp_output_13_0_g59216 * ( 1.0 - _Splat0_NoiseDarken ) ) , lerpResult71_g59216);
+				float3 lerpResult4_g59216 = lerp( temp_output_13_0_g59216 , lerpResult6_g59216 , _Splat0_EnableNoise);
+				float localStochasticTiling347_g59239 = ( 0.0 );
+				float2 vertexToFrag70_g59200 = IN.ase_texcoord4.xy;
+				float2 temp_output_6_0_g59234 = vertexToFrag70_g59200;
+				float2 temp_output_393_0_g59239 = temp_output_6_0_g59234;
+				float2 UV347_g59239 = temp_output_393_0_g59239;
+				float2 UV1347_g59239 = float2( 0,0 );
+				float2 UV2347_g59239 = float2( 0,0 );
+				float2 UV3347_g59239 = float2( 0,0 );
+				float W1347_g59239 = 0.0;
+				float W2347_g59239 = 0.0;
+				float W3347_g59239 = 0.0;
+				StochasticTiling( UV347_g59239 , UV1347_g59239 , UV2347_g59239 , UV3347_g59239 , W1347_g59239 , W2347_g59239 , W3347_g59239 );
+				float2 temp_output_175_332_g59234 = UV1347_g59239;
+				float2 UV1_00379_g59235 = temp_output_175_332_g59234;
+				float2 temp_output_175_331_g59234 = temp_output_393_0_g59239;
+				float2 temp_output_225_0_g59235 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59235 = ddx( temp_output_225_0_g59235 );
+				float2 UV0_00_DDX394_g59235 = temp_output_33_0_g59235;
+				float2 temp_output_65_0_g59235 = ddy( temp_output_225_0_g59235 );
+				float2 UV0_00_DDY395_g59235 = temp_output_65_0_g59235;
+				float3 appendResult361_g59239 = (float3(W1347_g59239 , W2347_g59239 , W3347_g59239));
+				float3 temp_output_175_362_g59234 = appendResult361_g59239;
+				float3 Weight_00404_g59235 = temp_output_175_362_g59234;
+				float3 break332_g59235 = Weight_00404_g59235;
+				float2 temp_output_175_333_g59234 = UV2347_g59239;
+				float2 UV2_00380_g59235 = temp_output_175_333_g59234;
+				float2 temp_output_175_334_g59234 = UV3347_g59239;
+				float2 UV3_00381_g59235 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59235 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV1_00379_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV2_00380_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat1, sampler_Splat0, UV3_00381_g59235, UV0_00_DDX394_g59235, UV0_00_DDY395_g59235 ) * break332_g59235.z ) );
+				float3 temp_output_10898_67_g59175 = (Sample2DPlaner353_g59235).rgb;
+				float3 SPLAT_1_FINAL2809_g59175 = temp_output_10898_67_g59175;
+				float3 temp_output_3633_0_g59175 = ( (_Splat1_Color).rgb * SPLAT_1_FINAL2809_g59175 * _Splat1_Brightness );
+				float3 temp_output_12_0_g59231 = temp_output_3633_0_g59175;
+				float dotResult28_g59231 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59231 );
+				float3 temp_cast_3 = (dotResult28_g59231).xxx;
+				float temp_output_21_0_g59231 = ( 1.0 - _Splat1_Saturation );
+				float3 lerpResult31_g59231 = lerp( temp_cast_3 , temp_output_12_0_g59231 , temp_output_21_0_g59231);
+				float3 temp_output_11_0_g59213 = lerpResult31_g59231;
+				float3 temp_output_12_0_g59214 = temp_output_11_0_g59213;
+				float dotResult28_g59214 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59214 );
+				float3 temp_cast_4 = (dotResult28_g59214).xxx;
+				float temp_output_21_0_g59214 = 1.5;
+				float3 lerpResult31_g59214 = lerp( temp_cast_4 , temp_output_12_0_g59214 , temp_output_21_0_g59214);
+				float3 temp_output_4_0_g59213 = ( saturate( lerpResult31_g59214 ) * 0.2 );
+				float lerpResult23_g59213 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59213 = lerp( _TerrainWetnessIntensity , lerpResult23_g59213 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59213 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59213 = lerp( temp_output_11_0_g59213 , temp_output_4_0_g59213 , saturate( ( saturate( max( 0.0 , lerpResult22_g59213 ) ) * temp_output_29_0_g59213 ) ));
+				float temp_output_38_0_g59213 = _TerrainWetnessAffectLayer1;
+				float3 lerpResult9_g59213 = lerp( temp_output_11_0_g59213 , lerpResult6_g59213 , temp_output_38_0_g59213);
+				float3 temp_output_27_0_g59209 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59209 = lerpResult9_g59213;
+				float3 lerpResult29_g59209 = lerp( temp_output_27_0_g59209 , temp_output_28_0_g59209 , saturate( ( ( distance( temp_output_28_0_g59209 , temp_output_27_0_g59209 ) - _CoverMapRangeL1 ) / max( _CoverMapFuzzinessL1 , 1E-05 ) ) ));
+				float3 temp_output_10875_20_g59175 = lerpResult29_g59209;
+				float3 lerpResult8463_g59175 = lerp( lerpResult9_g59213 , temp_output_10875_20_g59175 , _CoverMapAffectL1);
+				float3 temp_output_37_0_g59216 = lerpResult8463_g59175;
+				float2 vertexToFrag83_g59216 = IN.ase_texcoord4.zw;
+				float4 tex2DNode32_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag83_g59216 );
+				float lerpResult72_g59216 = lerp( tex2DNode32_g59216.r , ( 1.0 - tex2DNode32_g59216.r ) , _Splat1_NoiseInvert);
+				float3 lerpResult28_g59216 = lerp( temp_output_37_0_g59216 , ( temp_output_37_0_g59216 * ( 1.0 - _Splat1_NoiseDarken ) ) , lerpResult72_g59216);
+				float3 lerpResult38_g59216 = lerp( temp_output_37_0_g59216 , lerpResult28_g59216 , _Splat1_EnableNoise);
+				float2 vertexToFrag70_g59197 = IN.ase_texcoord5.xy;
+				float2 temp_output_6_0_g59240 = vertexToFrag70_g59197;
+				float3 temp_output_10899_32_g59175 = (SAMPLE_TEXTURE2D( _Splat2, sampler_Splat0, temp_output_6_0_g59240 )).rgb;
+				float3 SPLAT_2_FINAL2812_g59175 = temp_output_10899_32_g59175;
+				float3 temp_output_3637_0_g59175 = ( (_Splat2_Color).rgb * SPLAT_2_FINAL2812_g59175 * _Splat2_Brightness );
+				float3 temp_output_12_0_g59232 = temp_output_3637_0_g59175;
+				float dotResult28_g59232 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59232 );
+				float3 temp_cast_5 = (dotResult28_g59232).xxx;
+				float temp_output_21_0_g59232 = ( 1.0 - _Splat2_Saturation );
+				float3 lerpResult31_g59232 = lerp( temp_cast_5 , temp_output_12_0_g59232 , temp_output_21_0_g59232);
+				float3 temp_output_11_0_g59206 = lerpResult31_g59232;
+				float3 temp_output_12_0_g59207 = temp_output_11_0_g59206;
+				float dotResult28_g59207 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59207 );
+				float3 temp_cast_6 = (dotResult28_g59207).xxx;
+				float temp_output_21_0_g59207 = 1.5;
+				float3 lerpResult31_g59207 = lerp( temp_cast_6 , temp_output_12_0_g59207 , temp_output_21_0_g59207);
+				float3 temp_output_4_0_g59206 = ( saturate( lerpResult31_g59207 ) * 0.2 );
+				float lerpResult23_g59206 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59206 = lerp( _TerrainWetnessIntensity , lerpResult23_g59206 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59206 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59206 = lerp( temp_output_11_0_g59206 , temp_output_4_0_g59206 , saturate( ( saturate( max( 0.0 , lerpResult22_g59206 ) ) * temp_output_29_0_g59206 ) ));
+				float temp_output_38_0_g59206 = _TerrainWetnessAffectLayer2;
+				float3 lerpResult9_g59206 = lerp( temp_output_11_0_g59206 , lerpResult6_g59206 , temp_output_38_0_g59206);
+				float3 temp_output_27_0_g59212 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59212 = lerpResult9_g59206;
+				float3 lerpResult29_g59212 = lerp( temp_output_27_0_g59212 , temp_output_28_0_g59212 , saturate( ( ( distance( temp_output_28_0_g59212 , temp_output_27_0_g59212 ) - _CoverMapRangeL2 ) / max( _CoverMapFuzzinessL2 , 1E-05 ) ) ));
+				float3 temp_output_10878_20_g59175 = lerpResult29_g59212;
+				float3 lerpResult8469_g59175 = lerp( lerpResult9_g59206 , temp_output_10878_20_g59175 , _CoverMapAffectL2);
+				float3 temp_output_48_0_g59216 = lerpResult8469_g59175;
+				float2 vertexToFrag85_g59216 = IN.ase_texcoord5.zw;
+				float4 tex2DNode45_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag85_g59216 );
+				float lerpResult73_g59216 = lerp( tex2DNode45_g59216.r , ( 1.0 - tex2DNode45_g59216.r ) , _Splat2_NoiseInvert);
+				float3 lerpResult42_g59216 = lerp( temp_output_48_0_g59216 , ( temp_output_48_0_g59216 * ( 1.0 - _Splat2_NoiseDarken ) ) , lerpResult73_g59216);
+				float3 lerpResult46_g59216 = lerp( temp_output_48_0_g59216 , lerpResult42_g59216 , _Splat2_EnableNoise);
+				float localStochasticTiling347_g59251 = ( 0.0 );
+				float2 vertexToFrag70_g59203 = IN.ase_texcoord6.xy;
+				float2 temp_output_6_0_g59246 = vertexToFrag70_g59203;
+				float2 temp_output_393_0_g59251 = temp_output_6_0_g59246;
+				float2 UV347_g59251 = temp_output_393_0_g59251;
+				float2 UV1347_g59251 = float2( 0,0 );
+				float2 UV2347_g59251 = float2( 0,0 );
+				float2 UV3347_g59251 = float2( 0,0 );
+				float W1347_g59251 = 0.0;
+				float W2347_g59251 = 0.0;
+				float W3347_g59251 = 0.0;
+				StochasticTiling( UV347_g59251 , UV1347_g59251 , UV2347_g59251 , UV3347_g59251 , W1347_g59251 , W2347_g59251 , W3347_g59251 );
+				float2 temp_output_175_332_g59246 = UV1347_g59251;
+				float2 UV1_00379_g59247 = temp_output_175_332_g59246;
+				float2 temp_output_175_331_g59246 = temp_output_393_0_g59251;
+				float2 temp_output_225_0_g59247 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59247 = ddx( temp_output_225_0_g59247 );
+				float2 UV0_00_DDX394_g59247 = temp_output_33_0_g59247;
+				float2 temp_output_65_0_g59247 = ddy( temp_output_225_0_g59247 );
+				float2 UV0_00_DDY395_g59247 = temp_output_65_0_g59247;
+				float3 appendResult361_g59251 = (float3(W1347_g59251 , W2347_g59251 , W3347_g59251));
+				float3 temp_output_175_362_g59246 = appendResult361_g59251;
+				float3 Weight_00404_g59247 = temp_output_175_362_g59246;
+				float3 break332_g59247 = Weight_00404_g59247;
+				float2 temp_output_175_333_g59246 = UV2347_g59251;
+				float2 UV2_00380_g59247 = temp_output_175_333_g59246;
+				float2 temp_output_175_334_g59246 = UV3347_g59251;
+				float2 UV3_00381_g59247 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59247 = ( ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV1_00379_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV2_00380_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Splat3, sampler_Splat0, UV3_00381_g59247, UV0_00_DDX394_g59247, UV0_00_DDY395_g59247 ) * break332_g59247.z ) );
+				float3 temp_output_10900_67_g59175 = (Sample2DPlaner353_g59247).rgb;
+				float3 SPLAT_3_FINAL2814_g59175 = temp_output_10900_67_g59175;
+				float3 temp_output_3642_0_g59175 = ( (_Splat3_Color).rgb * SPLAT_3_FINAL2814_g59175 * _Splat3_Brightness );
+				float3 temp_output_12_0_g59233 = temp_output_3642_0_g59175;
+				float dotResult28_g59233 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59233 );
+				float3 temp_cast_7 = (dotResult28_g59233).xxx;
+				float temp_output_21_0_g59233 = ( 1.0 - _Splat3_Saturation );
+				float3 lerpResult31_g59233 = lerp( temp_cast_7 , temp_output_12_0_g59233 , temp_output_21_0_g59233);
+				float3 temp_output_11_0_g59187 = lerpResult31_g59233;
+				float3 temp_output_12_0_g59188 = temp_output_11_0_g59187;
+				float dotResult28_g59188 = dot( float3(0.2126729,0.7151522,0.072175) , temp_output_12_0_g59188 );
+				float3 temp_cast_8 = (dotResult28_g59188).xxx;
+				float temp_output_21_0_g59188 = 1.5;
+				float3 lerpResult31_g59188 = lerp( temp_cast_8 , temp_output_12_0_g59188 , temp_output_21_0_g59188);
+				float3 temp_output_4_0_g59187 = ( saturate( lerpResult31_g59188 ) * 0.2 );
+				float lerpResult23_g59187 = lerp( _TerrainWetnessIntensity , ( _TerrainWetnessIntensity * _GlobalWetnessTerrainIntensity ) , _GlobalWetnessTerrainEnabled);
+				float lerpResult22_g59187 = lerp( _TerrainWetnessIntensity , lerpResult23_g59187 , _TerrainWetnessBiasGlobal);
+				float temp_output_29_0_g59187 = saturate( _TerrainWetnessMask );
+				float3 lerpResult6_g59187 = lerp( temp_output_11_0_g59187 , temp_output_4_0_g59187 , saturate( ( saturate( max( 0.0 , lerpResult22_g59187 ) ) * temp_output_29_0_g59187 ) ));
+				float temp_output_38_0_g59187 = _TerrainWetnessAffectLayer3;
+				float3 lerpResult9_g59187 = lerp( temp_output_11_0_g59187 , lerpResult6_g59187 , temp_output_38_0_g59187);
+				float3 temp_output_27_0_g59210 = CoverMap_Albedo8425_g59175;
+				float3 temp_output_28_0_g59210 = lerpResult9_g59187;
+				float3 lerpResult29_g59210 = lerp( temp_output_27_0_g59210 , temp_output_28_0_g59210 , saturate( ( ( distance( temp_output_28_0_g59210 , temp_output_27_0_g59210 ) - _CoverMapRangeL3 ) / max( _CoverMapFuzzinessL3 , 1E-05 ) ) ));
+				float3 temp_output_10876_20_g59175 = lerpResult29_g59210;
+				float3 lerpResult8475_g59175 = lerp( lerpResult9_g59187 , temp_output_10876_20_g59175 , _CoverMapAffectL3);
+				float3 temp_output_61_0_g59216 = lerpResult8475_g59175;
+				float2 vertexToFrag87_g59216 = IN.ase_texcoord6.zw;
+				float4 tex2DNode58_g59216 = SAMPLE_TEXTURE2D( _GlobalTerrainNoise, sampler_Splat0, vertexToFrag87_g59216 );
+				float lerpResult74_g59216 = lerp( tex2DNode58_g59216.r , ( 1.0 - tex2DNode58_g59216.r ) , _Splat3_NoiseInvert);
+				float3 lerpResult55_g59216 = lerp( temp_output_61_0_g59216 , ( temp_output_61_0_g59216 * ( 1.0 - _Splat3_NoiseDarken ) ) , lerpResult74_g59216);
+				float3 lerpResult59_g59216 = lerp( temp_output_61_0_g59216 , lerpResult55_g59216 , _Splat3_EnableNoise);
+				float4 weightedBlendVar7863_g59175 = Control00Weight403_g59175;
+				float3 weightedBlend7863_g59175 = ( weightedBlendVar7863_g59175.x*lerpResult4_g59216 + weightedBlendVar7863_g59175.y*lerpResult38_g59216 + weightedBlendVar7863_g59175.z*lerpResult46_g59216 + weightedBlendVar7863_g59175.w*lerpResult59_g59216 );
+				float3 temp_output_2894_0_g59175 = ( weightedBlend7863_g59175 * _Global_Brightness );
+				float3 localClipHoles4536_g59175 = ( temp_output_2894_0_g59175 );
+				float2 uv_TerrainHolesTexture = IN.ase_texcoord7.xy * _TerrainHolesTexture_ST.xy + _TerrainHolesTexture_ST.zw;
+				float Hole4536_g59175 = SAMPLE_TEXTURE2D( _TerrainHolesTexture, sampler_TerrainHolesTexture, uv_TerrainHolesTexture ).r;
+				{
+				#ifdef _ALPHATEST_ON
+				clip(Hole4536_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				
+
+				float3 BaseColor = localClipHoles4536_g59175;
+				float Alpha = dotResult1044_g59175;
+				float AlphaClipThreshold = 0.0;
+
+				half4 color = half4(BaseColor, Alpha );
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				return color;
+			}
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "DepthNormals"
+			Tags { "LightMode"="DepthNormalsOnly" }
+
+			ZWrite On
+			Blend One Zero
+			ZTest LEqual
+			ZWrite On
+
+			HLSLPROGRAM
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			
+
+			
+
+			#define SHADERPASS SHADERPASS_DEPTHNORMALSONLY
+			//#define SHADERPASS SHADERPASS_DEPTHNORMALS
+
+			
+            #if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+			#endif
+		
+
+			
+			#if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RenderingLayers.hlsl"
+			#endif
+		
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#if defined(LOD_FADE_CROSSFADE)
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/LODCrossFade.hlsl"
+            #endif
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_FRAG_WORLD_POSITION
+			#define ASE_NEEDS_FRAG_SCREEN_POSITION
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma shader_feature_local _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			#if defined(ASE_EARLY_Z_DEPTH_OPTIMIZE) && (SHADER_TARGET >= 45)
+				#define ASE_SV_DEPTH SV_DepthLessEqual
+				#define ASE_SV_POSITION_QUALIFIERS linear noperspective centroid
+			#else
+				#define ASE_SV_DEPTH SV_Depth
+				#define ASE_SV_POSITION_QUALIFIERS
+			#endif
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 tangentOS : TANGENT;
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord2 : TEXCOORD2;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				ASE_SV_POSITION_QUALIFIERS float4 positionCS : SV_POSITION;
+				float4 clipPosV : TEXCOORD0;
+				float3 worldNormal : TEXCOORD1;
+				float4 worldTangent : TEXCOORD2;
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 positionWS : TEXCOORD3;
+				#endif
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					float4 shadowCoord : TEXCOORD4;
+				#endif
+				float4 ase_texcoord5 : TEXCOORD5;
+				float4 ase_texcoord6 : TEXCOORD6;
+				float4 ase_texcoord7 : TEXCOORD7;
+				float4 ase_texcoord8 : TEXCOORD8;
+				float4 ase_texcoord9 : TEXCOORD9;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			TEXTURE2D(_Normal0);
+			TEXTURE2D(_Splat0);
+			SAMPLER(sampler_Normal0);
+			TEXTURE2D(_CoverMapNormal);
+			TEXTURE2D(_Normal1);
+			TEXTURE2D(_Splat1);
+			TEXTURE2D(_Normal2);
+			TEXTURE2D(_Splat2);
+			TEXTURE2D(_Normal3);
+			TEXTURE2D(_Splat3);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			void StochasticTiling( float2 UV, out float2 UV1, out float2 UV2, out float2 UV3, out float W1, out float W2, out float W3 )
+			{
+				float2 vertex1, vertex2, vertex3;
+				// Scaling of the input
+				float2 uv = UV * 3.464; // 2 * sqrt (3)
+				// Skew input space into simplex triangle grid
+				const float2x2 gridToSkewedGrid = float2x2( 1.0, 0.0, -0.57735027, 1.15470054 );
+				float2 skewedCoord = mul( gridToSkewedGrid, uv );
+				// Compute local triangle vertex IDs and local barycentric coordinates
+				int2 baseId = int2( floor( skewedCoord ) );
+				float3 temp = float3( frac( skewedCoord ), 0 );
+				temp.z = 1.0 - temp.x - temp.y;
+				if ( temp.z > 0.0 )
+				{
+					W1 = temp.z;
+					W2 = temp.y;
+					W3 = temp.x;
+					vertex1 = baseId;
+					vertex2 = baseId + int2( 0, 1 );
+					vertex3 = baseId + int2( 1, 0 );
+				}
+				else
+				{
+					W1 = -temp.z;
+					W2 = 1.0 - temp.y;
+					W3 = 1.0 - temp.x;
+					vertex1 = baseId + int2( 1, 1 );
+					vertex2 = baseId + int2( 1, 0 );
+					vertex3 = baseId + int2( 0, 1 );
+				}
+				UV1 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex1 ) ) * 43758.5453 );
+				UV2 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex2 ) ) * 43758.5453 );
+				UV3 = UV + frac( sin( mul( float2x2( 127.1, 311.7, 269.5, 183.3 ), vertex3 ) ) * 43758.5453 );
+				return;
+			}
+			
+			half4 CalculateShadowMask497_g59262( half2 LightmapUV )
+			{
+				#if defined(SHADOWS_SHADOWMASK) && defined(LIGHTMAP_ON)
+				half4 shadowMask = inputData.shadowMask;
+				#elif !defined (LIGHTMAP_ON)
+				half4 shadowMask = unity_ProbesOcclusion;
+				#else
+				half4 shadowMask = half4(1, 1, 1, 1);
+				#endif
+				return shadowMask;
+			}
+			
+			float3 AdditionalLightsFlatMask14x( float3 WorldPosition, float2 ScreenUV, float4 ShadowMask )
+			{
+				float3 Color = 0;
+				#if defined(_ADDITIONAL_LIGHTS)
+					#define SUM_LIGHTFLAT(Light)\
+						Color += Light.color * ( Light.distanceAttenuation * Light.shadowAttenuation );
+					InputData inputData = (InputData)0;
+					inputData.normalizedScreenSpaceUV = ScreenUV;
+					inputData.positionWS = WorldPosition;
+					uint meshRenderingLayers = GetMeshRenderingLayer();
+					uint pixelLightCount = GetAdditionalLightsCount();	
+					#if USE_FORWARD_PLUS
+					for (uint lightIndex = 0; lightIndex < min(URP_FP_DIRECTIONAL_LIGHTS_COUNT, MAX_VISIBLE_LIGHTS); lightIndex++)
+					{
+						FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK
+						Light light = GetAdditionalLight(lightIndex, WorldPosition, ShadowMask);
+						#ifdef _LIGHT_LAYERS
+						if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+						#endif
+						{
+							SUM_LIGHTFLAT( light );
+						}
+					}
+					#endif
+					LIGHT_LOOP_BEGIN( pixelLightCount )
+						Light light = GetAdditionalLight(lightIndex, WorldPosition, ShadowMask);
+						#ifdef _LIGHT_LAYERS
+						if (IsMatchingLightLayer(light.layerMask, meshRenderingLayers))
+						#endif
+						{
+							SUM_LIGHTFLAT( light );
+						}
+					LIGHT_LOOP_END
+				#endif
+				return Color;
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.ase_texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			VertexOutput VertexFunction( VertexInput v  )
+			{
+				VertexOutput o = (VertexOutput)0;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float4 appendResult10975_g59175 = (float4(cross( v.normalOS , float3(0,0,1) ) , -1.0));
+				
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.ase_texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord5.xy = vertexToFrag27_g59193;
+				float2 Offset235_g59194 = _Splat0_ST.zw;
+				float2 temp_output_41_0_g59194 = ( ( v.ase_texcoord.xy * _Splat0_ST.xy ) + Offset235_g59194 );
+				float2 vertexToFrag70_g59194 = temp_output_41_0_g59194;
+				o.ase_texcoord5.zw = vertexToFrag70_g59194;
+				float2 Offset235_g59180 = float2( 1,0 );
+				float2 temp_output_41_0_g59180 = ( ( v.ase_texcoord.xy * float2( 1,1 ) ) + Offset235_g59180 );
+				float2 vertexToFrag70_g59180 = temp_output_41_0_g59180;
+				o.ase_texcoord6.xy = vertexToFrag70_g59180;
+				float2 Offset235_g59200 = _Splat1_ST.zw;
+				float2 temp_output_41_0_g59200 = ( ( v.ase_texcoord.xy * _Splat1_ST.xy ) + Offset235_g59200 );
+				float2 vertexToFrag70_g59200 = temp_output_41_0_g59200;
+				o.ase_texcoord6.zw = vertexToFrag70_g59200;
+				float2 Offset235_g59197 = _Splat2_ST.zw;
+				float2 temp_output_41_0_g59197 = ( ( v.ase_texcoord.xy * _Splat2_ST.xy ) + Offset235_g59197 );
+				float2 vertexToFrag70_g59197 = temp_output_41_0_g59197;
+				o.ase_texcoord7.xy = vertexToFrag70_g59197;
+				float2 Offset235_g59203 = _Splat3_ST.zw;
+				float2 temp_output_41_0_g59203 = ( ( v.ase_texcoord.xy * _Splat3_ST.xy ) + Offset235_g59203 );
+				float2 vertexToFrag70_g59203 = temp_output_41_0_g59203;
+				o.ase_texcoord7.zw = vertexToFrag70_g59203;
+				
+				o.ase_texcoord8.xy = v.ase_texcoord2.xy;
+				o.ase_texcoord9 = v.ase_texcoord;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord8.zw = 0;
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+				v.tangentOS = appendResult10975_g59175;
+
+				VertexPositionInputs vertexInput = GetVertexPositionInputs( v.positionOS.xyz );
+
+				float3 normalWS = TransformObjectToWorldNormal( v.normalOS );
+				float4 tangentWS = float4( TransformObjectToWorldDir( v.tangentOS.xyz ), v.tangentOS.w );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					o.positionWS = vertexInput.positionWS;
+				#endif
+
+				o.worldNormal = normalWS;
+				o.worldTangent = tangentWS;
+
+				#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR) && defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					o.shadowCoord = GetShadowCoord( vertexInput );
+				#endif
+
+				o.positionCS = vertexInput.positionCS;
+				o.clipPosV = vertexInput.positionCS;
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 tangentOS : TANGENT;
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord2 : TEXCOORD2;
+
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.tangentOS = v.tangentOS;
+				o.ase_texcoord = v.ase_texcoord;
+				o.ase_texcoord2 = v.ase_texcoord2;
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.tangentOS = patch[0].tangentOS * bary.x + patch[1].tangentOS * bary.y + patch[2].tangentOS * bary.z;
+				o.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
+				o.ase_texcoord2 = patch[0].ase_texcoord2 * bary.x + patch[1].ase_texcoord2 * bary.y + patch[2].ase_texcoord2 * bary.z;
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			void frag(	VertexOutput IN
+						, out half4 outNormalWS : SV_Target0
+						#ifdef ASE_DEPTH_WRITE_ON
+						,out float outputDepth : ASE_SV_DEPTH
+						#endif
+						#ifdef _WRITE_RENDERING_LAYERS
+						, out float4 outRenderingLayers : SV_Target1
+						#endif
+						 )
+			{
+				UNITY_SETUP_INSTANCE_ID(IN);
+				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX( IN );
+
+				#if defined(ASE_NEEDS_FRAG_WORLD_POSITION)
+					float3 WorldPosition = IN.positionWS;
+				#endif
+
+				float4 ShadowCoords = float4( 0, 0, 0, 0 );
+				float3 WorldNormal = IN.worldNormal;
+				float4 WorldTangent = IN.worldTangent;
+
+				float4 ClipPos = IN.clipPosV;
+				float4 ScreenPos = ComputeScreenPos( IN.clipPosV );
+
+				#if defined(ASE_NEEDS_FRAG_SHADOWCOORDS)
+					#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+						ShadowCoords = IN.shadowCoord;
+					#elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
+						ShadowCoords = TransformWorldToShadowCoord( WorldPosition );
+					#endif
+				#endif
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord5.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				float localSplatClip1046_g59175 = ( dotResult1044_g59175 );
+				float SplatWeight1046_g59175 = dotResult1044_g59175;
+				{
+				#if !defined(SHADER_API_MOBILE) && defined(TERRAIN_SPLAT_ADDPASS)
+				clip(SplatWeight1046_g59175 == 0.0f ? -1 : 1);
+				#endif
+				}
+				float4 temp_output_1048_0_g59175 = ( tex2DNode3739_g59175 / ( localSplatClip1046_g59175 + 0.001 ) );
+				float4 Control00Weight403_g59175 = temp_output_1048_0_g59175;
+				float localStochasticTiling347_g59257 = ( 0.0 );
+				float2 vertexToFrag70_g59194 = IN.ase_texcoord5.zw;
+				float2 temp_output_6_0_g59252 = vertexToFrag70_g59194;
+				float2 temp_output_393_0_g59257 = temp_output_6_0_g59252;
+				float2 UV347_g59257 = temp_output_393_0_g59257;
+				float2 UV1347_g59257 = float2( 0,0 );
+				float2 UV2347_g59257 = float2( 0,0 );
+				float2 UV3347_g59257 = float2( 0,0 );
+				float W1347_g59257 = 0.0;
+				float W2347_g59257 = 0.0;
+				float W3347_g59257 = 0.0;
+				StochasticTiling( UV347_g59257 , UV1347_g59257 , UV2347_g59257 , UV3347_g59257 , W1347_g59257 , W2347_g59257 , W3347_g59257 );
+				float2 temp_output_175_332_g59252 = UV1347_g59257;
+				float2 UV1_00379_g59254 = temp_output_175_332_g59252;
+				float2 temp_output_175_331_g59252 = temp_output_393_0_g59257;
+				float2 temp_output_225_0_g59254 = temp_output_175_331_g59252;
+				float2 temp_output_33_0_g59254 = ddx( temp_output_225_0_g59254 );
+				float2 UV0_00_DDX394_g59254 = temp_output_33_0_g59254;
+				float2 temp_output_65_0_g59254 = ddy( temp_output_225_0_g59254 );
+				float2 UV0_00_DDY395_g59254 = temp_output_65_0_g59254;
+				float3 appendResult361_g59257 = (float3(W1347_g59257 , W2347_g59257 , W3347_g59257));
+				float3 temp_output_175_362_g59252 = appendResult361_g59257;
+				float3 Weight_00404_g59254 = temp_output_175_362_g59252;
+				float3 break332_g59254 = Weight_00404_g59254;
+				float2 temp_output_175_333_g59252 = UV2347_g59257;
+				float2 UV2_00380_g59254 = temp_output_175_333_g59252;
+				float2 temp_output_175_334_g59252 = UV3347_g59257;
+				float2 UV3_00381_g59254 = temp_output_175_334_g59252;
+				float4 Sample2DPlaner353_g59254 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV1_00379_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV2_00380_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal0, sampler_Normal0, UV3_00381_g59254, UV0_00_DDX394_g59254, UV0_00_DDY395_g59254 ) * break332_g59254.z ) );
+				float4 temp_output_10901_66_g59175 = Sample2DPlaner353_g59254;
+				float4 NORMAL_0_FINAL3070_g59175 = temp_output_10901_66_g59175;
+				float3 unpack10077_g59175 = UnpackNormalScale( NORMAL_0_FINAL3070_g59175, _Splat0_NormalScale );
+				unpack10077_g59175.z = lerp( 1, unpack10077_g59175.z, saturate(_Splat0_NormalScale) );
+				float2 vertexToFrag70_g59180 = IN.ase_texcoord6.xy;
+				float2 temp_output_189_0_g59176 = vertexToFrag70_g59180;
+				float3 unpack163_g59176 = UnpackNormalScale( SAMPLE_TEXTURE2D( _CoverMapNormal, sampler_Normal0, temp_output_189_0_g59176 ), _CoverMapNormalStrength );
+				unpack163_g59176.z = lerp( 1, unpack163_g59176.z, saturate(_CoverMapNormalStrength) );
+				float3 CoverMap_Normal8436_g59175 = unpack163_g59176;
+				float3 temp_output_30_0_g59184 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59184 = unpack10077_g59175;
+				float Layer0Range10428_g59175 = _CoverMapRangeL0;
+				float Layer0Fuzziness10429_g59175 = _CoverMapFuzzinessL0;
+				float3 lerpResult38_g59184 = lerp( temp_output_30_0_g59184 , temp_output_46_0_g59184 , saturate( ( ( distance( temp_output_46_0_g59184 , temp_output_30_0_g59184 ) - Layer0Range10428_g59175 ) / max( Layer0Fuzziness10429_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10527_48_g59175 = lerpResult38_g59184;
+				float CoverMapLayer08450_g59175 = _CoverMapAffectL0;
+				float3 lerpResult8458_g59175 = lerp( unpack10077_g59175 , temp_output_10527_48_g59175 , CoverMapLayer08450_g59175);
+				float localStochasticTiling347_g59239 = ( 0.0 );
+				float2 vertexToFrag70_g59200 = IN.ase_texcoord6.zw;
+				float2 temp_output_6_0_g59234 = vertexToFrag70_g59200;
+				float2 temp_output_393_0_g59239 = temp_output_6_0_g59234;
+				float2 UV347_g59239 = temp_output_393_0_g59239;
+				float2 UV1347_g59239 = float2( 0,0 );
+				float2 UV2347_g59239 = float2( 0,0 );
+				float2 UV3347_g59239 = float2( 0,0 );
+				float W1347_g59239 = 0.0;
+				float W2347_g59239 = 0.0;
+				float W3347_g59239 = 0.0;
+				StochasticTiling( UV347_g59239 , UV1347_g59239 , UV2347_g59239 , UV3347_g59239 , W1347_g59239 , W2347_g59239 , W3347_g59239 );
+				float2 temp_output_175_332_g59234 = UV1347_g59239;
+				float2 UV1_00379_g59236 = temp_output_175_332_g59234;
+				float2 temp_output_175_331_g59234 = temp_output_393_0_g59239;
+				float2 temp_output_225_0_g59236 = temp_output_175_331_g59234;
+				float2 temp_output_33_0_g59236 = ddx( temp_output_225_0_g59236 );
+				float2 UV0_00_DDX394_g59236 = temp_output_33_0_g59236;
+				float2 temp_output_65_0_g59236 = ddy( temp_output_225_0_g59236 );
+				float2 UV0_00_DDY395_g59236 = temp_output_65_0_g59236;
+				float3 appendResult361_g59239 = (float3(W1347_g59239 , W2347_g59239 , W3347_g59239));
+				float3 temp_output_175_362_g59234 = appendResult361_g59239;
+				float3 Weight_00404_g59236 = temp_output_175_362_g59234;
+				float3 break332_g59236 = Weight_00404_g59236;
+				float2 temp_output_175_333_g59234 = UV2347_g59239;
+				float2 UV2_00380_g59236 = temp_output_175_333_g59234;
+				float2 temp_output_175_334_g59234 = UV3347_g59239;
+				float2 UV3_00381_g59236 = temp_output_175_334_g59234;
+				float4 Sample2DPlaner353_g59236 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV1_00379_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV2_00380_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal1, sampler_Normal0, UV3_00381_g59236, UV0_00_DDX394_g59236, UV0_00_DDY395_g59236 ) * break332_g59236.z ) );
+				float4 temp_output_10898_66_g59175 = Sample2DPlaner353_g59236;
+				float4 NORMAL_1_FINAL3071_g59175 = temp_output_10898_66_g59175;
+				float3 unpack10076_g59175 = UnpackNormalScale( NORMAL_1_FINAL3071_g59175, _Splat1_NormalScale );
+				unpack10076_g59175.z = lerp( 1, unpack10076_g59175.z, saturate(_Splat1_NormalScale) );
+				float3 temp_output_30_0_g59183 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59183 = unpack10076_g59175;
+				float Layer1Range10423_g59175 = _CoverMapRangeL1;
+				float Layer1Fuzziness10424_g59175 = _CoverMapFuzzinessL1;
+				float3 lerpResult38_g59183 = lerp( temp_output_30_0_g59183 , temp_output_46_0_g59183 , saturate( ( ( distance( temp_output_46_0_g59183 , temp_output_30_0_g59183 ) - Layer1Range10423_g59175 ) / max( Layer1Fuzziness10424_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10529_48_g59175 = lerpResult38_g59183;
+				float CoverMapLayer18465_g59175 = _CoverMapAffectL1;
+				float3 lerpResult8505_g59175 = lerp( unpack10076_g59175 , temp_output_10529_48_g59175 , CoverMapLayer18465_g59175);
+				float2 vertexToFrag70_g59197 = IN.ase_texcoord7.xy;
+				float2 temp_output_6_0_g59240 = vertexToFrag70_g59197;
+				float4 temp_output_10899_33_g59175 = SAMPLE_TEXTURE2D( _Normal2, sampler_Normal0, temp_output_6_0_g59240 );
+				float4 NORMAL_2_FINAL3072_g59175 = temp_output_10899_33_g59175;
+				float3 unpack10075_g59175 = UnpackNormalScale( NORMAL_2_FINAL3072_g59175, _Splat2_NormalScale );
+				unpack10075_g59175.z = lerp( 1, unpack10075_g59175.z, saturate(_Splat2_NormalScale) );
+				float3 temp_output_30_0_g59185 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59185 = unpack10075_g59175;
+				float Layer2Fuzziness10422_g59175 = _CoverMapFuzzinessL2;
+				float3 lerpResult38_g59185 = lerp( temp_output_30_0_g59185 , temp_output_46_0_g59185 , saturate( ( ( distance( temp_output_46_0_g59185 , temp_output_30_0_g59185 ) - Layer2Fuzziness10422_g59175 ) / max( Layer2Fuzziness10422_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10526_48_g59175 = lerpResult38_g59185;
+				float CoverMaptLayer28471_g59175 = _CoverMapAffectL2;
+				float3 lerpResult8510_g59175 = lerp( unpack10075_g59175 , temp_output_10526_48_g59175 , CoverMaptLayer28471_g59175);
+				float localStochasticTiling347_g59251 = ( 0.0 );
+				float2 vertexToFrag70_g59203 = IN.ase_texcoord7.zw;
+				float2 temp_output_6_0_g59246 = vertexToFrag70_g59203;
+				float2 temp_output_393_0_g59251 = temp_output_6_0_g59246;
+				float2 UV347_g59251 = temp_output_393_0_g59251;
+				float2 UV1347_g59251 = float2( 0,0 );
+				float2 UV2347_g59251 = float2( 0,0 );
+				float2 UV3347_g59251 = float2( 0,0 );
+				float W1347_g59251 = 0.0;
+				float W2347_g59251 = 0.0;
+				float W3347_g59251 = 0.0;
+				StochasticTiling( UV347_g59251 , UV1347_g59251 , UV2347_g59251 , UV3347_g59251 , W1347_g59251 , W2347_g59251 , W3347_g59251 );
+				float2 temp_output_175_332_g59246 = UV1347_g59251;
+				float2 UV1_00379_g59248 = temp_output_175_332_g59246;
+				float2 temp_output_175_331_g59246 = temp_output_393_0_g59251;
+				float2 temp_output_225_0_g59248 = temp_output_175_331_g59246;
+				float2 temp_output_33_0_g59248 = ddx( temp_output_225_0_g59248 );
+				float2 UV0_00_DDX394_g59248 = temp_output_33_0_g59248;
+				float2 temp_output_65_0_g59248 = ddy( temp_output_225_0_g59248 );
+				float2 UV0_00_DDY395_g59248 = temp_output_65_0_g59248;
+				float3 appendResult361_g59251 = (float3(W1347_g59251 , W2347_g59251 , W3347_g59251));
+				float3 temp_output_175_362_g59246 = appendResult361_g59251;
+				float3 Weight_00404_g59248 = temp_output_175_362_g59246;
+				float3 break332_g59248 = Weight_00404_g59248;
+				float2 temp_output_175_333_g59246 = UV2347_g59251;
+				float2 UV2_00380_g59248 = temp_output_175_333_g59246;
+				float2 temp_output_175_334_g59246 = UV3347_g59251;
+				float2 UV3_00381_g59248 = temp_output_175_334_g59246;
+				float4 Sample2DPlaner353_g59248 = ( ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV1_00379_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.x ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV2_00380_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.y ) + ( SAMPLE_TEXTURE2D_GRAD( _Normal3, sampler_Normal0, UV3_00381_g59248, UV0_00_DDX394_g59248, UV0_00_DDY395_g59248 ) * break332_g59248.z ) );
+				float4 temp_output_10900_66_g59175 = Sample2DPlaner353_g59248;
+				float4 NORMAL_3_FINAL3073_g59175 = temp_output_10900_66_g59175;
+				float3 unpack10074_g59175 = UnpackNormalScale( NORMAL_3_FINAL3073_g59175, _Splat3_NormalScale );
+				unpack10074_g59175.z = lerp( 1, unpack10074_g59175.z, saturate(_Splat3_NormalScale) );
+				float3 temp_output_30_0_g59186 = CoverMap_Normal8436_g59175;
+				float3 temp_output_46_0_g59186 = unpack10074_g59175;
+				float Layer3Range10418_g59175 = _CoverMapRangeL3;
+				float Layer3Fuzziness10419_g59175 = _CoverMapFuzzinessL3;
+				float3 lerpResult38_g59186 = lerp( temp_output_30_0_g59186 , temp_output_46_0_g59186 , saturate( ( ( distance( temp_output_46_0_g59186 , temp_output_30_0_g59186 ) - Layer3Range10418_g59175 ) / max( Layer3Fuzziness10419_g59175 , 1E-05 ) ) ));
+				float3 temp_output_10528_48_g59175 = lerpResult38_g59186;
+				float CoverMapLayer38477_g59175 = _CoverMapAffectL3;
+				float3 lerpResult8515_g59175 = lerp( unpack10074_g59175 , temp_output_10528_48_g59175 , CoverMapLayer38477_g59175);
+				float4 weightedBlendVar504_g59175 = Control00Weight403_g59175;
+				float3 weightedBlend504_g59175 = ( weightedBlendVar504_g59175.x*lerpResult8458_g59175 + weightedBlendVar504_g59175.y*lerpResult8505_g59175 + weightedBlendVar504_g59175.z*lerpResult8510_g59175 + weightedBlendVar504_g59175.w*lerpResult8515_g59175 );
+				float3 worldPosValue187_g59262 = WorldPosition;
+				float3 WorldPosition434_g59262 = worldPosValue187_g59262;
+				float4 ase_screenPosNorm = ScreenPos / ScreenPos.w;
+				ase_screenPosNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? ase_screenPosNorm.z : ase_screenPosNorm.z * 0.5 + 0.5;
+				float2 ScreenUV190_g59262 = (ase_screenPosNorm).xy;
+				float2 ScreenUV434_g59262 = ScreenUV190_g59262;
+				half2 LightmapUV497_g59262 = (IN.ase_texcoord8.xy*(unity_DynamicLightmapST).xy + (unity_DynamicLightmapST).zw);
+				half4 localCalculateShadowMask497_g59262 = CalculateShadowMask497_g59262( LightmapUV497_g59262 );
+				float4 shadowMaskValue180_g59262 = localCalculateShadowMask497_g59262;
+				float4 ShadowMask434_g59262 = shadowMaskValue180_g59262;
+				float3 localAdditionalLightsFlatMask14x434_g59262 = AdditionalLightsFlatMask14x( WorldPosition434_g59262 , ScreenUV434_g59262 , ShadowMask434_g59262 );
+				float3 Final_Normal10668_g59175 = ( weightedBlend504_g59175 + localAdditionalLightsFlatMask14x434_g59262 );
+				#ifdef _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+				float3 staticSwitch10602_g59175 = Final_Normal10668_g59175;
+				#else
+				float3 staticSwitch10602_g59175 = Final_Normal10668_g59175;
+				#endif
+				
+
+				float3 Normal = staticSwitch10602_g59175;
+				float Alpha = dotResult1044_g59175;
+				float AlphaClipThreshold = 0.0;
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					float DepthValue = IN.positionCS.z;
+				#endif
+
+				#ifdef _ALPHATEST_ON
+					clip(Alpha - AlphaClipThreshold);
+				#endif
+
+				#if defined(LOD_FADE_CROSSFADE)
+					LODFadeCrossFade( IN.positionCS );
+				#endif
+
+				#ifdef ASE_DEPTH_WRITE_ON
+					outputDepth = DepthValue;
+				#endif
+
+				#if defined(_GBUFFER_NORMALS_OCT)
+					float2 octNormalWS = PackNormalOctQuadEncode(WorldNormal);
+					float2 remappedOctNormalWS = saturate(octNormalWS * 0.5 + 0.5);
+					half3 packedNormalWS = PackFloat2To888(remappedOctNormalWS);
+					outNormalWS = half4(packedNormalWS, 0.0);
+				#else
+					#if defined(_NORMALMAP)
+						#if _NORMAL_DROPOFF_TS
+							float crossSign = (WorldTangent.w > 0.0 ? 1.0 : -1.0) * GetOddNegativeScale();
+							float3 bitangent = crossSign * cross(WorldNormal.xyz, WorldTangent.xyz);
+							float3 normalWS = TransformTangentToWorld(Normal, half3x3(WorldTangent.xyz, bitangent, WorldNormal.xyz));
+						#elif _NORMAL_DROPOFF_OS
+							float3 normalWS = TransformObjectToWorldNormal(Normal);
+						#elif _NORMAL_DROPOFF_WS
+							float3 normalWS = Normal;
+						#endif
+					#else
+						float3 normalWS = WorldNormal;
+					#endif
+					outNormalWS = half4(NormalizeNormalPerPixel(normalWS), 0.0);
+				#endif
+
+				#ifdef _WRITE_RENDERING_LAYERS
+					uint renderingLayers = GetMeshRenderingLayer();
+					outRenderingLayers = float4( EncodeMeshRenderingLayer( renderingLayers ), 0, 0, 0 );
+				#endif
+			}
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "SceneSelectionPass"
+			Tags { "LightMode"="SceneSelectionPass" }
+
+			Cull Off
+			AlphaToMask Off
+
+			HLSLPROGRAM
+
+			
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			#define SCENESELECTIONPASS 1
+
+			#define ATTRIBUTES_NEED_NORMAL
+			#define ATTRIBUTES_NEED_TANGENT
+			#define SHADERPASS SHADERPASS_DEPTHONLY
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+			#endif
+		
+
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				float4 positionCS : SV_POSITION;
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord1 : TEXCOORD1;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.ase_texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			struct SurfaceDescription
+			{
+				float Alpha;
+				float AlphaClipThreshold;
+			};
+
+			VertexOutput VertexFunction(VertexInput v  )
+			{
+				VertexOutput o;
+				ZERO_INITIALIZE(VertexOutput, o);
+
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.ase_texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord.xy = vertexToFrag27_g59193;
+				
+				o.ase_texcoord1 = v.ase_texcoord;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord.zw = 0;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+
+				float3 positionWS = TransformObjectToWorld( v.positionOS.xyz );
+
+				o.positionCS = TransformWorldToHClip(positionWS);
+
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.ase_texcoord = v.ase_texcoord;
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag(VertexOutput IN ) : SV_TARGET
+			{
+				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				
+
+				surfaceDescription.Alpha = dotResult1044_g59175;
+				surfaceDescription.AlphaClipThreshold = 0.0;
+
+				#if _ALPHATEST_ON
+					float alphaClipThreshold = 0.01f;
+					#if ALPHA_CLIP_THRESHOLD
+						alphaClipThreshold = surfaceDescription.AlphaClipThreshold;
+					#endif
+					clip(surfaceDescription.Alpha - alphaClipThreshold);
+				#endif
+
+				half4 outColor = 0;
+
+				#ifdef SCENESELECTIONPASS
+					outColor = half4(_ObjectId, _PassValue, 1.0, 1.0);
+				#elif defined(SCENEPICKINGPASS)
+					outColor = _SelectionID;
+				#endif
+
+				return outColor;
+			}
+
+			ENDHLSL
+		}
+
+		UsePass "Hidden/Nature/Terrain/Utilities/PICKING"
+	UsePass "Hidden/Nature/Terrain/Utilities/SELECTION"
+
+		Pass
+		{
+			
+			Name "ScenePickingPass"
+			Tags { "LightMode"="Picking" }
+
+			AlphaToMask Off
+
+			HLSLPROGRAM
+
+			
+
+			#define _NORMAL_DROPOFF_TS 1
+			#define ASE_FOG 1
+			#define ASE_FINAL_COLOR_ALPHA_MULTIPLY 1
+			#define _ALPHATEST_ON 1
+			#define _NORMALMAP 1
+			#define ASE_SRP_VERSION 140010
+			#define ASE_USING_SAMPLING_MACROS 1
+
+
+			
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+		    #define SCENEPICKINGPASS 1
+
+			#define ATTRIBUTES_NEED_NORMAL
+			#define ATTRIBUTES_NEED_TANGENT
+			#define SHADERPASS SHADERPASS_DEPTHONLY
+
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Texture.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Input.hlsl"
+			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureStack.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140009
+			#include_with_pragmas "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRenderingKeywords.hlsl"
+			#endif
+		
+
+			
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/FoveatedRendering.hlsl"
+           
+
+			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
+
+			
+            #if ASE_SRP_VERSION >=140007
+			#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
+			#endif
+		
+
+			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
+
+			#define ASE_NEEDS_VERT_NORMAL
+			#define ASE_NEEDS_VERT_POSITION
+			#pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+			#define TERRAIN_SPLAT_FIRSTPASS 1
+
+
+			struct VertexInput
+			{
+				float4 positionOS : POSITION;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct VertexOutput
+			{
+				float4 positionCS : SV_POSITION;
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord1 : TEXCOORD1;
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+
+			CBUFFER_START(UnityPerMaterial)
+			float4 _Control_ST;
+			half4 _CoverMapTint;
+			half4 _Splat1_Color;
+			float4 _Splat1_ST;
+			half4 _Splat2_Color;
+			float4 _Splat2_ST;
+			half4 _Splat0_Color;
+			half4 _Splat3_Color;
+			float4 _Splat3_ST;
+			float4 _TerrainHolesTexture_ST;
+			half4 _Splat6_Color;
+			float4 _Splat0_ST;
+			half4 _Splat7_Color;
+			half4 _Splat5_Color;
+			half4 _Splat4_Color;
+			half _Splat3_SmoothnessType;
+			half _Splat1_EnableNoise;
+			half _Splat1_NoiseInvert;
+			half _Splat1_NoiseScale;
+			half _Splat1_NoiseDarken;
+			half _CoverMapAffectL1;
+			half _CoverMapFuzzinessL1;
+			half _CoverMapRangeL1;
+			half _TerrainWetnessAffectLayer1;
+			half _Splat1_Saturation;
+			half _Splat1_Brightness;
+			half _Splat0_OcclusionStrengthAO;
+			half _Splat1_OcclusionStrengthAO;
+			half _Splat0_EnableNoise;
+			half _Splat0_NoiseInvert;
+			half _Splat0_NoiseScale;
+			half _Splat0_NoiseDarken;
+			half _CoverMapAffectL0;
+			half _CoverMapFuzzinessL0;
+			half _CoverMapRangeL0;
+			half _CoverMapBrightness;
+			half _TerrainWetnessAffectLayer0;
+			float _TerrainWetnessMask;
+			half _TerrainWetnessBiasGlobal;
+			float _TerrainWetnessIntensity;
+			half _Splat0_Saturation;
+			half _Splat2_SmoothnessType;
+			half _Splat1_Metallic;
+			half _Splat2_Saturation;
+			half _TerrainWetnessAffectLayer2;
+			half _Splat0_Metallic;
+			half _Splat2_Metallic;
+			half _Splat3_NormalScale;
+			half _Splat2_NormalScale;
+			half _Splat1_NormalScale;
+			half _CoverMapNormalStrength;
+			half _Splat0_NormalScale;
+			half _Splat3_Metallic;
+			half _Global_Brightness;
+			half _Splat3_EnableNoise;
+			half _Splat3_NoiseInvert;
+			half _Splat3_NoiseScale;
+			half _Splat3_NoiseDarken;
+			half _CoverMapAffectL3;
+			half _CoverMapFuzzinessL3;
+			half _CoverMapRangeL3;
+			half _TerrainWetnessAffectLayer3;
+			half _Splat3_Saturation;
+			half _Splat3_Brightness;
+			half _Splat0_SmoothnessType;
+			half _Splat1_SmoothnessType;
+			half _Splat2_EnableNoise;
+			half _Splat2_NoiseInvert;
+			half _Splat2_NoiseDarken;
+			half _CoverMapAffectL2;
+			half _CoverMapFuzzinessL2;
+			half _CoverMapRangeL2;
+			half _Splat2_Brightness;
+			half _Splat2_NoiseScale;
+			half _Splat6_EnableNoise;
+			half _Splat2_OcclusionStrengthAO;
+			half _Splat4_Metallic;
+			half _Splat7_NoiseDarken;
+			half _CoverMapAffectL7;
+			half _Splat5_NoiseScale;
+			half _Splat4_EnableNoise;
+			half _Splat5_EnableNoise;
+			half _Splat5_NoiseDarken;
+			half _Splat4_NoiseDarken;
+			half _Splat7_NoiseScale;
+			half _Splat6_NoiseScale;
+			half _Splat4_NoiseScale;
+			half _Splat7_NoiseInvert;
+			half _Splat6_NoiseInvert;
+			half _Splat5_NoiseInvert;
+			half _Splat4_NoiseInvert;
+			half _Splat7_EnableNoise;
+			half _CoverMapAffectL6;
+			half _BasePassBrightness;
+			half _BasePassSmoothness;
+			half _Splat4_Brightness;
+			half _Splat4_Saturation;
+			half _Splat5_Brightness;
+			half _Splat5_Saturation;
+			half _Splat5_Metallic;
+			half _EnableBasePassCoverMap;
+			half _Splat7_Brightness;
+			half _Splat7_Saturation;
+			half _Splat6_Brightness;
+			half _Splat6_NoiseDarken;
+			half _CoverMapAffectL4;
+			half _CoverMapAffectL5;
+			half _Splat6_Saturation;
+			half _Splat0_Brightness;
+			half _Splat6_Metallic;
+			half _Splat4_NormalScale;
+			half _Splat7_SmoothnessType;
+			half _Splat7_Smoothness;
+			half _Splat3_Smoothness;
+			half _Splat6_Smoothness;
+			half _Splat2_Smoothness;
+			half _Splat6_SmoothnessType;
+			half _Splat5_Smoothness;
+			half _Splat1_Smoothness;
+			half _Splat5_SmoothnessType;
+			half _Splat0_Smoothness;
+			half _Splat4_Smoothness;
+			half _Splat4_SmoothnessType;
+			half _Splat7_OcclusionStrengthAO;
+			half _Splat6_OcclusionStrengthAO;
+			half _Splat5_OcclusionStrengthAO;
+			half _Splat4_OcclusionStrengthAO;
+			half _TerrainWetnessAffectLayer4;
+			half _Splat5_NormalScale;
+			half _Splat6_NormalScale;
+			half _Splat7_NormalScale;
+			half _TerrainWetnessAffectLayer7;
+			half _CoverMapRangeL6;
+			half _CoverMapFuzzinessL6;
+			half _Splat7_Metallic;
+			half _CoverMapRangeL7;
+			half _TerrainWetnessAffectLayer6;
+			half _TerrainWetnessAffectLayer5;
+			half _CoverMapRangeL5;
+			half _CoverMapFuzzinessL5;
+			half _CoverMapRangeL4;
+			half _CoverMapFuzzinessL4;
+			half _CoverMapFuzzinessL7;
+			half _Splat3_OcclusionStrengthAO;
+			#ifdef ASE_TRANSMISSION
+				float _TransmissionShadow;
+			#endif
+			#ifdef ASE_TRANSLUCENCY
+				float _TransStrength;
+				float _TransNormal;
+				float _TransScattering;
+				float _TransDirect;
+				float _TransAmbient;
+				float _TransShadow;
+			#endif
+			#ifdef ASE_TESSELLATION
+				float _TessPhongStrength;
+				float _TessValue;
+				float _TessMin;
+				float _TessMax;
+				float _TessEdgeLength;
+				float _TessMaxDisp;
+			#endif
+			CBUFFER_END
+
+			#ifdef SCENEPICKINGPASS
+				float4 _SelectionID;
+			#endif
+
+			#ifdef SCENESELECTIONPASS
+				int _ObjectId;
+				int _PassValue;
+			#endif
+
+			TEXTURE2D(_Control);
+			SAMPLER(sampler_Control);
+			#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+				TEXTURE2D(_TerrainHeightmapTexture);//ASE Terrain Instancing
+				TEXTURE2D( _TerrainNormalmapTexture);//ASE Terrain Instancing
+				SAMPLER(sampler_TerrainNormalmapTexture);//ASE Terrain Instancing
+			#endif//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_START( Terrain )//ASE Terrain Instancing
+				UNITY_DEFINE_INSTANCED_PROP( float4, _TerrainPatchInstanceData )//ASE Terrain Instancing
+			UNITY_INSTANCING_BUFFER_END( Terrain)//ASE Terrain Instancing
+			CBUFFER_START( UnityTerrain)//ASE Terrain Instancing
+				#ifdef UNITY_INSTANCING_ENABLED//ASE Terrain Instancing
+					float4 _TerrainHeightmapRecipSize;//ASE Terrain Instancing
+					float4 _TerrainHeightmapScale;//ASE Terrain Instancing
+				#endif//ASE Terrain Instancing
+			CBUFFER_END//ASE Terrain Instancing
+
+
+			float4 mod289( float4 x )
+			{
+				return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+			
+			float4 perm( float4 x )
+			{
+				return mod289(((x * 34.0) + 1.0) * x);
+			}
+			
+			float SimpleNoise3D( float3 p )
+			{
+				 float3 a = floor(p);
+				    float3 d = p - a;
+				    d = d * d * (3.0 - 2.0 * d);
+				 float4 b = a.xxyy + float4(0.0, 1.0, 0.0, 1.0);
+				    float4 k1 = perm(b.xyxy);
+				 float4 k2 = perm(k1.xyxy + b.zzww);
+				    float4 c = k2 + a.zzzz;
+				    float4 k3 = perm(c);
+				    float4 k4 = perm(c + 1.0);
+				    float4 o1 = frac(k3 * (1.0 / 41.0));
+				 float4 o2 = frac(k4 * (1.0 / 41.0));
+				    float4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+				    float2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+				    return o4.y * d.y + o4.x * (1.0 - d.y);
+			}
+			
+			VertexInput ApplyMeshModification( VertexInput v )
+			{
+			#ifdef UNITY_INSTANCING_ENABLED
+				float2 patchVertex = v.positionOS.xy;
+				float4 instanceData = UNITY_ACCESS_INSTANCED_PROP( Terrain, _TerrainPatchInstanceData );
+				float2 sampleCoords = ( patchVertex.xy + instanceData.xy ) * instanceData.z;
+				float height = UnpackHeightmap( _TerrainHeightmapTexture.Load( int3( sampleCoords, 0 ) ) );
+				v.positionOS.xz = sampleCoords* _TerrainHeightmapScale.xz;
+				v.positionOS.y = height* _TerrainHeightmapScale.y;
+				#ifdef ENABLE_TERRAIN_PERPIXEL_NORMAL
+					v.normalOS = float3(0, 1, 0);
+				#else
+					v.normalOS = _TerrainNormalmapTexture.Load(int3(sampleCoords, 0)).rgb* 2 - 1;
+				#endif
+				v.ase_texcoord.xy = sampleCoords* _TerrainHeightmapRecipSize.zw;
+			#endif
+				return v;
+			}
+			
+
+			struct SurfaceDescription
+			{
+				float Alpha;
+				float AlphaClipThreshold;
+			};
+
+			VertexOutput VertexFunction(VertexInput v  )
+			{
+				VertexOutput o;
+				ZERO_INITIALIZE(VertexOutput, o);
+
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+				v = ApplyMeshModification(v);
+				float2 break26_g59193 = _Control_ST.zw;
+				float2 appendResult15_g59193 = (float2(( break26_g59193.x + 0.001 ) , ( break26_g59193.y + 0.0001 )));
+				float2 vertexToFrag27_g59193 = ( ( v.ase_texcoord.xy * _Control_ST.xy ) + appendResult15_g59193 );
+				o.ase_texcoord.xy = vertexToFrag27_g59193;
+				
+				o.ase_texcoord1 = v.ase_texcoord;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				o.ase_texcoord.zw = 0;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					float3 defaultVertexValue = v.positionOS.xyz;
+				#else
+					float3 defaultVertexValue = float3(0, 0, 0);
+				#endif
+
+				float3 vertexValue = defaultVertexValue;
+
+				#ifdef ASE_ABSOLUTE_VERTEX_POS
+					v.positionOS.xyz = vertexValue;
+				#else
+					v.positionOS.xyz += vertexValue;
+				#endif
+
+				v.normalOS = v.normalOS;
+
+				float3 positionWS = TransformObjectToWorld( v.positionOS.xyz );
+				o.positionCS = TransformWorldToHClip(positionWS);
+
+				return o;
+			}
+
+			#if defined(ASE_TESSELLATION)
+			struct VertexControl
+			{
+				float4 vertex : INTERNALTESSPOS;
+				float3 normalOS : NORMAL;
+				float4 ase_texcoord : TEXCOORD0;
+
+				UNITY_VERTEX_INPUT_INSTANCE_ID
+			};
+
+			struct TessellationFactors
+			{
+				float edge[3] : SV_TessFactor;
+				float inside : SV_InsideTessFactor;
+			};
+
+			VertexControl vert ( VertexInput v )
+			{
+				VertexControl o;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				o.vertex = v.positionOS;
+				o.normalOS = v.normalOS;
+				o.ase_texcoord = v.ase_texcoord;
+				return o;
+			}
+
+			TessellationFactors TessellationFunction (InputPatch<VertexControl,3> v)
+			{
+				TessellationFactors o;
+				float4 tf = 1;
+				float tessValue = _TessValue; float tessMin = _TessMin; float tessMax = _TessMax;
+				float edgeLength = _TessEdgeLength; float tessMaxDisp = _TessMaxDisp;
+				#if defined(ASE_FIXED_TESSELLATION)
+				tf = FixedTess( tessValue );
+				#elif defined(ASE_DISTANCE_TESSELLATION)
+				tf = DistanceBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, tessValue, tessMin, tessMax, GetObjectToWorldMatrix(), _WorldSpaceCameraPos );
+				#elif defined(ASE_LENGTH_TESSELLATION)
+				tf = EdgeLengthBasedTess(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams );
+				#elif defined(ASE_LENGTH_CULL_TESSELLATION)
+				tf = EdgeLengthBasedTessCull(v[0].vertex, v[1].vertex, v[2].vertex, edgeLength, tessMaxDisp, GetObjectToWorldMatrix(), _WorldSpaceCameraPos, _ScreenParams, unity_CameraWorldClipPlanes );
+				#endif
+				o.edge[0] = tf.x; o.edge[1] = tf.y; o.edge[2] = tf.z; o.inside = tf.w;
+				return o;
+			}
+
+			[domain("tri")]
+			[partitioning("fractional_odd")]
+			[outputtopology("triangle_cw")]
+			[patchconstantfunc("TessellationFunction")]
+			[outputcontrolpoints(3)]
+			VertexControl HullFunction(InputPatch<VertexControl, 3> patch, uint id : SV_OutputControlPointID)
+			{
+				return patch[id];
+			}
+
+			[domain("tri")]
+			VertexOutput DomainFunction(TessellationFactors factors, OutputPatch<VertexControl, 3> patch, float3 bary : SV_DomainLocation)
+			{
+				VertexInput o = (VertexInput) 0;
+				o.positionOS = patch[0].vertex * bary.x + patch[1].vertex * bary.y + patch[2].vertex * bary.z;
+				o.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
+				o.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
+				#if defined(ASE_PHONG_TESSELLATION)
+				float3 pp[3];
+				for (int i = 0; i < 3; ++i)
+					pp[i] = o.positionOS.xyz - patch[i].normalOS * (dot(o.positionOS.xyz, patch[i].normalOS) - dot(patch[i].vertex.xyz, patch[i].normalOS));
+				float phongStrength = _TessPhongStrength;
+				o.positionOS.xyz = phongStrength * (pp[0]*bary.x + pp[1]*bary.y + pp[2]*bary.z) + (1.0f-phongStrength) * o.positionOS.xyz;
+				#endif
+				UNITY_TRANSFER_INSTANCE_ID(patch[0], o);
+				return VertexFunction(o);
+			}
+			#else
+			VertexOutput vert ( VertexInput v )
+			{
+				return VertexFunction( v );
+			}
+			#endif
+
+			half4 frag(VertexOutput IN ) : SV_TARGET
+			{
+				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
+
+				float2 vertexToFrag27_g59193 = IN.ase_texcoord.xy;
+				float4 tex2DNode3739_g59175 = SAMPLE_TEXTURE2D( _Control, sampler_Control, vertexToFrag27_g59193 );
+				float dotResult1044_g59175 = dot( tex2DNode3739_g59175 , half4(1,1,1,1) );
+				
+
+				surfaceDescription.Alpha = dotResult1044_g59175;
+				surfaceDescription.AlphaClipThreshold = 0.0;
+
+				#if _ALPHATEST_ON
+					float alphaClipThreshold = 0.01f;
+					#if ALPHA_CLIP_THRESHOLD
+						alphaClipThreshold = surfaceDescription.AlphaClipThreshold;
+					#endif
+						clip(surfaceDescription.Alpha - alphaClipThreshold);
+				#endif
+
+				half4 outColor = 0;
+
+				#ifdef SCENESELECTIONPASS
+					outColor = half4(_ObjectId, _PassValue, 1.0, 1.0);
+				#elif defined(SCENEPICKINGPASS)
+					outColor = _SelectionID;
+				#endif
+
+				return outColor;
+			}
+
+			ENDHLSL
+		}
+		
+	}
+	
+	CustomEditor "DE_ShaderGUITerrain"
+	FallBack "Hidden/Shader Graph/FallbackError"
+	
+	Dependency "BaseMapShader"="Hidden/DE Environment/Terrain/DE Demo BasePass"
+	Dependency "AddPassShader"="Hidden/DE Environment/Terrain/DE Demo AddPass"
+	Dependency "BaseMapShader"="Hidden/DE Environment/Terrain/DE Demo BasePass"
+	Dependency "AddPassShader"="Hidden/DE Environment/Terrain/DE Demo AddPass"
+
+	Fallback "Off"
+}
+/*ASEBEGIN
+Version=19303
+Node;AmplifyShaderEditor.RangedFloatNode;67;320,272;Inherit;False;Constant;_AlphaClipThreshold1;AlphaClipThreshold;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;72;224,0;Inherit;False;DESF Terrain 8 Layer;0;;59175;8162e294921788c47a27c2043589b3c8;200,4484,1,4485,1,10966,1,9368,0,10830,0,9357,0,9513,0,9514,0,9322,0,9340,0,9542,0,10105,0,10111,0,10190,0,9519,0,10108,0,9520,0,10118,0,9370,0,9316,0,9543,0,10843,0,10836,0,10824,0,10189,0,9324,0,9544,0,9517,0,9516,0,9327,0,9337,0,10410,0,10409,0,10407,0,10408,0,9344,0,10414,0,9353,0,10413,0,9319,0,9342,0,9334,0,10119,0,10176,0,9341,0,9511,0,9351,0,9510,0,9323,0,9545,0,9313,0,9312,0,9299,0,10411,0,9991,0,9992,0,9355,0,9310,0,10173,0,10120,0,10553,0,9922,0,10183,0,10122,0,10564,0,10565,0,9305,0,10174,0,10175,0,10107,0,10192,0,10209,0,10208,0,10123,0,10579,0,10191,0,10578,0,10124,0,9371,0,10552,0,9379,0,10412,0,9378,0,10212,0,9993,0,10112,0,9597,0,9486,0,9483,0,9480,0,9328,0,9360,0,9359,0,10114,0,10213,0,9361,0,9598,0,10110,0,10182,0,9347,0,10184,0,9369,0,9362,0,10116,0,9332,0,10181,0,9311,0,10115,0,2896,1,10368,1,3629,1,9506,1,3371,1,10826,1,3630,1,9507,1,9498,1,10825,1,3777,1,10835,1,3776,1,3635,1,3790,0,10828,0,3636,0,3788,0,10842,1,3800,1,3797,1,3641,1,9508,1,9499,1,9509,1,10837,1,9500,1,10829,1,9504,1,9505,1,9502,1,10844,1,9501,1,9503,1,9793,0,9780,0,9771,0,9772,0,9777,0,9791,0,9781,0,9776,0,9761,0,9775,0,9792,0,9773,0,9757,0,9759,0,9779,0,5124,1,5125,1,5126,1,5127,1,10147,1,10148,1,10149,1,10150,1,10198,0,8656,1,8654,1,8311,1,8655,1,8644,1,8643,1,8615,1,8645,1,9763,1,9751,1,9752,1,9762,1,9765,1,9749,1,9750,1,9764,1,10619,0,10610,0,10612,0,10618,0,10614,0,10617,0,10620,0,10616,0,5839,0,6624,1,5242,0,5260,0,10681,0,10680,0,10667,0,10679,0,10678,0,10682,0;0;9;FLOAT3;0;FLOAT3;549;FLOAT;550;FLOAT;551;FLOAT;552;FLOAT;2761;FLOAT3;553;FLOAT3;10968;FLOAT4;10960
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;50;645.0565,0;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ExtraPrePass;0;0;ExtraPrePass;5;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;0;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;52;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ShadowCaster;0;2;ShadowCaster;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;False;False;True;False;False;False;False;0;False;;False;False;False;False;False;False;False;False;False;True;1;False;;True;3;False;;False;True;1;LightMode=ShadowCaster;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;53;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;DepthOnly;0;3;DepthOnly;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;False;False;True;False;False;False;False;0;False;;False;False;False;False;False;False;False;False;False;True;1;False;;False;False;True;1;LightMode=DepthOnly;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;54;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Meta;0;4;Meta;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=Meta;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;55;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Universal2D;0;5;Universal2D;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;1;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;False;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=Universal2D;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;56;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;DepthNormals;0;6;DepthNormals;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;False;;True;3;False;;False;True;1;LightMode=DepthNormalsOnly;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;57;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;GBuffer;0;7;GBuffer;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalGBuffer;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;58;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;SceneSelectionPass;0;8;SceneSelectionPass;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;2;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=SceneSelectionPass;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;59;645.0565,40.11808;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ScenePickingPass;0;9;ScenePickingPass;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=Picking;False;False;0;;0;0;Standard;0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;51;640,0;Float;False;True;-1;2;DE_ShaderGUITerrain;0;12;DE Environment/Terrain/DE Demo;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;21;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;5;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=-100;UniversalMaterialType=Lit;TerrainCompatible=True;True;5;True;12;all;0;False;True;1;1;False;;0;False;;1;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;2;LightMode=UniversalForwardOnly;TerrainCompatible=True;False;False;4;Include;;False;;Native;False;0;0;;Define;TERRAIN_SPLAT_FIRSTPASS 1;False;;Custom;False;0;0;;Pragma;instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap;False;;Custom;True;0;0;Forward, GBuffer;Pragma;multi_compile_instancing;False;;Custom;True;0;0;Forward,GBuffer,ShadowCaster,DepthOnly,DepthNormals;Off;4;BaseMapShader=Hidden/DE Environment/Terrain/DE Demo BasePass;AddPassShader=Hidden/DE Environment/Terrain/DE Demo AddPass;BaseMapShader=Hidden/DE Environment/Terrain/DE Demo BasePass;AddPassShader=Hidden/DE Environment/Terrain/DE Demo AddPass;0;Standard;39;Workflow;1;0;Surface;0;0;  Refraction Model;0;0;  Blend;0;0;Two Sided;1;0;Fragment Normal Space,InvertActionOnDeselection;0;0;Forward Only;1;638162438491034359;Transmission;0;0;  Transmission Shadow;0.5,True,_ASETransmissionShadow;0;Translucency;0;0;  Translucency Strength;1,True,_ASETranslucencyStrength;0;  Normal Distortion;0.5,True,_ASETranslucencyNormalDistortion;0;  Scattering;2,True,_ASETranslucencyScattering;0;  Direct;0.9,True,_ASETranslucencyScattering;0;  Ambient;0.1,True,_ASETranslucencyAmbient;0;  Shadow;0.5,True,_ASETranslucencyShadow;0;Cast Shadows;0;638162445753263295;  Use Shadow Threshold;0;0;GPU Instancing;0;638162456717211447;LOD CrossFade;0;638162445856431097;Built-in Fog;1;0;_FinalColorxAlpha;1;638162445897066981;Meta Pass;1;0;Override Baked GI;0;0;Extra Pre Pass;0;0;Tessellation;0;0;  Phong;0;0;  Strength;0.5,True,_TessellationPhong;0;  Type;0;0;  Tess;16,True,_TessellationStrength;0;  Min;10,True,_TessellationDistanceMin;0;  Max;25,True,_TessellationDistanceMax;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;0;  Early Z;0;0;Vertex Position,InvertActionOnDeselection;1;0;Debug Display;0;0;Clear Coat;0;0;0;10;False;True;False;True;True;True;True;False;True;True;True;;True;0
+WireConnection;51;0;72;0
+WireConnection;51;1;72;549
+WireConnection;51;3;72;550
+WireConnection;51;4;72;551
+WireConnection;51;5;72;552
+WireConnection;51;6;72;2761
+WireConnection;51;7;67;0
+WireConnection;51;10;72;10968
+WireConnection;51;30;72;10960
+ASEEND*/
+//CHKSM=5E416CB2BA4909AF5F8D507FE3296964F83500E7

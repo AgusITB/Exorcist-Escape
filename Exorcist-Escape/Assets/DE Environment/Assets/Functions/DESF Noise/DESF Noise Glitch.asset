@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Noise Glitch
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.TimeNode;11;-2265.001,175.7732;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionSwitch;65;-462.534,38.39759;Inherit;False;Noise
+    Map;False;0;2;-1;None;Active;Object;-1;10;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;7;-1808.444,-209.427;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;14;-1248.589,-543.3463;Float;False;Constant;_Color0;Color
+    0;2;0;Create;True;0;0;0;False;0;False;1,1,1,0;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;35;-610.1732,135.4084;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;3;-2041.504,73.37408;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ClampOpNode;31;-1113.416,-206.6678;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;21;-1472.322,-207.5397;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;28;-766.8566,43.47121;Inherit;False;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ComponentMaskNode;22;-2043.026,4.022113;Inherit;False;True;False;False;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PiNode;16;-1808.289,-116.349;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector4Node;51;46.53996,-244.0495;Inherit;False;Constant;_Vector0;Vector
+    0;11;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;19;-1971.108,-209.6479;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;6.06;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;62;90.7697,145.3745;Inherit;False;Enable;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;56;-2447.075,-251.0615;Inherit;False;Noise
+    Direction;1;3;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;10;-934.5333,-252.1804;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.TFHCRemapNode;23;-1312.306,-207.5624;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TimeNode;20;-2605.888,109.162;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.OneMinusNode;75;-986.5907,372.2303;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;1;-71.56651,43.24743;Inherit;False;3;3;0;COLOR;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;58;-2588.575,5.136315;Inherit;False;Noise
+    Speed;1;5;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;25;-1250.058,-376.3651;Float;False;Constant;_Color2;Color
+    2;2;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StepOpNode;49;-1544.871,323.7235;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LerpOp;68;284.4287,22.79981;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.LerpOp;76;-808.7257,298.7205;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;13;-255.5406,229.0717;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;61;-485.066,225.0969;Inherit;False;Noise
+    Strength;1;4;False;1;0;FLOAT;0.1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RadiansOpNode;46;-1897.344,372.7962;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;66;-2192.708,-162.334;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;59;-1543.84,212.4294;Inherit;False;Noise
+    Map;9;7;False;1;0;SAMPLER2D;0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;30;-1614.337,-208.375;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;57;-2176.493,-253.8833;Inherit;False;Noise
+    Width;1;6;False;1;0;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;72;-261.1276,-98.78093;Inherit;False;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;74;45.06165,-17.07373;Inherit;False;Constant;_Float1;Float
+    1;0;0;Create;True;0;0;0;False;0;False;0.25;0.25;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;5;-2387.843,8.159031;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;71;-442.6523,-104.9978;Inherit;False;Constant;_Float0;Float
+    0;37;0;Create;True;0;0;0;False;0;False;0.01;-0.18;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;73;301.0616,-125.0737;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;43;-1718.138,441.1945;Float;False;Constant;_Float4;Float
+    4;12;0;Create;True;0;0;0;False;0;False;0.2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;15;-2205.362,5.638095;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;42;-2076.183,366.716;Float;False;Constant;_Rotation;Rotation;13;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;60;-1547.678,465.943;Inherit;False;SS
+    Sampler State;13;8;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;17;-2203.588,73.24426;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;100;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RotatorNode;48;-1746.49,324.5914;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;78;-1058.854,178.1828;Inherit;False;Mask
+    Inverted;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;63;-297.2178,140.6517;Inherit;False;Noise
+    Tint;4;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;2;-1316.637,73.11234;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;45;-1311.684,294.2375;Inherit;True;Property;_Sample001;Sample
+    001;15;0;Create;True;0;0;0;False;1;DE_DrawerTextureSingleLine;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WorldPosInputsNode;80;-2434.966,-161.0708;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.StickyNoteNode;81;-535.6163,-459.4705;Inherit;False;528.2443;200.7159;Noise
+    Glitch Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;82;272,160;Inherit;False;241.7633;223.0972;;;0,0,0,1;**DESF
+    Noise Glitch$_DigitalNoiseEnable$_DigitalNoiseMap$_DigitalNoiseMapInverted$_DigitalNoiseDirection$_DigitalNoiseStrength$_DigitalNoiseSpeed$_DigitalNoiseWidth;0;0\nNode;AmplifyShaderEditor.FunctionOutput;69;493.9249,-121.27;Inherit;False;False;-1;Alpha;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;486.422,26.47248;Inherit;False;True;-1;Mask;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;65;0;28;0\nWireConnection;65;1;35;0\nWireConnection;7;0;19;0\nWireConnection;7;1;22;0\nWireConnection;35;0;28;0\nWireConnection;35;1;76;0\nWireConnection;3;0;17;0\nWireConnection;3;1;11;1\nWireConnection;31;0;23;0\nWireConnection;21;0;30;0\nWireConnection;28;0;10;0\nWireConnection;28;1;2;0\nWireConnection;22;0;15;0\nWireConnection;19;0;57;0\nWireConnection;19;1;66;0\nWireConnection;10;0;14;0\nWireConnection;10;1;25;0\nWireConnection;10;2;31;0\nWireConnection;23;0;21;0\nWireConnection;75;0;45;0\nWireConnection;1;0;65;0\nWireConnection;1;1;63;0\nWireConnection;1;2;13;0\nWireConnection;49;0;48;0\nWireConnection;49;1;43;0\nWireConnection;68;0;51;0\nWireConnection;68;1;1;0\nWireConnection;68;2;62;0\nWireConnection;76;0;45;0\nWireConnection;76;1;75;0\nWireConnection;76;2;78;0\nWireConnection;13;0;61;0\nWireConnection;46;0;42;0\nWireConnection;66;0;80;2\nWireConnection;66;1;80;1\nWireConnection;66;2;56;0\nWireConnection;30;0;7;0\nWireConnection;30;1;16;0\nWireConnection;72;0;71;0\nWireConnection;72;1;65;0\nWireConnection;5;0;58;0\nWireConnection;5;1;20;2\nWireConnection;73;0;74;0\nWireConnection;73;1;72;0\nWireConnection;73;2;62;0\nWireConnection;15;0;5;0\nWireConnection;17;0;80;3\nWireConnection;48;2;46;0\nWireConnection;2;0;3;0\nWireConnection;2;1;21;0\nWireConnection;45;0;59;0\nWireConnection;45;1;49;0\nWireConnection;45;7;60;0\nWireConnection;69;0;73;0\nWireConnection;0;0;68;0\nASEEND*/\n//CHKSM=6F4A91EE8B3F74AF99B53B876AD1EAE944A1C588"
+  m_functionName: 
+  m_description: 'Noise Glitch Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.38039216, g: 0.24705882, b: 0.4627451, a: 1}
+  m_customNodeCategory: DESF Noise
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

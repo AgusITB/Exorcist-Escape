@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF HDRP Iridescent
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.1.5\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19105\nNode;AmplifyShaderEditor.StickyNoteNode;81;569.7153,-371.5832;Inherit;False;278.9986;189.2926;;;0,0,0,1;_IridescenceMaskEnable$_IridescenceMaskMap$_IridescenceMaskStrength$$_IridescenceThicknessEnable$_IridescenceThicknessMap$_IridescenceThicknessStrength$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;128;-6.610383,-328.6872;Inherit;False;394.2951;172.1153;Iridescence
+    Mask Map;;0,0,0,1;Assign a Texture, with values from 0 to 1, that controls the
+    strength of the iridescence effect. $$A texel with a value of 1 corresponds to
+    full strength, while those with a value of 0 disables the iridescence effect.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;129;862.1603,-368.211;Inherit;False;319.3543;179.9788;HDRP
+    Iridescent Node;;0,0,0,1;Applies the Iridescence workflow to the Material. Iridescent
+    surfaces appear to gradually change color as the angle of view or angle of illumination
+    changes.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;134;-11.68499,304.7114;Inherit;False;470.8171;191.204;Iridescence
+    Thickness map;;0,0,0,1;Assign a Texture, with values from 0 to 1, that controls
+    the thickness of the thin iridescence layer over the material. $$This modifies
+    the color of the effect. Unit is micrometer multiplied by 3. $$A value of 1 is
+    remapped to 3 micrometers or 3000 nanometers.;0;0\nNode;AmplifyShaderEditor.SamplerNode;125;-14.56416,-147.7237;Inherit;True;Property;_TextureSample1;Texture
+    Sample 1;17;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;132;643.9835,529.2806;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;64;304.0116,601.2336;Half;False;Property;_IridescenceThicknessStrength;Iridescence
+    Thickness Strength;6;0;Create;False;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;59;334.5067,-57.89265;Half;False;Property;_IridescenceMaskStrength;Iridescence
+    Mask Strength;3;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;44;521.0157,677.7358;Half;False;Property;_IridescenceThicknessEnable;Enable
+    Iridescence Thickness;4;0;Create;False;1;;6;Default;0;Layer 2;1;Layer 3;2;Layer
+    4;3;Layer 5;4;Layer 6;5;0;False;2;DE_DrawerToggleLeft;Space(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;127;651.1309,-126.7305;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;50;827.8865,-150.7352;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;49;835.6848,505.2147;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1029.334,504.2789;Inherit;False;True;-1;Iridescence
+    Thickness;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;3;1023.421,-149.6223;Inherit;False;False;-1;Iridescent
+    Mask;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;86;538.1076,52.62718;Inherit;False;DESF
+    Utility Register Inline;-1;;44098;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;84;110.9936,127.2402;Inherit;False;Property;_CATEGORY_IRIDESCENT;CATEGORY_IRIDESCENT;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(IRIDESCENT,true,_IridescenceMaskSourceEnable,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;90;386.955,132.0878;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;85;136.0979,202.0858;Inherit;False;Property;_SPACE_IRIDESCENT;SPACE_IRIDESCENT;7;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;41;270.957,54.29259;Half;False;Property;_IridescenceMaskEnable;Enable
+    Iridescence Mask;1;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;130;-18.21032,507.4907;Inherit;True;Property;_TextureSample2;Texture
+    Sample 1;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;131;-302.3116,509.7725;Inherit;True;Property;_IridescenceThicknessMap;Iridescence
+    Thickness Map;5;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.TexturePropertyNode;126;-271.5183,-147.4046;Inherit;True;Property;_IridescenceMaskMap;Iridescence
+    Mask Map;2;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nWireConnection;125;0;126;0\nWireConnection;125;7;126;1\nWireConnection;132;0;130;1\nWireConnection;132;1;64;0\nWireConnection;127;0;125;1\nWireConnection;127;1;59;0\nWireConnection;50;1;127;0\nWireConnection;50;2;86;0\nWireConnection;49;1;132;0\nWireConnection;49;2;44;0\nWireConnection;0;0;49;0\nWireConnection;3;0;50;0\nWireConnection;86;1;41;0\nWireConnection;86;2;90;0\nWireConnection;90;0;84;0\nWireConnection;90;1;85;0\nWireConnection;130;0;131;0\nWireConnection;130;7;131;1\nASEEND*/\n//CHKSM=2188BE7C334CE4CECA98B09CA92EEB8F406A913D"
+  m_functionName: 
+  m_description: HDRP Iridescent Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

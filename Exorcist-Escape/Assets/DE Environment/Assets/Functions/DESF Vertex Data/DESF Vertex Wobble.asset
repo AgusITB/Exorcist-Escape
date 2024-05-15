@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Vertex Wobble
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;48;-1737.749,-800;Inherit;False;1552.047;679.881;Creates
+    a sine wave from a given input with an added pseudo-random value;16;12;29;31;27;34;44;42;43;41;35;32;38;47;46;26;33;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.SinOpNode;33;-1392,-464;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;26;-784,-592;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;46;-672,-752;Inherit;False;Constant;_Min;Min;5;0;Create;True;0;0;0;False;0;False;-0.01;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;47;-672,-672;Inherit;False;Constant;_Max;Max;5;0;Create;True;0;0;0;False;0;False;0.01;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;38;-496,-640;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FractNode;32;-640,-592;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;55;576,-736;Inherit;False;382.1444;151.3907;Vertex
+    Wobble Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.PosVertexDataNode;19;576,-560;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DynamicAppendNode;20;608,-400;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;22;976,-560;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;21;800,-480;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;18;416,-496;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;16;288,-400;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.PosVertexDataNode;15;112,-400;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;17;112,-496;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;49;-128,-352;Inherit;False;Wobble
+    Distance;1;1;False;1;0;FLOAT;0.05;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;35;-336,-496;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;41;-912,-592;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;43;-1072,-592;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;42;-976,-496;Inherit;False;Constant;_Float5;Float
+    2;0;0;Create;True;0;0;0;False;0;False;43758.55;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;44;-1264,-592;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;34;-1248,-496;Inherit;False;Constant;_Float4;Float
+    1;0;0;Create;True;0;0;0;False;0;False;91.2228;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;27;-1392,-592;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;31;-1520,-592;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;29;-1680,-592;Half;False;Constant;_Float3;Float
+    0;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;12;-1664,-464;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;10;-1920,-560;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-1920,-368;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;9;-2128,-560;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;50;-2128,-480;Inherit;False;Wobble
+    Speed;1;2;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;54;-2128,-384;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionInput;51;-2160,-224;Inherit;False;Wobble
+    Frequency;1;3;False;1;0;FLOAT;2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;56;640,-192;Inherit;False;187;104;Wobble;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;52;640,-272;Inherit;False;Wobble;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;4;1153.636,-559.9195;Inherit;False;True;-1;Vertex
+    Position;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;33;0;12;0\nWireConnection;26;0;41;0\nWireConnection;26;1;42;0\nWireConnection;38;0;46;0\nWireConnection;38;1;47;0\nWireConnection;38;2;32;0\nWireConnection;32;0;26;0\nWireConnection;20;0;18;0\nWireConnection;20;1;16;1\nWireConnection;20;2;16;2\nWireConnection;22;0;19;0\nWireConnection;22;1;21;0\nWireConnection;21;0;19;0\nWireConnection;21;1;20;0\nWireConnection;21;2;52;0\nWireConnection;18;0;17;0\nWireConnection;18;1;16;0\nWireConnection;16;0;15;0\nWireConnection;17;0;35;0\nWireConnection;17;1;49;0\nWireConnection;35;0;38;0\nWireConnection;35;1;33;0\nWireConnection;41;0;43;0\nWireConnection;43;0;44;0\nWireConnection;43;1;34;0\nWireConnection;44;0;33;0\nWireConnection;44;1;27;0\nWireConnection;27;0;31;0\nWireConnection;31;0;12;0\nWireConnection;31;1;29;0\nWireConnection;12;0;10;0\nWireConnection;12;1;11;0\nWireConnection;10;0;9;0\nWireConnection;10;1;50;0\nWireConnection;11;0;54;2\nWireConnection;11;1;51;0\nWireConnection;4;0;22;0\nASEEND*/\n//CHKSM=07D8E82D20873DD43DE7F5102F784A235580ECC7"
+  m_functionName: 
+  m_description: 'Vertex Wobble Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Vertex Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

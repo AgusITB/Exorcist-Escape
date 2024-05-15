@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF HDRP Diffusion Profile
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.1.5\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19105\nNode;AmplifyShaderEditor.FunctionNode;7;-165.036,44.65601;Inherit;False;DESF
+    Utility Register Inline;-1;;44098;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;8;-306.5,71.75;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;5;-616.7581,66.48;Inherit;False;Property;_CATEGORY_DIFFUSIONPROFILE;CATEGORY_DIFFUSION
+    PROFILE;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(DIFFUSION PROFILE,true,_DiffusionProfileHash,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;6;-578.965,137.845;Inherit;False;Property;_SPACE_DIFFUSIONPROFILE;SPACE_DIFFUSIONPROFILE;2;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;10;-235.794,-378.864;Inherit;False;236.2021;100;;;0,0,0,1;_DiffusionProfileHash;0;0\nNode;AmplifyShaderEditor.DiffusionProfileNode;2;-447.5947,-22.8511;Float;False;Property;_DiffusionProfileHash;Diffusion
+    Profile;1;0;Create;False;1;;0;0;False;0;False;0;0;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;11;13.87632,-381.7118;Inherit;False;498.8568;240.0597;HDRP
+    Diffusion Profile Node;;0.0471698,0.0471698,0.0471698,1;Assign a Diffusion Profile
+    to drive the behavior of subsurface scattering. To quickly view the currently
+    selected Diffusion Profile\u2019s Inspector, double click the Diffusion Profile
+    Asset in the assign field. If you do not assign a Diffusion Profile, HDRP does
+    not process the subsurface scattering.$$$This property only appears when you
+    select Subsurface Scattering or Translucent from the Material Type drop-down.;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;319.6909,-21.20495;Inherit;False;True;-1;Diffusion
+    Profile;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;9;97.19107,-25.45498;Inherit;False;Include
+    Header;True;1;2;0;In 0;In 1;Object;-1;9;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nWireConnection;7;1;2;0\nWireConnection;7;2;8;0\nWireConnection;8;0;5;0\nWireConnection;8;1;6;0\nWireConnection;0;0;9;0\nWireConnection;9;0;2;0\nWireConnection;9;1;7;0\nASEEND*/\n//CHKSM=28F0EB509660271176E525BC3692808FEED684DB"
+  m_functionName: 
+  m_description: HDRP Diffusion Profile Node
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4745098, g: 0.4117647, b: 0.34117648, a: 1}
+  m_customNodeCategory: DESF Input Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Ambient Occlusion Factor
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.BreakToComponentsNode;3;253.4494,-210.3596;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleDivideOpNode;8;-101.0879,-208.2149;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.ComputeScreenPosHlpNode;2;-549.0176,-207.7991;Inherit;False;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.UnityObjToClipPosHlpNode;1;-769.1808,-208.5623;Inherit;False;1;0;FLOAT3;0,0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.PosVertexDataNode;6;-959.4642,-207.5868;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ComponentMaskNode;7;-316.3186,-131.9266;Inherit;False;False;False;False;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;9;38.40961,-209.8447;Inherit;False;AmbientOcclusionFactor
+    aoFactor = GetScreenSpaceAmbientOcclusion(screenUV)@$$return float2(aoFactor.indirectAmbientOcclusion,
+    aoFactor.directAmbientOcclusion)@$;2;Create;1;True;screenUV;FLOAT2;0,0;In;;Inherit;False;AO;False;False;0;;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;12;-128,-496;Inherit;False;378.7;187.9615;Ambient
+    Occlusion Factor Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;11;384,-112;Inherit;False;False;-1;Direct
+    Light;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;10;384,-208;Inherit;False;True;-1;Indirect
+    Light;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;3;0;9;0\nWireConnection;8;0;2;0\nWireConnection;8;1;7;0\nWireConnection;2;0;1;0\nWireConnection;1;0;6;0\nWireConnection;7;0;2;0\nWireConnection;9;0;8;0\nWireConnection;11;0;3;1\nWireConnection;10;0;3;0\nASEEND*/\n//CHKSM=DDA868438DB997207CFA250A40CEDA36445AA6E0"
+  m_functionName: 
+  m_description: 'Ambient Occlusion Factor Node
+
+
+    URP 10x and Higher'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7529412, g: 0.6784314, b: 0, a: 1}
+  m_customNodeCategory: DESF Lighting
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

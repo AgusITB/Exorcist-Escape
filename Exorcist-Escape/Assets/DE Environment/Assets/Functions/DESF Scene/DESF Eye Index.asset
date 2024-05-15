@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Eye Index
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.1\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19301\nNode;AmplifyShaderEditor.CommentaryNode;24;-290.1049,572.6784;Inherit;False;251;131;World
+    Position;1;22;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;21;-1321.603,153.3209;Inherit;False;1274.639;410.6107;View
+    Direction;8;20;19;18;17;16;15;14;13;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;12;-339.8237,-77.21107;Inherit;False;293.3333;206.4649;Screen
+    Position;2;10;8;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;8;-292.8237,-22.21105;Inherit;False;
+    #ifdef USING_STEREO_MATRICES$\tuint oldIndex = unity_StereoEyeIndex@$\tunity_StereoEyeIndex
+    = 0@$\tfloat4 leftClip = UnityObjectToClipPos(Vertex)@$\tfloat2 leftUV = leftClip.xy
+    * 0.5f / unity_StereoScaleOffset[unity_StereoEyeIndex].xx@$\tunity_StereoEyeIndex
+    = 1@$\tfloat4 rightClip = UnityObjectToClipPos(Vertex)@$\tfloat2 rightUV = rightClip.xy
+    * 0.5f / unity_StereoScaleOffset[unity_StereoEyeIndex].xx@$\tunity_StereoEyeIndex
+    = oldIndex@$\tfloat2 outUV = lerp(leftUV, rightUV, 0.5)@$#else$\tfloat4 pos =
+    UnityObjectToClipPos(Vertex)@$\tfloat2 outUV = pos.xy * 0.5f / (_ScreenParams.y
+    / _ScreenParams.x)@$#endif$\toutUV.x /= (_ScreenParams.y / _ScreenParams.x)@$#if
+    UNITY_UV_STARTS_AT_TOP$\toutUV.y *= -1@$#endif$\treturn outUV@;2;Create;1;True;vertex;FLOAT3;0,0,0;In;;Inherit;False;Center
+    Eye Screen Position;True;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.CustomExpressionNode;10;-296.7977,47.2538;Inherit;False;#ifdef
+    USING_STEREO_MATRICES$uint oldIndex = unity_StereoEyeIndex@$unity_StereoEyeIndex
+    = 0@$float4 leftClip = UnityObjectToClipPos(vertex)@$float2 leftUV = ComputeScreenPos(leftClip).xy@$unity_StereoEyeIndex
+    = 1@$float4 rightClip = UnityObjectToClipPos(vertex)@$float2 rightUV = ComputeScreenPos(leftClip).xy@$unity_StereoEyeIndex
+    = oldIndex@$return lerp(leftClip, rightClip, 0.5)@$#else$float4 leftClip = UnityObjectToClipPos(vertex)@$return
+    ComputeScreenPos(leftClip).xy@$#endif;2;Create;1;True;vertex;FLOAT3;0,0,0;In;;Inherit;False;Center
+    Eye Screen Position;True;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;7;-604.8237,-26.21107;Inherit;False;VertexPos;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ObjectToWorldTransfNode;13;-1271.603,377.1646;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DynamicAppendNode;16;-1076.33,378.9426;Inherit;False;FLOAT3;4;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;20;-1132.76,224.3372;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionSwitch;19;-905.5847,349.7645;Inherit;False;World
+    Position;False;0;2;-1;World Position;Object To World;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;18;-815.3549,272.3209;Inherit;False;#if
+    defined(USING_STEREO_MATRICES)$float3 leftEye = unity_StereoWorldSpaceCameraPos[0]@$float3
+    rightEye = unity_StereoWorldSpaceCameraPos[1]@$$float3 centerEye = lerp(leftEye,
+    rightEye, 0.5)@$#else$float3 centerEye = _WorldSpaceCameraPos@$#endif$$return
+    centerEye@;3;Create;0;Center Eye World Position;True;False;0;;False;0;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;14;-587.4547,271.3208;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;15;-258.2966,265.4557;Inherit;False;Normalize
+    View;False;1;2;-1;Off;On;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;17;-425.4547,341.3208;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;22;-246.1049,618.6784;Inherit;False;#if
+    defined(USING_STEREO_MATRICES)$float3 leftEye = unity_StereoWorldSpaceCameraPos[0]@$float3
+    rightEye = unity_StereoWorldSpaceCameraPos[1]@$$float3 centerEye = lerp(leftEye,
+    rightEye, 0.5)@$#else$float3 centerEye = _WorldSpaceCameraPos@$#endif$$return
+    centerEye@;3;Create;0;Center Eye World Position;True;False;0;;False;0;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;25;234.2016,-202.2569;Inherit;False;Default;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;26;232.9015,-87.8569;Inherit;False;Screen
+    Position;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSubtitle;27;240.7015,20.04307;Inherit;False;View
+    Direction;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSubtitle;29;248.5016,125.343;Inherit;False;World
+    Position;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;11;510.2452,-209.2215;Inherit;False;Center
+    Eye;False;0;4;-1;Default;Screen Position;View Direction;World Position;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT2;0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;6;-148.1169,-161.9919;Inherit;False;#if
+    defined(USING_STEREO_MATRICES) || defined(UNITY_SINGLE_PASS_STEREO)$float3 leftEye
+    = unity_StereoWorldSpaceCameraPos[0]@$float3 rightEye = unity_StereoWorldSpaceCameraPos[1]@$$float3
+    centerEye = lerp(leftEye, rightEye, 0.5)@$#else$float3 centerEye = _WorldSpaceCameraPos@$#endif$$return
+    centerEye@;3;Create;0;Center Eye;True;False;0;;False;0;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;3;818.0475,-205.9;Inherit;False;True;-1;Center
+    Eye;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;8;0;7;0\nWireConnection;16;0;13;0\nWireConnection;19;0;20;0\nWireConnection;19;1;16;0\nWireConnection;14;0;18;0\nWireConnection;14;1;19;0\nWireConnection;15;0;14;0\nWireConnection;15;1;17;0\nWireConnection;17;0;14;0\nWireConnection;25;0;6;0\nWireConnection;26;0;8;0\nWireConnection;27;0;15;0\nWireConnection;29;0;22;0\nWireConnection;11;0;25;0\nWireConnection;11;1;26;0\nWireConnection;11;2;27;0\nWireConnection;11;3;29;0\nWireConnection;3;0;11;0\nASEEND*/\n//CHKSM=66B7BB90AB550D0185FA319FD5D0A72088A6CC74"
+  m_functionName: 
+  m_description: 'Eye Index Node
+
+
+    under construction'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

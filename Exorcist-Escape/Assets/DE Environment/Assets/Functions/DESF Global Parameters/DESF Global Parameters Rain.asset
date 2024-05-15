@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Global Parameters Rain
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;7;-635.266,9.602051;Inherit;False;651.8735;240.278;_GlobalWetness;4;1;5;3;4;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;8;-916.9512,12.46475;Inherit;False;266.9999;128.6;;;0,0,0,1;_GlobalRainEnabled$_GlobalRainIntensity;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;3;-518.2278,60.60205;Inherit;False;Global;_GlobalRainEnabled;_GlobalRainEnabled;0;0;Create;True;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;1;-590.266,133.88;Half;False;Global;_GlobalRainIntensity;_GlobalRainIntensity;2;1;[HideInInspector];Create;False;1;;0;0;False;0;False;1;0;0;10;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;4;-255.4284,63.61096;Inherit;False;True;-1;GlobalRainEnabled;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;5;-253.3925,138.405;Inherit;False;False;-1;GlobalRainIntensity;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;4;0;3;0\nWireConnection;5;0;1;0\nASEEND*/\n//CHKSM=B1FA3D314A544ADDCF2F0BF3FF0AB706BE5A2D02"
+  m_functionName: 
+  m_description: 'Global Parameters Rain Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Global Parameters
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

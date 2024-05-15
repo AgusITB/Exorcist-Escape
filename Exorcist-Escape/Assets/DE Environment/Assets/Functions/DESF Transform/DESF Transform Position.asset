@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Transform Position
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19302\nNode;AmplifyShaderEditor.CommentaryNode;47;-936.4728,-672;Inherit;False;880.9728;432.8899;;5;44;43;68;45;48;Deprecated;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;55;0,-1024;Inherit;False;1287.74;790.3857;Transform
+    Position Node;6;59;58;57;56;31;15;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;48;-464,-624;Inherit;False;383;200;
+    for legacy purposes only;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;56;32,-832;Inherit;False;342.101;294.6897;Input;;0,0,0,1;Object
+    Space$Sets input position space to Object space$$World Space$Sets input position
+    space to World space$$View Space$Sets input position space to View space$$Tangent$Sets
+    input position space to Tangent space$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;57;624,-832;Inherit;False;374.9932;300.483;Output;;0,0,0,1;Object
+    Space$Sets output position space to Object space$$World Space$Sets output position
+    space to World space$$View Space$Sets output position space to View space$$Tangent$Sets
+    output position space to Tangent space$$Clip$Sets output position space to Clip
+    space$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;58;32,-512;Inherit;False;977.1882;214.8813;Inverse
+    TBN;;0,0,0,1;To transform from tangent to another space an inverse TBN matrix(Tangent,Binormal,Normal)
+    must be calculated. Inverting matrices in an heavy operation but in this transforms
+    case it can be simplified at the cost of some precision loss. (Only shown on
+    when From is set to Tangent).$$Fast: $More performant but less precise inverse
+    TBN matrix generation.$$Precise: $Inverse TBN matrix generation created through
+    fully mathematical matrix inversion operation.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;59;32,-976;Inherit;False;602.7541;126.5291;;;0,0,0,1;This
+    node transforms position values from one space to another. In cases of more complex
+    transformation it deals with any intermediate transformation that is necessary
+    as well as float4 to float3 conversions. It also deals with different rendering
+    path shader logic like HD SRP with relative camera rendering.;0;0\nNode;AmplifyShaderEditor.TransformPositionNode;31;400,-832;Inherit;True;Object;World;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.UnityObjToClipPosHlpNode;45;-672,-448;Inherit;False;1;0;FLOAT3;0,0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ObjectToWorldTransfNode;68;-640,-624;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WorldToObjectTransfNode;43;-848,-624;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.UnityObjToViewPosHlpNode;44;-880,-448;Inherit;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;15;1168,-976;Inherit;False;True;-1;;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nASEEND*/\n//CHKSM=D02E32E377D7D39A46F8352DDA70E87894B60988"
+  m_functionName: 
+  m_description: 'Transform Position Node
+
+
+    Teaching Sample
+
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11372549, g: 0.30588236, b: 0.3764706, a: 1}
+  m_customNodeCategory: DESF Transform
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

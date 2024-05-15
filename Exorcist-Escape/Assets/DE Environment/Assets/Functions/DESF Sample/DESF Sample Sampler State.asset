@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sample Sampler State
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.3\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19303\nNode;AmplifyShaderEditor.CommentaryNode;79;-1949.912,-2515.373;Inherit;False;1416.993;817.0029;;8;78;83;77;74;81;75;73;90;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;90;-1680,-2464;Inherit;False;218.9789;125.4753;Register
+    Local Var;1;76;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;80;-1958.239,-3142.274;Inherit;False;876.1694;607.647;Sampler
+    State Node;5;66;72;71;67;91;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;67;-1904,-2880;Inherit;False;424.141;327.2546;Sampler
+    State Node;;0,0,0,1;Sampler State Node is useful for locking a filter or a mode
+    into a sample$$Filter - Defines filtering mode for sampling$--- Point$--- Bilinear$---
+    Trilinear$$Wrap - Defines wrap mode for sampling$--- Repeat$--- Clamp$--- Mirror$---
+    MirrorOnce$--- Per-Axis$       * U axis$       * V axis$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;81;-1136,-2336;Inherit;False;576.148;275.7086;SS
+    out from texture object can be used to share Sampler State;;0,0,0,1;in order
+    to not break the Mip Chain with in GPU avoid sharing SS between fragment stages,
+    in most cases 3 SS sets can be used as follows $$--- SS (BaseColor)$This is safe
+    to share with anything not listed below such as metallic, smoothness and emission.
+    $$--- SS (Normal)$keeping normal maps in its own SS will have improved quality
+    and not break mip mapping $$--- SS (Vertex Position)$avoid sharing anything using
+    vertex position such as height maps and or parallax with the SS used for Base
+    Color or normal mapping. $;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;83;-1728,-2000;Inherit;False;264.9938;159.4007;Get
+    Local Var;;0,0,0,1;use register Node to share SS with other locations within
+    your graph;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;68;58.4612,-2449.599;Inherit;False;Wrap;False;0;5;-1;Repeat;Clamp;Mirror;MirrorOnce;PerAxis;Object;-1;10;0;SAMPLERSTATE;;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;85;58.12799,-2274.343;Inherit;False;Wrap;False;0;5;-1;Repeat;Clamp;Mirror;MirrorOnce;PerAxis;Instance;68;10;0;SAMPLERSTATE;;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;86;57.12799,-2105.343;Inherit;False;Wrap;False;0;5;-1;Repeat;Clamp;Mirror;MirrorOnce;PerAxis;Instance;68;10;0;SAMPLERSTATE;;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;84;-154.8521,-2443.634;Inherit;False;0;0;0;0;-1;None;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerStateNode;89;-149.872,-2099.343;Inherit;False;0;0;0;2;-1;None;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;69;347.5612,-2443.299;Inherit;False;Filter;False;0;3;-1;Point;Bilinear;Trilinear;Object;-1;10;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;;False;2;SAMPLERSTATE;;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionInput;70;-350.3392,-2455.299;Inherit;False;Tex;9;0;False;1;0;SAMPLER2D;0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SamplerStateNode;88;-151.872,-2268.343;Inherit;False;0;0;0;1;-1;None;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerNode;73;-1440,-2336;Inherit;True;Property;_TextureSample1;Texture
+    Sample 1;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;75;-1440,-2144;Inherit;True;Property;_TextureSample2;Texture
+    Sample 2;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;77;-1440,-1936;Inherit;True;Property;_TextureSample3;Texture
+    Sample 3;2;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;74;-1920,-2336;Inherit;True;Property;_BaseColor;BaseColor
+    ;1;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.RegisterLocalVarNode;76;-1664,-2416;Inherit;False;SSBaseColor;-1;True;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.GetLocalVarNode;78;-1664,-1920;Inherit;False;76;SSBaseColor;1;0;OBJECT;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.SamplerNode;72;-1408,-3088;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;71;-1904,-3088;Inherit;True;Property;_Texture0;Texture
+    0;0;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.StickyNoteNode;91;-1456,-2880;Inherit;False;330.2999;327.9001;Unity
+    2021.2 and above;;0.9056604,0,0,1;Aniso. Filtering$$--- None$--- X2$--- X4$---
+    X8$--- X16;0;0\nNode;AmplifyShaderEditor.SamplerStateNode;66;-1632,-2976;Inherit;False;4;0;0;0;-1;None;1;0;SAMPLER2D;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionOutput;64;561.4903,-2435.945;Inherit;False;True;-1;Output;0;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nWireConnection;68;0;84;0\nWireConnection;85;0;88;0\nWireConnection;86;0;89;0\nWireConnection;69;0;68;0\nWireConnection;69;1;85;0\nWireConnection;69;2;86;0\nWireConnection;73;0;74;0\nWireConnection;73;7;74;1\nWireConnection;75;0;74;0\nWireConnection;75;7;74;1\nWireConnection;77;7;78;0\nWireConnection;76;0;74;1\nWireConnection;72;0;71;0\nWireConnection;72;7;66;0\nWireConnection;64;0;69;0\nASEEND*/\n//CHKSM=DC861814CA7DCF3C8BB414861433E690B48922B6"
+  m_functionName: 
+  m_description: 'Sample Sampler State Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Sample
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Module Toon Ramp
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;244;1968,-1024;Inherit;False;268.3597;215.9884;;;0,0,0,1;_ToonMapRampEnable$_ToonMapRamp$_ToonMapRampStrength$_ToonMapRampSaturation$_ToonMapRampSmoothness$_ToonMapRampWrap$_ToonMapRampSharpness$_ToonMapRampOffset$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;389;1504,-960;Inherit;False;150;100;Blend;;0,0,0,1;Overlay;0;0\nNode;AmplifyShaderEditor.OneMinusNode;256;864,-944;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;388;1296,-832;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;384;-176,-704;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;385;-16,-704;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexturePropertyNode;159;-64,-1216;Inherit;True;Property;_ToonMapRamp;Toon
+    Map;2;0;Create;False;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.FunctionInput;392;-960,-848;Inherit;False;NdotH;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;387;992,-832;Inherit;False;Property;_ToonMapRampStrength;Strength;3;0;Create;False;0;0;0;False;0;False;0.1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;255;576,-944;Inherit;False;Property;_ToonMapRampSaturation;Saturation;4;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;383;-464,-704;Inherit;False;Property;_ToonMapRampSmoothness;Smoothness;5;0;Create;False;0;0;0;False;0;False;0.65;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;98;-768,-1024;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;345;-768,-848;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;346;-640,-848;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;347;-512,-848;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;62;-512,-1024;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;90;-320,-1024;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;382;192,-1056;Inherit;True;Property;_TextureSample1;Texture
+    Sample 0;6;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;MipLevel;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;390;-992,-928;Float;False;Property;_ToonMapRampWrapOffset;Wrap
+    Offset;7;0;Create;False;1;;0;0;False;0;False;0.5;0.5;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;350;-992,-1008;Float;False;Property;_ToonMapRampWrapScale;Wrap
+    Scale;6;0;Create;False;1;;0;0;False;0;False;0.5;0.5;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;391;-960,-1088;Inherit;False;NdotL;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;348;-1088,-768;Half;False;Property;_ToonMapRampOffset;Offset;9;0;Create;False;1;;0;0;False;0;False;0.1;0.295;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;349;-1088,-688;Half;False;Property;_ToonMapRampSharpness;Sharpness;8;0;Create;False;1;;0;0;False;0;False;1.5;0.426;0.01;5;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;393;-688,-688;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;253;512,-1056;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;97;672,-1056;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionNode;120;1056,-1056;Inherit;False;DESF
+    Color Saturation;-1;;44974;637cc9c8803d43e4fa62c5e0a514a3f9;3,42,0,24,0,16,0;5;12;FLOAT3;0,0,0;False;21;FLOAT;0;False;20;COLOR;0,0,0,0;False;14;FLOAT3;0,0,0;False;22;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.BlendOpsNode;386;1504,-1088;Inherit;False;Overlay;True;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;49;1344,-1168;Inherit;False;BaseColor;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;156;1760,-1168;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;394;1724.079,-1040.166;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;395;1728,-624;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;251;1472,-624;Inherit;False;DESF
+    Utility Register Inline;-1;;44975;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;155;1216,-624;Half;False;Property;_ToonMapRampEnable;ENABLE
+    TOON RAMP;1;0;Create;False;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;252;1312,-544;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;249;1056,-544;Inherit;False;Property;_CATEGORY_TOONRAMP;CATEGORY_TOONRAMP;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(TOON
+    RAMP,true,_ToonMapRampEnable,0,0);False;0;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;250;1088,-464;Inherit;False;Property;_SPACE_TOONRAMP;SPACE_TOONRAMP;10;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;104;1920,-1168;Inherit;False;True;-1;BaseColor;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;256;0;255;0\nWireConnection;388;0;387;0\nWireConnection;384;0;383;0\nWireConnection;385;0;384;0\nWireConnection;98;0;391;0\nWireConnection;98;1;350;0\nWireConnection;98;2;390;0\nWireConnection;345;0;392;0\nWireConnection;345;1;348;0\nWireConnection;346;0;345;0\nWireConnection;346;1;393;0\nWireConnection;347;0;346;0\nWireConnection;62;0;98;0\nWireConnection;90;0;62;0\nWireConnection;90;1;347;0\nWireConnection;382;0;159;0\nWireConnection;382;1;90;0\nWireConnection;382;2;385;0\nWireConnection;382;7;159;1\nWireConnection;393;0;349;0\nWireConnection;253;0;382;0\nWireConnection;97;0;253;0\nWireConnection;97;1;382;4\nWireConnection;120;12;97;0\nWireConnection;120;21;256;0\nWireConnection;386;0;49;0\nWireConnection;386;1;120;0\nWireConnection;386;2;388;0\nWireConnection;156;0;49;0\nWireConnection;156;1;386;0\nWireConnection;156;2;394;0\nWireConnection;394;0;395;0\nWireConnection;395;0;251;0\nWireConnection;251;1;155;0\nWireConnection;251;2;252;0\nWireConnection;252;0;249;0\nWireConnection;252;1;250;0\nWireConnection;104;0;156;0\nASEEND*/\n//CHKSM=6B8AC95B714656998D039B0F359E07D3D58F74F9"
+  m_functionName: 
+  m_description: 'Module Toon Ramp Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Module
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Screen Position NonStereo
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.ScreenPosInputsNode;2;-624,-112;Inherit;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CustomExpressionNode;3;-208,-112;Inherit;False;#if
+    UNITY_SINGLE_PASS_STEREO$float4 scaleOffset = unity_StereoScaleOffset[ unity_StereoEyeIndex
+    ]@$UV.xy = (UV.xy - scaleOffset.zw) / scaleOffset.xy@$#endif$return UV@;2;Create;1;True;UV;FLOAT2;0,0;In;;Float;False;UnStereo;False;False;0;;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;5;-384,-272;Inherit;False;392.976;114.0856;Screen
+    Position NonStereo Node;;0,0,0,1;Common Screen Non Stereo Screen Position Transforms
+    a Screen Position values from VR Stereo to non Stereo$;0;0\nNode;AmplifyShaderEditor.FunctionInput;1;-400,-112;Inherit;False;Screen
+    Position;4;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.StickyNoteNode;6;-400,0;Inherit;False;270;110;Screen
+    Position;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;4;-16,-112;Inherit;False;True;-1;UV;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;3;0;1;0\nWireConnection;1;0;2;0\nWireConnection;4;0;3;0\nASEEND*/\n//CHKSM=C1CCBB2E49E4C7CCAFB22DF827D8A9DA58B2F0CA"
+  m_functionName: 
+  m_description: 'Screen Position NonStereo Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

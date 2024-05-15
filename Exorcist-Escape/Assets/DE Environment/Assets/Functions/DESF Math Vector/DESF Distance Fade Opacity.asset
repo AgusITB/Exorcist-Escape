@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Distance Fade Opacity
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;161;-2224,-416;Inherit;False;211.6003;138.9692;;;0,0,0,1;_DistanceFadeEnable$_DistanceFadeMode$_DistanceFadeRange;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;128;-3120,-560;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;133;-3296,-560;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;165;-3296,-336;Inherit;False;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;134;-3456,-336;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;164;-3488,-256;Inherit;False;Constant;_Exponentvalue;Exponent
+    value;2;0;Create;True;0;0;0;False;0;False;0.01;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.DepthFade;131;-3744,-336;Inherit;False;True;True;True;2;1;FLOAT3;0,0,0;False;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;159;-3472,-560;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;158;-3712,-416;Half;False;Property;_DistanceFadeMode;Distance
+    Fade Mode;2;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer
+    5;4;Layer 6;5;0;False;1;DE_DrawerFloatEnum(FadeIn _FadeOut);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;147;-3648,-496;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;149;-3792,-560;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;160;-4112,-320;Float;False;Property;_DistanceFadeRange;Distance
+    Fade Range;3;0;Create;False;0;0;0;False;0;False;75;1525;2;500;0;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;148;-3968,-560;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;163;-4176,-496;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;146;-4240,-640;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleAddOpNode;170;-2656,-368;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;156;-2864,-448;Inherit;False;Property;_DistanceFadeEnable;ENABLE
+    FADE;1;0;Create;False;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;169;-2512,-448;Inherit;False;DESF
+    Utility Register Inline;-1;;1;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;171;-2816,-768;Inherit;False;383.7463;174.6689;Distance
+    Fade Opacity Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;166;-2928,-288;Inherit;False;Property;_SPACE_DISTANCEFADE;SPACE_DISTANCEFADE;4;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;167;-2960,-368;Inherit;False;Property;_CATEGORY_DISTANCEFADE;CATEGORY_DISTANCEFADE;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(DISTANCE
+    FADE,true,_DistanceFadeEnable,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;157;-2208,-576;Inherit;False;3;0;FLOAT;1;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;125;-2048,-576;Inherit;False;True;-1;Opacity;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;128;0;133;0\nWireConnection;128;1;165;0\nWireConnection;133;0;159;0\nWireConnection;165;0;134;0\nWireConnection;165;1;164;0\nWireConnection;134;0;131;0\nWireConnection;131;0;160;0\nWireConnection;159;0;149;0\nWireConnection;159;1;147;0\nWireConnection;159;2;158;0\nWireConnection;147;0;149;0\nWireConnection;149;0;148;0\nWireConnection;149;1;160;0\nWireConnection;148;0;146;0\nWireConnection;148;1;163;0\nWireConnection;170;0;167;0\nWireConnection;170;1;166;0\nWireConnection;169;1;156;0\nWireConnection;169;2;170;0\nWireConnection;157;1;128;0\nWireConnection;157;2;169;0\nWireConnection;125;0;157;0\nASEEND*/\n//CHKSM=C79796AB8B3C34B008359A66810518DD8E8BC7FF"
+  m_functionName: 
+  m_description: 'Distance Fade Opacity Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Vector
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

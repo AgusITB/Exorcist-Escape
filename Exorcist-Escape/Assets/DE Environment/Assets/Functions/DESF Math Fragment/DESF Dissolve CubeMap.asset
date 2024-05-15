@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Dissolve CubeMap
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SamplerNode;256;-2048,-512;Inherit;True;Property;_CubemapInput;Cubemap
+    Input;0;0;Create;True;0;0;0;False;0;False;-1;None;ef7513b54a0670140b9b967af7620563;True;0;False;white;Auto;False;Object;-1;Auto;Cube;8;0;SAMPLERCUBE;;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;253;-1536,-512;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;258;-1712,-448;Inherit;False;Brightness;1;1;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;260;-1376,-512;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;259;-2272,-512;Inherit;False;Cubemap;11;0;False;1;0;SAMPLERCUBE;0;False;1;SAMPLERCUBE;0\nNode;AmplifyShaderEditor.WorldReflectionVector;254;-2304,-432;Inherit;False;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;255;-2496,-432;Float;False;Constant;_Vector0;Vector
+    0;1;0;Create;True;0;0;0;False;0;False;0,0,1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SamplerNode;66;-2048,-128;Inherit;True;Property;_DossilveMask;Dossilve
+    Mask;3;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;251;-1728,-288;Inherit;False;Dissolve
+    Amount;1;5;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;64;-1504,-288;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;63;-1312,-288;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;-0.6;False;4;FLOAT;0.6;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;67;-1088,-160;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;248;-2272,-128;Inherit;False;Dossilve
+    Mask;9;2;False;1;0;SAMPLER2D;0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.FunctionInput;249;-2240,-48;Inherit;False;UV;2;3;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;250;-2272,-256;Inherit;False;SS;13;4;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionNode;262;-2080,96;Inherit;False;DESF
+    Alpha Clip Threshold Shadow;0;;57706;022626164a79e9542a55b37bef6515ec;1,32,0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;257;-1216,-512;Inherit;False;False;-1;Emission;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;245;-960,-160;Inherit;False;True;-1;Alpha;1;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionOutput;263;-1728,96;Inherit;False;False;-1;Alpha
+    Clip Threshold Shadow;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;256;0;259;0\nWireConnection;256;1;254;0\nWireConnection;256;7;250;0\nWireConnection;253;0;256;0\nWireConnection;253;1;258;0\nWireConnection;260;0;253;0\nWireConnection;254;0;255;0\nWireConnection;66;0;248;0\nWireConnection;66;1;249;0\nWireConnection;66;7;250;0\nWireConnection;64;0;251;0\nWireConnection;63;0;64;0\nWireConnection;67;0;63;0\nWireConnection;67;1;66;0\nWireConnection;257;0;260;0\nWireConnection;245;0;67;0\nWireConnection;263;0;262;0\nASEEND*/\n//CHKSM=DB3476941AC7205ABEFEBEB2130962B17A11376B"
+  m_functionName: 
+  m_description: 'Dissolve CubeMap Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Fragment
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

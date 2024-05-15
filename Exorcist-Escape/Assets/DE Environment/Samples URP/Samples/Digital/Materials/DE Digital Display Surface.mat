@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Digital Display Surface
+  m_Shader: {fileID: 4800000, guid: 163ed9f4e99c43b1836b3b09633fedda, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _GLITCHHALOVERTICALHORIZONTAL1_ON
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DigitalPixellateMap:
+        m_Texture: {fileID: 2800000, guid: 7667d14a6f168c840a37c709d714be54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8f6c448a39169b44eae7369a3f4ec6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pixel_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 7667d14a6f168c840a37c709d714be54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.466
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _Brightness: 1
+    - _CATEGORY_EMISSION: 0
+    - _CATEGORY_FLICKER: 1
+    - _CATEGORY_PIXELLATE: 1
+    - _CATEGORY_SHAKE: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _Cutoff: 0.5
+    - _DigitalBrightness: 1
+    - _DigitalFlickerEnable: 1
+    - _DigitalFlickerFrequency: 1.5
+    - _DigitalFlickerFrequencyScale: 0.45
+    - _DigitalFlickerIsInverted: 1
+    - _DigitalFlickerSpeed: 0.15
+    - _DigitalOffsetX: 0.34
+    - _DigitalOffsetY: 1.26
+    - _DigitalPanningSpeedX: 0
+    - _DigitalPanningSpeedY: 0
+    - _DigitalPixellateEmissiveIntensity: 1
+    - _DigitalPixellateEmissiveIsRandom: 1
+    - _DigitalPixellateEmissiveRandomSpeed: 0.35
+    - _DigitalPixellateEnable: 1
+    - _DigitalPixellateIntensity: 0.55
+    - _DigitalPixellateIsInverted: 0
+    - _DigitalPixellateSize: 0.05
+    - _DigitalPixellateTiling: 8
+    - _DigitalRotation: 0
+    - _DigitalShakeEnable: 1
+    - _DigitalShakeIntensity: 1
+    - _DigitalShakeInterval: 0.5
+    - _DigitalTilingX: 2.45
+    - _DigitalTilingY: 1.95
+    - _EmissionFlags: 3
+    - _EmissiveEnable: 1
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_Pixel: 1
+    - _EmissiveIsRandom: 1
+    - _EmissiveRandomSpeed: 0.35
+    - _EmissiveRandomSpeed_Pixel: 0.35
+    - _EmissiveRenderFace: 0
+    - _EmissiveisGlobal: 0
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 0
+    - _Flicker_Speed: 0.544
+    - _GlossyReflections: 1
+    - _Pixel_EmissionStrength: 0.201
+    - _Pixel_Intensity: 0.551
+    - _Pixel_Mode: 1
+    - _Pixel_Size: 0.05
+    - _Pixel_Tiling: 8
+    - _Pixel_TintSpeed: 0.431
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_EMISSION: 0
+    - _SPACE_FLICKER: 0
+    - _SPACE_PIXELLATE: 0
+    - _SPACE_SHAKE: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SpecularHighlights: 1
+    - _UV_OffsetX: 0.78
+    - _UV_OffsetY: 0.36
+    - _UV_PanningSpeedX: 0
+    - _UV_PanningSpeedY: 0
+    - _UV_Rotation: -0.17
+    - _UV_ShakeIntensity: 1
+    - _UV_ShakeInterval: 0.5
+    - _UV_ShakeMode: 1
+    - _UV_TilingX: 4
+    - _UV_TilingY: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 0.31479836, g: 2, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _DigitalPixellateEmissiveColor: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0.9355135, b: 1, a: 0}
+    - _EmissiveColorPixel: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _EmissiveColor_Pixel: {r: 0, g: 0.30938813, b: 1, a: 0}
+    - _MainUVs: {r: 2, g: 3, b: 0, a: 0}
+    - _Pixel_EmissionTint: {r: 0.8989928, g: 1, b: 0, a: 0}
+    - _PixellateUVs: {r: 8, g: 8, b: 0, a: 0}
+  m_BuildTextureStacks: []

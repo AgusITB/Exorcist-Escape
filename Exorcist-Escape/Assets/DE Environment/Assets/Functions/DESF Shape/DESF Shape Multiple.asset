@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Shape Multiple
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;5;-294,-260.25;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;2;-62,-57.25;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;1,0;False;2;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;15;440,86.75;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector2Node;4;-254,-144.25;Inherit;False;Constant;_Vector0;Vector
+    0;1;0;Create;True;0;0;0;False;0;False;1,1;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.BreakToComponentsNode;23;28.32275,55.263;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;10;-47,153.75;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;1,0;False;2;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionNode;14;180,152.75;Inherit;False;DESF
+    Pattern Ellipse;-1;;3;5879149f841932d47aaaef71a9c46e7b;1,22,1;5;13;FLOAT2;0,0;False;9;FLOAT;0.5;False;8;FLOAT;0.5;False;20;FLOAT;2;False;21;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;24;-7.74091,273.4835;Inherit;False;Ellipse
+    Size;1;4;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;19;-341.6772,-17.737;Inherit;False;Rectangle
+    Position;2;1;False;1;0;FLOAT2;-0.2,-0.2;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;21;-327.6772,51.263;Inherit;False;Rectangle
+    Scale;2;3;False;1;0;FLOAT2;0.2,0.3;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;20;-319.6772,192.263;Inherit;False;Ellipse
+    Position;2;2;False;1;0;FLOAT2;0.2,0.2;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionNode;25;157.669,-61.1723;Inherit;False;DESF
+    Shape Rectangle;-1;;4;593112410b3173142966ac0ccff9f0a4;2,43,0,9,1;6;11;FLOAT2;0,0;False;23;FLOAT;0;False;17;FLOAT;0.5;False;19;FLOAT;0.5;False;46;FLOAT;2;False;47;FLOAT;0;False;1;FLOAT;38\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;656,64;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;18;480,0;Inherit;False;Color;5;0;False;1;0;COLOR;1,1,1,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.StickyNoteNode;26;640,-288;Inherit;False;382.7;157.2;Shape
+    Multiple Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;848,64;Inherit;True;True;-1;Output;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;2;0;5;0\nWireConnection;2;1;4;0\nWireConnection;2;2;19;0\nWireConnection;15;0;25;38\nWireConnection;15;1;14;0\nWireConnection;23;0;21;0\nWireConnection;10;0;5;0\nWireConnection;10;1;4;0\nWireConnection;10;2;20;0\nWireConnection;14;13;10;0\nWireConnection;14;9;24;0\nWireConnection;14;8;24;0\nWireConnection;25;11;2;0\nWireConnection;25;17;23;0\nWireConnection;25;19;23;1\nWireConnection;16;0;18;0\nWireConnection;16;1;15;0\nWireConnection;0;0;16;0\nASEEND*/\n//CHKSM=182912453381E8132888E7196929CF49EC041C22"
+  m_functionName: 
+  m_description: 'Shape Multiple Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6901961, g: 0.17254902, b: 0.023529412, a: 1}
+  m_customNodeCategory: DESF Shape
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

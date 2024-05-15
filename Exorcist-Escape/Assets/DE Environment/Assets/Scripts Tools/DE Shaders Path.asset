@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc0b354c51242abb41ad706dcd5ba5a, type: 3}
+  m_Name: DE Shaders Path
+  m_EditorClassIdentifier: 
+  password: DE_SHADERS
+  Paths:
+  - name: DE Environment BIRP
+    DEPackage: 0
+    renderPipeline: 0
+    unityCycle: 030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
+    packagePaths:
+    - Assets/DE Environment/Samples BIRP.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment HDRP 12x
+    DEPackage: 0
+    renderPipeline: 1
+    unityCycle: 09000000
+    packagePaths:
+    - Assets/DE Environment/Samples HDRP 12x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment HDRP 14x
+    DEPackage: 0
+    renderPipeline: 1
+    unityCycle: 0c000000
+    packagePaths:
+    - Assets/DE Environment/Samples HDRP 14x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment HDRP 17x
+    DEPackage: 0
+    renderPipeline: 1
+    unityCycle: 0f000000
+    packagePaths:
+    - Assets/DE Environment/Samples HDRP 17x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment URP 12x
+    DEPackage: 0
+    renderPipeline: 2
+    unityCycle: 09000000
+    packagePaths:
+    - Assets/DE Environment/Samples URP 12x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment URP 14x
+    DEPackage: 0
+    renderPipeline: 2
+    unityCycle: 0c000000
+    packagePaths:
+    - Assets/DE Environment/Samples URP 14x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  - name: DE Environment URP 17x
+    DEPackage: 0
+    renderPipeline: 2
+    unityCycle: 0f000000
+    packagePaths:
+    - Assets/DE Environment/Samples URP 17x.unitypackage
+    scenePaths2019: []
+    names2019: []
+  Info_Slot_0:
+    enabled: 1
+    tabName: Latest Update
+    strings:
+    - '<b>DE Environment v11.2.0 dated: 04/11/2024</b>'
+    - "\u25CF Build Editor 1.9.3.3"
+    - "\u25CF See DE documentaion for full change log"
+    - 
+    - 
+    - 
+    - 
+    - <b>------ Supported Render Pipelines ------</b>
+    - <b>Built-in Standard Render Pipeline:</b>
+    - "\u25CF <color=Orange>Unity 2019.04.31 or higher</color>"
+    - <b>URP / HDRP:</b>
+    - "\u25CF <color=Orange>12x api 12.1.13 or higher</color>"
+    - "\u25CF <color=Orange>14x api 14.0.10 or higher</color>"
+    - "\u25CF <color=Orange>17x api 17.0.2 or higher</color>"
+    - 
+    - 
+    - 
+  Info_Slot_1:
+    enabled: 0
+    tabName: test
+    strings:
+    - wow
+    - wwwwww
+  Info_Slot_2:
+    enabled: 0
+    tabName: Test 1
+    strings:
+    - 'wowo owow '
+  Info_Slot_3:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  Info_Slot_4:
+    enabled: 0
+    tabName: 
+    strings:
+    - 
+  icon: T_IconPoweredby
+  BannerDEEnvironment: T_IconBannerStudio
+  BannerDEStudio: T_IconBannerStudio
+  BannerDEBicubic: T_IconBannerBicubic
+  BannerDEAutomotive: T_IconBannerAutomotive
+  BannerDEToon: T_IconBannerToon
+  BannerDEDecal: T_IconBannerDecal
+  BannerDEDigital: T_IconBannerDigital
+  BannerDEDissolve: T_IconBannerDissolve
+  BannerDEFabric: T_IconBannerFabric
+  BannerDEGlass: T_IconBannerGlass
+  BannerDEHologram: T_IconBannerHologram
+  BannerDEIce: T_IconBannerIce
+  BannerDEMobile: T_IconBannerMobile
+  BannerDEParallax: T_IconBannerParallax
+  BannerDEPolybrush: T_IconBannerPolybrush
+  BannerDERain: T_IconBannerRain
+  BannerDEStochastic: T_IconBannerStochastic
+  BannerDETerrain: T_IconBannerTerrain
+  BannerDETriplanar: T_IconBannerTriplanar
+  BannerDETwoSided: T_IconBannerTwoSided
+  BannerDEUVReveal: T_IconBannerUVReveal
+  BannerDEVectorDisplacement: T_IconBannerVectorDisplacement
+  BannerDEVegetation: T_IconBannerVegetation
+  BannerDEWater: T_IconBannerWater
+  BannerDEPortal: T_IconBannerPortal

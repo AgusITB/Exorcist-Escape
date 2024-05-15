@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Core Decal Shadow Blob
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.TransformPositionNode;107;-635.5977,-1228.999;Inherit;False;World;Object;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ColorNode;125;511.4684,-1592.547;Half;False;Constant;_Color0;Color
+    0;7;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SaturateNode;108;819.8203,-1190.635;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;113;1313.775,-1817.754;Inherit;False;Unity
+    Render Pipeline - High Definition ;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;127;962.1923,-1806.105;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.OneMinusNode;99;487.4473,-1193.969;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;112;1314.868,-1742.078;Inherit;False;Unity
+    Render Pipeline - Universal;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;96;-70.75471,-1195.002;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionNode;120;502.7304,-1418.373;Inherit;False;DESF
+    Emission Node;-1;;41681;be83a58da3289584d9f5faa7c4e70928;0;4;19;FLOAT3;0.003921569,0.003921569,0.003921569;False;21;FLOAT;1;False;12;FLOAT;1;False;36;FLOAT;0;False;2;FLOAT3;22;FLOAT3;29\nNode;AmplifyShaderEditor.OneMinusNode;95;-242.1763,-1317.054;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;98;337.6469,-1196.875;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;1.14;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;111;1129.896,-1806.426;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;94;-389.1562,-1318.366;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwizzleNode;119;749.8757,-1592.277;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DistanceOpNode;97;121.0866,-1194.776;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;114;1673.936,-1780.619;Inherit;False;Unity
+    Render Pipeline;False;1;2;0;HDRP;URP;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;100;666.7915,-1193.211;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;126;975.2975,-1437.765;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;105;-581.6336,-1315.117;Half;False;Constant;_Size;Size;3;0;Create;True;0;0;0;False;0;False;0.5;0.5;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;134;135.9612,-1525.894;Inherit;False;DESF
+    Emission Flags;5;;44344;3dfe3c4d6149b6c48b5287e33c05b24f;0;3;15;FLOAT;0;False;2;FLOAT;0;False;8;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;136;-837.9058,-1221.039;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.OneMinusNode;140;619.084,-625.6355;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;139;774.9118,-624.0766;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;149;1682.548,-1667.664;Inherit;False;298.8809;272.2085;;;0,0,0,1;_EmissiveColor$_EdgeSharpness$_Offset$_EmissiveisGlobal$_EmissiveIntensity$_EmissiveIntensityHDRP$_EmissiveExposureWeight$_MetallicStrength$_OcclusionStrengthAO$_SmoothnessStrength;0;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;152;496.9381,-815.9913;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;151;644.9381,-890.9913;Inherit;False;DESF
+    Utility Register Inline;-1;;44345;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;132;274.3229,-748.2549;Inherit;False;Property;_SPACE_DECAL;SPACE_DECAL;13;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;133;244.8489,-819.4649;Inherit;False;Property;_CATEGORY_DECAL;CATEGORY_DECAL;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(DECAL,true,_EmissiveColor,0,0);False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;68;453.4429,-1101.03;Half;False;Property;_EdgeSharpness;Edge
+    Sharpness;2;0;Create;False;0;0;0;False;0;False;5.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;103;173.6449,-1092.943;Half;False;Property;_Offset;Offset;3;0;Create;False;0;0;0;False;0;False;1.2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;124;217.2587,-1330.691;Half;False;Property;_EmissiveisGlobal;Emissive
+    is Global;4;0;Create;False;0;0;0;False;1;DE_DrawerToggleNoKeyword;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;121;-88.2112,-1526.032;Half;False;Property;_EmissiveIntensity;Emissive
+    Intensity;7;0;Create;False;1;;0;0;False;0;False;1;86.9;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector4Node;122;-85.9474,-1458.455;Half;False;Property;_EmissiveIntensityHDRP;Emissive
+    Intensity;8;0;Create;False;0;0;0;False;1;DE_DrawerEmissiveIntensity;False;1,1,1,0;0.125,0,0,1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;123;143.5378,-1405.091;Half;False;Property;_EmissiveExposureWeight;Emissive
+    Exposure Weight;9;0;Create;False;0;0;0;False;0;False;0.75;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;142;347.2587,-891.6694;Half;False;Property;_MetallicStrength;Metallic
+    Strength;10;0;Create;False;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;143;344.8746,-633.5273;Half;False;Property;_OcclusionStrengthAO;Occlusion
+    Strength;11;0;Create;False;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;144;344.9137,-542.9404;Half;False;Property;_SmoothnessStrength;Smoothness
+    Strength;12;0;Create;False;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;78;28.95856,-1808.021;Half;False;Property;_EmissiveColor;Shadow
+    Color;1;1;[HDR];Create;False;1;;0;0;False;0;False;0.03,0.03,0.03,0;1,1,1,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwizzleNode;153;320.9771,-1810.583;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;87;1948.131,-1777.572;Inherit;False;True;-1;Base
+    Color;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;102;1024.246,-1193.224;Inherit;False;False;-1;Alpha;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;109;1166.852,-1434.987;Inherit;False;False;-1;Emission;6;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;146;935.6702,-623.0576;Inherit;False;False;-1;Occlusion;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;145;926.6401,-536.0573;Inherit;False;False;-1;Smoothness;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;148;1026.045,-1108.38;Inherit;False;False;-1;MAOS
+    Opacity;5;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;147;932.397,-885.503;Inherit;False;False;-1;Metallic;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;107;0;136;0\nWireConnection;108;0;100;0\nWireConnection;113;0;111;0\nWireConnection;127;0;153;0\nWireConnection;127;2;108;0\nWireConnection;99;0;98;0\nWireConnection;112;0;111;0\nWireConnection;96;0;107;1\nWireConnection;96;1;95;0\nWireConnection;96;2;107;3\nWireConnection;120;19;153;0\nWireConnection;120;21;134;0\nWireConnection;120;12;123;0\nWireConnection;120;36;124;0\nWireConnection;95;0;94;0\nWireConnection;98;0;97;0\nWireConnection;98;1;103;0\nWireConnection;111;0;127;0\nWireConnection;94;0;105;0\nWireConnection;94;1;107;2\nWireConnection;119;0;125;0\nWireConnection;97;0;96;0\nWireConnection;114;0;113;0\nWireConnection;114;1;112;0\nWireConnection;100;0;99;0\nWireConnection;100;1;68;0\nWireConnection;126;0;119;0\nWireConnection;126;1;120;22\nWireConnection;126;2;108;0\nWireConnection;134;15;121;0\nWireConnection;134;2;121;0\nWireConnection;134;8;122;1\nWireConnection;140;0;143;0\nWireConnection;139;0;140;0\nWireConnection;152;0;133;0\nWireConnection;152;1;132;0\nWireConnection;151;1;142;0\nWireConnection;151;2;152;0\nWireConnection;153;0;78;0\nWireConnection;87;0;114;0\nWireConnection;102;0;108;0\nWireConnection;109;0;126;0\nWireConnection;146;0;139;0\nWireConnection;145;0;144;0\nWireConnection;148;0;108;0\nWireConnection;147;0;151;0\nASEEND*/\n//CHKSM=EBAE9BCA29B9C78834B48BC7A43613511CE91973"
+  m_functionName: 
+  m_description: 'Core Decal Shadow Blob Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Decal
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

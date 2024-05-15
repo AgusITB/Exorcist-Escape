@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Global Parameters Terrain Wetness
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;1;-525.8441,-264.8254;Inherit;False;651.8735;240.278;_GlobalWetnessTerrain;4;6;5;3;2;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;4;-807.5293,-260.9627;Inherit;False;266.9999;128.6;;;0,0,0,1;_GlobalWetnessTerrainEnabled$_GlobalWetnessTerrainIntensity;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;6;-476.8441,-138.5475;Half;False;Global;_GlobalWetnessTerrainIntensity;_GlobalWetnessTerrainIntensity;2;1;[HideInInspector];Create;False;1;;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;5;-472.8059,-216.8254;Inherit;False;Global;_GlobalWetnessTerrainEnabled;_GlobalWetnessTerrainEnabled;0;0;Create;True;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;2;-155.0065,-209.8165;Inherit;False;True;-1;GlobalWetnessTerrainEnabled;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;3;-157.9706,-135.0225;Inherit;False;False;-1;GlobalWetnessTerrainIntensity;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;2;0;5;0\nWireConnection;3;0;6;0\nASEEND*/\n//CHKSM=36712AD0372DF660CC1A4B07E22388EF9D719433"
+  m_functionName: 
+  m_description: 'Global Parameters Terrain Wetness Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Global Parameters
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

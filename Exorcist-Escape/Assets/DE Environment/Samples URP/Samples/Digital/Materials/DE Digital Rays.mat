@@ -1,0 +1,240 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Digital Rays
+  m_Shader: {fileID: 4800000, guid: 8b421081a5cd4fb190ffee64e16d1257, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SPECULARHIGHLIGHTS_OFF
+  m_InvalidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _GlitchHalo_Map01:
+        m_Texture: {fileID: 2800000, guid: 70538b2e17d85a14aaaf2b5367999b97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchHalo_Map02:
+        m_Texture: {fileID: 2800000, guid: 0ae8669d504606c43996dd64a6d79bec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HALO_Map01:
+        m_Texture: {fileID: 2800000, guid: 70538b2e17d85a14aaaf2b5367999b97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HALO_Map02:
+        m_Texture: {fileID: 2800000, guid: 0ae8669d504606c43996dd64a6d79bec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HaloMap01:
+        m_Texture: {fileID: 2800000, guid: 70538b2e17d85a14aaaf2b5367999b97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HaloMap02:
+        m_Texture: {fileID: 2800000, guid: 0ae8669d504606c43996dd64a6d79bec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBiasShadow: 0.289
+    - _AlphatoCoverage: 0
+    - _AppearProgress1: 0.661
+    - _Brightness: 1.374
+    - _CATEGORY_ALPHACLIP: 1
+    - _CATEGORY_CARDSIZE: 1
+    - _CATEGORY_FLICKER: 1
+    - _CATEGORY_NOISE: 1
+    - _CATEGORY_SHADOW: 1
+    - _CATEGORY_SURFACEINPUTSRAYS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_VERTEXGROW: 0
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _DigitalEmissiveIntensity: 2
+    - _DigitalEmissiveIsRandom: 0
+    - _DigitalEmissiveRandomSpeed: 0
+    - _DigitalFlickerEnable: 1
+    - _DigitalFlickerFrequency: 1.07
+    - _DigitalFlickerFrequencyScale: 0.123
+    - _DigitalFlickerIsInverted: 0
+    - _DigitalFlickerSpeed: 0.328
+    - _DigitalNoiseEmissiveIntensity: 3
+    - _DigitalNoiseEmissiveIsRandom: 0
+    - _DigitalNoiseEmissiveRandomSpeed: 0.054
+    - _DigitalNoiseEnable: 1
+    - _DigitalNoiseScale: 7.92
+    - _DigitalNoiseShift: -0.41
+    - _DigitalNoiseSpeedX: 0.07
+    - _DigitalNoiseSpeedY: -0.07
+    - _DigitalRayAppear: 0.681
+    - _DigitalRayEnable: 1
+    - _DigitalRayOpacity: 0.367
+    - _DigitalRay_Appear: 0.431
+    - _DigitalRay_EmissionStrength: 0.62
+    - _DigitalRay_EmissionStrengthNoise: 0.76
+    - _DigitalRay_FlickerSpeed: 0.39
+    - _DigitalRay_Frequency: 1.42
+    - _DigitalRay_FrequencyScale: 0.421
+    - _DigitalRay_ModeFlicker: 1
+    - _DigitalRay_ModeNoise: 2
+    - _DigitalRay_ModeRay: 1
+    - _DigitalRay_NoiseScale: 2.66
+    - _DigitalRay_NoiseShift: 1.3
+    - _DigitalRay_NoiseSpeedX: 0
+    - _DigitalRay_NoiseSpeedY: -0.35
+    - _DigitalRay_Opacity: 1
+    - _DigitalRay_Opacity1: 0.73
+    - _DigitalRay_RandomTintSpeed: 0.134
+    - _DigitalRay_RandomTintSpeedNoise: 0.448
+    - _DigitalRay_Rotation: 60
+    - _DigitalRotation: 0
+    - _EmissionFlags: 3
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_Noise: 1
+    - _EmissiveRandomSpeed: 0.035
+    - _EmissiveRandomSpeed_Noise: 0.02
+    - _Enable: 0
+    - _EnableGrow: 1
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 1
+    - _Flicker_Mode1: 0
+    - _Flicker_Speed: 0.254
+    - _Flicker_Speed1: 0
+    - _Float0: 0.74
+    - _Float2: 0.5
+    - _Frequency: 3.21
+    - _Frequency1: 1.94
+    - _FrequencyScale: 0.432
+    - _FrequencyScale1: 0.127
+    - _GlancingClipMode: 1
+    - _GlitchFlash_Mode: 1
+    - _GlitchFlash_Speed: 0.635
+    - _GlitchFlicker_Mode: 1
+    - _GlitchFlicker_Speed: 0.282
+    - _GlitchHalo_Appear: 0.901
+    - _GlitchHalo_Blur: 1
+    - _GlitchHalo_ColorPlaletteMode: 1
+    - _GlitchHalo_ColorPlaletteSpeed: 0.238
+    - _GlitchHalo_Mode: 1
+    - _GlitchHalo_Opacity: 2
+    - _GlitchHalo_PlaletteIntensity: 37.2
+    - _GlitchHalo_Strength: 25.7
+    - _GlitchVertex_ModeSize: 1
+    - _GlitchVertex_SizeX: -0.02
+    - _GlitchVertex_SizeY: -0.13
+    - _GlitchVertex_SizeZ: -0.03
+    - _GlossyReflections: 0
+    - _HALO_Blur: 0.705
+    - _HALO_ColorPlaletteMode: 1
+    - _HALO_ColorPlaletteSpeed: 0.227
+    - _HALO_ColorPlaletteSpeed1: 0.1
+    - _HALO_EmissionStrength: 99.3
+    - _HALO_Mode: 1
+    - _HALO_Opacity: 0.76
+    - _HALO_PlaletteIntensity: 8.9
+    - _HALO_Strength: 27.7
+    - _Halo_Appear: 0.435
+    - _Halo_Blur: 1
+    - _Halo_EmissionStrength: 1
+    - _Halo_EmissionStrengthNoise: 1
+    - _Halo_Mode: 0
+    - _Halo_Opacity: 1.4
+    - _Halo_RandomTintSpeed: 0
+    - _Halo_RandomTintSpeedNoise: 0
+    - _Lightshaft_Opacity1: 0.924
+    - _MaskClipValue: 0.5
+    - _ModeNoise: 1
+    - _NoiseScale: 1
+    - _NoiseShift: -0.04
+    - _NoiseSpeedX: 0
+    - _NoiseSpeedY: -0.5
+    - _OffsetX: -0.03
+    - _OffsetY: 0.07
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Rotation: 61.07
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_CARDSIZE: 0
+    - _SPACE_FLICKER: 0
+    - _SPACE_NOISE: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SURFACEINPUTSRAYS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_VERTEXGROW: 0
+    - _Scanline_ScreenSpaceMode1: 3
+    - _Scanline_Tiling1: 1
+    - _Sides: 3
+    - _Size: 0.5
+    - _SizeX: 1
+    - _SizeXYZ: 1
+    - _SizeY: 0.72
+    - _SpecularHighlights: 0
+    - _Thickness: -0.5
+    - _VertexCardSizeEnable: 0
+    - _VertexCardSizeX: -0.2
+    - _VertexCardSizeY: 0.3
+    - _VertexCardSizeZ: 1
+    - _VertexGrowEnable: 1
+    - _VertexGrowX: 1.24
+    - _VertexGrowXYZ: 1
+    - _VertexGrowY: 1.25
+    - _VertexGrowZ: 0
+    - _Vertex_ModeVertexGrow: 1
+    - _Vertex_ModeVertexSize: 0
+    - _Vertex_SizeX: 0
+    - _Vertex_SizeXGrow: 1.24
+    - _Vertex_SizeY: 0
+    - _Vertex_SizeYGrow: 1.25
+    - _Vertex_SizeZ: 0
+    - _Vertex_SizeZGrow: 1
+    - _ZWriteMode: 0
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0, a: 0}
+    - _DigitalEmissiveColor: {r: 2.8513565, g: 2.9960785, b: 0, a: 0}
+    - _DigitalNoiseEmissiveColor: {r: 0, g: 0.54840547, b: 2.9960785, a: 0}
+    - _DigitalRay_Tint: {r: 0, g: 1.3997087, b: 1.1334227, a: 0}
+    - _DigitalRay_TintNoise: {r: 0, g: 1.5157166, b: 0.11575419, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveColorNoise: {r: 0, g: 0.4439945, b: 1, a: 1}
+    - _EmissiveColor_Noise: {r: 0, g: 0.4439945, b: 1, a: 1}
+    - _GlitchHalo_Tint: {r: 0, g: 2.5882351, b: 1.1852012, a: 0.05490196}
+    - _HALO_Tint: {r: 0, g: 0.7490196, b: 0.6039216, a: 1}
+    - _Halo_Tint: {r: 0, g: 0.72156864, b: 0.7490196, a: 1}
+    - _Halo_TintNoise: {r: 0.7490196, g: 0.3882353, b: 0, a: 1}
+  m_BuildTextureStacks: []

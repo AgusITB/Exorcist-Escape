@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Vertex Fast Meatball
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.FunctionNode;105;232.8973,-1348.876;Inherit;False;DESF
+    Utility Register Inline;-1;;44965;49619a4f7b4f20e4792a15deac1422f5;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;109;95.57288,-1323.312;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;92;511.9378,-1156.752;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;98;272.2125,-1068.168;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;93;512.9378,-856.7524;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;94;518.4891,-667.0311;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;110;332.7426,-645.5176;Inherit;False;FLOAT3;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;81;102.745,-638.7835;Inherit;False;4;0;FLOAT4;0,0,0,0;False;3;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.WorldToObjectTransfNode;24;-143.6447,-637.4304;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TransformPositionNode;77;-161.55,-478.6563;Inherit;False;World;Tangent;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;21;-317.3225,-640.8207;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;17;-485.4919,-618.246;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ObjectToWorldTransfNode;16;-560.7889,-806.5036;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.PosVertexDataNode;86;-750.9578,-805.9511;Inherit;False;1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.NoiseGeneratorNode;12;-748.7178,-620.2679;Inherit;False;Simplex3D;False;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;89;-745.8826,-517.8909;Inherit;False;4;0;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;9;-1055.422,-699.7332;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;10;-895.0811,-615.2364;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;8;-1059.251,-593.6844;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;87;-870.8723,-409.3469;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;13;-1046.332,-473.6836;Half;False;Property;_Meatball_Height;Height;7;0;Create;False;0;0;0;False;0;False;0.25;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;88;-1037.872,-394.3469;Inherit;False;Constant;_Float0;Float
+    0;8;0;Create;True;0;0;0;False;0;False;15;2;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;7;-1261.398,-768.6816;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;80;-1311.48,-590.3831;Inherit;False;4;0;FLOAT4;0,0,0,0;False;3;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT3;0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.WorldToObjectTransfNode;5;-1549.366,-645.334;Inherit;False;1;0;FLOAT4;0,0,0,1;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;6;-1222.112,-686.0187;Half;False;Property;_Meatball_Speed;Speed;9;0;Create;False;0;0;0;False;0;False;2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;4;-1255.064,-450.37;Half;False;Property;_Meatball_Scale;Scale;8;0;Create;False;0;0;0;False;0;False;0.75;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;107;-1751.114,-522.7786;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;3;-1422.255,-774.3834;Half;False;Property;_Meatball_Timescale;Timescale;10;0;Create;False;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;103;-189.6069,-1327.938;Inherit;False;Property;_CATEGORY_FASTMEATBALL;CATEGORY_FAST
+    MEATBALL;0;0;Create;True;0;0;0;False;1;DE_DrawerCategory(FAST MEATBALL,true,_Meatball_Mode,0,0);False;0;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;104;-121.0317,-1257.688;Inherit;False;Property;_SPACE_MEATBALL;SPACE_MEATBALL;11;0;Create;True;0;0;0;False;1;DE_DrawerSpace(10);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;90;4.136993,-1400.62;Half;False;Property;_Meatball_Mode;ENABLE
+    MEATBALL;1;0;Create;False;0;0;0;False;1;DE_DrawerToggleLeft;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;97;93.493,-975.268;Half;False;Property;_Meatball_Source;Tint
+    Source;3;0;Create;False;0;6;Default;0;Layer 2;1;Layer 3;2;Layer 4;3;Layer 5;4;Layer
+    6;5;0;False;1;DE_DrawerFloatEnum(Texture _Tint);False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;111;211.3103,-786.931;Inherit;False;DESF
+    Algorithm Flat Shade;4;;44973;b9c4e984f6ca39b45b0830bb824c8e9c;3,37,1,87,0,27,0;3;86;FLOAT3;0,0,1;False;30;FLOAT;1;False;20;SAMPLER2D;;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;39;32.35945,-858.4185;Inherit;False;Normal;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;112;-64,-1040;Inherit;False;FLOAT3;0;1;2;3;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ColorNode;27;-304,-1040;Half;False;Property;_Meatball_Tint;Tint;2;1;[HDR];Create;False;0;0;0;False;0;False;0,0,0,0;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;44;96,-1152;Inherit;False;BaseColor;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;33;700.2762,-1158.249;Inherit;False;False;-1;BaseColor;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;34;692.602,-854.6945;Inherit;False;True;-1;Normal;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;35;674.0786,-667.6994;Inherit;False;False;-1;Vertex
+    Position;2;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;105;1;90;0\nWireConnection;105;2;109;0\nWireConnection;109;0;103;0\nWireConnection;109;1;104;0\nWireConnection;92;0;44;0\nWireConnection;92;1;98;0\nWireConnection;92;2;105;0\nWireConnection;98;0;44;0\nWireConnection;98;1;112;0\nWireConnection;98;2;97;0\nWireConnection;93;0;39;0\nWireConnection;93;1;111;0\nWireConnection;93;2;105;0\nWireConnection;94;1;110;0\nWireConnection;94;2;105;0\nWireConnection;110;0;81;0\nWireConnection;81;0;24;0\nWireConnection;81;3;24;0\nWireConnection;81;1;24;0\nWireConnection;81;2;77;0\nWireConnection;24;0;21;0\nWireConnection;77;0;21;0\nWireConnection;21;0;16;0\nWireConnection;21;1;17;0\nWireConnection;17;0;12;0\nWireConnection;17;1;89;0\nWireConnection;16;0;86;0\nWireConnection;12;0;10;0\nWireConnection;89;0;13;0\nWireConnection;89;3;13;0\nWireConnection;89;1;13;0\nWireConnection;89;2;87;0\nWireConnection;9;0;7;0\nWireConnection;9;1;6;0\nWireConnection;10;0;9;0\nWireConnection;10;1;8;0\nWireConnection;8;0;80;0\nWireConnection;8;1;4;0\nWireConnection;87;0;13;0\nWireConnection;87;1;88;0\nWireConnection;7;0;3;0\nWireConnection;80;0;5;0\nWireConnection;80;3;5;0\nWireConnection;80;1;5;0\nWireConnection;80;2;107;0\nWireConnection;5;0;107;0\nWireConnection;111;86;39;0\nWireConnection;112;0;27;0\nWireConnection;33;0;92;0\nWireConnection;34;0;93;0\nWireConnection;35;0;94;0\nASEEND*/\n//CHKSM=3D9DA0503ECADAAC83A801BD2B8E096CD50F23E4"
+  m_functionName: 
+  m_description: 'Vertex Fast Meatball Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF Vertex Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

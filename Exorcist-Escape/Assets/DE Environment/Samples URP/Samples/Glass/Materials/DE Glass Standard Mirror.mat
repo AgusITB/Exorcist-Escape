@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Glass Standard Mirror
+  m_Shader: {fileID: 4800000, guid: 69e9564a422d4ec2bce93feb3132ec24, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Bump:
+        m_Texture: {fileID: 2800000, guid: 71a22b1ce3080874f8b6638e36ce8ffe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClearCoatNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlassNormalMap:
+        m_Texture: {fileID: 2800000, guid: 1dd132c18271a7342804cb62d284938c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlassSmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: 9ac405a7918b094448f761641e6b0f4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrungeMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_MaskMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: 14426935bd76b95408ef5ceff39d8a5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphatoCoverage: 0
+    - _Brightness: 0.696
+    - _BumpNormalCompute: 0
+    - _CATEGORY_CLEARCOAT: 1
+    - _CATEGORY_COLOR: 1
+    - _CATEGORY_NORMAL: 1
+    - _CATEGORY_OPACITY: 1
+    - _CATEGORY_REFRACTION: 1
+    - _CATEGORY_SMOOTHNESS: 1
+    - _CATEGORY_SPECULAR: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ChromaticAberration: 0.0111
+    - _ClearCoatAmount: 0.25
+    - _ClearCoatBumpStrength: 0.25
+    - _ClearCoatEnable: 0
+    - _ClearCoatPower: -0.5
+    - _ClearCoatScale: 3.55
+    - _ClearCoatUVMode: 0
+    - _ColorMask: 15
+    - _ContrastValue: 1.19
+    - _CubeMapMode: 0
+    - _Cull: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _EmissionFlags: 0
+    - _EmissiveColorMapOffsetX: 0
+    - _EmissiveColorMapOffsetY: 0
+    - _EmissiveColorMapTilingX: 1
+    - _EmissiveColorMapTilingY: 1
+    - _EmissiveColor_MainStrength: 1
+    - _EmissiveEnable: 0
+    - _EmissiveFlicker: 0
+    - _EmissiveIntensity: 1
+    - _EmissiveMapEnable: 0
+    - _EmissivePanningIntensity: 1
+    - _EmissivePanningIsRandom: 0
+    - _EmissivePanningRandomSpeed: 0.15
+    - _EmissivePanningRotation: 0
+    - _EmissivePanningSpeedX: 0
+    - _EmissivePanningSpeedY: 0
+    - _EmissivePanningisGlobal: 0
+    - _EmissiveRenderFace: 2
+    - _EmissiveisGlobal: 0
+    - _EnvironmentReflections: 1
+    - _Fresnel_Bias: 0.353
+    - _Fresnel_Mode: 1
+    - _Fresnel_Power: 2.97
+    - _Fresnel_Scale: 0.121
+    - _GlassChromaticAberration: 0.024
+    - _GlassNormalCompute: 0
+    - _GlassNormalStrength: 0.2
+    - _GlassOffsetX: 1
+    - _GlassOffsetY: 1
+    - _GlassOpacity: 0.566
+    - _GlassRefractionIndex: 0.035
+    - _GlassRotation: 0
+    - _GlassSmoothnessPower: 10
+    - _GlassSmoothnessScale: 1.1
+    - _GlassSmoothnessSource: 0
+    - _GlassSmoothnessStrength: 0.884
+    - _GlassTiling: 15
+    - _GlassTilingX: 15
+    - _GlassTilingY: 15
+    - _GlossyReflections: 1
+    - _GrungeMode: 0
+    - _IndexofRefraction1: 1
+    - _Mask_Flicker: 0
+    - _Mask_MaskMode: 0
+    - _Mask_MaskStrength: 1
+    - _Mask_OffsetX: 0
+    - _Mask_OffsetY: 1
+    - _Mask_PanningXSpeed: 0
+    - _Mask_PanningYSpeed: 0
+    - _Mask_Rotation: 0
+    - _Mask_Strength: 1.26
+    - _Mask_StrengthEmission: 73.7
+    - _Mask_TilingX: 1
+    - _Mask_TilingY: 1
+    - _Mask_TillingMode: 0
+    - _Mian1_UVSet: 0
+    - _ModeRefractedShadows: 1
+    - _ModeRefraction: 0
+    - _NormalMode: 0
+    - _NormalStrength: 1.52
+    - _OffsetX: 0
+    - _OffsetXGrunge: 1
+    - _OffsetY: 0
+    - _OffsetYGrunge: 1
+    - _Opacity: 0.858
+    - _PosterizePower: 8
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RefractionIndex: 0.067
+    - _RefractionShadow: 0
+    - _SPACE_CLEARCOAT: 0
+    - _SPACE_NORMAL: 0
+    - _SPACE_OPACITY: 0
+    - _SPACE_REFRACTION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SPECULAR: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE__COLOR: 0
+    - _ShadowTransform1: 0.5
+    - _Smoothness: 0.989
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 5.89
+    - _SmoothnessFresnelScale: 1.02
+    - _SmoothnessMax: 0.5412675
+    - _SmoothnessMin: 0.14996655
+    - _SmoothnessOffsetX: 1
+    - _SmoothnessOffsetY: 1
+    - _SmoothnessPower: 10
+    - _SmoothnessRotation: 0
+    - _SmoothnessScale: 1.808
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.85
+    - _SmoothnessStrength1: 1
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 1
+    - _SmoothnessTilingX: 15
+    - _SmoothnessTilingY: 15
+    - _SmoothnessType: 0
+    - _SpecularEnable: 1
+    - _SpecularEnableClamped: 1
+    - _SpecularHighlights: 1
+    - _SpecularMode: 2
+    - _SpecularStrength: 0.478
+    - _SpecularStrengthDielectric: 1
+    - _SpecularStrengthDielectricIOR: 1.266
+    - _SpecularWrap: 1.14
+    - _TilingX: 5
+    - _TilingXGrunge: 1
+    - _TilingY: 5
+    - _TilingYGrunge: 1
+    - _TillingModeGrunge: 0
+    - _ZTestMode: 4
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ClearCoatUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color0: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor_MainTint: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissivePanningColor: {r: 0, g: 0, b: 0, a: 0}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _Mask_Color: {r: 0, g: 0.01645045, b: 0.7490196, a: 1}
+    - _NormalUVs: {r: 5, g: 5, b: 0, a: 0}
+    - _RefractionColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
+    - _Smoothness: {r: 0.14996655, g: 0.5412675, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 1, g: 1, b: 0, a: 0}
+    - _SmoothnessUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _SpecularColor: {r: 0.14150941, g: 0.13556027, b: 0.10613206, a: 0}
+    - _UVOffset0: {r: 0.07, g: 0.1, b: 0.1, a: 0}
+    - _UVOffset1: {r: -0.1, g: -0.1, b: -0.1, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Matrix Transformation
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;1;-256,-432;Inherit;False;470;133;Transformation
+    Matrix Node ;;0,0,0,1;Defines a constant Matrix 4x4 value for a common Transformation
+    Matrix in the shader. The Transformation Matrix can be selected from the dropdown
+    parameter.;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;11;-736,-256;Inherit;False;float4x4
+    Out = UNITY_MATRIX_M@$return Out@;6;Create;0;Model;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.StickyNoteNode;22;128,-96;Inherit;False;281;142;BIRP;;0,0,0,1;Two
+    output value options for this node, Inverse Projection and Inverse View Projection,
+    are not compatible with the Built-In Render Pipeline target.;0;0\nNode;AmplifyShaderEditor.FunctionSubtitle;12;-512,-256;Inherit;False;Model;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;13;-544,-176;Inherit;False;Inverse
+    Model;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;14;-480,-96;Inherit;False;View;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;15;-544,-16;Inherit;False;Inverse
+    View;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;16;-512,64;Inherit;False;Projection;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;17;-576,144;Inherit;False;Inverse
+    Projection;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;18;-544,224;Inherit;False;View
+    Projection;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSubtitle;19;-608,304;Inherit;False;Inverse
+    View Projection;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSwitch;10;-256,-256;Inherit;False;Matrix
+    BIRP;False;0;6;-1;Model;Inverse Model;View;Inverse View;Projection;Inverse View
+    Projection;Object;-1;10;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;2;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;3;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;4;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;5;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;6;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;7;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSwitch;20;-256,-64;Inherit;False;Matrix
+    SRP;False;0;8;-1;Model;Inverse Model;View;Inverse View;Projection;Inverse Projection;View
+    Projection;Inverse View Projection;Object;-1;10;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;2;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;3;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;4;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;5;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;6;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;7;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionSwitchByPipeline;21;128,-256;Inherit;False;4;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;3;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;2;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;9;-800,304;Inherit;False;float4x4
+    Out = UNITY_MATRIX_I_VP@$return Out@;6;Create;0;InverseViewProjection;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;8;-768,224;Inherit;False;float4x4
+    Out = UNITY_MATRIX_VP@$return Out@;6;Create;0;ViewProjection;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;7;-768,144;Inherit;False;float4x4
+    Out = UNITY_MATRIX_I_P@$return Out@;6;Create;0;InverseProjection;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;6;-736,64;Inherit;False;float4x4
+    Out = UNITY_MATRIX_P@$return Out@;6;Create;0;Projection;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;5;-736,-16;Inherit;False;float4x4
+    Out = UNITY_MATRIX_I_V@$return Out@;6;Create;0;InverseView;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;4;-736,-96;Inherit;False;float4x4
+    Out = UNITY_MATRIX_V@$return Out@;6;Create;0;View;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.CustomExpressionNode;3;-768,-176;Inherit;False;float4x4
+    Out = UNITY_MATRIX_I_M@$return Out@;6;Create;0;InverseModel;True;False;0;;False;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.FunctionOutput;0;384,-256;Inherit;False;True;-1;Out(4x4);0;True;1;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT4x4;0\nWireConnection;12;0;11;0\nWireConnection;13;0;3;0\nWireConnection;14;0;4;0\nWireConnection;15;0;5;0\nWireConnection;16;0;6;0\nWireConnection;17;0;7;0\nWireConnection;18;0;8;0\nWireConnection;19;0;9;0\nWireConnection;10;0;12;0\nWireConnection;10;1;13;0\nWireConnection;10;2;14;0\nWireConnection;10;3;15;0\nWireConnection;10;4;16;0\nWireConnection;10;5;19;0\nWireConnection;20;0;12;0\nWireConnection;20;1;13;0\nWireConnection;20;2;14;0\nWireConnection;20;3;15;0\nWireConnection;20;4;16;0\nWireConnection;20;5;17;0\nWireConnection;20;6;18;0\nWireConnection;20;7;19;0\nWireConnection;21;0;10;0\nWireConnection;21;3;10;0\nWireConnection;21;1;20;0\nWireConnection;21;2;20;0\nWireConnection;0;0;21;0\nASEEND*/\n//CHKSM=29F18E1E45C9B871F5BAF93922340207A6DB1A88"
+  m_functionName: 
+  m_description: 'Transformation Matrix Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.3529412, g: 0.7019608, b: 0.15686275, a: 1}
+  m_customNodeCategory: DESF Matrix
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

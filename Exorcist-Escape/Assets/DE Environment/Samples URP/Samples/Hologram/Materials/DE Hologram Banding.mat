@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Hologram Banding
+  m_Shader: {fileID: 4800000, guid: 61f543ad4e234a76b48c2bc86d7ab8dd, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6985df1eeaa995c44aef915c09d19312, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3cb57d481b49b9843abbcaeb6403dc16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: e6b230abeed656f4baf11f7c4e8a2b82, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 1
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _Displacement_Mode: 1
+    - _Displacement_Mode1: 1
+    - _ENVIRONMENTREFLECTIONS_OFF: 0
+    - _EmissionFlags: 0
+    - _EnvironmentReflections: 1
+    - _Float6: 1
+    - _GlitchBanding_NoiseSize: 0.01
+    - _GlitchBanding_NoiseSpeed: 3
+    - _GlossyReflections: 1
+    - _MaskBanding_BlendAxisX1: 0
+    - _MaskBanding_BlendAxisY1: 1
+    - _MaskBanding_LengthAxis1: 1.5
+    - _MaskBanding_LengthCenter1: 0
+    - _MaskBanding_LengthTransition1: 0.1
+    - _MaskBanding_ManualFill1: 0.5
+    - _MaskBanding_Mode: 1
+    - _MaskBanding_Mode1: 1
+    - _MaskBanding_Speed1: 1
+    - _MaskBanding_SpeedTimeScale1: 0.25
+    - _MaskClipValue: 0
+    - _MaskClipValue2: 0.5
+    - _MetallicStrength: 0
+    - _NoiseStrength: 0.25
+    - _NormalStrength: 2
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 1
+    - _OcclusionStrengthAO: 0.5
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RECEIVE_SHADOWS_OFF: 0
+    - _ReceiveShadows: 1
+    - _SPECULARHIGHLIGHTS_OFF: 0
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessMax: 0.126
+    - _SmoothnessMin: 0
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 1.1
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.1
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _SpecularHighlights: 1
+    - _TilingX: 2
+    - _TilingY: 2
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionRandom_Tint1: {r: 0.23137255, g: 1, b: 0, a: 0}
+    - _MainUVs: {r: 4, g: 4, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _Smoothness: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

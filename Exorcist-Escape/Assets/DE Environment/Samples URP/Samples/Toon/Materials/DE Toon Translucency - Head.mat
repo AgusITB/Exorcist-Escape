@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Toon Translucency - Head
+  m_Shader: {fileID: 4800000, guid: f982f3735b317cd40ad54aad143aeb70, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: c84f727527e22c34ab307ae126943318, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 2800000, guid: 66df6e74ed65b574a93faa27dd85d149, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b38a44f30af9f794b8862c1698afe357, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RimLightNoiseNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 2800000, guid: 96d1978f455e5c04da3379bb66a03bca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonMap:
+        m_Texture: {fileID: 2800000, guid: 909339191ae44c8498f425039cbb04fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonMapRamp:
+        m_Texture: {fileID: 2800000, guid: 5252e5113c92d334681c33dc324cc488, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonMatCapMap:
+        m_Texture: {fileID: 2800000, guid: 4e49f0af34589494d9a44839e2de345c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransmissionMaskMap:
+        m_Texture: {fileID: 2800000, guid: 96d1978f455e5c04da3379bb66a03bca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphaRemapMax: 1
+    - _AlphaRemapMin: 0
+    - _BaseColorSaturation: 0
+    - _Brightness: 1
+    - _CATEGORY_ALPHACLIPPING: 1
+    - _CATEGORY_COLOR: 1
+    - _CATEGORY_DISSOLVE: 1
+    - _CATEGORY_EMISSION: 0
+    - _CATEGORY_LIGHTING: 1
+    - _CATEGORY_RIMLIGHT: 0
+    - _CATEGORY_SPECULAR: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_TOONMAP: 0
+    - _CATEGORY_TOONMATCAP: 0
+    - _CATEGORY_TOONRAMP: 0
+    - _CATEGORY_TRANSLUCENCY: 1
+    - _CATEGORY_TRANSMISSION: 0
+    - _Cull: 0
+    - _DissolveEnable: 0
+    - _DissolveScale: 1
+    - _DissolveStrength: 0
+    - _DoubleSidedNormalMode: 2
+    - _EmissionEnable: 0
+    - _EmissionFlags: 3
+    - _EmissiveGlowEnable: 0
+    - _EmissiveGlowIntensity: 5
+    - _EmissiveIntensity: 1
+    - _EmissiveMaskEnable: 0
+    - _EmissiveMaskIntensity: 1
+    - _EmissiveMaskPanningSpeedX: 0
+    - _EmissiveMaskPanningSpeedY: 0
+    - _EmissiveMaskRotation: 0
+    - _EmissivePanningSpeedX: 0
+    - _EmissivePanningSpeedY: 0
+    - _EmissiveRotation: 0
+    - _EnableRimLight: 0
+    - _EnableRimLightNoise: 0
+    - _GlancingClipMode: 0
+    - _IndirectDiffuse: 0.512
+    - _IndirectSpecular: 0.55
+    - _IndirectSpecularOcclusion: 0.429
+    - _IndirectSpecularSmoothness: 0.248
+    - _MipBias: 0
+    - _NormalStrength: 2
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RimLightIntensity: 0.76
+    - _RimLightNoiseIntensity: 0.98
+    - _RimLightNoiseStrength: 0.045
+    - _RimLightSmoothing: 0.154
+    - _RimLightSpace: 0
+    - _RimLightStrength: 0.164
+    - _RimLightThreshold: 0.133
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_COLOR: 0
+    - _SPACE_DISSOLVE: 0
+    - _SPACE_EMISSION: 0
+    - _SPACE_LIGHTING: 0
+    - _SPACE_RIMLIGHT: 0
+    - _SPACE_SPECULAR: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_TOONMAP: 0
+    - _SPACE_TOONRAMP: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _SPACE_TRANSMISSION: 0
+    - _ShadowApproxmation: 1
+    - _ShadowColorEnable: 0
+    - _ShadowIntensity: 0.919
+    - _ShadowOffset: 0.336
+    - _ShadowSharpness: 0.141
+    - _ShadowStrength: 0.251
+    - _SpecularEnable: 1
+    - _SpecularMode: 2
+    - _SpecularPower: 14.9
+    - _SpecularRound: 0
+    - _SpecularStrength: 0.612
+    - _SpecularStrengthDielectric: 0
+    - _SpecularStrengthDielectricIOR: 1.892
+    - _SpecularWrap: 1.53
+    - _SpecularWrapOffset: 0
+    - _SpecularWrapScale: 1.37
+    - _ThicknessFeather: 0.493
+    - _ThicknessMapInverted: 1
+    - _ThicknessStrength: 1.409
+    - _ToonMapEnable: 0
+    - _ToonMapMode: 2
+    - _ToonMapOffset: 0.422
+    - _ToonMapRampEnable: 1
+    - _ToonMapRampOffset: 0.007
+    - _ToonMapRampSaturation: 0
+    - _ToonMapRampSharpness: 1.96
+    - _ToonMapRampSmoothness: 0.775
+    - _ToonMapRampStrength: 0.104
+    - _ToonMapRampWrap: 0.46
+    - _ToonMapRampWrapOffset: 0.5
+    - _ToonMapRampWrapScale: 0.5
+    - _ToonMapSaturation: 0
+    - _ToonMapSharpness: 4.26
+    - _ToonMapStereoConverge: 0
+    - _ToonMapWrap: 0.65
+    - _ToonMatCapBrightness: 1
+    - _ToonMatCapEnable: 1
+    - _ToonMatCapNormalSpace: 0
+    - _ToonMatCapOffset: 0.253
+    - _ToonMatCapSaturation: 0
+    - _ToonMatCapSharpness: 1.75
+    - _ToonMatCapSmoothness: 0.301
+    - _TranslucencyEnable: 1
+    - _TranslucencySource: 1
+    - _TranslucencyStrength: 2.25
+    - _TransmissionEnable: 1
+    - _TransmissionMaskFeather: 0.659
+    - _TransmissionMaskInverted: 0
+    - _TransmissionMaskStrength: 0.763
+    - _TransmissionSource: 1
+    - _TransmissionStrength: 1.03
+    - _UVMode: 0
+    m_Colors:
+    - _AlphaRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveGlowColor: {r: 0.11254626, g: 0.32987696, b: 0, a: 0}
+    - _EmissiveMaskColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveMaskUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _EmissiveUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _IndirectSpecularColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 0}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _RimLightColor: {r: 0, g: 1.6627451, b: 5.992157, a: 0}
+    - _RimLightNoiseColor: {r: 0.5424528, g: 1, b: 0.909801, a: 0}
+    - _ShadowColor: {r: 0.495283, g: 0.495283, b: 0.495283, a: 0}
+    - _SpecularColor: {r: 0.066037714, g: 0.01735407, b: 0.0071644704, a: 1}
+    - _ToonMatCapColor: {r: 0.4056604, g: 0.22325352, b: 0.05931826, a: 1}
+    - _TranslucencyColor: {r: 0.36130688, g: 0.17144115, b: 0.07227186, a: 1}
+    - _TransmissionColor: {r: 0.36078432, g: 0.12156197, b: 0.07058824, a: 1}
+  m_BuildTextureStacks: []

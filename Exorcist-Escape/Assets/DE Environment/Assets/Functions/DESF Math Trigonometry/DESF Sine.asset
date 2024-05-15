@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sine
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;52;816,48;Inherit;False;1639.928;585.1653;Ripples;16;59;56;50;55;54;53;51;49;48;47;46;42;41;40;39;38;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;30;-320,48;Inherit;False;1078.074;582.7546;Blinking
+    Light;7;37;33;32;29;31;27;26;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;25;576,-384;Inherit;False;484.9727;314.918;Remap
+    from [-1,1] to [0,1];2;24;35;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;23;288,-384;Inherit;False;248;304;Sine
+    wave function;1;36;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;21;-320,-384;Inherit;False;578.9727;299.2188;Horizontal
+    gradient from 0 to 2PI;4;20;19;17;18;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;16;-304,-720;Inherit;False;615.2999;304;Sine
+    Node;3;14;34;6;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;14;-48,-656;Inherit;False;314.2999;119.7;;;0,0,0,1;The
+    Sin node outputs the sine of the value specified on its Input. The input value
+    must be in radians unit system;0;0\nNode;AmplifyShaderEditor.PiNode;18;-112,-320;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;17;-272,-320;Inherit;False;Constant;_Two;Two;0;0;Create;True;0;0;0;False;0;False;2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;19;80,-320;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;20;-144,-240;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleTimeNode;26;-272,96;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;27;-64,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;-144,208;Inherit;False;207.7555;108.6633;;;0,0,0,1;First
+    we speed up our time by multiplying it by five.;0;0\nNode;AmplifyShaderEditor.TFHCRemapNode;29;464,96;Inherit;True;5;0;FLOAT;0;False;1;FLOAT;-1;False;2;FLOAT;0;False;3;FLOAT;1;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;128,192;Inherit;False;238.077;124.546;;;0,0,0,1;The
+    Sine node takes the constantly increasing time value and oscillates it between
+    -1 and 1 in a continuous wave pattern.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;432,320;Inherit;False;272.7303;157.7555;;;0,0,0,1;To
+    make the result more useful for visuals, we remap the -1 to 1 range to a range
+    of 0 to 1 instead.$$This is a good illustration of the smooth wave created by
+    the Sine node.;0;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;24;768,-320;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;35;608,-240;Inherit;False;Constant;_Remap;Remap;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;36;336,-320;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;37;144,96;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;38;912,96;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FractNode;39;1104,96;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;40;1232,96;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;41;1408,96;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;42;1216,208;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;46;1632,96;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;47;1792,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;20;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMinOpNode;48;1968,96;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;49;2096,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;51;2256,96;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;53;896,368;Inherit;False;251.9999;116;;;0.2075472,0.2075472,0.2075472,1;First
+    we create a radial gradient with the Polar Coordinates node.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;54;1408,320;Inherit;False;187;123;;;0,0,0,1;Then
+    we animate it by adding time.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;55;1840,288;Inherit;False;212;103;;;0,0,0,1;Then
+    we increase the contrast and expand the range to 5 * PI.;0;0\nNode;AmplifyShaderEditor.PiNode;50;1888,208;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;56;2208,320;Inherit;False;196;133;;;0,0,0,1;Finally,
+    we use the Sine node to convert the larger range into 3 ripples or waves.;0;0\nNode;AmplifyShaderEditor.FunctionNode;59;896,208;Inherit;False;DESF
+    UV Polar Coordinates;-1;;3;4ee17c629fd6db648b7d3ef46c0bea00;0;4;10;FLOAT2;0,0;False;3;FLOAT2;0.5,0.5;False;12;FLOAT;1;False;7;FLOAT;1;False;3;FLOAT2;0;FLOAT;53;FLOAT;54\nNode;AmplifyShaderEditor.SinOpNode;34;-256,-656;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;-768,-720;Inherit;False;382.6021;179.0251;Reference
+    Implementation;;0,0,0,1;sign for float3 could be implemented like this.$$float3
+    sign(float x)${$  float3 val = a > 0@$  return val - (a < 0)@$};0;0\nNode;AmplifyShaderEditor.FunctionOutput;6;-48,-528;Inherit;False;True;-1;Out;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;18;0;17;0\nWireConnection;19;0;18;0\nWireConnection;19;1;20;1\nWireConnection;27;0;26;0\nWireConnection;29;0;37;0\nWireConnection;24;0;36;0\nWireConnection;24;1;35;0\nWireConnection;24;2;35;0\nWireConnection;36;0;19;0\nWireConnection;37;0;27;0\nWireConnection;39;0;38;0\nWireConnection;40;0;39;0\nWireConnection;41;0;40;0\nWireConnection;41;1;42;0\nWireConnection;42;0;59;53\nWireConnection;46;0;41;0\nWireConnection;47;0;46;0\nWireConnection;48;0;47;0\nWireConnection;49;0;48;0\nWireConnection;49;1;50;0\nWireConnection;51;0;49;0\nASEEND*/\n//CHKSM=7B2FEABD3B081AB07C422404664A2771C31B4E14"
+  m_functionName: 
+  m_description: 'Sine Node
+
+
+    Teaching Sample
+
+
+    Sin
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Trigonometry
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

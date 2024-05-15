@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Remap
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;43;32,-64;Inherit;False;1412;491;Math;21;12;13;20;21;5;6;14;11;32;33;34;31;35;10;2;9;7;8;4;3;0;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;42;48,-352;Inherit;False;718.2208;259;Remap
+    Node;2;1;41;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;19;31.15076,448;Inherit;False;982.4612;524.9823;Faster
+    Alternate Methods;9;37;36;40;38;15;17;16;22;18;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;1;272,-304;Inherit;False;442.2208;162.3695;;;0,0,0,1;The
+    Remap node changes the range of incoming values to the given output range.$$Use
+    the In Min Max to tell the node what the original range of values is.  Use the
+    Out Min Max to tell the node what the new resulting range should be.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;18;592,608;Inherit;False;383.8468;105.3303;Example;;0,0,0,1;Multiplying
+    by 2 and subtracting 1 is a fast method to change a 0-1 range to a -1 to 1 range.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;20;96,112;Inherit;False;197.0745;100;In
+    Min Max;;0,0,0,1;Minimum and Maximum values for input interpolation;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;21;96,240;Inherit;False;191.0393;100;Out
+    Min Max;;0.009433985,0.009433985,0.009433985,1;Minimum and Maximum values for
+    output interpolation;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;22;112,496;Inherit;False;295.2299;143.3703;;;0,0,0,1;If
+    you have a more specific remapping to do, it may be more efficient to do it another
+    way rather than using this node.;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;592,512;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;17;768,512;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;15;432,496;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;38;432,720;Inherit;False;Constant;_Float1;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;40;592,832;Inherit;False;379.168;102.9908;Example;;0,0,0,1;Multiplying
+    by 0.5 and then adding 0.5 is a fast way to convert from a -1 to 1 range to a
+    0 to 1 range.;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;36;592,736;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;37;768,736;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TFHCRemapNode;41;96,-304;Inherit;False;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;4;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;12;624,224;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;13;656,240;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;5;672,-16;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;6;832,-16;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;14;1008,-16;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;11;1152,176;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;32;960,64;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;33;1120,32;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;34;1104,176;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;31;960,272;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;35;944,304;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;10;672,288;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;2;512,-16;Inherit;False;In;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;9;672,80;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;7;512,80;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.BreakToComponentsNode;8;512,288;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;4;320,288;Inherit;False;Out
+    Min Max;2;2;False;1;0;FLOAT2;0,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;3;320,80;Inherit;False;In
+    Min Max;2;1;False;1;0;FLOAT2;-1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1280,176;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;16;0;15;0\nWireConnection;17;0;16;0\nWireConnection;36;0;38;0\nWireConnection;37;0;36;0\nWireConnection;12;0;7;0\nWireConnection;13;0;12;0\nWireConnection;5;0;2;0\nWireConnection;5;1;8;0\nWireConnection;6;0;5;0\nWireConnection;6;1;9;0\nWireConnection;14;0;6;0\nWireConnection;14;1;32;0\nWireConnection;11;0;34;0\nWireConnection;11;1;13;0\nWireConnection;32;0;31;0\nWireConnection;33;0;14;0\nWireConnection;34;0;33;0\nWireConnection;31;0;35;0\nWireConnection;35;0;10;0\nWireConnection;10;0;8;1\nWireConnection;10;1;8;0\nWireConnection;9;0;7;1\nWireConnection;9;1;7;0\nWireConnection;7;0;3;0\nWireConnection;8;0;4;0\nWireConnection;0;0;11;0\nASEEND*/\n//CHKSM=A899260C1D6EBA59F17EE465100E27ABE6FC93B5"
+  m_functionName: 
+  m_description: 'Remap Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.25882354, b: 0.3254902, a: 1}
+  m_customNodeCategory: DESF Math Range
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

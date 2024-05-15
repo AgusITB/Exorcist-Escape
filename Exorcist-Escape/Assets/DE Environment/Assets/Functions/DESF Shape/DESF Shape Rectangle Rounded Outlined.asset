@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Shape Rectangle Rounded Outlined
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;78;384,224;Inherit;False;388.0342;158.3184;Shape
+    Rectangle Rounded Outlined Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;8;-803.283,393.8528;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;34;-642.478,565.8468;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.4,0.4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;17;-347.973,505.7838;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.AbsOpNode;19;-628.361,328.0067;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.AbsOpNode;22;-638.165,494.0637;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;31;-495.105,328.9597;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0.12,0.3;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;32;-489.9031,499.0167;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0.12,0.3;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;38;-640.682,396.7898;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.4,0.4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;41;-351.176,329.7268;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LengthOpNode;58;-220.369,505.9697;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LengthOpNode;37;-224.572,331.9127;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;13;-976,416;Inherit;False;Thickness;1;2;False;1;0;FLOAT;0.21;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;76;-1056,256;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;54;-976,576;Inherit;False;Size;2;3;False;1;0;FLOAT2;1.6,1.82;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;77;-832,288;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StepOpNode;20;208,512;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StepOpNode;29;208,336;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;30;352,432;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;47;48,416;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;65;512,432;Inherit;False;Rectangle
+    Rounded Outlined;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;24;64,560;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;75;-144,608;Inherit;False;Radius;1;1;False;1;0;FLOAT;0.16;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;73;784,432;Inherit;True;True;-1;Out;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;8;0;54;0\nWireConnection;8;1;13;0\nWireConnection;34;0;54;0\nWireConnection;17;0;32;0\nWireConnection;19;0;77;0\nWireConnection;22;0;77;0\nWireConnection;31;0;19;0\nWireConnection;31;1;38;0\nWireConnection;32;0;22;0\nWireConnection;32;1;34;0\nWireConnection;38;0;8;0\nWireConnection;41;0;31;0\nWireConnection;58;0;17;0\nWireConnection;37;0;41;0\nWireConnection;77;0;76;0\nWireConnection;20;0;58;0\nWireConnection;20;1;24;0\nWireConnection;29;0;37;0\nWireConnection;29;1;47;0\nWireConnection;30;0;29;0\nWireConnection;30;1;20;0\nWireConnection;47;0;75;0\nWireConnection;65;0;30;0\nWireConnection;24;0;75;0\nWireConnection;73;0;65;0\nASEEND*/\n//CHKSM=A9F15B2878A2F2588633C04F187D09B887ADA6EC"
+  m_functionName: 
+  m_description: 'Shape Rectangle Rounded Outlined Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6901961, g: 0.17254902, b: 0.023529412, a: 1}
+  m_customNodeCategory: DESF Shape
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

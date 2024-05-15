@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Decal Standard
+  m_Shader: {fileID: 4800000, guid: e8167c7210924b9ca7d43ce247e7d605, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _MATERIAL_AFFECTS_ALBEDO
+  - _MATERIAL_AFFECTS_MAOS
+  - _MATERIAL_AFFECTS_NORMAL
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 1986
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseColorMap:
+        m_Texture: {fileID: 2800000, guid: 0a6a958f66f05fb4eb5172d98fccfd58, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 2800000, guid: ea2713640a3194446aa49c670de97b71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: 225e0dbe511ed9e4c8dfbb1770356cb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 7ac61064c235ff24390969d26b12e574, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 225e0dbe511ed9e4c8dfbb1770356cb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AO: 0
+    - _AffectAlbedo: 0
+    - _AffectMetal: 0
+    - _AffectNormal: 0
+    - _AffectSmoothness: 0
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1.35
+    - _CATEGORY_COLOR: 1
+    - _CATEGORY_DECAL: 1
+    - _CATEGORY_DECALMAP: 1
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_OPACITY: 1
+    - _CATEGORY_PARALLAX: 1
+    - _DecalAngleFadeSupported: 1
+    - _DecalColorSpaceDouble: 0
+    - _DecalEdgeMask: 0
+    - _DecalEmissiveEnable: 1
+    - _DecalMainLightInfluence: 0
+    - _DecalMeshBiasType: 0
+    - _DecalMeshDepthBias: 0
+    - _DecalMeshViewBias: 0.74
+    - _DecalOpacityGlobal: 0
+    - _DecalOpacityMOASChannel: 0
+    - _DecalOpacityNormalChannel: 0
+    - _DrawOrder: 0
+    - _EmissionFlags: 3
+    - _EmissiveColor_MainStrength: 5
+    - _EmissiveEnable: 1
+    - _EmissiveEnable1: 1
+    - _EmissiveIntensity: 1
+    - _GlobalOpacity: 0.065
+    - _GradientContrast: 0.721
+    - _GradientEnable: 1
+    - _GradientHeight: 14.4
+    - _GradientInverted: 0
+    - _GradientRamp: 0.455
+    - _MaskOpactityChannel: 0
+    - _Metallic: 0
+    - _MetallicStrength: 0
+    - _NormalOpactityChannel: 0
+    - _NormalStrength: 2
+    - _OcclusionStrengthAO: 0
+    - _ParallaxHeightScale: 0
+    - _ParallaxReferencePlane: 0.252
+    - _Rotation: 180
+    - _SPACE_COLOR: 0
+    - _SPACE_DECAL: 0
+    - _SPACE_DECALMAP: 0
+    - _SPACE_EMISSION: 0
+    - _SPACE_OPACITY: 0
+    - _SPACE_PARALLAX: 0
+    - _Smoothness: 0
+    - _SmoothnessStrength: 0
+    - _Standard_EmissiveIntensityUnit: 0
+    - _UVRotation: 0
+    - _Unity_Identify_HDRP_Decal: 1
+    m_Colors:
+    - _BaseColor: {r: 2.9960785, g: 2.6793704, b: 0, a: 0}
+    - _Color0: {r: 1, g: 0.912394, b: 0, a: 0}
+    - _DecalColor: {r: 0.094882324, g: 0.9811321, b: 0, a: 1}
+    - _EmissionColor: {r: 1.8160001, g: 1.7667569, b: 0, a: 1}
+    - _EmissiveColor: {r: 0.7105738, g: 1.4980392, b: 0, a: 0}
+    - _GradientColor: {r: 1, g: 0, b: 0, a: 0}
+    - _GradientColorBottom: {r: 0.3877363, g: 0.5955882, b: 0.188311, a: 0}
+    - _GradientColorBottomSide: {r: 0.7058823, g: 0.2024221, b: 0.2024221, a: 0}
+    - _GradientColorCurvature: {r: 1, g: 0, b: 0.444931, a: 0}
+    - _GradientColorSide: {r: 0.2569204, g: 0.5525266, b: 0.7279412, a: 0}
+  m_BuildTextureStacks: []

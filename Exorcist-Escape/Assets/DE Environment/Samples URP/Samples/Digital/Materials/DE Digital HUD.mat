@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Digital HUD
+  m_Shader: {fileID: 4800000, guid: 5903b5a8decf4a3683ec6e20f4f9947d, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Bump:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DigitalNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 420ae60a0a9388a4c876dcb8dcabfb6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchNoise_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 261d8dd40b1a4668a8136fe40b9a5c6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitchPixel_Map:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HUD_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 081ebfacc24ed2a44a0fa19895b660e0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HUD_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: fb91a0d46fb58a44583293b40cfd62ce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HUD_PixelMap:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 420ae60a0a9388a4c876dcb8dcabfb6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PIXEL_PixelMap:
+        m_Texture: {fileID: 2800000, guid: faab624b561959d4890b8b54dd043989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMap:
+        m_Texture: {fileID: 2800000, guid: c08697bc281ea3a43b7fe8e5f845489f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBias: 0.031
+    - _AlphaCutoffBiasShadow: 0.5
+    - _AlphatoCoverage: 0
+    - _Brightness: 1.025
+    - _CATEGORY_ALPHACLIP: 1
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_NOISEGLITCH: 1
+    - _CATEGORY_SHADOW: 1
+    - _CATEGORY_SHAKE: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _ColorPosterize_Mode: 1
+    - _Color_ModePosterize: 0
+    - _Color_PosterizePower: 1
+    - _Cull: 0
+    - _CullMode: 0
+    - _DigitalBrightness: 1
+    - _DigitalMaskInverted: 1
+    - _DigitalNoiseDirection: 0
+    - _DigitalNoiseEmissiveIntensity: 0.5
+    - _DigitalNoiseEmissiveIsRandom: 0
+    - _DigitalNoiseEmissiveRandomSpeed: 0.25
+    - _DigitalNoiseEnable: 1
+    - _DigitalNoiseMapInverted: 1
+    - _DigitalNoiseSpeed: 6.97
+    - _DigitalNoiseStrength: 0.0235
+    - _DigitalNoiseWidth: 195.1
+    - _DigitalOffsetX: 0.5
+    - _DigitalOffsetY: -0.12
+    - _DigitalOpacityShake: 0
+    - _DigitalOpacityShift: 0.555
+    - _DigitalPanningSpeedX: -0.2
+    - _DigitalPanningSpeedY: -0.1
+    - _DigitalRotation: 0
+    - _DigitalShakeEnable: 1
+    - _DigitalShakeIntensity: 1
+    - _DigitalShakeInterval: 0.53
+    - _DigitalShakeOpacity: 0
+    - _DigitalTilingX: 4
+    - _DigitalTilingY: 4
+    - _EmissionFlags: 3
+    - _EmissionRandom_EmissionStrength: 0.544
+    - _EmissionRandom_TintSpeed: 0.26
+    - _EmissiveEnable: 1
+    - _EmissiveIntensity: 2
+    - _EmissiveIntensity_Random: 1
+    - _EmissiveIsRandom: 1
+    - _EmissiveRandomSpeed: 0.237
+    - _EmissiveRandomSpeed_Random: 0.248
+    - _EmissiveRenderFace: 2
+    - _EmissiveisGlobal: 0
+    - _EnvironmentReflections: 1
+    - _Flicker_Mode: 2
+    - _Flicker_Speed: 0.983
+    - _GlancingClipMode: 0
+    - _GlitchFlash_Mode: 0
+    - _GlitchFlash_Speed: 0.73
+    - _GlitchFlicker_Mode: 2
+    - _GlitchFlicker_Speed: 0.66
+    - _GlitchNoise_ColorPlaletteMode: 0
+    - _GlitchNoise_ColorPlaletteSpeed: 0
+    - _GlitchNoise_Mode: 1
+    - _GlitchNoise_Mode1: 0
+    - _GlitchNoise_NoiseDirection: 0
+    - _GlitchNoise_NoiseDirection1: 1
+    - _GlitchNoise_NoiseSpeed: 4.71
+    - _GlitchNoise_NoiseSpeed1: 0.07
+    - _GlitchNoise_NoiseStrength: 0.0578
+    - _GlitchNoise_NoiseStrength1: 0.003
+    - _GlitchNoise_NoiseWidth: 38.9
+    - _GlitchNoise_NoiseWidth1: 77.8
+    - _GlitchNoise_PlaletteIntensity: 0
+    - _GlitchPixel_Amount: 1.01
+    - _GlitchPixel_Intensity: 0.42
+    - _GlitchPixel_Mode: 1
+    - _GlitchPixel_Tiling: 5.1
+    - _GlitchPosterize_Mode: 1
+    - _GlitchPosterize_PosterizePower: 79
+    - _GlitchShake_Intensity: 0.1
+    - _GlitchShake_Interval: 1.8
+    - _GlitchShake_Mode: 0
+    - _GlossyReflections: 1
+    - _HUD_ColorPlaletteMode: 0
+    - _HUD_ColorPlaletteSpeed: 0.1
+    - _HUD_Mode: 1
+    - _HUD_NoiseDirection: 1
+    - _HUD_NoiseFlashSpeed: 1.43
+    - _HUD_NoiseIntensityEmission: 10
+    - _HUD_NoiseMode: 1
+    - _HUD_NoiseSpeed: 1.28
+    - _HUD_NoiseStrength: 0.0787
+    - _HUD_NoiseWidth: 65.8
+    - _HUD_OffsetX: 0
+    - _HUD_OffsetY: 0
+    - _HUD_OpacityShake: 1
+    - _HUD_OpacityShift: 1.22
+    - _HUD_PanningSpeedX: -0.17
+    - _HUD_PanningSpeedY: 0
+    - _HUD_PixelTiling: 25
+    - _HUD_PixelationStrength: 0.121
+    - _HUD_PixelationStrengthGlitch: 0.5526463
+    - _HUD_PlaletteIntensity: 0
+    - _HUD_Posterize: 1
+    - _HUD_Rotation: 180
+    - _HUD_ShakeIntensity: 0
+    - _HUD_ShakeInterval: 1.48
+    - _HUD_TilingX: 1
+    - _HUD_TilingY: 1
+    - _MaskClipValue: 0.5
+    - _ModeRefraction: 0
+    - _Noise_Mode: 1
+    - _Noise_NoiseDirection: 0
+    - _Noise_NoiseSpeed: 3.63
+    - _Noise_NoiseStrength: 0.0319
+    - _Noise_NoiseWidth: 113
+    - _NormalStrength: 1
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Opacity: 0.7
+    - _PIXEL_ColorPlaletteMode: 0
+    - _PIXEL_ColorPlaletteSpeed: 0
+    - _PIXEL_PixelationStrength: 0.83
+    - _PIXEL_PixelationStrengthGlitch: 0.7480486
+    - _PIXEL_PlaletteIntensity: 0
+    - _PIXEL_Tiling: 25
+    - _POSTERIZE_Posterize: 39
+    - _Posterize_Mode: 1
+    - _Posterize_Power: 73
+    - _QueueControl: 1
+    - _QueueOffset: 29
+    - _ReceiveShadows: 1
+    - _SPACE_ALPHACLIP: 0
+    - _SPACE_EMISSION: 0
+    - _SPACE_NOISEGLITCH: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SHAKE: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SmoothnessStrength1: 1
+    - _SmoothnessType: 0
+    - _SpecularHighlights: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UV_IntensityShake: 0.5
+    - _UV_IntensityShake1: -0.93
+    - _UV_IntervalShake: 1
+    - _UV_IntervalShake1: 1
+    - _UV_ModeShake: 0
+    - _UV_ModeShake1: 1
+    - _UV_OffsetX: 0.69
+    - _UV_OffsetY: 0.3
+    - _UV_OpacityShift: 1.519
+    - _UV_PanningSpeedX: 0
+    - _UV_PanningSpeedY: 0
+    - _UV_Rotation: 0
+    - _UV_ShakeIntensity: 0.5
+    - _UV_ShakeInterval: 0.5
+    - _UV_ShakeMode: 1
+    - _UV_ShakeOpacity: 1
+    - _UV_TilingX: 4
+    - _UV_TilingY: 4
+    - _ZWriteMode: 0
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 0, g: 0.39447007, b: 1.4980392, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.67058825}
+    - _Color0: {r: 1, g: 0, b: 0, a: 0}
+    - _DigitalNoiseEmissiveColor: {r: 0, g: 0.48477888, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionRandom_Tint: {r: 0.7490196, g: 0.24705882, b: 0, a: 1}
+    - _EmissiveColor: {r: 0, g: 0.7921569, b: 1.4980392, a: 0}
+    - _EmissiveColorRandom: {r: 0.9254902, g: 1, b: 0, a: 0}
+    - _EmissiveColor_Random: {r: 1.3882353, g: 1.4980392, b: 0, a: 0}
+    - _GlitchNoise_NoiseTint: {r: 8.266665, g: 15.999998, b: 0, a: 0.36862746}
+    - _GlitchPixel_Tint: {r: 2.6390157, g: 0, b: 1.0603557, a: 0.57254905}
+    - _HUD_NoiseTint: {r: 0, g: 0.8344827, b: 1, a: 1}
+    - _HUD_PixelTint: {r: 0.06617647, g: 0.06617647, b: 0.06617647, a: 0}
+    - _MainUVs: {r: 3.97, g: 2.55, b: 0.61, a: 0}
+    - _PIXEL_Tint: {r: 0.06617647, g: 0.06617647, b: 0.06617647, a: 1}
+  m_BuildTextureStacks: []

@@ -1,0 +1,390 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Surface Emission Moss
+  m_Shader: {fileID: 4800000, guid: 2b52873ffce4432a964537a1e0a36740, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d24f9797d60154d46b11f365e8ddfb59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColor_Map:
+        m_Texture: {fileID: 2800000, guid: e036aac427a23cd4a92d378acbe912f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColor_MaskMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: dfbd64095dd164a4f9e24e101860b65c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: b134508eff82eee4a9f4406debf33b5d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MossColorMap:
+        m_Texture: {fileID: 2800000, guid: 1a02e0c5e7531d342a213586ab1e2762, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MossNoiseMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MossNormalMap:
+        m_Texture: {fileID: 2800000, guid: d1509383ace3a3145b934bc1467f44d6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Moss_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 1a02e0c5e7531d342a213586ab1e2762, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Moss_NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 84f8dce80bafde6408c0ba87144e5d97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Moss_NormalMap:
+        m_Texture: {fileID: 2800000, guid: b4f5594d560cc2046a7319d7bb021cb6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Snow_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: cf9bd0cd75fb3eb41ba72a994a84374c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Snow_NormalMap:
+        m_Texture: {fileID: 2800000, guid: 23ffe2bc64a090e40a31057b2ea0dbaa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Surface_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 65de4e2085e19784c9119479c0cfb18c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Surface_NormalMap:
+        m_Texture: {fileID: 2800000, guid: 4647ef17bc445b943a9d664b875656d5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlbedoAffectEmissive: 0
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _BumpNormalCompute: 0
+    - _CATEGORY_DISPLACEMENT: 0
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_METALLIC: 0
+    - _CATEGORY_MOSS: 1
+    - _CATEGORY_MOSSBLENDING: 1
+    - _CATEGORY_MOSSHEIGHT: 1
+    - _CATEGORY_OCCLUSION: 0
+    - _CATEGORY_SMOOTHNESS: 0
+    - _CATEGORY_SPECULAR: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CullMode: 0
+    - _EmissionFlags: 3
+    - _EmissiveAffectAlbedoBias: 0.598
+    - _EmissiveColor_GlowStrength: 2
+    - _EmissiveColor_MainMode: 1
+    - _EmissiveColor_MainStrength: 0
+    - _EmissiveColor_MapOffsetX: -0.09
+    - _EmissiveColor_MapOffsetY: 1.72
+    - _EmissiveColor_MapTilingX: 2
+    - _EmissiveColor_MapTilingY: 2
+    - _EmissiveColor_MaskIntensityAlpha: 0
+    - _EmissiveColor_MaskIntensityBlue: 3.1
+    - _EmissiveColor_MaskIntensityGreen: 0.1
+    - _EmissiveColor_MaskIntensityRed: 3.1
+    - _EmissiveColor_MaskMode: 0
+    - _EmissiveColor_MaskOffset: 0.66
+    - _EmissiveColor_MaskTiling: 8.3
+    - _EmissiveEnable: 1
+    - _EmissiveFlagMode: 10
+    - _EmissiveGlobalController: 1
+    - _EmissiveGlowColorGlobalController: 1
+    - _EmissiveGlowEnable: 1
+    - _EmissiveGlowIntensity: 3
+    - _EmissiveGlowisGlobal: 0
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensity_Glow: 3
+    - _EmissiveRenderFace: 0
+    - _EmissiveisGlobal: 0
+    - _EmissiveisGlobal_Glow: 0
+    - _EnvironmentReflections: 1
+    - _Global_EmissionGlow_Strength: 1
+    - _Global_Emission_Enabled: 1
+    - _Global_Emission_Strength: 1
+    - _GlossyReflections: 1
+    - _MetallicStrength: 0.028
+    - _MossBlendNormalInfluence: 0.898
+    - _MossBlendNormalInfluenceBottom: 0.794
+    - _MossBlendOffset: 8.2
+    - _MossBlendOffsetBottom: 0.5
+    - _MossBlendSideStrength: 0.7
+    - _MossBlendStrength: 0.842
+    - _MossBlendStrengthBottom: 0.926
+    - _MossBlendStrengthHeight: 9.55
+    - _MossBlendStrengthHeightBottom: 6.63
+    - _MossBrightness: 5
+    - _MossBrightnessBottom: 4.65
+    - _MossBrightnessTop: 1
+    - _MossEmissionAffectAlbedoBias: 0
+    - _MossEmissionEnable: 1
+    - _MossEmissionGlowEnable: 1
+    - _MossEmissionGlowIntensity: 4
+    - _MossEmissionGlowIsGlobal: 0
+    - _MossEmissionIntensity: 1
+    - _MossEmissionIsGlobal: 0
+    - _MossEnable: 1
+    - _MossHeighDepth: 0
+    - _MossHeighNoiseScale: 25
+    - _MossHeighNoiseShift: 2
+    - _MossHeighWeight: 0
+    - _MossHeightDepth: 0
+    - _MossHeightEnable: 0
+    - _MossHeightNoiseScale: 25
+    - _MossHeightNoiseShift: 2
+    - _MossHeightStrength: 0.868
+    - _MossHeightWeight: 0
+    - _MossMetallicStrength: 0
+    - _MossMode: 0
+    - _MossNoiseFalloff: 2.18
+    - _MossNoiseLength: 3.3
+    - _MossNoiseOffset: -0.13
+    - _MossNoiseTiling: 0.444
+    - _MossNoiseUVSmoothEdges: 0
+    - _MossNoiseUVSpace: 0
+    - _MossNormalStrength: 1
+    - _MossOcclusionSource: 0
+    - _MossOcclusionSourceBaked: 0
+    - _MossOcclusionStrength: 0
+    - _MossOcclusionStrengthAO: 0
+    - _MossOcclusionStrengthAORemapMax: 0.9883268
+    - _MossOcclusionStrengthAORemapMin: 0.3181108
+    - _MossOffset: 0
+    - _MossSaturation: 0
+    - _MossSmoothness: 0.294
+    - _MossSmoothnessFresnelEnable: 0
+    - _MossSmoothnessFresnelPower: 0
+    - _MossSmoothnessFresnelScale: 0
+    - _MossSmoothnessPower: 10
+    - _MossSmoothnessScale: 1.1
+    - _MossSmoothnessStrength: 0.344
+    - _MossSmoothnessStrengthRemapMax: 1
+    - _MossSmoothnessStrengthRemapMin: 0.2624545
+    - _MossTiling: 5
+    - _MossUVSpace: 0
+    - _Moss_BottomBlendIntensity: 1
+    - _Moss_BottomBlendOffset: 3.29
+    - _Moss_BottomBlendStrength: 10
+    - _Moss_BottomBrightness: 1
+    - _Moss_BottomNormalInfluence: 0.5
+    - _Moss_ColorSaturation: 1
+    - _Moss_EmissionGlowStrength: 0.236
+    - _Moss_EmissionMode: 1
+    - _Moss_EmissionStrength: 0
+    - _Moss_EnableHeight: 0
+    - _Moss_GlobalWetnessMode: 0
+    - _Moss_Height: 0
+    - _Moss_HeightDepth: 0
+    - _Moss_HeightNoiseScale: 25
+    - _Moss_HeightNoiseShift: 2
+    - _Moss_HeightWeight: 0
+    - _Moss_MetallicStrength: 0
+    - _Moss_Mode: 1
+    - _Moss_ModeType: 0
+    - _Moss_NoiseLength: 0.56
+    - _Moss_NoiseOffset: -0.022
+    - _Moss_NoiseScale: 0.609
+    - _Moss_NoiseShift: 2.18
+    - _Moss_NormalStrength: 2
+    - _Moss_OcclusionSource: 0
+    - _Moss_OcclusionStrength: 0.041
+    - _Moss_Offset: 0
+    - _Moss_Smoothness: 0.719
+    - _Moss_SmoothnessMax: 0.7235023
+    - _Moss_SmoothnessMin: 0.56682026
+    - _Moss_SmoothnessPower: 4.4
+    - _Moss_SmoothnessScale: 1.71
+    - _Moss_SmoothnessStrength: 0
+    - _Moss_Tiling: 5
+    - _Moss_TopBlendIntensity: 0.756
+    - _Moss_TopBlendOffset: 3.2
+    - _Moss_TopBlendStrength: 7.84
+    - _Moss_TopBrightness: 1.09
+    - _Moss_TopNormalInfluence: 0.631
+    - _Moss_UVSpace: 0
+    - _NormalStrength: 2
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionSourceMode: 0
+    - _OcclusionStrengthAO: 0.383
+    - _OcclusionStrengthAORemapMax: 1
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SPACE_EMISSION: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_MOSS: 0
+    - _SPACE_MOSSBLENDING: 0
+    - _SPACE_MOSSHEIGHT: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _Smoothness: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessMax: 0.7709759
+    - _SmoothnessMin: 0.6415663
+    - _SmoothnessModeSurface: 2
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 1.1
+    - _SmoothnessSource: 1
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.191
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessThreshold: 0
+    - _SmoothnessType: 0
+    - _SmoothnessVariance: 0.2
+    - _Snow_BottomBlendIntensity: 1
+    - _Snow_BottomBlendOffset: -1
+    - _Snow_BottomBlendStrength: 10
+    - _Snow_BottomBrightness: 1
+    - _Snow_BottomNormalInfluence: 0.5
+    - _Snow_EmissionGlowStrength: 1.52
+    - _Snow_EmissionMode: 1
+    - _Snow_EmissionStrength: 1.97
+    - _Snow_GlobalWetnessMode: 0
+    - _Snow_Height: 0
+    - _Snow_HeightDepth: 0
+    - _Snow_HeightNoiseScale: 25
+    - _Snow_HeightNoiseShift: 2
+    - _Snow_HeightWeight: 0
+    - _Snow_MetallicStrength: 0.25
+    - _Snow_Mode: 1
+    - _Snow_ModeType: 0
+    - _Snow_NoiseLength: 5
+    - _Snow_NoiseOffset: 0
+    - _Snow_NoiseScale: 0.25
+    - _Snow_NoiseShift: 2
+    - _Snow_NormalStrength: 1
+    - _Snow_OcclusionStrength: 0.5
+    - _Snow_Offset: 0
+    - _Snow_SmoothnessStrength: 0.45
+    - _Snow_Tiling: 1
+    - _Snow_TopBlendIntensity: 1
+    - _Snow_TopBlendOffset: -1
+    - _Snow_TopBlendStrength: 10
+    - _Snow_TopBrightness: 1
+    - _Snow_TopNormalInfluence: 0.5
+    - _Snow_UVSpace: 1
+    - _SpecularHighlights: 1
+    - _SurfaceBrightnessBottom: 1
+    - _SurfaceBrightnessTop: 1
+    - _Surface_BottomUp_BlendStrength: 5
+    - _Surface_BottomUp_Intensity: 1
+    - _Surface_BottomUp_Offset: -0.4450392
+    - _Surface_DistanceLength: 1.96
+    - _Surface_DistanceOffset: 1
+    - _Surface_DoubleColorSpace: 0
+    - _Surface_MapMode: 1
+    - _Surface_MetallicStrength2: 0
+    - _Surface_NoiseScale: 1
+    - _Surface_NoiseShift: 0.83
+    - _Surface_NormalStrength: 1
+    - _Surface_OcclusionStrength: 0.5
+    - _Surface_OffsetXMoss: 0
+    - _Surface_OffsetYCMoss: 0
+    - _Surface_Saturation: 1
+    - _Surface_SmoothnessStrength: 0
+    - _Surface_TilingXMoss: 4
+    - _Surface_TilingYMoss: 4
+    - _Surface_TopDown_BlendStrength: 8.1
+    - _Surface_TopDown_Intensity: 0.593
+    - _Surface_TopDown_Offset: -0.5
+    - _Surface_UVPosition: 1
+    - _TilingX: 3
+    - _TilingY: 3
+    - _UseEmissiveIntensity: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColorGlow: {r: 0, g: 0.990566, b: 0.6699673, a: 1}
+    - _EmissiveColor_Glow: {r: 0, g: 0.03333378, b: 2, a: 0}
+    - _EmissiveColor_GlowTint: {r: 0.3131798, g: 0.72272253, b: 0, a: 1}
+    - _EmissiveColor_MainTint: {r: 0.24397278, g: 0, b: 1, a: 1}
+    - _EmissiveColor_MaskAlpha: {r: 0.3333333, g: 0.1019608, b: 0.5450981, a: 1}
+    - _EmissiveColor_MaskBlue: {r: 0, g: 0, b: 1, a: 1}
+    - _EmissiveColor_MaskGreen: {r: 0, g: 1, b: 0, a: 1}
+    - _EmissiveColor_MaskRed: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissiveGlowColor: {r: 0, g: 1, b: 0.6333215, a: 0}
+    - _MainUVs: {r: 3, g: 3, b: 0, a: 0}
+    - _MetallicStrength: {r: 0, g: 1, b: 0, a: 0}
+    - _MossBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MossColorBottom: {r: 1, g: 1, b: 1, a: 1}
+    - _MossColorTop: {r: 1, g: 1, b: 1, a: 1}
+    - _MossEmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _MossEmissionGlowColor: {r: 0, g: 0.44719267, b: 1, a: 0}
+    - _MossMetallicStrength: {r: 0, g: 1, b: 0, a: 0}
+    - _MossNoiseUV: {r: 1, g: 1, b: 0, a: 0}
+    - _MossOcclusionStrengthAO: {r: 0.3181108, g: 0.9883268, b: 0, a: 0}
+    - _MossSmoothnessStrength: {r: 0.2624545, g: 1, b: 0, a: 0}
+    - _MossUVs: {r: 5, g: 5, b: 0, a: 0}
+    - _Moss_BottomTint: {r: 1, g: 1, b: 1, a: 1}
+    - _Moss_EmissionGlowTint: {r: 0, g: 1.1486983, b: 0.30181488, a: 1}
+    - _Moss_EmissionTint: {r: 0.22073746, g: 1, b: 0, a: 1}
+    - _Moss_Smoothness: {r: 0.56682026, g: 0.7235023, b: 0, a: 0}
+    - _Moss_TopTint: {r: 1, g: 1, b: 1, a: 1}
+    - _OcclusionStrengthAO: {r: 0, g: 1, b: 0, a: 0}
+    - _Smoothness: {r: 0.6415663, g: 0.7709759, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 1, b: 0, a: 0}
+    - _Snow_BottomTint: {r: 1, g: 1, b: 1, a: 1}
+    - _Snow_TopTint: {r: 1, g: 1, b: 1, a: 1}
+    - _Surface_TintBottom: {r: 1, g: 1, b: 1, a: 1}
+    - _Surface_TintTop: {r: 0.60784316, g: 0.67058825, b: 0.40392154, a: 1}
+  m_BuildTextureStacks: []

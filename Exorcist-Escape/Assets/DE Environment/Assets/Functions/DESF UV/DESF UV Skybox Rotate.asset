@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Skybox Rotate
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;183;-1584,-1792;Inherit;False;179.5921;100;Rotation;;0,0,0,1;Compute
+    Rotation Y;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;46;-945.5728,-1798.115;Half;False;Constant;_Float0;Float
+    0;50;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;55;-942.2954,-1695.501;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;184;388.5526,-1968;Inherit;False;382.7076;161.9801;UV
+    Cubemap Rotate Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SinOpNode;58;-1088,-1696;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;57;-1088,-1616;Half;False;Constant;_Float9;Float
+    9;50;0;Create;True;1;;0;0;False;0;False;-1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;39;-1088,-1520;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;40;-768,-1520;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;62;-768,-1648;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;51;-768,-1776;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CosOpNode;50;-1088,-1776;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RadiansOpNode;52;-1264,-1600;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;129;-1424,-1600;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;49;-1584,-1584;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;41;-1792,-1520;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CosOpNode;38;-1088,-1440;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;73;-960,-1328;Inherit;False;3;0;FLOAT;1;False;1;FLOAT;0.5;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;74;-1104,-1328;Half;False;Constant;_Float7;Float
+    7;47;0;Create;True;1;;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;75;-1104,-1216;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OrthoParams;76;-1344,-1328;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.MatrixFromVectors;43;-576,-1776;Inherit;False;FLOAT3x3;True;4;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3x3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;164;-48,-1776;Inherit;False;2;2;0;FLOAT3x3;0,0,0,1,1,1,1,0,1;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;182;256,-1776;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.VertexToFragmentNode;36;384,-1776;Inherit;False;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;172;-32,-1648;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;181;96,-1664;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.PosVertexDataNode;107;-256,-1696;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.NegateNode;119;-224,-1536;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;126;-480,-1536;Inherit;False;Rotation
+    Position Height;1;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;185;-480,-1456;Inherit;False;321.5313;163.1958;Rotation
+    Position Height;;0.03773582,0.03773582,0.03773582,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;186;-1584,-1392;Inherit;False;182.5079;103.7509;Mode;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;65;-1584,-1664;Inherit;False;Rotation;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;187;-2015.512,-1616;Inherit;False;197.5117;146.2614;Rotation
+    Speed;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;66;-1792,-1616;Inherit;False;Rotation
+    Speed;1;2;False;1;0;FLOAT;3;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;64;-1584,-1472;Inherit;False;Mode;1;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;640,-1776;Inherit;False;True;-1;UV;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;55;0;58;0\nWireConnection;55;1;57;0\nWireConnection;58;0;52;0\nWireConnection;39;0;52;0\nWireConnection;40;0;39;0\nWireConnection;40;1;46;0\nWireConnection;40;2;38;0\nWireConnection;62;0;46;0\nWireConnection;62;1;73;0\nWireConnection;62;2;46;0\nWireConnection;51;0;50;0\nWireConnection;51;1;46;0\nWireConnection;51;2;55;0\nWireConnection;50;0;52;0\nWireConnection;52;0;129;0\nWireConnection;129;0;65;0\nWireConnection;129;1;49;0\nWireConnection;129;2;64;0\nWireConnection;49;0;66;0\nWireConnection;49;1;41;0\nWireConnection;38;0;52;0\nWireConnection;73;0;74;0\nWireConnection;73;1;75;0\nWireConnection;73;2;76;4\nWireConnection;75;0;76;2\nWireConnection;75;1;76;1\nWireConnection;43;0;51;0\nWireConnection;43;1;62;0\nWireConnection;43;2;40;0\nWireConnection;164;0;43;0\nWireConnection;164;1;107;0\nWireConnection;182;0;164;0\nWireConnection;182;1;181;0\nWireConnection;36;0;182;0\nWireConnection;172;0;107;2\nWireConnection;172;1;119;0\nWireConnection;181;1;172;0\nWireConnection;119;0;126;0\nWireConnection;0;0;36;0\nASEEND*/\n//CHKSM=9281A917055F2CC7746C76CC1D49D0DC488C96AB"
+  m_functionName: 
+  m_description: 'UV Cubemap Rotate Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Gradient
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;20;-1152,-352;Inherit;False;1703.029;811.0192;Exsample;11;27;36;38;28;35;33;39;45;47;46;41;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;33;-971,-240;Inherit;False;229.5065;136.9803;Fixed;1;26;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;19;-1156.184,-640;Inherit;False;895.6206;255.1596;Gradient
+    Node;3;0;25;7;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;35;-976,80;Inherit;False;218.5065;135.9803;Blend;1;37;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;39;-288,-224;Inherit;False;220.5065;135.9803;Blend;1;44;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;7;-896,-592;Inherit;False;361.8408;140.2996;;;0,0,0,1;The
+    Gradient Node creates a gradient object which must be connected with a Gradient
+    Sample node to sample each of its colors on a given Time;0;0\nNode;AmplifyShaderEditor.GradientNode;25;-1104,-592;Inherit;False;0;2;2;1,1,1,0;1,1,1,1;1,0;1,1;0;1;OBJECT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;28;-960,-64;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GradientSampleNode;27;-672,-192;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GradientNode;26;-960,-192;Inherit;False;1;2;2;1,0,0,0.5000076;1,1,1,1;1,0;1,0.5764706;0;1;OBJECT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;38;-960,256;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GradientSampleNode;36;-672,128;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GradientNode;37;-960,128;Inherit;False;0;2;2;1,0,0,0.5000076;1,1,1,1;1,0;1,0.5764706;0;1;OBJECT;0\nNode;AmplifyShaderEditor.GradientSampleNode;41;176,-192;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SinTimeNode;45;-288,-64;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;46;-128,-16;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;47;32,-16;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.GradientNode;44;-272,-192;Inherit;False;0;6;2;0.0999999,0,1,0;0,0.5500002,1,0.08116274;0.00999999,1,0.2245,0.1797055;1,0.9166666,0,0.498558;1,0.03333334,0,0.6956588;0.0999999,0,1,1;1,0;1,1;0;1;OBJECT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-400,-592;Inherit;False;True;-1;Output;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;27;0;26;0\nWireConnection;27;1;28;2\nWireConnection;36;0;37;0\nWireConnection;36;1;38;2\nWireConnection;41;0;44;0\nWireConnection;41;1;47;0\nWireConnection;46;0;45;4\nWireConnection;47;0;46;0\nASEEND*/\n//CHKSM=9F1FFCBAB9DFBC760CC203E0687EFB6B7ED00FB1"
+  m_functionName: 
+  m_description: 'Gradient Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Gradient
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

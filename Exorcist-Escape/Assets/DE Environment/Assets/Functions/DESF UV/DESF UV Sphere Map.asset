@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Sphere Map
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;33;32,1152;Inherit;False;1028.193;270.752;Example
+    Masking Sphere Map;9;6;9;7;8;16;17;4;15;35;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;128,640;Inherit;False;392.8643;145.4867;UV
+    Sphere Map Node;;0,0,0,1;The UV Sphere Map node creates UV coordinates for sampling
+    a texture in sphere map format.  This is useful for creating cheap reflection
+    effects and MatCap materials.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;30;-624,736;Inherit;False;144.9994;111.7181;;;0,0,0,1;normalize
+    the Position in View space.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;-432,912;Inherit;False;201.8175;102.8787;;;0,0,0,1;cross
+    product between that and the Normal Vector in view space.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;-80,912;Inherit;False;264;100;;;0,0,0,1;convert
+    the range of the data to 0 to 1 so that it can be used as UV coordinates.;0;0\nNode;AmplifyShaderEditor.WireNode;34;211.0518,870.2056;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NormalizeNode;22;-608,656;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CrossProductOpNode;26;-432,816;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;27;-256,816;Inherit;False;FLOAT2;1;0;2;3;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;28;-80,816;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;29;96,816;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.PosVertexDataNode;20;-1248,656;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.NormalVertexDataNode;24;-1248,832;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TransformPositionNode;21;-864,656;Inherit;False;Object;View;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.TransformPositionNode;25;-864,832;Inherit;False;Object;View;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.BreakToComponentsNode;39;256,896;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.DistanceOpNode;4;272,1216;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;35;208,1216;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SaturateNode;9;592,1312;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;7;752,1200;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;6;432,1200;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;15;256,1328;Inherit;False;Radius;1;2;False;1;0;FLOAT;0.25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;16;448,1312;Inherit;False;Hardness;1;3;False;1;0;FLOAT;0.25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;8;880,1200;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;41;-1091,512;Inherit;False;201;100;Vertex
+    Position;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;42;-1088,976;Inherit;False;201;100;Vertex
+    Normal;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;37;-1056,656;Inherit;False;Vertex
+    Position;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;36;-1056,832;Inherit;False;Vertex
+    Normal;3;1;False;1;0;FLOAT3;0,0,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;17;80,1248;Inherit;False;Anchor;2;4;False;1;0;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;38;384,896;Inherit;False;False;-1;U;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;40;384,976;Inherit;False;False;-1;V;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;384,816;Inherit;False;True;-1;UV;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;34;0;29;0\nWireConnection;22;0;21;0\nWireConnection;26;0;22;0\nWireConnection;26;1;25;0\nWireConnection;27;0;26;0\nWireConnection;28;0;27;0\nWireConnection;29;0;28;0\nWireConnection;21;0;37;0\nWireConnection;25;0;36;0\nWireConnection;39;0;29;0\nWireConnection;4;0;35;0\nWireConnection;4;1;17;0\nWireConnection;35;0;34;0\nWireConnection;9;0;16;0\nWireConnection;7;0;6;0\nWireConnection;7;1;9;0\nWireConnection;6;0;4;0\nWireConnection;6;1;15;0\nWireConnection;8;0;7;0\nWireConnection;37;0;20;0\nWireConnection;36;0;24;0\nWireConnection;38;0;39;0\nWireConnection;40;0;39;1\nWireConnection;0;0;29;0\nASEEND*/\n//CHKSM=A7B778F5694F3B028FE5E6A27D81ED3BB1C98422"
+  m_functionName: 
+  m_description: 'UV Sphere Map Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

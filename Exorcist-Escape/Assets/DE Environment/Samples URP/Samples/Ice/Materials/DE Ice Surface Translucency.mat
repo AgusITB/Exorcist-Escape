@@ -1,0 +1,274 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Ice Surface Translucency
+  m_Shader: {fileID: 4800000, guid: 7724f8e79df04b60a783ffc47514cdf4, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ADD_PRECOMPUTED_VELOCITY
+  - _DOUBLESIDED_ON
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _ICEFLOWENABLE_ON
+  - _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _IceBaseMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceFlowMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceMaskMap:
+        m_Texture: {fileID: 2800000, guid: 850358b71d9a4db43aedecab28ba8739, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceNormalMap:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IceParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 17f617f96b2e6fc4595744d94c243c6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer0_NormalMap:
+        m_Texture: {fileID: 2800000, guid: b35d251b6908f804a8e7cadffe6d5db3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layer1_FlowMap:
+        m_Texture: {fileID: 2800000, guid: 17f617f96b2e6fc4595744d94c243c6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 850358b71d9a4db43aedecab28ba8739, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 2800000, guid: 00446cf3db6461a49bf6130f413b45b1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransmissionMaskMap:
+        m_Texture: {fileID: 2800000, guid: 6c045007b5e8bdf4e966eed93f4430f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ASETranslucencyAmbient: 0.8339342
+    - _ASETranslucencyDirect: 0.9
+    - _ASETranslucencyNormalDistortion: 0.2735869
+    - _ASETranslucencyScattering: 2
+    - _ASETranslucencyShadow: 0.5
+    - _ASETranslucencyStrength: 1
+    - _ASETransmissionShadow: 0.518
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffBiasShadow: 0.5
+    - _BumpNormalCompute: 0
+    - _CATEGORY_ICEFLOW: 1
+    - _CATEGORY_METALLIC: 1
+    - _CATEGORY_OCCLUSION: 1
+    - _CATEGORY_OPACITY: 1
+    - _CATEGORY_PARALLAX: 1
+    - _CATEGORY_REFRACTION: 1
+    - _CATEGORY_SHADOW: 1
+    - _CATEGORY_SMOOTHNESS: 1
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_TRANSLUCENCY: 1
+    - _CATEGORY_TRANSLUCENCYASE: 1
+    - _CATEGORY_TRANSMISSION: 1
+    - _CATEGORY_WETNESS: 1
+    - _Chromatic: 0.066
+    - _Cull: 0
+    - _EmissionFlags: 0
+    - _EnableIceFlow: 1
+    - _EnableTranslucency: 1
+    - _EnableTransmission: 1
+    - _EnvironmentReflections: 1
+    - _GlobalEnableGlobalWetness: 0
+    - _GlobalWetnessStrength: 0
+    - _GlossyReflections: 1
+    - _IceBrightness: 1
+    - _IceFlowEnable: 1
+    - _IceFlowHeightIterations: 1
+    - _IceFlowHeightReferencePlane: 0.926
+    - _IceFlowHeightScale: 0.585
+    - _IceFlowSpeedX: 0.05
+    - _IceFlowSpeedY: 0.05
+    - _IceFlowStrength: 0.51
+    - _IceFlowTilingX: 5
+    - _IceFlowTilingY: 5
+    - _IceHeightIterations: 1
+    - _IceHeightReferencePlane: 1.032
+    - _IceHeightScale: 0.0434
+    - _IceMetallicStrength: 0.769
+    - _IceNormalCompute: 0
+    - _IceNormalStrength: 1
+    - _IceOcclusionSource: 0
+    - _IceOcclusionStrength: 0
+    - _IceOpacity: 0.756
+    - _IceSmoothnessPower: 10
+    - _IceSmoothnessScale: 0.95
+    - _IceSmoothnessSource: 1
+    - _IceSmoothnessStrength: 0.788
+    - _IceTilingX: 2
+    - _IceTilingY: 2
+    - _IceTranslucencyEnable: 0
+    - _IceTransmissionEnable: 0
+    - _IceTransmissionStrength: 0.01
+    - _IceWetnessEnable: 1
+    - _IceWetnesssStrength: 0.883
+    - _Layer0_Brightness: 1
+    - _Layer0_HeightIterations: 1
+    - _Layer0_HeightReferencePlane: 0.638
+    - _Layer0_HeightScale: 0.0052
+    - _Layer0_MetallicStrength: 0.342
+    - _Layer0_NormalStrength: 0.5
+    - _Layer0_OcclusionStrength: 0.676
+    - _Layer0_Opacity: 0.43
+    - _Layer0_Strength: 1
+    - _Layer0_TilingX: 2
+    - _Layer0_TilingY: 2
+    - _Layer1_FlowSpeedX: 0.01
+    - _Layer1_FlowSpeedY: 0.01
+    - _Layer1_HeightIterations: 1.12
+    - _Layer1_HeightReferencePlane: 0.877
+    - _Layer1_HeightScale: 0
+    - _Layer1_TilingX: 3
+    - _Layer1_TilingY: 3
+    - _MetallicStrength: 0
+    - _OcclusionSource: 0
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionStrengthAO: 0
+    - _OcclusionStrengthAORemapMax: 0.87194586
+    - _OcclusionStrengthAORemapMin: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RefractionIndex: 0.077
+    - _SPACE_ICEFLOW: 0
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_OPACITY: 0
+    - _SPACE_PARALLAX: 0
+    - _SPACE_REFRACTION: 0
+    - _SPACE_SHADOW: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_TRANSLUCENCY: 0
+    - _SPACE_TRANSLUCENCYASE: 0
+    - _SPACE_TRANSMISSION: 0
+    - _SPACE_WETNESS: 0
+    - _Smoothness: 0.96
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 0
+    - _SmoothnessFresnelScale: 0
+    - _SmoothnessPower: 10
+    - _SmoothnessScale: 1.1
+    - _SmoothnessSource: 1
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrength: 0.882
+    - _SmoothnessStrengthRemapMax: 1
+    - _SmoothnessStrengthRemapMin: 0.35228014
+    - _SpecularHighlights: 1
+    - _ThicknessFeather: 0.304
+    - _ThicknessMapInverted: 0
+    - _ThicknessStrength: 0.293
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.911
+    - _TransScattering: 2
+    - _TransShadow: 0.9
+    - _Translucency: 15.6
+    - _TranslucencyEnable: 1
+    - _TranslucencySource: 0
+    - _TranslucencyStrength: 1.3
+    - _TranslucencyThicknessInverted: 1
+    - _TransmissionEnable: 0
+    - _TransmissionMaskFeather: 1
+    - _TransmissionMaskInverted: 0
+    - _TransmissionMaskStrength: 1.466198
+    - _TransmissionSource: 1
+    - _TransmissionStrength: 1
+    - _TransmissionThicknessInverted: 1
+    - _URP_TranslucencyAmbient: 0.8339342
+    - _URP_TranslucencyDirect: 0.9
+    - _URP_TranslucencyNormalDistortion: 0.2735869
+    - _URP_TranslucencyScattering: 2
+    - _URP_TranslucencyShadow: 0.5
+    - _URP_TranslucencyStrength: 1
+    - _URP_TransmissionShadow: 0.5
+    - _Wetness: 1.25
+    - _WetnessEnable: 1
+    - _WetnessEnableGlobalWetness: 1
+    - _WetnessGlobalEnablel: 1
+    - _WetnessGlobalInfluenceEnable: 0
+    - _WetnessGlobalStrength: 1.183
+    - _WetnessMask: 0.75
+    - _WetnesssStrength: 0.61
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IceColor: {r: 0.3176471, g: 0.86124986, b: 1, a: 1}
+    - _IceFlowColor0: {r: 0.050729785, g: 0.5155174, b: 0.5660378, a: 1}
+    - _IceFlowColor1: {r: 0, g: 0.6293888, b: 1, a: 1}
+    - _IceFlowUVs: {r: 5, g: 5, b: 0, a: 0}
+    - _IceTranslucencyColor: {r: 0, g: 0.6507245, b: 0.7490196, a: 1}
+    - _IceTransmissionColor: {r: 0, g: 0.2287193, b: 0.5019608, a: 1}
+    - _IceUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _Layer0_Color: {r: 0, g: 1, b: 0.73990655, a: 1}
+    - _Layer1_Color: {r: 0, g: 1, b: 0.3482921, a: 1}
+    - _Layer2_Color: {r: 0.42733178, g: 0.9150943, b: 0.8683809, a: 1}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0.87194586, b: 0, a: 0}
+    - _RefractionColor: {r: 0.2941177, g: 0.2941177, b: 0.2941177, a: 0}
+    - _SmoothnessStrength: {r: 0.35228014, g: 1, b: 0, a: 0}
+    - _TranslucencyColor: {r: 0, g: 0.25954726, b: 0.34901962, a: 1}
+    - _TranslucencyTint: {r: 0, g: 1.3019608, b: 1.4980392, a: 1}
+    - _TransmissionColor: {r: 0.07652828, g: 0.25557694, b: 0.49056602, a: 1}
+    - _TransmissionTint: {r: 0, g: 0.2287193, b: 0.5019608, a: 1}
+  m_BuildTextureStacks: []
