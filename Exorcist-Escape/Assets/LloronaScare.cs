@@ -25,6 +25,7 @@ public class LloronaScare : MonoBehaviour
         SpotLight.SetActive(false);
         Frame.SetActive(false);
         Llorona.SetActive(true);
+        SpotLight.GetComponent<Light>().intensity = 5f;
         yield return new WaitForSeconds(2f);
         SpotLight.SetActive(true);
         AudioSource.PlayClipAtPoint(lloronaScream, this.transform.position);
@@ -52,6 +53,7 @@ public class LloronaScare : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         controller.enabled = true;
+        SpotLight.GetComponent<Light>().intensity = 1f;
         SpotLight.SetActive(true);
     }
 

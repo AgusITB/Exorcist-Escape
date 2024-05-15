@@ -26,24 +26,31 @@ public class Llorona : MonoBehaviour
                 Vector3 direccionPersecucion = jugador.position - transform.position;
                 direccionPersecucion.y = 0f; 
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);*/
+            if (agent != null)
+            {
                 agent.destination = jugador.position;
+            }
                 //transform.Translate(Time.deltaTime * velocidadPersecucion * Vector3.forward);
             //}
         }
     }
     public void SetQuedarseQuieto(bool estado)
     {
-        if (estado)
+        if (agent!=null)
         {
-            agent.isStopped = true;
-            lloronaAnimator.SetBool("IsWalking", false);
-        }
-        else
-        {
-            agent.isStopped = false;
-            lloronaAnimator.SetBool("IsWalking", true);
-        }
+            if (estado)
+            {
+                agent.isStopped = true;
+                lloronaAnimator.SetBool("IsWalking", false);
+            }
+            else
+            {
+                agent.isStopped = false;
+                lloronaAnimator.SetBool("IsWalking", true);
+            }
 
-        quedarseQuieto = estado;
+            quedarseQuieto = estado;
+        }
+      
     }
 }

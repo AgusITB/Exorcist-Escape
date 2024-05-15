@@ -14,14 +14,21 @@ public class VisionAngle : MonoBehaviour
             if (hit.collider.TryGetComponent(out Llorona llorona))
             {
                 Debug.Log("Lloronahit");
-                llorona.SetQuedarseQuieto(true);
+                if (llorona != null)
+                {
+                    llorona.SetQuedarseQuieto(true);
+                }
             }
    
         }
         else
         {
             Debug.Log("Nada");
-            this.llorona.SetQuedarseQuieto(false);
+            if (llorona!= null)
+            {
+                this.llorona.SetQuedarseQuieto(false);
+            }
+          
         }
     }
 }
