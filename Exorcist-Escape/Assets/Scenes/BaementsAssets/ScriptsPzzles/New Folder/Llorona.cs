@@ -8,6 +8,7 @@ public class Llorona : MonoBehaviour
     public float distanciaPersecucion = 10f; 
     private bool quedarseQuieto = false;
     private Animator lloronaAnimator;
+    private bool isDeactivated = false;
 
     [SerializeField] private NavMeshAgent agent;
     private void Awake()
@@ -15,42 +16,51 @@ public class Llorona : MonoBehaviour
         lloronaAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
-
+    public void StopAndDeactivate()
+    {
+        if (agent != null)
+        {
+            agent.isStopped = true;
+            agent.ResetPath(); 
+        }
+        isDeactivated = true;
+        gameObject.SetActive(false);
+    }
     void Update()
     {
+        if (isDeactivated) return;
+
         if (!quedarseQuieto)
         {  
-            float distanciaAlJugador = Vector3.Distance(transform.position, jugador.position);
-            /*if (distanciaAlJugador < distanciaPersecucion)
-            {  
-                Vector3 direccionPersecucion = jugador.position - transform.position;
-                direccionPersecucion.y = 0f; 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccionPersecucion), 0.1f);*/
             if (agent != null)
             {
                 agent.destination = jugador.position;
             }
-                //transform.Translate(Time.deltaTime * velocidadPersecucion * Vector3.forward);
-            //}
         }
     }
     public void SetQuedarseQuieto(bool estado)
     {
-        if (agent!=null)
+        if (agent != null)
         {
             if (estado)
             {
-                agent.isStopped = true;
+                if (agent.isOnNavMesh)
+                {
+                    agent.isStopped = true;
+                }
                 lloronaAnimator.SetBool("IsWalking", false);
             }
             else
             {
-                agent.isStopped = false;
+                if (agent.isOnNavMesh)
+                {
+                    agent.isStopped = false;
+                }
                 lloronaAnimator.SetBool("IsWalking", true);
             }
 
             quedarseQuieto = estado;
         }
-      
+
     }
 }
