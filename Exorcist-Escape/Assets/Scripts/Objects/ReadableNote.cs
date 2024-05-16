@@ -22,8 +22,13 @@ public class ReadableNote : PickableObject
     }
     protected override void Collect()
     {
-        notesManager.ChangeText(text.text);
-        AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position);
+        notesManager.ChangeText(text);
+        
+        if (pickUpClip != null)
+        {
+            AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position, 0.3f);
+        }
+       
     }
 }
 

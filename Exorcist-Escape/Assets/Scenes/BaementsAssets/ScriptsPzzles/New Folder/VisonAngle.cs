@@ -13,7 +13,6 @@ public class VisionAngle : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out Llorona llorona))
             {
-                Debug.Log("Lloronahit");
                 if (llorona != null)
                 {
                     llorona.SetQuedarseQuieto(true);
@@ -23,7 +22,6 @@ public class VisionAngle : MonoBehaviour
         }
         else
         {
-            Debug.Log("Nada");
             if (llorona!= null)
             {
                 this.llorona.SetQuedarseQuieto(false);
