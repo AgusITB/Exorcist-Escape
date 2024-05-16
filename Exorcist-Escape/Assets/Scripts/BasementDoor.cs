@@ -13,7 +13,7 @@ public class BasementDoor : NonPickableObject
     public override void Interact()
     {
         Debug.Log("Go to the basement");
-        SceneManager.LoadScene("House");
+        SceneManager.LoadScene(2);
     }
 
     private void OnTriggerEnter(Collider other)
