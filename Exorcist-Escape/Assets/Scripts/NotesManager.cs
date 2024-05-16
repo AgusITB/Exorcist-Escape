@@ -8,6 +8,7 @@ public class NotesManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI targetText;
     [SerializeField] private GameObject NoteInspection;
     [SerializeField] private CinemachineInputProvider InputProvider;
+    [SerializeField] private PlayerController playerController;
 
     private RectTransform sourceContainer;
     public RectTransform targetContainer;
@@ -18,24 +19,27 @@ public class NotesManager : MonoBehaviour
         instance = this;
  
     }
-    private void HideNote()
-    {
-        NoteInspection.SetActive(false);
-        //isInspecting = false;
-    }
     public void ChangeText(TextMeshPro sourceText)
+    {
+      
+        isInspecting = !isInspecting;
+        InputProvider.enabled = !isInspecting;
+        //meshGui.textStyle = text.textStyle;
+        //meshGui.text = text.text;
+
+        CopyText(sourceText);
+        playerController.enabled = !isInspecting;
+        NoteInspection.SetActive(isInspecting);
+
+    }
+
+    private void CopyText(TextMeshPro sourceText)
     {
         sourceContainer = sourceText.gameObject.GetComponent<RectTransform>();
         // Calculate the size ratio
         float widthRatio = targetContainer.rect.width / sourceContainer.rect.width;
         float heightRatio = targetContainer.rect.height / sourceContainer.rect.height;
         float sizeRatio = Mathf.Min(widthRatio, heightRatio);
-
-
-        isInspecting = !isInspecting;
-        InputProvider.enabled = !isInspecting;
-        //meshGui.textStyle = text.textStyle;
-        //meshGui.text = text.text;
 
         targetText.text = sourceText.text;
 
@@ -59,9 +63,6 @@ public class NotesManager : MonoBehaviour
         targetText.enableWordWrapping = sourceText.enableWordWrapping;
         targetText.overflowMode = sourceText.overflowMode;
         targetText.richText = sourceText.richText;
-
-        NoteInspection.SetActive(isInspecting);
-
     }
 
 }
