@@ -1,16 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class MovementInMain : MonoBehaviour
 {
-  
+
     public void NewGame(string sceneName)
     {
+
         SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
     }
+    private static IEnumerator LoadScene(string sceneName)
+    {
+
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!asyncLoadLevel.isDone)
+        {
+            Debug.Log("Loading the Scene");
+            yield return null;
+        }
+        Debug.Log("Hello");
+        DataController.instance.ActivatePlayerCamera(sceneName);
+
+
+    }
+
     public void Continue()
     {
         if (DataController.instance != null)

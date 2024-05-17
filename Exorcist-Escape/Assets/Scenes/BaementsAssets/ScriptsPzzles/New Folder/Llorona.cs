@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class Llorona : MonoBehaviour
 {
-    public Transform jugador; 
+    private Transform jugador; 
     public float velocidadPersecucion = 5f; 
     public float distanciaPersecucion = 10f; 
     private bool quedarseQuieto = false;
@@ -15,6 +15,8 @@ public class Llorona : MonoBehaviour
     {
         lloronaAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<VisionAngle>().llorona = this;
     }
     public void StopAndDeactivate()
     {

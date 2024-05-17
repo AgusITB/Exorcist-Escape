@@ -1,44 +1,46 @@
+using System;
 using System.IO;
 using UnityEngine;
 
+
 public class DataController : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
+    private Transform controllerTransform;
     public static DataController instance;
+    private PlayerController playerController;
+    private Transform playerTransform;
+
+    [SerializeField] private PlayerSettings playerSettings;
+
+    [Serializable]
+    public class PlayerSettings
+    {
+        public GameObject virtualCamera;
+        public GameObject mainCamera;
+    }
+
+
     private string saveFilePath = "./Assets/Scripts/JSON/Data.json";
 
 
     private void Awake()
-    { 
+    {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            playerTransform = GetComponent<Transform>();
+            controllerTransform = GetComponent<Transform>();
+            playerController = GetComponent<PlayerController>();
         }
         else
         {
             Destroy(gameObject);
         }
-        // instance = this;
-        // LoadPlayerPosition();
+        
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("checkpoint"))
-        {
-            SavePlayerPosition();
-        }
-    }
-
-    private void Awake()
-    {
-       
-    }
-
     public void SavePlayerPosition()
     {
+
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         PlayerData playerData = new PlayerData(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z, playerTransform.rotation.x, playerTransform.rotation.y, playerTransform.rotation.z, currentSceneName);
         string jsonData = JsonUtility.ToJson(playerData);
@@ -73,25 +75,31 @@ public class DataController : MonoBehaviour
                 using (StreamReader reader = File.OpenText(saveFilePath))
                 {
 
+
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(playerData.scenaName);
+                    ActivatePlayerCamera(playerData.scenaName);
                     /// LOAD SCENE SAVED
-                    string jsonData = reader.ReadToEnd();
-                    PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
-                    playerTransform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
+                    controllerTransform.SetPositionAndRotation(new Vector3(playerData.posX, playerData.posY, playerData.posZ), Quaternion.Euler(playerData.rotX, playerData.rotY, playerData.rotZ));
 
                 }
             }
             else
             {
                 Debug.LogWarning("No se encontr� el archivo en: " + saveFilePath);
-             UnityEngine.SceneManagement.SceneManager.LoadScene(playerData.scenaName);
             }
-
-            playerTransform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
-            playerTransform.rotation = Quaternion.Euler(playerData.rotX, playerData.rotY, playerData.rotZ);
         }
         catch (System.Exception e)
         {
             Debug.LogError("Error al cargar la posici�n: " + e.Message);
         }
     }
+
+    public void ActivatePlayerCamera(string sceneName)
+    {
+        Debug.Log("Start");
+        playerSettings.virtualCamera.SetActive(true);
+        playerSettings.mainCamera.SetActive(true);
+        playerController.enabled = true;
+    }
+
 }
