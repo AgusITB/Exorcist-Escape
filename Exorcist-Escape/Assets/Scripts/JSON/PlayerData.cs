@@ -7,8 +7,9 @@ public class PlayerData
     public float rotX;
     public float rotY;
     public float rotZ;
+    public string scenaName;
 
-    public PlayerData(float x, float y, float z, float rotX, float rotY, float rotZ)
+    public PlayerData(float x, float y, float z, float rotX, float rotY, float rotZ, string scenaName)
     {
         posX = x;
         posY = y;
@@ -16,5 +17,6 @@ public class PlayerData
         this.rotX = rotX;
         this.rotY = rotY;
         this.rotZ = rotZ;
+        this.scenaName = scenaName;
     }
 }
