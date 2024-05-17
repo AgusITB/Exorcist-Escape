@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -7,27 +5,34 @@ public class DataController : MonoBehaviour
 {
     private Transform playerTransform;
     public static DataController instance;
-    //Ruta relativa del Data.json
     private string saveFilePath = "./Assets/Scripts/JSON/Data.json";
-   
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("chekpoint"))
+        if (other.CompareTag("checkpoint"))
         {
             SavePlayerPosition();
-
-           
         }
     }
+
     private void Awake()
     {
-        playerTransform = GetComponent<Transform>();
-        LoadPlayerPosition();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            playerTransform = GetComponent<Transform>();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
     public void SavePlayerPosition()
     {
-        PlayerData playerData = new PlayerData(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z, playerTransform.rotation.x, playerTransform.rotation.y, playerTransform.rotation.z);
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        PlayerData playerData = new PlayerData(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z, playerTransform.rotation.x, playerTransform.rotation.y, playerTransform.rotation.z, currentSceneName);
         string jsonData = JsonUtility.ToJson(playerData);
         try
         {
@@ -41,23 +46,28 @@ public class DataController : MonoBehaviour
             Debug.LogError("Error al guardar la posición: " + e.Message);
         }
     }
+
     public void LoadPlayerPosition()
     {
+        if (!File.Exists(saveFilePath))
+        {
+            Debug.LogWarning("No se encontró el archivo en: " + saveFilePath);
+            return;
+        }
+
         try
         {
-            if (File.Exists(saveFilePath))
+            string jsonData = File.ReadAllText(saveFilePath);
+            PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
+
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            if (currentSceneName != playerData.scenaName)
             {
-                using (StreamReader reader = File.OpenText(saveFilePath))
-                {
-                    string jsonData = reader.ReadToEnd();
-                    PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
-                    playerTransform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
-                }
+                UnityEngine.SceneManagement.SceneManager.LoadScene(playerData.scenaName);
             }
-            else
-            {
-                Debug.LogWarning("No se encontró el archivo en: " + saveFilePath);
-            }
+
+            playerTransform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
+            playerTransform.rotation = Quaternion.Euler(playerData.rotX, playerData.rotY, playerData.rotZ);
         }
         catch (System.Exception e)
         {

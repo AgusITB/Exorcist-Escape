@@ -6,14 +6,22 @@ using UnityEngine.UI;
 
 public class MovementInMain : MonoBehaviour
 {
-
+  
     public void NewGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
     }
     public void Continue()
     {
-        //Hacer Logica Para Cargar Partida
+        if (DataController.instance != null)
+        {
+            DataController.instance.LoadPlayerPosition();
+            Debug.Log("Se ha cargado la posición del jugador.");
+        }
+        else
+        {
+            Debug.Log("Es null");
+        }
     }
     public void Options()
     {
