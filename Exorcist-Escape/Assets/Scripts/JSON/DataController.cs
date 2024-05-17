@@ -1,30 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public class DataController : MonoBehaviour
 {
-    private Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
     public static DataController instance;
     //Ruta relativa del Data.json
     private string saveFilePath = "./Assets/Scripts/JSON/Data.json";
    
+
+
+    private void Awake()
+    {
+        instance = this;
+        LoadPlayerPosition();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("chekpoint"))
         {
             SavePlayerPosition();
-
-           
         }
     }
-    private void Awake()
-    {
-        playerTransform = GetComponent<Transform>();
-        LoadPlayerPosition();
-    }
+
     public void SavePlayerPosition()
     {
         PlayerData playerData = new PlayerData(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z, playerTransform.rotation.x, playerTransform.rotation.y, playerTransform.rotation.z);
@@ -43,15 +42,19 @@ public class DataController : MonoBehaviour
     }
     public void LoadPlayerPosition()
     {
+     
         try
         {
             if (File.Exists(saveFilePath))
             {
                 using (StreamReader reader = File.OpenText(saveFilePath))
                 {
+
+                    /// LOAD SCENE SAVED
                     string jsonData = reader.ReadToEnd();
                     PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
                     playerTransform.position = new Vector3(playerData.posX, playerData.posY, playerData.posZ);
+
                 }
             }
             else

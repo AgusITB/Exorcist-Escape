@@ -54,7 +54,10 @@ public class KeypadController : MonoBehaviour
             if (linkedObject == null)
                 return;
 
+            if (linkedObject.TryGetComponent(out Door door)) door.UnlockDoor();
+
             linkedObject.Interact();
+       
             if (audioSource != null)
                 audioSource.PlayOneShot(correctSound);
 

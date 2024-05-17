@@ -9,7 +9,7 @@ public class MovementInMain : MonoBehaviour
 
          public void NewGame(string sceneName)
         {
-            SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
+            SceneManager.LoadScene(2); // Cargar la escena especificada por el nombre
         }
         public void Continue()
         {

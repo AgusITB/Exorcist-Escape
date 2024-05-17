@@ -9,10 +9,14 @@ public class Inventoryitems : MonoBehaviour
     {
         foreach (UIItem item in items)
         {
-            item.pickableObject.onPickUp += () =>
+            if (item != null)
             {
-                ChangeOpacity(item);
-            };
+                item.pickableObject.onPickUp += () =>
+                {
+                    ChangeOpacity(item);
+                };
+            }
+     
         }
     }
 
