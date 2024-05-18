@@ -1,15 +1,18 @@
 using System;
+using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class DataController : MonoBehaviour
 {
-    private Transform controllerTransform;
     public static DataController instance;
     private PlayerController playerController;
-    private Transform playerTransform;
 
+    [SerializeField] private GameObject playerHUD;
+    [SerializeField] private GameObject mainMenu;
+    
     [SerializeField] private PlayerSettings playerSettings;
 
     [Serializable]
@@ -20,7 +23,7 @@ public class DataController : MonoBehaviour
     }
 
 
-    private string saveFilePath = "./Assets/Scripts/JSON/Data.json";
+    private readonly string saveFilePath = "./Assets/Scripts/JSON/Data.json";
 
 
     private void Awake()
@@ -29,7 +32,6 @@ public class DataController : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            controllerTransform = GetComponent<Transform>();
             playerController = GetComponent<PlayerController>();
         }
         else
@@ -41,17 +43,15 @@ public class DataController : MonoBehaviour
     public void SavePlayerPosition()
     {
 
-        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        PlayerData playerData = new PlayerData(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z, playerTransform.rotation.x, playerTransform.rotation.y, playerTransform.rotation.z, currentSceneName);
+        string currentSceneName = SceneManager.GetActiveScene().name;   
+        PlayerData playerData = new(this.transform.position.x, this.transform.position.y, this.transform.position.z, this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z, currentSceneName);
         string jsonData = JsonUtility.ToJson(playerData);
         try
         {
-            using (StreamWriter writer = new StreamWriter(saveFilePath))
-            {
-                writer.Write(jsonData);
-            }
+            using StreamWriter writer = new(saveFilePath);
+            writer.Write(jsonData);
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.LogError("Error al guardar la posici�n: " + e.Message);
         }
@@ -69,18 +69,12 @@ public class DataController : MonoBehaviour
             string jsonData = File.ReadAllText(saveFilePath);
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
 
-            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            string currentSceneName = SceneManager.GetActiveScene().name;
             if (currentSceneName != playerData.scenaName)
             {
                 using (StreamReader reader = File.OpenText(saveFilePath))
                 {
-
-
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(playerData.scenaName);
-                    ActivatePlayerCamera(playerData.scenaName);
-                    /// LOAD SCENE SAVED
-                    controllerTransform.SetPositionAndRotation(new Vector3(playerData.posX, playerData.posY, playerData.posZ), Quaternion.Euler(playerData.rotX, playerData.rotY, playerData.rotZ));
-
+                    StartCoroutine(LoadScene(playerData.scenaName, playerData.posX, playerData.posY, playerData.posZ,playerData.rotX, playerData.rotY, playerData.rotZ));                
                 }
             }
             else
@@ -88,18 +82,36 @@ public class DataController : MonoBehaviour
                 Debug.LogWarning("No se encontr� el archivo en: " + saveFilePath);
             }
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             Debug.LogError("Error al cargar la posici�n: " + e.Message);
         }
     }
 
-    public void ActivatePlayerCamera(string sceneName)
+    private IEnumerator LoadScene(string sceneName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ)
     {
-        Debug.Log("Start");
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!asyncLoadLevel.isDone)
+        {
+            yield return null;
+        }
+        Destroy(GameObject.FindGameObjectWithTag("SpawnPoint"));
+
+        this.transform.SetPositionAndRotation(new Vector3(posX, posY, posZ), Quaternion.Euler(rotX, rotY, rotZ));
+        yield return new WaitForSeconds(1f);
+        ActivatePlayerCamera();
+    }
+    public void ActivatePlayerCamera()
+    {
         playerSettings.virtualCamera.SetActive(true);
         playerSettings.mainCamera.SetActive(true);
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            mainMenu.SetActive(false);
+            playerHUD.SetActive(true);
+        }
         playerController.enabled = true;
+
     }
 
 }

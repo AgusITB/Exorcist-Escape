@@ -9,6 +9,7 @@ public class TriggerDeleteLLorona : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             llorona.StopAndDeactivate();
+            Destroy(this.gameObject);
         }
     }
 

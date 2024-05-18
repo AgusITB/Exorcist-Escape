@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +7,10 @@ public class GameManager : MonoBehaviour
     public GameObject interactText;
     public GameObject icon;
 
+    public GameObject key1;
+    public GameObject key2;
+    public GameObject necklace;
+    public GameObject baby;
 
     public static GameManager instance;
     private void Awake()
