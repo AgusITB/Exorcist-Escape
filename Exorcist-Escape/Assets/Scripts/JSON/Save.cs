@@ -1,19 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Save : NonPickableObject
 {
     private GameManager gameManager;
 
-    private void Awake()
+    private DataController dataController;
+
+    private void Start()
     {
         gameManager = GameManager.instance;
-       
+        dataController = DataController.instance;
     }
     public override void Interact()
     {
+        dataController.SavePlayerPosition();
         Debug.Log("Save...");
     }
     private void OnTriggerEnter(Collider other)

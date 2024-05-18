@@ -1,10 +1,9 @@
 ﻿using System;
-using UnityEngine;
 
 [Serializable]
 public class UIItem
 {
+    public string name;
     public PickableObject pickableObject;
-    public GameObject UIKey;
 }
 

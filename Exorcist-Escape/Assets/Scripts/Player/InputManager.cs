@@ -26,19 +26,23 @@ public class InputManager : MonoBehaviour
             instance = this;
         
         playerControls = new PlayerControls();
-        playerControls.Player.Flashlight.performed += _ => toggleLight.Invoke();
-        playerControls.Player.ToggleLights.started += _ => changeLight.Invoke();
-        playerControls.Player.Interact.performed += _ => interacted.Invoke();
+
 
     }
 
     private void OnEnable()
     {
         playerControls.Enable();
+        playerControls.Player.Flashlight.performed += _ => toggleLight?.Invoke();
+        playerControls.Player.ToggleLights.started += _ => changeLight?.Invoke();
+        playerControls.Player.Interact.performed += _ => interacted?.Invoke();
     }
     private void OnDisable()
     {
         playerControls.Disable();
+        playerControls.Player.Flashlight.performed -= _ => toggleLight?.Invoke();
+        playerControls.Player.ToggleLights.started -= _ => changeLight?.Invoke();
+        playerControls.Player.Interact.performed -= _ => interacted?.Invoke();
     }
 
     public Vector2 GetPlayerMovement()

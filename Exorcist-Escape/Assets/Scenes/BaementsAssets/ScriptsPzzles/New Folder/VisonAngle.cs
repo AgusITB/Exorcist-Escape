@@ -4,7 +4,7 @@ public class VisionAngle : MonoBehaviour
 {
     public Camera camaraJugador; 
     public LayerMask capaEnemigo;
-    [SerializeField] private Llorona llorona;
+    public Llorona llorona;
     private void Update()
     {
         Ray rayo = camaraJugador.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
