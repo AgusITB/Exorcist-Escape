@@ -18,9 +18,9 @@ public class BasementDoor : NonPickableObject
         var asyncLoadLevel = SceneManager.LoadSceneAsync("FinalHouse", LoadSceneMode.Single);
         while (!asyncLoadLevel.isDone)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             yield return null;
         }
-        DataController.instance.ActivatePlayerCamera();
     }
 
     //private void OnTriggerEnter(Collider other)

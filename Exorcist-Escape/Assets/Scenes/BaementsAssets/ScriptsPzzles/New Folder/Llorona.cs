@@ -30,6 +30,7 @@ public class Llorona : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(agent.isStopped);
         if (isDeactivated) return;
 
         if (!quedarseQuieto)
@@ -39,6 +40,14 @@ public class Llorona : MonoBehaviour
                 agent.destination = jugador.position;
             }
         }
+    }
+    public void SetStopLlorona()
+    {
+        lloronaAnimator.enabled = true;
+        lloronaAnimator.SetBool("IsWalking", true);
+        quedarseQuieto = false;
+        agent.destination = jugador.position;
+        agent.isStopped = false;
     }
     public void SetQuedarseQuieto(bool estado)
     {
