@@ -23,7 +23,7 @@ public class DataController : MonoBehaviour
     }
 
 
-    private readonly string saveFilePath = "./Assets/Scripts/JSON/Data.json";
+    private readonly string saveFilePath = $"{Application.dataPath}/StreamingAssets/data.json";
 
 
     private void Awake()

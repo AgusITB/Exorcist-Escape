@@ -7,7 +7,6 @@ public class VisionAngle : MonoBehaviour
     public Llorona llorona;
     private void Update()
     {
-        Debug.Log("Updating");
         Ray rayo = camaraJugador.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         if (Physics.Raycast(rayo, out hit, Mathf.Infinity, capaEnemigo))

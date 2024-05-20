@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class ReadableNote : PickableObject
@@ -6,6 +7,8 @@ public class ReadableNote : PickableObject
 
     private NotesManager notesManager;
     private TextMeshPro text;
+
+    public Action NoteReaded;
     protected override void Awake()
     {
         base.Awake();
@@ -23,12 +26,15 @@ public class ReadableNote : PickableObject
     protected override void Collect()
     {
         notesManager.ChangeText(text);
-        
+        NoteReaded?.Invoke();
+
         if (pickUpClip != null)
         {
             AudioSource.PlayClipAtPoint(pickUpClip, this.transform.position, 0.3f);
         }
-       
+        
+
+
     }
 }
 
