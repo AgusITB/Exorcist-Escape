@@ -13,15 +13,15 @@ public class AudioLoudnessDetector : MonoBehaviour
     }
     private void MicrophoneToAudioClip(int microphoneIndex)
     {
-        //if (Microphone.devices.Length > 0)
-        //{
-        //    microphoneName = Microphone.devices[microphoneIndex];
-        //    microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
-        //}
-        //if (Microphone.devices.Length == 0)
-        //{
+        if (Microphone.devices.Length > 0)
+        {
+            microphoneName = Microphone.devices[microphoneIndex];
+            microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
+        }
+        if (Microphone.devices.Length == 0)
+        {
             enabled = false;
-        //}
+        }
     }
 
     public float GetLoudnessFromMicrohpone()
