@@ -22,13 +22,4 @@ public class BasementDoor : NonPickableObject
             yield return null;
         }
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    gameManager.ActivateHud("Go to the basement");
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    gameManager.DeactivateHud();
-    //}
 }

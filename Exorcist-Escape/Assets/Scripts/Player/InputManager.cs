@@ -39,7 +39,6 @@ public class InputManager : MonoBehaviour
     }
     private void OnDisable()
     {
-        playerControls.Disable();
         playerControls.Player.Flashlight.performed -= _ => toggleLight?.Invoke();
         playerControls.Player.ToggleLights.started -= _ => changeLight?.Invoke();
         playerControls.Player.Interact.performed -= _ => interacted?.Invoke();

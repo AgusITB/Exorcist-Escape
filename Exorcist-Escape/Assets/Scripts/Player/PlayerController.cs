@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
 
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float m_StepInterval;
     [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-
+    [SerializeField] private GameObject deathMenu;
+    [SerializeField] private GameObject playerHUD;
     private float m_StepCycle;
     private float m_NextStep;
 
@@ -91,4 +93,15 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out Llorona llorona))
+        {
+            deathMenu.SetActive(true);
+            this.enabled = false;
+            inputManager.enabled = false;
+            playerHUD.SetActive(false);
+            Destroy(llorona.gameObject);
+        }
+    }
 }

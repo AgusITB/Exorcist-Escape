@@ -30,7 +30,6 @@ public class Llorona : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(agent.isStopped);
         if (isDeactivated) return;
 
         if (!quedarseQuieto)

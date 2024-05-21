@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +10,7 @@ public class MovementInMain : MonoBehaviour
 
         SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
     }
+
     public void Continue()
     {
         if (DataController.instance != null)

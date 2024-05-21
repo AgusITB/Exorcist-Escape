@@ -12,7 +12,8 @@ public class DataController : MonoBehaviour
 
     [SerializeField] private GameObject playerHUD;
     [SerializeField] private GameObject mainMenu;
-    
+    [SerializeField] private GameObject deathMenu;
+
     [SerializeField] private PlayerSettings playerSettings;
 
     [Serializable]
@@ -38,12 +39,12 @@ public class DataController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
     }
     public void SavePlayerPosition()
     {
 
-        string currentSceneName = SceneManager.GetActiveScene().name;   
+        string currentSceneName = SceneManager.GetActiveScene().name;
         PlayerData playerData = new(this.transform.position.x, this.transform.position.y, this.transform.position.z, this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z, currentSceneName);
         string jsonData = JsonUtility.ToJson(playerData);
         try
@@ -74,12 +75,8 @@ public class DataController : MonoBehaviour
             {
                 using (StreamReader reader = File.OpenText(saveFilePath))
                 {
-                    StartCoroutine(LoadScene(playerData.scenaName, playerData.posX, playerData.posY, playerData.posZ,playerData.rotX, playerData.rotY, playerData.rotZ));                
+                    StartCoroutine(LoadScene(playerData.scenaName, playerData.posX, playerData.posY, playerData.posZ, playerData.rotX, playerData.rotY, playerData.rotZ));
                 }
-            }
-            else
-            {
-                Debug.LogWarning("No se encontr� el archivo en: " + saveFilePath);
             }
         }
         catch (Exception e)
@@ -111,7 +108,8 @@ public class DataController : MonoBehaviour
             playerHUD.SetActive(true);
         }
         playerController.enabled = true;
-
+        InputManager.Instance.enabled = true;
+        deathMenu.SetActive(false);
     }
 
 }

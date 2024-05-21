@@ -30,11 +30,11 @@ public class Baby : PickableObject
                 player.enabled = false;
                 Camera.main.transform.rotation = Quaternion.identity;
                 Camera.main.transform.GetComponent<CinemachineBrain>().enabled = false;
-                player.transform.DORotate(new Vector3(0, -32.93f, 0), 0.5f).SetEase(Ease.Linear);
+                player.transform.DORotate(new Vector3(0, -39.082f, 0), 0.5f).SetEase(Ease.Linear);
                 this.gameObject.SetActive(false);
             
         }
-    
+        /**/
     }
 
     private void NoteReaded()
