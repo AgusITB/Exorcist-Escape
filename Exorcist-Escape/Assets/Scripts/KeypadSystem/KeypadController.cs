@@ -15,6 +15,7 @@ public class KeypadController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip correctSound;
     public AudioClip wrongSound;
+    [SerializeField] Color wordsColor;
 
     protected void Start()
     {
@@ -44,7 +45,7 @@ public class KeypadController : MonoBehaviour
     public void Clear()
     {
         passwordText.text = "";
-        passwordText.color = Color.white;
+        passwordText.color = wordsColor;
     }
 
     protected virtual void Enter()

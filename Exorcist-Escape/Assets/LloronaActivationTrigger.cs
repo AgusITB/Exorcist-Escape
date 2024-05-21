@@ -12,6 +12,7 @@ public class LloronaActivationTrigger : MonoBehaviour
     {
         if(other.TryGetComponent(out PlayerController playerController))
         {
+            playerController.gameObject.GetComponent<DataController>().SavePlayerPosition();
             door.Interact();
             door.LockDoor();
             llorona.GetComponent<Animator>().enabled = true;
