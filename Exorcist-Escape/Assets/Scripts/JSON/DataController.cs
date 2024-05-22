@@ -71,13 +71,13 @@ public class DataController : MonoBehaviour
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(jsonData);
 
             string currentSceneName = SceneManager.GetActiveScene().name;
-            if (currentSceneName != playerData.scenaName)
-            {
+            //if (currentSceneName != playerData.scenaName)
+            //{
                 using (StreamReader reader = File.OpenText(saveFilePath))
                 {
                     StartCoroutine(LoadScene(playerData.scenaName, playerData.posX, playerData.posY, playerData.posZ, playerData.rotX, playerData.rotY, playerData.rotZ));
                 }
-            }
+            //}
         }
         catch (Exception e)
         {

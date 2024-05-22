@@ -1,7 +1,4 @@
-﻿using UnityEditor.Networking.PlayerConnection;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
+﻿using UnityEngine;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -79,7 +76,7 @@ public class PlayerController : MonoBehaviour
         if (inputManager == null) return;
 
         groundedPlayer = controller.isGrounded;
-  
+
         Vector2 movement = inputManager.GetPlayerMovement();
         Vector3 move = new(movement.x, 0, movement.y);
 

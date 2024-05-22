@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class WhenFInishd : MonoBehaviour
@@ -22,7 +19,14 @@ public class WhenFInishd : MonoBehaviour
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(DataController.instance.LoadSceneWithoutDestroyingSpawnPoint("HouseOutside"));
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            StartCoroutine(DataController.instance.LoadSceneWithoutDestroyingSpawnPoint("HouseOutside"));
+        }
+    }
 }

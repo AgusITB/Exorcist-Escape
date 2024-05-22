@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class MovementInMain : MonoBehaviour
 {
-
+    [SerializeField] GameObject mainCanvas;
     public void NewGame(string sceneName)
     {
+        mainCanvas.SetActive(false);
         Debug.Log("Start New Game...");
         SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
     }

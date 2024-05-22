@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class LloronaFinal : PickableObject
 {
@@ -12,15 +13,14 @@ public class LloronaFinal : PickableObject
 
     public AudioLoudnessDetector detector;
 
-    [SerializeField] private float minimumSensibility = 100;
-    [SerializeField] private float maximumSensibility = 1000;
-
     [SerializeField] private float currentLoudnessSensibility = 500;
     [SerializeField] private float threshold = 0.1f;
 
     [SerializeField] private GameObject baby;
 
     [SerializeField] private GameObject babyPosition;
+
+    private bool alreadyInteracted = false;
     protected override void Awake()
     {
         base.Awake();
@@ -30,7 +30,7 @@ public class LloronaFinal : PickableObject
     }
     private void Start()
     {
-        agent.destination = target.position;
+        agent.destination = target.position; /*GameObject.FindGameObjectWithTag("Player").transform.position;*/
     }
     public void StopAndDeactivate()
     {
@@ -91,7 +91,14 @@ public class LloronaFinal : PickableObject
     }
     public override void Interact()
     {
-        Collect();
+        if (!alreadyInteracted)
+        {
+            Collect();
+            alreadyInteracted = true;
+            SceneManager.LoadScene("Creditos");
+            GameObject.FindGameObjectWithTag("Player").SetActive(false);
+        }
+
     }
 
     protected override void Collect()
