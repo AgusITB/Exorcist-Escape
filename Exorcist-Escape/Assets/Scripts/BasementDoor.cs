@@ -1,8 +1,3 @@
-using System.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-
 public class BasementDoor : NonPickableObject
 {
     private void Awake()
@@ -11,15 +6,6 @@ public class BasementDoor : NonPickableObject
     }
     public override void Interact()
     {
-        StartCoroutine(LoadScene());
-    }
-    private static IEnumerator LoadScene() {
-
-        var asyncLoadLevel = SceneManager.LoadSceneAsync("FinalHouse", LoadSceneMode.Single);
-        while (!asyncLoadLevel.isDone)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
-            yield return null;
-        }
+        StartCoroutine(DataController.instance.LoadSceneWithoutDestroyingSpawnPoint("FinalHouse"));
     }
 }

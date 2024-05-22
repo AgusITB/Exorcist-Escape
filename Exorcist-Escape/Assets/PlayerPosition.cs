@@ -21,7 +21,7 @@ public class PlayerPosition : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<PlayerController>().enabled = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         player.transform.position = this.transform.position;
         player.transform.localPosition = this.transform.position;
         DataController.instance.ActivatePlayerCamera();

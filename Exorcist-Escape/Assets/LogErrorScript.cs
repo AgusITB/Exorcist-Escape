@@ -8,7 +8,6 @@ public class LogErrorScript : MonoBehaviour
     {
         Debug.developerConsoleEnabled = true;
         Debug.developerConsoleVisible = true;
-        Debug.LogError("I am an Error");
     }
 
 }

@@ -7,12 +7,13 @@ public class MovementInMain : MonoBehaviour
 
     public void NewGame(string sceneName)
     {
-
+        Debug.Log("Start New Game...");
         SceneManager.LoadScene(sceneName); // Cargar la escena especificada por el nombre
     }
 
     public void Continue()
     {
+        Debug.Log("ContinueGame...");
         if (DataController.instance != null)
         {
             DataController.instance.LoadPlayerPosition();

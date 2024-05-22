@@ -85,21 +85,42 @@ public class DataController : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadScene(string sceneName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ)
+    public IEnumerator LoadScene(string sceneName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ)
     {
         var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         while (!asyncLoadLevel.isDone)
         {
+            Debug.Log("Loading scene..." + ": " + sceneName);
             yield return null;
         }
+        Debug.Log("Scene lodaded");
         Destroy(GameObject.FindGameObjectWithTag("SpawnPoint"));
 
         this.transform.SetPositionAndRotation(new Vector3(posX, posY, posZ), Quaternion.Euler(rotX, rotY, rotZ));
         yield return new WaitForSeconds(1f);
         ActivatePlayerCamera();
     }
+
+    public IEnumerator LoadSceneWithoutDestroyingSpawnPoint(string sceneName)
+    {
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        while (!asyncLoadLevel.isDone)
+        {
+            Debug.Log("Loading scene..." + ": " + sceneName);
+            yield return null;
+        }
+        Debug.Log("Scene lodaded");
+        Transform transform = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
+
+        this.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        ActivatePlayerCamera();
+    }
+
+
     public void ActivatePlayerCamera()
     {
+        Debug.Log("LoadCharacterPosition");
         playerSettings.virtualCamera.SetActive(true);
         playerSettings.mainCamera.SetActive(true);
         if (SceneManager.GetActiveScene().name != "MainMenu")
@@ -107,6 +128,7 @@ public class DataController : MonoBehaviour
             mainMenu.SetActive(false);
             playerHUD.SetActive(true);
         }
+        playerController.GetComponent<CharacterController>().enabled = true;
         playerController.enabled = true;
         InputManager.Instance.enabled = true;
         deathMenu.SetActive(false);
