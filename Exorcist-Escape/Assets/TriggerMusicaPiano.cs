@@ -23,7 +23,7 @@ public class TriggerMusicaPiano : MonoBehaviour
             {
                 pianoAudioSource.enabled = true;
                 pianoAudioSource.Play();
-                Destroy(gameObject);
+                Destroy(gameObject, 1f);
             }
         }
     }
