@@ -15,11 +15,23 @@ public class AudioLoudnessDetector : MonoBehaviour
     {
         if (Microphone.devices.Length > 0)
         {
-            microphoneName = Microphone.devices[microphoneIndex];
-            microphoneClip = Microphone.Start(microphoneName, true, 20, AudioSettings.outputSampleRate);
+            Debug.Log(Microphone.devices.Length);
+            foreach (var device in Microphone.devices)
+            {
+
+                Debug.Log(device);
+            }
+
+            Debug.Log("Used device:" + Microphone.devices[microphoneIndex]);
+
+
+
+            microphoneClip = Microphone.Start(Microphone.devices[microphoneIndex], true, 20, AudioSettings.outputSampleRate);
+            Debug.Log(microphoneClip);
         }
         if (Microphone.devices.Length == 0)
         {
+            Debug.Log("DetectorDisabled");
             enabled = false;
         }
     }

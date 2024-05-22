@@ -63,9 +63,11 @@ public class LloronaFinal : PickableObject
                         if (agent != null)
                         {
                             float loudness = detector.GetLoudnessFromMicrohpone() * currentLoudnessSensibility;
+                            Debug.Log("Loudness: " + loudness);
                             if (loudness < threshold) loudness = 0.01f;
 
-                            if (loudness > 50f)
+
+                            if (loudness > 1f)
                             {
                                 agent.isStopped = false;
                                 lloronaAnimator.SetBool("IsWalking", true);
