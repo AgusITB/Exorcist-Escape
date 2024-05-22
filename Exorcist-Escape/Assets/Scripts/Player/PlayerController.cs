@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Networking.PlayerConnection;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
@@ -10,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private bool groundedPlayer;
 
-    private Vector3 playerVelocity;
+    private float verticalVelocity;
 
     [SerializeField] private float playerSpeed;
     [SerializeField] private float gravityValue;
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float m_StepInterval;
     [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
     [SerializeField] private GameObject deathMenu;
-    [SerializeField] private GameObject playerHUD;
+    [SerializeField] public GameObject playerHUD;
     private float m_StepCycle;
     private float m_NextStep;
 
@@ -40,14 +41,15 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        ProgressStepCycle(2);
+        ProgressStepCycle();
     }
 
-    private void ProgressStepCycle(float speed)
+    private void ProgressStepCycle()
     {
+
         if (controller.velocity.sqrMagnitude > 0 && (inputManager.GetPlayerMovement().x != 0 || inputManager.GetPlayerMovement().y != 0))
         {
-            m_StepCycle += (controller.velocity.magnitude + (speed * 1f)) * Time.fixedDeltaTime;
+            m_StepCycle += (controller.velocity.magnitude + 1f * playerSpeed) * Time.fixedDeltaTime;
         }
 
         if (!(m_StepCycle > m_NextStep))
@@ -77,20 +79,51 @@ public class PlayerController : MonoBehaviour
         if (inputManager == null) return;
 
         groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
-
+  
         Vector2 movement = inputManager.GetPlayerMovement();
         Vector3 move = new(movement.x, 0, movement.y);
-        move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
-        move.y = 0f;
+
+
+        // Get the camera's right and forward directions
+        Vector3 cameraRight = cameraTransform.right;
+        Vector3 cameraForward = cameraTransform.forward;
+
+        // Flatten the camera's forward direction to the horizontal plane
+        cameraForward.y = 0;
+        cameraForward.Normalize();
+
+        // Flatten the camera's right direction to the horizontal plane
+        cameraRight.y = 0;
+        cameraRight.Normalize();
+
+        // Calculate the move direction based on the flattened vectors
+        move = move.x * cameraRight + move.z * cameraForward;
+
+        // Apply gravity
+        if (!groundedPlayer)
+        {
+            verticalVelocity += gravityValue * Time.deltaTime;
+        }
+        else
+        {
+            verticalVelocity = 0f;
+        }
+
+        move.y = verticalVelocity;
 
         controller.Move(playerSpeed * Time.deltaTime * move);
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        //move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
+        //move.y += gravityValue * Time.deltaTime;
+
+        //if (groundedPlayer && move.y < 0)
+        //{
+        //    move.y = 0f;
+        //}
+        //controller.Move(playerSpeed * Time.deltaTime * move);
+
+        //playerVelocity.y += gravityValue * Time.deltaTime;
+        //controller.Move(playerVelocity * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)

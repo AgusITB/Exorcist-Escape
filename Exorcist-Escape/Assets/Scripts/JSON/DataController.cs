@@ -90,10 +90,8 @@ public class DataController : MonoBehaviour
         var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         while (!asyncLoadLevel.isDone)
         {
-            Debug.Log("Loading scene..." + ": " + sceneName);
             yield return null;
         }
-        Debug.Log("Scene lodaded");
         Destroy(GameObject.FindGameObjectWithTag("SpawnPoint"));
 
         this.transform.SetPositionAndRotation(new Vector3(posX, posY, posZ), Quaternion.Euler(rotX, rotY, rotZ));
@@ -106,10 +104,8 @@ public class DataController : MonoBehaviour
         var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         while (!asyncLoadLevel.isDone)
         {
-            Debug.Log("Loading scene..." + ": " + sceneName);
             yield return null;
         }
-        Debug.Log("Scene lodaded");
         Transform transform = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
 
         this.transform.SetPositionAndRotation(transform.position, transform.rotation);
@@ -120,7 +116,6 @@ public class DataController : MonoBehaviour
 
     public void ActivatePlayerCamera()
     {
-        Debug.Log("LoadCharacterPosition");
         playerSettings.virtualCamera.SetActive(true);
         playerSettings.mainCamera.SetActive(true);
         if (SceneManager.GetActiveScene().name != "MainMenu")
