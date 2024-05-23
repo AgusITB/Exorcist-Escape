@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Parallax Mapping Bi Directional
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;232;75.72491,2130.598;Inherit;False;266;102;Enable
+    Custom Derivative;;0,0,0,1;Useful for optimization when daisy chaining Parallax
+    Mapping ;0;0\nNode;AmplifyShaderEditor.FunctionInput;213;-506.5402,2389.681;Inherit;False;Iterations;1;7;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;241;-896,2672;Inherit;False;296.8999;176.8;;;0,0,0,1;Amplitude
+    controls the maximum height range of the effect. Values that are too high tend
+    to pull the effect apart and break the illusion.  Values that are too low aren't
+    visible, so finding the right balance is important.;0;0\nNode;AmplifyShaderEditor.WireNode;242;-375.4187,2568.297;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;246;-64,2368;Inherit;False;268.8818;135.25;;;0,0,0,1;The
+    resulting UVs are shifted away from the viewer in the view direciton when the
+    height map is white.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;247;64,1728;Inherit;False;405.256;179.494;UV
+    Parallax Mapping Bi Directional Node;;0,0,0,1;$$$;0;0\nNode;AmplifyShaderEditor.FunctionInput;214;-536.3149,2651.811;Inherit;False;SS;13;4;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;222;68.98822,2034.617;Inherit;False;Option;False;0;2;2;In
+    0;In 1;Instance;228;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdyOpNode;225;-256,2032;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdxOpNode;223;-256,1920;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;228;64,1920;Inherit;False;Enable
+    Custom Derivative;True;0;2;2;In 0;In 1;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;194;-448,1920;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;224;-112,1984;Inherit;False;DDX;2;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;231;-112,2096;Inherit;False;DDY;2;2;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;118;-544,2272;Inherit;False;Heightmap;9;3;False;1;0;SAMPLER2D;0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;235;-656,2336;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;209;-1024,2272;Float;False;Tangent;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DynamicAppendNode;234;-816,2272;Inherit;False;FLOAT2;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;240;-720,2576;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;195;-912,2576;Inherit;False;Amplitude;1;5;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;196;-576,2480;Inherit;False;Reference
+    Plane;1;6;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;203;-272,2288;Float;False;UVs
+    += plane * scale * refp * ite@$for(int i = 0@ i < ite@ i++)${$#if ASE_USING_SAMPLING_MACROS$\tUVs
+    += (SAMPLE_TEXTURE2D( tex, samplerstate, UVs ).g - 1) * plane * scale@$#else$\tUVs
+    += (tex2D(tex, UVs).g - 1) * plane * scale@$#endif$}$return UVs@;2;Create;7;True;tex;SAMPLER2D;0.0;In;;Float;False;True;UVs;FLOAT2;0,0;In;;Float;False;True;plane;FLOAT2;0,0;In;;Float;False;True;ite;INT;0;In;;Float;False;True;refp;FLOAT;0;In;;Float;False;True;scale;FLOAT;0;In;;Float;False;True;samplerstate;SAMPLERSTATE;;In;;Inherit;False;IterativeParallax;True;False;0;;False;7;0;SAMPLER2D;0.0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;3;INT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;SAMPLERSTATE;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;219;384,1920;Inherit;False;False;-1;DDX;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;218;112,2288;Inherit;False;True;-1;UV;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;220;384,2032;Inherit;False;False;-1;DDY;2;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;242;0;240;0\nWireConnection;222;0;225;0\nWireConnection;222;1;231;0\nWireConnection;225;0;194;0\nWireConnection;223;0;194;0\nWireConnection;228;0;223;0\nWireConnection;228;1;224;0\nWireConnection;235;0;234;0\nWireConnection;235;1;209;3\nWireConnection;234;0;209;0\nWireConnection;240;0;195;0\nWireConnection;203;0;118;0\nWireConnection;203;1;194;0\nWireConnection;203;2;235;0\nWireConnection;203;3;213;0\nWireConnection;203;4;196;0\nWireConnection;203;5;242;0\nWireConnection;203;6;214;0\nWireConnection;219;0;228;0\nWireConnection;218;0;203;0\nWireConnection;220;0;222;0\nASEEND*/\n//CHKSM=A34D4093767FE1C80216BDB34983F0427B6B295E"
+  m_functionName: 
+  m_description: 'UV Parallax Mapping Bi Directional Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

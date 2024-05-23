@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF World Normal Face
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;109;640,208;Inherit;False;1299.827;411.9055;Exsample
+    Foliage Fade-Out;8;108;112;111;106;105;110;104;113;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;101;-144,-336;Inherit;False;218.1436;102.443;;;0.05660379,0.0536668,0.0536668,1;Use
+    Camera-relative World Position to avoid precision issues$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;102;128,-352;Inherit;False;254.5178;117.047;;;0.05660379,0.0536668,0.0536668,1;Normals
+    are generated using the derivatives (DDX / DDY) of the position.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;103;512,-512;Inherit;False;538.3998;163.394;World
+    Normal Face Node ;;0.05660379,0.05046281,0.05046281,1;Returns a world-space Face
+    Normal$$Generates unsmoothed normals for the faces of the mesh. $$The normals
+    are generated using derivatives so these normals are completely independent from
+    the vertex normals provided by the mesh.$;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;86;608,-224;Inherit;False;Safe
+    Normalize;True;1;2;1;In 0;In 1;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;100;-144,-224;Inherit;False;Camera
+    Relative WP;True;0;2;0;In 0;In 1;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;91;-320,-160;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;92;-592,-80;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DdyOpNode;93;128,-224;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DdxOpNode;94;128,-144;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CrossProductOpNode;95;256,-224;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;96;432,-224;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;104;896,256;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;110;832,464;Inherit;False;246.9999;142;;;0,0,0,1;The
+    result of this dot product is white when the faces are pointed toward the camera,
+    and black when they're pointed away.;0;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;105;688,304;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;106;1136,256;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;111;1136,464;Inherit;False;274;139;;;0,0,0,1;When
+    Alpha Clipping is enabled in the Graph Settings, the result of this could be
+    passed into the Alpha port of the Context Node to clip out faces that aren't
+    facing the camera.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;112;1520,256;Inherit;False;402;309;;;0,0,0,1;Frequently,
+    the normals of foliage assets (such as tree branches or bushes) are pushed outward
+    away from the center.  This improves the lighting, but it also means that the
+    normals no longer represent the actual facing direction of the surface.$$For
+    this type of asset, it can improve quality to hide the faces when they're edge-on
+    to the camera - to hide the fact that the foliage is made of flat cards instead
+    of thousands of leaves.$$When normals are bent, fading out edge-on faces requires
+    using the Face Normal node instead of the Normal Vector. In that case, this type
+    of node arrangement could be used.$$;0;0\nNode;AmplifyShaderEditor.RoundOpNode;108;1360,256;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;113;848,256;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;114;848,-144;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;99;432,-144;Inherit;False;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.TransformDirectionNode;115;896,-144;Inherit;True;World;Tangent;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionSwitch;116;1152,-224;Inherit;False;Space;False;0;2;-1;World;Tangent;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;90;-528,-224;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;30;1408,-224;Inherit;True;True;-1;Out;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;86;0;96;0\nWireConnection;86;1;99;0\nWireConnection;100;0;90;0\nWireConnection;100;1;91;0\nWireConnection;91;0;90;0\nWireConnection;91;1;92;0\nWireConnection;93;0;100;0\nWireConnection;94;0;100;0\nWireConnection;95;0;93;0\nWireConnection;95;1;94;0\nWireConnection;96;0;95;0\nWireConnection;104;0;113;0\nWireConnection;104;1;105;0\nWireConnection;106;0;104;0\nWireConnection;106;1;104;0\nWireConnection;108;0;106;0\nWireConnection;113;0;114;0\nWireConnection;114;0;86;0\nWireConnection;99;0;95;0\nWireConnection;115;0;99;0\nWireConnection;116;0;86;0\nWireConnection;116;1;115;0\nWireConnection;30;0;116;0\nASEEND*/\n//CHKSM=0E64B2970C42D0C14EB7921BF882D0ECEF2729DA"
+  m_functionName: 
+  m_description: 'World Normal Face Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.7529412, g: 0.6784314, b: 0, a: 1}
+  m_customNodeCategory: DESF Surface Data
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

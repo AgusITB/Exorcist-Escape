@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DE Decal UV Reveal
+  m_Shader: {fileID: 4800000, guid: c7795a88ca030d944956dc9a1539ced6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseColorMap:
+        m_Texture: {fileID: 2800000, guid: 87f0754c40672f24c9a0ab4a4f4a2cd7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: ce16dc432c2dc1d4597211229cb1fecb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _CATEGORY_COLOR: 1
+    - _CATEGORY_DECALMAP: 1
+    - _CATEGORY_EMISSION: 1
+    - _CATEGORY_OPACITY: 1
+    - _CATEGORY_UVLIGHTREVEAL: 1
+    - _DecalAngleFadeSupported: 1
+    - _DecalColorSpaceDouble: 0
+    - _DecalEmissiveEnable: 1
+    - _DecalEmissiveIntensity: 0.25
+    - _DecalMainLightInfluence: 0
+    - _DecalMeshBiasType: 0
+    - _DecalMeshDepthBias: 0
+    - _DecalMeshViewBias: 0
+    - _DecalOpacityGlobal: 0
+    - _DecalOpacityMOASChannel: 0
+    - _DecalOpacityNormalChannel: 0
+    - _DecalUVLightEnable: 1
+    - _DecalUVLightThreshold: 0.203
+    - _DecalUVLightThresholdTemp: 0.285
+    - _DrawOrder: 0
+    - _EmissionFlags: 3
+    - _EmissiveIntensity: 1
+    - _MetallicStrength: 0
+    - _NormalStrength: 1
+    - _OcclusionStrengthAO: 0
+    - _SPACE_COLOR: 0
+    - _SPACE_DECALMAP: 0
+    - _SPACE_EMISSION: 0
+    - _SPACE_OPACITY: 0
+    - _SPACE_UVLIGHTREVEAL: 0
+    - _SmoothnessStrength: 0
+    - _UVRotation: 0
+    m_Colors:
+    - _DecalColor: {r: 0.42033768, g: 2, b: 0, a: 1}
+    - _DecalUVLightFilteredColor: {r: 0.49648243, g: 0.30860624, b: 0.6886792, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0.04595008, g: 0.6509434, b: 0.009211446, a: 0}
+  m_BuildTextureStacks: []

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Shape Spiral
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;38;416,32;Inherit;False;668.2562;225.5994;Determine
+    Width and draw smooth edge;5;8;6;12;7;4;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;37;-943.4429,-201.0719;Inherit;False;1267.577;483.26;Create
+    repeating radial line from center;11;21;22;18;23;20;19;15;16;5;13;10;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;36;-1888.948,-138.8064;Inherit;False;856.8865;248.5064;Create
+    radial UVs;6;27;28;17;25;26;31;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.FunctionInput;28;-1627.196,18.38412;Inherit;False;Position;2;1;False;1;0;FLOAT2;1.5,1.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;17;-1161.697,-94.62577;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;25;-1605.697,-93.62577;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;26;-1879.697,-95.62577;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;31;-1428.943,-93.52047;Inherit;False;DESF
+    UV Polar Coordinates;-1;;132;4ee17c629fd6db648b7d3ef46c0bea00;0;4;10;FLOAT2;0,0;False;3;FLOAT2;0.5,0.5;False;12;FLOAT;1;False;7;FLOAT;1;False;3;FLOAT2;0;FLOAT;53;FLOAT;54\nNode;AmplifyShaderEditor.FunctionInput;27;-1837.468,30.66947;Inherit;False;Tiling;2;0;False;1;0;FLOAT2;3,3;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;39;1152,-256;Inherit;False;383;160;Pattern
+    Spiral Node;;0,0,0,1;Creates a duotone spiral;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;1;1152,-64;Inherit;False;Mode
+    Anti Aliasing;False;1;3;1;None;Smoothstep;Derivative;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StepOpNode;2;992,-64;Inherit;False;2;0;FLOAT;0.5;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SmoothstepOpNode;6;928,80;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0.4;False;2;FLOAT;0.6;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;35;864,272;Inherit;False;DESF
+    Step Antialiasing;-1;;133;f0a1ac6d721c4e041afd125e4dbac8d5;0;2;27;FLOAT;0;False;28;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;7;688,80;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;40;832,16;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;12;528,176;Inherit;False;Width;1;3;False;1;0;FLOAT;0.6;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;4;576,80;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;8;432,80;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;34;688,320;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RoundOpNode;10;32,80;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;13;-80,16;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;9;208,16;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;5;-240,-96;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;-432,-128;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;15;-432,-32;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;19;-592,16;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;20;-752,112;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;23;-768,16;Inherit;False;Number;1;2;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PiNode;18;-624,-144;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TauNode;22;-896,192;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;21;-928,112;Inherit;False;Separation;1;4;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;41;-512,-48;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1408,-64;Inherit;True;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;17;0;31;0\nWireConnection;25;0;26;0\nWireConnection;25;1;27;0\nWireConnection;31;10;25;0\nWireConnection;31;3;28;0\nWireConnection;1;0;2;0\nWireConnection;1;1;6;0\nWireConnection;1;2;35;0\nWireConnection;2;1;40;0\nWireConnection;6;0;7;0\nWireConnection;35;27;34;0\nWireConnection;35;28;7;0\nWireConnection;7;0;4;0\nWireConnection;7;1;12;0\nWireConnection;40;0;7;0\nWireConnection;4;0;8;0\nWireConnection;8;0;9;0\nWireConnection;8;1;20;0\nWireConnection;10;0;13;0\nWireConnection;13;0;5;0\nWireConnection;13;1;20;0\nWireConnection;9;0;13;0\nWireConnection;9;1;10;0\nWireConnection;5;0;16;0\nWireConnection;5;1;15;0\nWireConnection;16;0;18;0\nWireConnection;16;1;17;0\nWireConnection;15;0;41;0\nWireConnection;15;1;19;0\nWireConnection;19;0;23;0\nWireConnection;19;1;20;0\nWireConnection;20;0;21;0\nWireConnection;20;1;22;0\nWireConnection;41;0;17;1\nWireConnection;0;0;1;0\nASEEND*/\n//CHKSM=D9DC94C7DBB578D8ECB655677502A8FE404D9B0A"
+  m_functionName: 
+  m_description: 'Shape Spiral Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6901961, g: 0.17254902, b: 0.023529412, a: 1}
+  m_customNodeCategory: DESF Shape
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

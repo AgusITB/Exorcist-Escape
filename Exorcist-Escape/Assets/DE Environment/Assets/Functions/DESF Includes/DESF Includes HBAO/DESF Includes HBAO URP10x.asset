@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Includes HBAO URP10x
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=18935\n112;125.5;1636;835;1812.603;404.2226;1.494731;True;True\nNode;AmplifyShaderEditor.StickyNoteNode;1;-434.1927,127.8598;Inherit;False;654.069;129.7631;ReadMe
+    LitAO setting in HBAO;;0,0,0,1;Direct should be connected where ever light color
+    is, and indirect can be connected to where ever indirect light is.;0;0\nNode;AmplifyShaderEditor.CustomExpressionNode;14;-234.1555,378.3681;Inherit;False;AmbientOcclusionFactor
+    aoFactor = GetScreenSpaceAmbientOcclusion(screenUV)@$$return float2(aoFactor.indirectAmbientOcclusion,
+    aoFactor.directAmbientOcclusion)@$;2;Create;1;True;screenUV;FLOAT2;0,0;In;;Inherit;False;AO;False;False;0;;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;13;-19.35498,378.8532;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleDivideOpNode;8;-381.9575,378.9943;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.ComponentMaskNode;11;-588.0579,452.4783;Inherit;False;False;False;False;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ComputeScreenPosHlpNode;12;-825.822,377.4137;Inherit;False;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.UnityObjToClipPosHlpNode;9;-1052.985,378.6505;Inherit;False;1;0;FLOAT3;0,0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.PosVertexDataNode;10;-1247.068,380.1259;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;15;133.645,335.8532;Inherit;False;True;-1;Indirect;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;16;137.7557,439.8665;Inherit;False;False;-1;Direct;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;14;0;8;0\nWireConnection;13;0;14;0\nWireConnection;8;0;12;0\nWireConnection;8;1;11;0\nWireConnection;11;0;12;0\nWireConnection;12;0;9;0\nWireConnection;9;0;10;0\nWireConnection;15;0;13;0\nWireConnection;16;0;13;1\nASEEND*/\n//CHKSM=CAA804767EE79B010D8DD0A5E7583B4E53F2B3F6"
+  m_functionName: 
+  m_description: "Last Changed: DE v5.0.0\n\nDESF Includes HBAO URP10x\nFix for AmbientOcclusionFactor
+    in unlit shaders\nThank you forASE User Contribution: SacbOy \nVistit ase Discord
+    for more info "
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_customHeader: 0
+  m_customHeaderColor: {r: 0.7647059, g: 0.30588236, b: 0, a: 1}
+  m_customNodeCategory: DESF Includes
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

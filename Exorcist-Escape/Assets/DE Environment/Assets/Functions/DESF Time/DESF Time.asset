@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Time
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;176;-938.4592,912;Inherit;False;1619.398;1016.496;FPS
+    & Repeat Interval;24;232;218;217;229;216;230;228;227;226;225;224;231;223;222;172;168;173;166;165;163;170;182;175;174;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;141;-272,0;Inherit;False;950.6241;411.678;;6;51;177;52;55;54;53;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;140;-272,432;Inherit;False;949.6351;455.7397;;5;46;47;50;49;48;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;72;768,720;Inherit;False;896.4589;325.9572;Time
+    Loops;3;70;73;71;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;29;768,-1104;Inherit;False;918.0942;446.6798;Time
+    Node;3;24;33;32;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;28;-224,-1104;Inherit;False;943.6405;441.1418;Time
+    Parameters Node;3;31;23;30;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;34;1728,-1104;Inherit;False;918.4474;449.1042;Sin
+    Time Node;3;25;36;35;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;38;2704,-1104;Inherit;False;922.7375;451.2494;Delta
+    Time Node;3;26;40;39;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;42;3661.855,-1104;Inherit;False;924.8825;449.1043;Cos
+    Time Node;3;27;44;43;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;74;768,0;Inherit;False;909.1516;340.1595;Animated
+    Scrolling;5;75;76;77;79;181;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;80;1792,48;Inherit;False;896.4589;325.9572;Time
+    Waves;4;82;84;85;86;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;90;768,1072;Inherit;False;898.1931;441.1202;Bouncing;5;93;91;89;92;87;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;94;1792,928;Inherit;False;1652.457;450.1009;Ripples;16;115;116;114;113;112;102;109;101;100;96;119;118;117;111;105;233;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;120;1792,384;Inherit;False;1199.863;530.9493;Artificial
+    Internal Light Source;11;131;130;129;125;122;121;132;128;127;126;123;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;133;768,352;Inherit;False;905.6292;343.4328;Animated
+    Rotation;5;137;138;136;134;178;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;30;-208,-1056;Inherit;False;483.1442;258.2374;;;0,0,0,1;t/20$Returns
+    the time value scaled by a factor of 0.05 (20x slower)$$t$Returns the unscaled
+    time value.$$t*2$Returns the time value scaled by a factor of 2.$$t*3$$Returns
+    the time value scaled by a factor of 3.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;304,-912;Inherit;False;349.7281;144.8991;;;0,0,0,1;The
+    Time Parameters node outputs Unity internal elapsed time in seconds scaled by
+    different constant amounts;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;784,-1056;Inherit;False;477.7251;101.8063;Scale;;0,0,0,1;Scale
+    factor which is multiplied by the current time value;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;1296,-960;Inherit;False;349.7281;163.3307;;;0,0,0,1;The
+    Time node outputs Unity internal elapsed time in seconds, which can be modified
+    by a Scale factor.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;35;1744,-1056;Inherit;False;482.5251;228.2063;;;0,0,0,1;t/8$Returns
+    the animated sine value scaled by a factor of 0.125 (8x slower)$$t/4$Returns
+    the animated sine value scaled by a factor of 0.25 (4x slower)$$t/2$Returns the
+    animated sine value scaled by a factor of 0.5 (2x slower)$$t$Returns the unscaled
+    animated sine value$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;36;2256,-912;Inherit;False;352.8;164.8666;;;0,0,0,1;The
+    Sin Time node outputs an animated sine wave with values varying between -1 and
+    1 using Unity internal time in seconds as its angle.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;39;2720,-1056;Inherit;False;495.4536;284.2296;;;0,0,0,1;dt$Returns
+    the real time elapsed between frames$$1/dt$Returns the inverse value of the real
+    time elapsed between frames.$$smoothDt$Returns a smooth time elapsed between
+    frames which takes into account and tone down big delta time variations$$1/smoothDt$Returns
+    the inverse value of the current smooth delta$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;40;3232,-896;Inherit;False;373.6848;165.209;;;0,0,0,1;The
+    Delta Time node outputs not only Unity internal elapsed time between frames in
+    seconds but also a smoother value of it and also the inverted value of each one
+    of them.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;43;3680,-1056;Inherit;False;495.4536;284.2296;;;0,0,0,1;t/8$Returns
+    the animated cosine value scaled by a factor of 0.125 (8x slower).$$t/4$Returns
+    the animated cosine value scaled by a factor of 0.25 (4x slower).$$t/2$Returns
+    the animated cosine value scaled by a factor of 0.5 (2x slower).$$t$Returns the
+    unscaled animated cosine value.$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;44;4192,-896;Inherit;False;355.2531;166.745;;;0,0,0,1;The
+    Cos Time node outputs an animated cosine wave with values varying between -1
+    and 1 using Unity internal time in seconds as its angle.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;73;864,848;Inherit;False;279.255;126.149;;;0,0,0,1;Using
+    a Fraction node, you can turn Time into a value that goes from zero to one and
+    then jumps back to zero again - a continous loop.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;79;1072,176;Inherit;False;191.6921;124.2083;;;0,0,0,1;Adding
+    Time to UV coordinates can be used to scroll textures.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;82;2048,192;Inherit;False;279.255;126.149;;;0,0,0,1;Using
+    Sine Time can create a smooth, animated wave where the time value oscillates
+    between -1 and 1.  Here we've adjusted that range to 0 to 1 so we can visualize
+    it.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;87;944,1344;Inherit;False;268.2867;130.5351;;;0,0,0,1;In
+    this example, the Sine of time gives us a value that oscilates back and forth
+    between 1 and -1.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;92;1280,1344;Inherit;False;353.8186;141.9221;;;0,0,0,1;Using
+    the Absolute node, now our data goes from 1 to 0 and back to 1, so it's more
+    like a bounce than a wave.$$The same thing could also be done with vertex position
+    to actually make your model bounce.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;105;1888,1232;Inherit;False;282;110;Polar
+    Coordinates node;;0,0,0,1;First we create a radial gradient with the Polar Coordinates
+    node (U).;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;111;2432,1200;Inherit;False;181;104;;;0,0,0,1;Then
+    we animate it by adding time.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;117;2832,1168;Inherit;False;235;100;;;0,0,0,1;Then
+    we increase the contrast and expand the range to 5 * PI.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;119;3168,1200;Inherit;False;219;123;;;0,0,0,1;Finally,
+    we use the Sine node to convert the larger range into 3 ripples or waves.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;126;1824,752;Inherit;False;199.2596;116.8203;;;0,0,0,1;Using
+    the Sine of Time to create a cycling animated value.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;127;2048,752;Inherit;False;254.5267;114.4173;;;0,0,0,1;Moving
+    point inside the object. The animated value becomes the point's X coordinate
+    - so the point is moving back and forth.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;128;2256,544;Inherit;False;254.5267;150.4609;;;0,0,0,1;Measuring
+    the distance between the animated point and the object space position creates
+    a gradient that's dark when the point is close to the pivot and bright when it's
+    further away.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;132;2704,672;Inherit;False;254.5267;150.4609;;;0,0,0,1;Saturating
+    and inverting the gradient gives us a mask that looks like a light source inside
+    the volume.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;134;1056,560;Inherit;False;233.255;100.149;;;0,0,0,1;Using
+    Time as the Rotation input, you can create rotating texture effects.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;174;-208,1136;Inherit;False;150;100;Interval;;0,0,0,1;Repeat
+    Interval;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;175;-16,1152;Inherit;False;150;100;FPS;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;177;-224,288;Inherit;False;150;100;Speed;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;182;192,1136;Inherit;False;242.3752;134.83;;;0,0,0,1;The
+    Floor Node rounds DOWN the input to the nearest integer value of a scalar or
+    of the individual components of vectors;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;222;-864,1680;Inherit;False;150;100;Interval;;0,0,0,1;Repeat
+    Interval;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;223;-672,1696;Inherit;False;150;100;FPS;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;231;-480,1680;Inherit;False;242.3752;134.83;;;0,0,0,1;The
+    Floor Node rounds DOWN the input to the nearest integer value of a scalar or
+    of the individual components of vectors;0;0\nNode;AmplifyShaderEditor.SinTimeNode;25;2256,-1056;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DeltaTime;26;3232,-1056;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CosTime;27;4208,-1056;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleAddOpNode;77;1056,80;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;76;832,176;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleTimeNode;75;848,80;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;85;2368,96;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;118;3248,976;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;96;1888,976;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FractNode;100;2080,976;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;109;2432,976;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;102;2224,1088;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PosVertexDataNode;123;1824,448;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SinTimeNode;121;1824,608;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;63;3888,-592;Inherit;False;Constant;_Color2;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;64;3888,-416;Inherit;False;Constant;_Color3;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0,0.1581101,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;66;3888,-240;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;57;1984,-592;Inherit;False;Constant;_Color0;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;58;1984,-416;Inherit;False;Constant;_Color1;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0,0.1581101,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TimeNode;23;304,-1056;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleTimeNode;24;1296,-1040;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;142;2944,-592;Inherit;False;Constant;_Color4;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;143;2944,-416;Inherit;False;Constant;_Color5;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0,0.1581101,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;145;2944,-240;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;101;2224,976;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0.78;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DistanceOpNode;125;2256,448;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;129;2416,448;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;130;2576,448;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;131;2752,448;Inherit;True;False;2;0;FLOAT;0;False;1;FLOAT;8;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TimeNode;48;-160,704;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FractNode;49;64,752;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;50;192,752;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;47;384,480;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FresnelNode;46;16,480;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;-0.12;False;2;FLOAT;1.77;False;3;FLOAT;1.06;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;89;864,1120;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FractNode;71;1184,768;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;70;864,768;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;138;816,432;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RotatorNode;137;1056,432;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;2;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleTimeNode;136;848,560;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NoiseGeneratorNode;178;1344,432;Inherit;True;Simple;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;50;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;91;1056,1120;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;93;1280,1120;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;156;384,-576;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ColorNode;154;64,-576;Inherit;False;Constant;_Color8;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;155;64,-400;Inherit;False;Constant;_Color9;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0,0.1581101,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;157;64,-224;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ColorNode;148;944,-576;Inherit;False;Constant;_Color6;Color
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;149;944,-400;Inherit;False;Constant;_Color7;Color
+    0;0;0;Create;True;0;0;0;False;0;False;0,0.1581101,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.LerpOp;150;1328,-576;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;151;960,-224;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;59;2272,-592;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.LerpOp;144;3232,-592;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.LerpOp;65;4176,-592;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.RangedFloatNode;67;3712,-160;Inherit;False;Constant;_Float1;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;159;-128,-144;Inherit;False;Constant;_Float6;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;153;800,-144;Inherit;False;Constant;_Float5;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;147;2768,-144;Inherit;False;Constant;_Float4;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;84;2048,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;122;2064,608;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;-1;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SinTimeNode;86;1840,96;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DeltaTime;62;2736,-288;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CosTime;69;3712,-304;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleTimeNode;161;768,-224;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;60;1984,-240;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;61;1808,-144;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SinTimeNode;56;1808,-304;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TimeNode;160;-192,-288;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;51;-224,208;Inherit;False;Constant;_Speed;Speed;0;0;Create;True;0;0;0;False;0;False;-2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;53;-48,48;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleTimeNode;52;-48,208;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;54;176,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FractNode;55;320,96;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;113;2800,976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;20;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMinOpNode;114;2960,976;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;112;2640,976;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PiNode;115;2896,1088;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;116;3088,976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleRemainderNode;170;-16,960;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;32;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;163;-224,960;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;165;160,960;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FloorOpNode;166;320,960;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;173;-192,1056;Inherit;False;Constant;_Interval;Interval;2;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;168;448,1040;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;172;-16,1072;Inherit;False;Constant;_FPS;FPS;2;0;Create;True;0;0;0;False;0;False;15;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.NoiseGeneratorNode;181;1344,80;Inherit;True;Simple;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;50;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleRemainderNode;224;-672,1504;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;32;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleTimeNode;225;-880,1504;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;226;-496,1504;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FloorOpNode;227;-336,1504;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;228;-848,1600;Inherit;False;Constant;_Interval1;Interval;2;0;Create;True;0;0;0;False;0;False;44;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;230;-672,1616;Inherit;False;Constant;_FPS1;FPS;2;0;Create;True;0;0;0;False;0;False;45;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;216;-448,1376;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleDivideOpNode;229;-224,1584;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;217;192,1376;Inherit;True;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;218;0,1456;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NoiseGeneratorNode;232;432,1376;Inherit;True;Simple;True;False;2;0;FLOAT2;0,0;False;1;FLOAT;50;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionNode;233;1984,1072;Inherit;False;Polar
+    Coordinates;-1;;4;7dab8e02884cf104ebefaa2e788e4162;0;4;1;FLOAT2;0,0;False;2;FLOAT2;0.5,0.5;False;3;FLOAT;1;False;4;FLOAT;1;False;3;FLOAT2;0;FLOAT;55;FLOAT;56\nNode;AmplifyShaderEditor.FunctionOutput;15;3696,-1232;Inherit;False;True;-1;Out;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;77;0;75;0\nWireConnection;77;1;76;0\nWireConnection;85;0;84;0\nWireConnection;118;0;116;0\nWireConnection;100;0;96;0\nWireConnection;109;0;101;0\nWireConnection;109;1;102;0\nWireConnection;102;0;233;55\nWireConnection;66;0;69;4\nWireConnection;66;1;67;0\nWireConnection;66;2;67;0\nWireConnection;145;0;62;1\nWireConnection;145;1;147;0\nWireConnection;145;2;147;0\nWireConnection;101;0;100;0\nWireConnection;125;0;123;0\nWireConnection;125;1;122;0\nWireConnection;129;0;125;0\nWireConnection;130;0;129;0\nWireConnection;131;0;130;0\nWireConnection;49;0;48;3\nWireConnection;50;0;49;0\nWireConnection;47;0;46;0\nWireConnection;47;1;50;0\nWireConnection;71;0;70;0\nWireConnection;137;0;138;0\nWireConnection;137;2;136;0\nWireConnection;178;0;137;0\nWireConnection;91;0;89;0\nWireConnection;93;0;91;0\nWireConnection;156;0;154;0\nWireConnection;156;1;155;0\nWireConnection;156;2;157;0\nWireConnection;157;0;160;2\nWireConnection;157;1;159;0\nWireConnection;157;2;159;0\nWireConnection;150;0;148;0\nWireConnection;150;1;149;0\nWireConnection;150;2;151;0\nWireConnection;151;0;161;0\nWireConnection;151;1;153;0\nWireConnection;151;2;153;0\nWireConnection;59;0;57;0\nWireConnection;59;1;58;0\nWireConnection;59;2;60;0\nWireConnection;144;0;142;0\nWireConnection;144;1;143;0\nWireConnection;144;2;145;0\nWireConnection;65;0;63;0\nWireConnection;65;1;64;0\nWireConnection;65;2;66;0\nWireConnection;84;0;86;4\nWireConnection;122;0;121;4\nWireConnection;60;0;56;4\nWireConnection;60;1;61;0\nWireConnection;60;2;61;0\nWireConnection;52;0;51;0\nWireConnection;54;0;53;2\nWireConnection;54;1;52;0\nWireConnection;55;0;54;0\nWireConnection;113;0;112;0\nWireConnection;114;0;113;0\nWireConnection;112;0;109;0\nWireConnection;116;0;114;0\nWireConnection;116;1;115;0\nWireConnection;170;0;163;0\nWireConnection;170;1;173;0\nWireConnection;165;0;170;0\nWireConnection;165;1;172;0\nWireConnection;166;0;165;0\nWireConnection;168;0;166;0\nWireConnection;168;1;172;0\nWireConnection;181;0;77;0\nWireConnection;224;0;225;0\nWireConnection;224;1;228;0\nWireConnection;226;0;224;0\nWireConnection;226;1;230;0\nWireConnection;227;0;226;0\nWireConnection;229;0;227;0\nWireConnection;229;1;230;0\nWireConnection;217;0;216;0\nWireConnection;217;1;218;0\nWireConnection;218;1;229;0\nWireConnection;232;0;217;0\nASEEND*/\n//CHKSM=7F19E3DA3E1B93B0BCD6D3453F6AA312F8FF98A5"
+  m_functionName: 
+  m_description: 'Time Node
+
+
+    Teaching Sample'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 1}
+  m_customNodeCategory: DESF Time
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

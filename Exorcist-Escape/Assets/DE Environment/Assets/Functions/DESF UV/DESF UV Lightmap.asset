@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Lightmap
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;204;-2555.707,-2807.87;Inherit;False;722.2621;384.9871;Dynamic
+    Lightmap;5;216;214;213;212;219;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;205;-2559.793,-3266.652;Inherit;False;721.4695;379.0135;Static
+    Lightmap;5;211;210;209;207;218;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;193;-2382.184,-2170.573;Inherit;False;2;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;196;-2386.184,-2293.573;Inherit;False;1;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.CustomExpressionNode;194;-2121.197,-2194.419;Inherit;False;#if
+    defined( DYNAMICLIGHTMAP_ON )$UV = texcoord2.xy * unity_DynamicLightmapST.xy
+    + unity_DynamicLightmapST.zw@$#endif;2;Call;2;True;texcoord2;FLOAT2;0,0;In;;Inherit;False;True;UV;FLOAT2;0,0;Out;;Inherit;False;Dynamic
+    Lightmap UV;False;False;0;;False;3;0;FLOAT;0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;2;FLOAT;0;FLOAT2;3\nNode;AmplifyShaderEditor.SwizzleNode;207;-2243.917,-3098.626;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;209;-2243.917,-3017.626;Inherit;False;FLOAT2;2;3;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;212;-2237.929,-2623.33;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;213;-2237.929,-2544.33;Inherit;False;FLOAT2;2;3;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;216;-2042.195,-2643.967;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;1,0;False;2;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;211;-2288.095,-3216.652;Inherit;False;1;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;214;-2284.934,-2748.202;Inherit;False;2;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;210;-2050.89,-3119.387;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;1,0;False;2;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.Vector4Node;218;-2513.795,-3099.735;Float;False;Global;unity_LightmapST;unity_LightmapST;2;0;Fetch;True;0;0;0;False;0;False;0,0,0,0;1,1,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.Vector4Node;219;-2537.443,-2632.239;Float;False;Global;unity_DynamicLightmapST;unity_DynamicLightmapST;2;0;Fetch;True;0;0;0;False;0;False;0,0,0,0;1,1,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;220;-2224,-3456;Inherit;False;381.9651;156.6631;
+    UV Lightmap Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;221;-1536,-3040;Inherit;False;208.434;147.8096;Lightmap
+    Static;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;222;-1536,-2560;Inherit;False;208.434;147.8096;UV
+    Dynamic;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionSubtitle;198;-1792,-3120;Inherit;False;Lightmap
+    Static;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSubtitle;199;-1792,-2640;Inherit;False;Lightmap
+    Dynamic;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.CustomExpressionNode;195;-2120.184,-2317.573;Inherit;False;#if
+    defined( LIGHTMAP_ON )$OUTPUT_LIGHTMAP_UV( v.texcoord1, unity_LightmapST, UV
+    )@$#endif;2;Call;2;True;texcoord1;FLOAT2;0,0;In;;Inherit;False;True;UV;FLOAT2;0,0;Out;;Inherit;False;Static
+    Lightmap UV;False;False;0;;False;3;0;FLOAT;0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;2;FLOAT;0;FLOAT2;3\nNode;AmplifyShaderEditor.FunctionOutput;188;-1536,-3120;Inherit;False;True;-1;UV
+    Static;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;203;-1536,-2640;Inherit;False;False;-1;UV
+    Dynamic;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;194;1;193;0\nWireConnection;207;0;218;0\nWireConnection;209;0;218;0\nWireConnection;212;0;219;0\nWireConnection;213;0;219;0\nWireConnection;216;0;214;0\nWireConnection;216;1;212;0\nWireConnection;216;2;213;0\nWireConnection;210;0;211;0\nWireConnection;210;1;207;0\nWireConnection;210;2;209;0\nWireConnection;198;0;210;0\nWireConnection;199;0;216;0\nWireConnection;195;1;196;0\nWireConnection;188;0;198;0\nWireConnection;203;0;199;0\nASEEND*/\n//CHKSM=0E59BCAA5BA7C4F1A9A9D6DBA671EEDBD014650C"
+  m_functionName: 
+  m_description: ' UV Lightmap Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 1
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

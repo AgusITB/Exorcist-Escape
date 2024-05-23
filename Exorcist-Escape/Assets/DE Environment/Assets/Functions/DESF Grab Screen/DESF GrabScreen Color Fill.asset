@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF GrabScreen Color Fill
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.ColorNode;48;-299.294,-246.0894;Half;False;Property;_Tint;Tint;0;1;[HDR];Create;True;0;0;0;False;0;False;0,0,0,0;1,0.5586207,0,1;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenColorNode;57;-312.1961,546.7963;Float;False;Global;_GrabScreen0;Grab
+    Screen 0;0;0;Create;True;0;0;0;True;0;False;Object;-1;False;False;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DesaturateOpNode;58;-94.59127,552.3645;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;59;-98.63267,350.6114;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleTimeNode;60;-844.7785,395.8844;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.GrabScreenPosition;61;-579.1092,546.1487;Inherit;False;0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.BlendOpsNode;62;110.4682,348.456;Inherit;False;Overlay;True;3;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;1;False;1;COLOR;0\nNode;AmplifyShaderEditor.RangedFloatNode;67;-821.3646,544.1403;Half;False;Property;_HueValue;Hue
+    Value;4;0;Create;True;0;0;0;False;0;False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;68;-1027.475,393.2591;Half;False;Property;_HueTimescale;Hue
+    Timescale;3;0;Create;True;0;0;0;False;0;False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;65;-343.6327,444.6115;Half;False;Property;_EnableHueShift;Enable
+    Hue Shift;1;1;[Toggle];Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;66;-850.4056,472.2057;Half;False;Property;_HueSaturation;Hue
+    Saturation;5;0;Create;True;0;0;0;False;0;False;1;1;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;54;-411.0624,166.1376;Half;False;Property;_FillAmount;Fill
+    Amount;2;0;Create;True;0;0;0;False;0;False;0;0;0;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenColorNode;49;-584.2727,-14.52631;Float;False;Global;_GrabScreen3;Grab
+    Screen 3;1;0;Create;True;0;0;0;True;0;False;Object;-1;False;False;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TFHCGrayscale;50;-365.1981,-55.63429;Inherit;False;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;51;-53.24604,-122.1421;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.LerpOp;53;137.8417,-39.05885;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.OneMinusNode;55;-43.88458,158.9188;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;69;374.7073,-40.71017;Inherit;False;Color
+    Fill Simple;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionSwitch;56;706.1586,-53.19409;Inherit;False;Type;False;0;2;-1;Color
+    Fill Simple;Color Fill Hue Shift;Object;-1;10;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionSubtitle;70;379.7073,178.2898;Inherit;False;Color
+    Fill Hue Shift;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionNode;63;-617.5405,373.4361;Inherit;False;DESF
+    Color Hue;-1;;13;0efb9ad0ecab19344a6861af5c286c6c;4,103,0,104,0,105,0,102,0;7;36;FLOAT3;0.55,0,0;False;18;FLOAT;0;False;19;FLOAT;1;False;47;FLOAT;0.77;False;20;FLOAT;1;False;150;FLOAT;1;False;46;FLOAT;1.23;False;4;FLOAT3;1;FLOAT;2;FLOAT;4;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;0;1078.433,-46.68252;Inherit;False;True;-1;RGBA;0;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;57;0;61;0\nWireConnection;58;0;57;0\nWireConnection;59;0;48;0\nWireConnection;59;1;63;1\nWireConnection;59;2;65;0\nWireConnection;60;0;68;0\nWireConnection;62;0;59;0\nWireConnection;62;1;58;0\nWireConnection;50;0;49;0\nWireConnection;51;0;50;0\nWireConnection;51;1;48;0\nWireConnection;53;0;51;0\nWireConnection;53;1;49;0\nWireConnection;53;2;55;0\nWireConnection;55;0;54;0\nWireConnection;69;0;53;0\nWireConnection;56;0;69;0\nWireConnection;56;1;70;0\nWireConnection;70;0;62;0\nWireConnection;63;18;60;0\nWireConnection;63;19;66;0\nWireConnection;63;20;67;0\nWireConnection;0;0;56;0\nASEEND*/\n//CHKSM=DEF1FBFB168DA65B6050385A189ACFAF5BE9B20D"
+  m_functionName: 
+  m_description: 'GrabScreen Color Fill Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.627451, g: 0.05490196, b: 0.14117648, a: 1}
+  m_customNodeCategory: DESF GrabScreen
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

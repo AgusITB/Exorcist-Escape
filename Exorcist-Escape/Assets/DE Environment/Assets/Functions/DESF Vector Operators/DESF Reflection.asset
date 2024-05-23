@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Reflection
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;157;128,32;Inherit;False;868.5392;426.462;Reflection
+    Vector of eye dir on the surface;6;150;152;154;151;156;153;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;149;128,-544;Inherit;False;1267.562;528.7926;Math;13;0;139;138;144;135;136;137;143;134;141;140;158;159;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;147;128,-896;Inherit;False;759.2332;304;Reflect
+    Node;2;145;146;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;140;864,-160;Inherit;False;355;100;;;0,0,0,1;This
+    is the math that is performed to by the Reflection node to create a reflection
+    vector.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;141;1027.697,-496;Inherit;False;354.9304;100;Reflection
+    Node;;0,0,0,1;Given an incoming vector and a Normal, the Reflection Node creates
+    a reflection vector.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;146;432,-848;Inherit;False;403.2332;193.6124;;;0.0471698,0.0471698,0.0471698,1;The
+    Reflect node calculates a reflection vector from a given Incident vector and
+    surface Normal vector. $$Internally the reflected vector is calculated via the
+    expression Incident - 2 * Normal * Dot(Incident\u2022Normal);0;0\nNode;AmplifyShaderEditor.StickyNoteNode;148;-304,-896;Inherit;False;402.0265;190.0095;Reference
+    Implementation;;0,0,0,1;reflect for float3 vectors could be implemented this
+    way:$$float3 reflect( float3 i, float3 n )${$  return i - 2.0 * n * dot(n,i)@$};0;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;134;1040,-384;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;137;560,-320;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;136;688,-320;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;135;864,-272;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ReflectOpNode;145;176,-848;Inherit;True;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.StickyNoteNode;153;176,224;Inherit;False;150;100;New
+    Note;;0,0,0,1;Eye Vector;0;0\nNode;AmplifyShaderEditor.WorldNormalVector;138;176,-240;Inherit;False;False;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;139;176,-384;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.StickyNoteNode;156;400,336;Inherit;False;355.7715;101.9231;;;0,0,0,1;Normal
+    vector should be normalized since this way the resulting reflected vector will
+    have the same length as the original Incident one;0;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;151;176,80;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldNormalVector;154;400,192;Inherit;False;True;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.NegateNode;152;432,80;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ReflectOpNode;150;656,80;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;158;384,-512;Inherit;False;150;100;Vector;;0,0,0,1;Incident
+    vector;0;0\nNode;AmplifyShaderEditor.FunctionInput;143;384,-384;Inherit;False;Vector;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;159;384,-160;Inherit;False;283.1763;108.2377;Normal;;0,0,0,1;Normal
+    vector$should be normalized beforehand;0;0\nNode;AmplifyShaderEditor.FunctionInput;144;384,-240;Inherit;False;Normal;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1200,-384;Inherit;True;True;-1;Out;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;134;0;143;0\nWireConnection;134;1;135;0\nWireConnection;137;0;143;0\nWireConnection;137;1;144;0\nWireConnection;136;0;137;0\nWireConnection;135;0;136;0\nWireConnection;135;1;144;0\nWireConnection;152;0;151;0\nWireConnection;150;0;152;0\nWireConnection;150;1;154;0\nWireConnection;143;0;139;0\nWireConnection;144;0;138;0\nWireConnection;0;0;134;0\nASEEND*/\n//CHKSM=A642359076C6F06AE46FD7A4BE3D8BF15F29B890"
+  m_functionName: 
+  m_description: 'Reflection Node
+
+
+    Teaching Sample
+
+
+    Reflect
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.21960784, g: 0.19607843, b: 0.44705883, a: 1}
+  m_customNodeCategory: DESF Vector Operators
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

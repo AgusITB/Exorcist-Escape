@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sample Distortion
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.TextureCoordinatesNode;280;-1299.959,-840.7673;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TextureCoordinatesNode;281;-1296.598,-712.696;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.PannerNode;282;-1547.787,-794.922;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;-1,-1;False;1;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.PannerNode;283;-1548.557,-668.9199;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;1,0.5;False;1;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;286;-640,-848;Inherit;False;382.8945;158.7299;Sample
+    Distortion Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleTimeNode;284;-1760,-800;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;285;-1984,-800;Inherit;False;Distortion
+    Speed;1;5;False;1;0;FLOAT;0.05;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;274;-1616,-496;Inherit;True;Property;_TextureSample3;Texture
+    Sample 3;6;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.UnpackScaleNormalNode;278;-1264,-496;Inherit;False;Tangent;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionInput;277;-1520,-304;Inherit;False;Distort
+    Intensity;1;4;False;1;0;FLOAT;0.04;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;273;-992,-592;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;275;-992,-400;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SamplerNode;269;-752,-624;Inherit;True;Property;_TextureSample1;Texture
+    Sample 1;6;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;270;-752,-416;Inherit;True;Property;_TextureSample2;Texture
+    Sample 2;7;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;271;-400,-624;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;272;-984.2175,-680.7197;Inherit;False;Tex;9;0;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.FunctionInput;68;-992,-272;Inherit;False;SS;13;1;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;287;-224,-528;Inherit;False;COLOR;1;0;COLOR;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;279;-1872,-416;Inherit;False;SS
+    Bump;13;3;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionInput;276;-1872,-496;Inherit;False;Tex
+    Distortion;9;2;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.FunctionOutput;70;0,-624;Inherit;False;True;-1;RGBA;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionOutput;288;0,-544;Inherit;False;False;-1;R;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;289;0,-464;Inherit;False;False;-1;G;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;290;0,-384;Inherit;False;False;-1;B;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;291;0,-320;Inherit;False;False;-1;A;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;280;1;282;0\nWireConnection;281;1;283;0\nWireConnection;282;1;284;0\nWireConnection;283;1;284;0\nWireConnection;284;0;285;0\nWireConnection;274;0;276;0\nWireConnection;274;7;279;0\nWireConnection;278;0;274;0\nWireConnection;278;1;277;0\nWireConnection;273;0;280;0\nWireConnection;273;1;278;0\nWireConnection;275;0;281;0\nWireConnection;275;1;278;0\nWireConnection;269;0;272;0\nWireConnection;269;1;273;0\nWireConnection;269;7;68;0\nWireConnection;270;0;272;0\nWireConnection;270;1;275;0\nWireConnection;270;7;68;0\nWireConnection;271;0;269;0\nWireConnection;271;1;270;0\nWireConnection;287;0;271;0\nWireConnection;70;0;271;0\nWireConnection;288;0;287;0\nWireConnection;289;0;287;1\nWireConnection;290;0;287;2\nWireConnection;291;0;287;3\nASEEND*/\n//CHKSM=489D84E74A98873302B7E885332608E4CA4E8E4B"
+  m_functionName: 
+  m_description: 'Sample Distortion Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Sample
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

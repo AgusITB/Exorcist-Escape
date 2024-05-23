@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Switch by Face
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;79;416,-128;Inherit;False;1259.677;707.9998;Exsample
+    Normal Flip Mode;11;69;68;75;61;77;78;62;76;71;70;59;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;30;-384,-128;Inherit;False;772.7301;519.191;Exsample
+    Draw front faces to green and back faces to red.;3;28;27;57;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;7;-384,-512;Inherit;False;770.9406;321.6495;Switch
+    by Face Node;3;4;5;56;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;5;-96,-448;Inherit;False;428.3426;129.3611;;;0.0471698,0.0471698,0.0471698,1;The
+    Switch by Face outputs relays one of its inputs according to if the rendered
+    surface is facing the camera ( Front ) or facing away from the camera ( Back
+    ).;0;0\nNode;AmplifyShaderEditor.SwitchByFaceNode;56;-336,-448;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SwitchByFaceNode;57;-64,-80;Inherit;True;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.StickyNoteNode;59;944,160;Inherit;False;297.3748;202.6522;;;0,0,0,1;Float(Flip,
+    0, Mirror, 1, None, 2)]$$_DoubleSidedConstantsFlip$*Flip      = (-1, -1, -1)$_DoubleSidedConstantsMirror$*Mirror 
+    = (1, 1, -1)$_DoubleSidedConstantsNone$*None   = (1, 1, 1) $$;0;0\nNode;AmplifyShaderEditor.ColorNode;27;-336,-80;Inherit;False;Constant;_OutsideColor;Outside
+    Color;1;0;Create;True;0;0;0;False;0;False;0,1,0.07363963,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ColorNode;28;-336,96;Inherit;False;Constant;_InsideColor;Inside
+    Color;1;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwitchByFaceNode;62;1392,-80;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;78;1152,-16;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;77;1120,-48;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;61;1216,0;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;68;944,16;Inherit;False;if(m_switch
+    ==0)$\treturn m_Flip@$else if(m_switch ==1)$\treturn m_Mirror@$else if(m_switch
+    ==2)$\treturn m_None@$else$return float3(0,0,0)@;3;Create;4;True;m_switch;FLOAT;0;In;;Inherit;False;True;m_Flip;FLOAT3;0,0,0;In;;Inherit;False;True;m_Mirror;FLOAT3;0,0,0;In;;Inherit;False;True;m_None;FLOAT3;0,0,0;In;;Inherit;False;_NormalMode
+    float3 switch ;False;False;0;;False;4;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;70;608,240;Inherit;False;Constant;_DoubleSidedConstantsMirror1;_DoubleSidedConstantsMirror;4;0;Create;True;0;0;0;False;0;False;1,1,-1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;71;608,384;Inherit;False;Constant;_DoubleSidedConstantsNone1;_DoubleSidedConstantsNone;4;0;Create;True;0;0;0;False;0;False;1,1,1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;75;704,16;Inherit;False;Property;_NormalMode;Normal
+    Mode;0;1;[Enum];Create;True;0;3;Flip;0;Mirror;1;None;2;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector3Node;76;464,-80;Inherit;False;Constant;_UnpackedNormalIn;Unpacked
+    Normal In;1;0;Create;True;0;0;0;False;0;False;0,0,1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;69;608,96;Inherit;False;Constant;_DoubleSidedConstantsFlip1;_DoubleSidedConstantsFlip;4;0;Create;True;0;0;0;False;0;False;-1,-1,-1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;4;160,-304;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;57;0;27;0\nWireConnection;57;1;28;0\nWireConnection;62;0;76;0\nWireConnection;62;1;61;0\nWireConnection;78;0;77;0\nWireConnection;77;0;76;0\nWireConnection;61;0;78;0\nWireConnection;61;1;68;0\nWireConnection;68;0;75;0\nWireConnection;68;1;69;0\nWireConnection;68;2;70;0\nWireConnection;68;3;71;0\nASEEND*/\n//CHKSM=6E6DC9984B40BFD2EE04E3CA33D053CF84F0AED8"
+  m_functionName: 
+  m_description: 'Switch by Face Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0, g: 0.3764706, b: 0.30980393, a: 1}
+  m_customNodeCategory: DESF Logic
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

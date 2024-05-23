@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Shape Hexagonal Distance
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;75;1005.706,1251.658;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;35;1108.259,541.1824;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.TextureCoordinatesNode;28;271.1673,496.0904;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.Vector2Node;62;-288.1597,1630.926;Inherit;False;Constant;_HexUVConst1;_Hex
+    UV Const;0;0;Create;True;0;0;0;False;0;False;3,-0.5;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.TextureCoordinatesNode;69;-80.8318,1638.196;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.GetLocalVarNode;88;696.8779,664.3768;Inherit;False;84;Dimensions;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;87;900.275,1699.511;Inherit;False;580.2999;127.2999;Pattern
+    Hexagonal UV Tiling;;0,0,0,1;By: Discord Tiber Legacy$UV Tiling in a Hexagonal
+    Grid, after all the Hexagon is the Bestagon @), Special Thanks to 'Art Of Code'
+    YT Channel: https://www.youtube.com/channel/UCcAlTqd9zID6aNX3TzwxJXg;0;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;71;1569.305,1629.058;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.Vector2Node;44;-308.362,917.4485;Half;False;Constant;_ProxHexDimensions1;_Prox.
+    Hex Dimensions;0;0;Create;True;0;0;0;False;0;False;1,1.73;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.SaturateNode;81;1259.706,1255.658;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;30;980.2591,477.1826;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;40;530.1951,576.5816;Inherit;False;Position;2;2;False;1;0;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SqrtOpNode;43;-176.0623,1061.213;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;56;1159.565,1423.111;Inherit;False;351.5907;100;Lerp
+    instead of Compare;;0,0,0,0.7843137;as logical operators are more costly;0;0\nNode;AmplifyShaderEditor.FunctionInput;70;149.7059,1631.658;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;74;151.5524,1712.168;Inherit;False;586.3502;100;Fmods;;0,0,0,0.7843137;'Simplified
+    Fmod' Nodes used instead of Regular 'Fmod' nodes due When UVs were \"Panned\"
+    in the Negatives it would no longer \"Fraction\" it, Bug maybe? Either way this
+    process is more Efficient.;0;0\nNode;AmplifyShaderEditor.SimplifiedFModOpNode;58;509.3152,1489.211;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;32;-10.33048,984.3149;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.GetLocalVarNode;86;-13.30939,1421.17;Inherit;False;84;Dimensions;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LerpOp;76;1395.706,1300.658;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;29;187.8434,918.1404;Inherit;False;Hex
+    Dimensions;False;1;3;-1;Approximate;Exact;Custom;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;37;534.2591,493.1824;Inherit;False;UV;2;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimplifiedFModOpNode;59;509.3152,1585.211;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.LengthOpNode;77;860.7059,1199.658;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LengthOpNode;78;866.7059,1270.658;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.AbsOpNode;33;980.2591,541.1824;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;31;852.259,477.1826;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.RegisterLocalVarNode;90;1715.285,1630.396;Inherit;False;HexagonalUV_ID;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.GetLocalVarNode;85;331.2794,1545.159;Inherit;False;84;Dimensions;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;54;187.3568,1323.098;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;79;339.6463,1458.463;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;42;-315.527,1058.347;Float;False;Constant;_4;_3;0;0;Create;True;0;0;0;False;0;False;3;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.CeilOpNode;73;1141.706,1258.658;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;41;-56.66188,1114.687;Inherit;False;Custom
+    Dimenstions;2;3;False;1;0;FLOAT2;1,1.73;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;68;714.9704,1404.338;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;34;1236.26,477.1826;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;38;692.2589,541.1824;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NormalizeNode;36;948.2589,605.1824;Inherit;False;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;57;23.85822,1329.087;Inherit;False;Constant;_13;_1/2;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;89;1608.347,1294.705;Inherit;False;HexagonalUV_Tiling;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;80;711.4902,1305.77;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;51;959.9455,702.1127;Inherit;False;509.5631;135.4498;Hexagonal
+    Distance;;0,0,0,1;$By: Discord Tiber Legacy$Similar to the Distance/Length Node
+    but produces a Hexagonal shaped result, Special Thanks to 'Art Of Code' YT Channel:
+    https://www.youtube.com/channel/UCcAlTqd9zID6aNX3TzwxJXg;0;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;84;451.7453,915.0596;Inherit;False;Dimensions;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;91;1328,288;Inherit;False;389.5819;160.9107;Pattern
+    Hexagonal Distance Node;;0,0,0,1;Hexagonal Distance$Hexagonal UV;0;0\nNode;AmplifyShaderEditor.FunctionSubtitle;50;1360,480;Inherit;False;Hexagonal
+    Distance;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1584,480;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;75;0;77;0\nWireConnection;75;1;78;0\nWireConnection;35;0;33;0\nWireConnection;35;1;36;0\nWireConnection;69;0;62;1\nWireConnection;69;1;62;2\nWireConnection;71;0;70;0\nWireConnection;71;1;76;0\nWireConnection;81;0;73;0\nWireConnection;30;0;31;0\nWireConnection;43;0;42;0\nWireConnection;70;0;69;0\nWireConnection;58;0;79;0\nWireConnection;58;1;85;0\nWireConnection;32;0;44;1\nWireConnection;32;1;43;0\nWireConnection;76;0;80;0\nWireConnection;76;1;68;0\nWireConnection;76;2;81;0\nWireConnection;29;0;44;0\nWireConnection;29;1;32;0\nWireConnection;29;2;41;0\nWireConnection;37;0;28;0\nWireConnection;59;0;70;0\nWireConnection;59;1;85;0\nWireConnection;77;0;80;0\nWireConnection;78;0;68;0\nWireConnection;33;0;38;0\nWireConnection;31;0;38;0\nWireConnection;90;0;71;0\nWireConnection;54;0;57;0\nWireConnection;54;1;86;0\nWireConnection;79;0;54;0\nWireConnection;79;1;70;0\nWireConnection;73;0;75;0\nWireConnection;68;0;59;0\nWireConnection;68;1;54;0\nWireConnection;34;0;30;0\nWireConnection;34;1;35;0\nWireConnection;38;0;37;0\nWireConnection;38;1;40;0\nWireConnection;36;0;88;0\nWireConnection;89;0;76;0\nWireConnection;80;0;58;0\nWireConnection;80;1;54;0\nWireConnection;84;0;29;0\nWireConnection;50;0;34;0\nWireConnection;0;0;50;0\nASEEND*/\n//CHKSM=22AFB19DA383B44C4CE336630EB9564BEACC7FD8"
+  m_functionName: 
+  m_description: 'Shape Hexagonal Distance Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6901961, g: 0.17254902, b: 0.023529412, a: 1}
+  m_customNodeCategory: DESF Shape
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

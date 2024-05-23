@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sample Billboard
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.3\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19303\nNode;AmplifyShaderEditor.CommentaryNode;246;590,-1794;Inherit;False;2205.1;851;Math;25;225;226;227;228;233;235;236;237;232;231;219;222;220;223;239;240;241;242;243;218;245;224;238;247;244;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;216;1232,-2240;Inherit;False;979.1392;364.2395;Sample
+    Billboard Node ;3;214;217;215;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;215;1520,-2192;Inherit;False;664.2402;272.2107;;;0,0,0,1;The
+    Billboard node will rotate vertex data ( position + normal ) to align object's
+    axis to current camera.$$This node is a bit different from all others as it injects
+    the necessary code into the vertex body and writes directly on the vertex position
+    and normal. It outputs a value of 0 so it can be connected directly to a vertex
+    port ( only if that port is a relative vertex offset ) or it can be used in an
+    Add node so further vertex operations can be placed.$Billboards can be set through
+    its Type either as Cylindrical where only the object X and Z axis are aligned
+    with the camera ( useful when rendering trees ) or as Spherical where all axis
+    are aligned.$$Also, through the Ignore Rotation parameter an object's initial
+    rotation can be either completely ignored and overridden, or it can be used as
+    a delta rotation over the billboard final calculations.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;217;1264,-2112;Inherit;False;214.5789;105.9795;NOTE:
+    ;;0,0,0,1;Billboard node should only be connected to vertex ports;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;244;2592,-1408;Inherit;False;185.1001;101.3;;;0.009433985,0.009433985,0.009433985,1;Rotates
+    a front-facing plane to always face the camera.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;245;1632,-1232;Inherit;False;325.5;211.8;Forward
+    Axis;;0,0,0,1;Here we allow the user to select the direction that the original
+    plane is facing and make adjustments based on the direction.$$Notice that Negative
+    Z is the most efficient choice since no adjustments are required. So if you can
+    make your original plane face negative Z to begin with, the shader will be slightly
+    cheaper.;0;0\nNode;AmplifyShaderEditor.NegateNode;235;1248,-1584;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NegateNode;236;1248,-1664;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NegateNode;237;1248,-1744;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;232;1040,-1344;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;240;864,-1200;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;242;672,-1056;Inherit;False;Scale;1;1;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;243;1520,-1376;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionSwitch;224;1632,-1472;Inherit;False;Forward
+    Axis;False;5;6;-1;Positive X;Negative X;Positive Y;Negative Y;Positive Z;Negative
+    Z;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT3;0,0,0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;247;640,-1712;Inherit;False;425.9292;168.4475;;;0,0,0,1;The
+    Billboard subgraph has a dropdown that allows us to select the initial direction
+    that our plane is facing before we turn it to face the camera. $$Selecting the
+    correct option here will ensure that our plane turns toward the camera correctly
+    and not some other direction.;0;0\nNode;AmplifyShaderEditor.BillboardNode;214;1312,-2192;Inherit;False;Cylindrical;False;True;0;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;233;1248,-1504;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;1,-1,-1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;225;1408,-1744;Inherit;False;FLOAT3;1;2;0;3;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;226;1408,-1664;Inherit;False;FLOAT3;1;2;0;3;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;227;1408,-1584;Inherit;False;FLOAT3;0;2;1;3;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SwizzleNode;228;1408,-1504;Inherit;False;FLOAT3;0;2;1;3;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ObjectScaleNode;241;640,-1200;Inherit;False;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.PosVertexDataNode;239;640,-1360;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;238;848,-1360;Inherit;False;Position;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;231;1248,-1408;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;-1,1,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;220;2224,-1488;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionNode;218;1648,-1568;Inherit;False;DESF
+    Matrix Transformation;-1;;1;95dd13b0bfcc53f48b7283702ebccabe;2,10,3,20,3;0;1;FLOAT4x4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;219;2000,-1488;Inherit;False;2;2;0;FLOAT4x4;0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.PosVertexDataNode;222;1968,-1376;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TransformPositionNode;223;2368,-1408;Inherit;False;World;Object;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionOutput;154;2592,-1488;Inherit;False;True;-1;Position;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;235;0;232;0\nWireConnection;236;0;232;0\nWireConnection;237;0;232;0\nWireConnection;232;0;238;0\nWireConnection;232;1;240;0\nWireConnection;240;0;241;0\nWireConnection;240;1;242;0\nWireConnection;243;0;231;0\nWireConnection;224;0;225;0\nWireConnection;224;1;226;0\nWireConnection;224;2;227;0\nWireConnection;224;3;228;0\nWireConnection;224;4;243;0\nWireConnection;224;5;232;0\nWireConnection;233;0;232;0\nWireConnection;225;0;237;0\nWireConnection;226;0;236;0\nWireConnection;227;0;235;0\nWireConnection;228;0;233;0\nWireConnection;238;0;239;0\nWireConnection;231;0;232;0\nWireConnection;220;0;219;0\nWireConnection;220;1;222;0\nWireConnection;219;0;218;0\nWireConnection;219;1;224;0\nWireConnection;223;0;220;0\nWireConnection;154;0;220;0\nASEEND*/\n//CHKSM=5D23B35471A67692B3813C9F1817D1D6AB915473"
+  m_functionName: 
+  m_description: 'Sample Billboard Node
+
+
+    Under construction
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Sample
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

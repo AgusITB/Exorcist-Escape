@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Mask Color
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.StickyNoteNode;96;-2304,-2288;Inherit;False;608.6992;157.689;Mask
+    Color Node;;0,0,0,1;The Color Mask Node creates a black and white mask that's
+    white where the input image matches the given color and black everywhere else.$$It
+    could be used for chroma-keying (green screen) type effects.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;97;-2304,-1904;Inherit;False;279;100;Range;;0.02830189,0.02830189,0.02830189,1;Range
+    input is used to select the width of the spectrum that is masked.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;98;-2256,-1600;Inherit;False;241;100;Fuzziness;;0,0,0,1;Fuzziness
+    input is used to control the falloff of the mask.;0;0\nNode;AmplifyShaderEditor.DistanceOpNode;79;-2448,-2048;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;84;-2112,-2048;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;102;-1952,-1744;Inherit;False;186.4251;115.0356;;;0,0,0,1;This
+    Maximum 0.00001 (1E-05) is here to prevent a divide by zero.;0;0\nNode;AmplifyShaderEditor.SaturateNode;80;-1664,-2048;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;86;-1808,-2048;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;103;-2717.545,-1888;Inherit;False;227.5454;119.3613;RGB;;0,0,0,1;The
+    Input value ;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;104;-2717.197,-2176;Inherit;False;227.1965;117.5447;Mask
+    Color;;0,0,0,1;Color to use for mask;0;0\nNode;AmplifyShaderEditor.FunctionInput;92;-2656,-2048;Inherit;False;Mask
+    Color;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;94;-2304,-1984;Inherit;False;Range;1;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;81;-2096,-1760;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;83;-2256,-1680;Float;False;Constant;_Float1;Float
+    0;0;0;Create;True;0;0;0;False;0;False;1E-05;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;95;-2256,-1760;Inherit;False;Fuzziness;1;3;False;1;0;FLOAT;0.1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;85;-1920,-2048;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;105;-1984,-1968;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;106;-1984,-1760;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;43;-2624,-1968;Inherit;False;RGB;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-1504,-2048;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;79;0;92;0\nWireConnection;79;1;43;0\nWireConnection;84;0;79;0\nWireConnection;84;1;94;0\nWireConnection;80;0;86;0\nWireConnection;86;0;85;0\nWireConnection;81;0;95;0\nWireConnection;81;1;83;0\nWireConnection;85;0;84;0\nWireConnection;85;1;105;0\nWireConnection;105;0;106;0\nWireConnection;106;0;81;0\nWireConnection;0;0;80;0\nASEEND*/\n//CHKSM=52B4DBD2CD1B02B37A7FFA6E8F05DC3755545247"
+  m_functionName: 
+  m_description: 'Mask Color Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.4392157, g: 0.34509805, b: 0.015686275, a: 1}
+  m_customNodeCategory: DESF Mask
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

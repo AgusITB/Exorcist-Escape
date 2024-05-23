@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Noise Hash
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19302\nNode;AmplifyShaderEditor.CommentaryNode;50;-2176,-1568;Inherit;False;801.0494;261.3622;Hash11Tchou;4;47;75;62;55;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;67;-2176,-432;Inherit;False;799.9482;266.8792;Tchou33;4;73;70;69;68;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;51;-2176,-1296;Inherit;False;802.9796;269.9104;Hash21Tchou;4;74;53;56;52;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;57;-2176,-1008;Inherit;False;802.9795;266.8792;Tchou23;4;71;60;61;58;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;63;-2176,-720;Inherit;False;802.9796;269.9105;Tchou31;4;72;66;65;64;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;38;-1342.812,378.8287;Inherit;False;Constant;_Float4;Float
+    4;0;0;Create;True;0;0;0;False;0;False;43758.55;43758.55;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;46;-1408,0;Inherit;False;383.9812;177.9937;Noise
+    Hash Node ;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SinOpNode;36;-1280,256;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-1120,256;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FractNode;39;-960,256;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;31;-1440,256;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;27;-1856,128;Inherit;False;Constant;_Vector4;Vector
+    4;3;0;Create;True;0;0;0;False;0;False;127.1,311.7,74.7;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;29;-1632,288;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;25;-1856,288;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;33;-1632,576;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;34;-1856,576;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;35;-1888,704;Inherit;False;Constant;_Vector6;Vector
+    6;3;0;Create;True;0;0;0;False;0;False;113.5,271.9,124.6;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;28;-1888,416;Inherit;False;Constant;_Vector5;Vector
+    5;3;0;Create;True;0;0;0;False;0;False;269.5,183.3,246.1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.BreakToComponentsNode;32;-2080,304;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;40;-2240,304;Inherit;False;UV;2;0;False;1;0;FLOAT2;1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;24;-2464,304;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;52;-2144,-1248;Inherit;False;320.0349;138.1543;;;0,0,0,1;Generates
+    a random output value for every unique input value.$$This one receives a Vec2
+    and outputs a Float.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;55;-2128,-1504;Inherit;False;324.3904;136.7025;;;0,0,0,1;Generates
+    a random output value for every unique input value.$$This one receives a float
+    and outputs a Float.;0;0\nNode;AmplifyShaderEditor.TransformPositionNode;43;-3088,-512;Inherit;False;World;Object;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldPosInputsNode;44;-3280,-512;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;45;-3056,-368;Inherit;False;Constant;_Seed;Seed;0;0;Create;True;0;0;0;False;0;False;274769;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;58;-2144,-960;Inherit;False;320.0349;138.1543;;;0,0,0,1;Generates
+    a random output value for every unique input value.$$This one receives a Vec3
+    and outputs a Vec3.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;64;-2144,-672;Inherit;False;320.0349;138.1543;;;0,0,0,1;Generates
+    a random output value for every unique input value.$$This one receives a Vec3
+    and outputs a Float.;0;0\nNode;AmplifyShaderEditor.Vector2Node;56;-1792,-1232;Inherit;False;Constant;_Vector2;Vector
+    2;0;0;Create;True;0;0;0;False;0;False;0,0;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2\nNode;AmplifyShaderEditor.StickyNoteNode;68;-2144,-384;Inherit;False;321.4839;135.2563;;;0,0,0,1;Generates
+    a random output value for every unique input value.$$This one receives a Vec3
+    and outputs a Vec3.;0;0\nNode;AmplifyShaderEditor.DynamicAppendNode;26;-1856,0;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;30;-1584,0;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector3Node;61;-1792,-944;Inherit;False;Constant;_Vector3;Vector
+    3;0;0;Create;True;0;0;0;False;0;False;0,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;65;-1792,-656;Inherit;False;Constant;_Vector7;Vector
+    3;0;0;Create;True;0;0;0;False;0;False;0,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;69;-1792,-368;Inherit;False;Constant;_Vector8;Vector
+    3;0;0;Create;True;0;0;0;False;0;False;0,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.StickyNoteNode;71;-1568,-864;Inherit;False;150;100;;;0,0,0,1;Input
+    = Vec3$Output = Vec3;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;72;-1568,-576;Inherit;False;150;100;;;0,0,0,1;Input
+    = Vec3$Output = Vec3;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;73;-1568,-288;Inherit;False;150;100;;;0,0,0,1;Input
+    = Vec3$Output = Vec3;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;74;-1568,-1152;Inherit;False;150;100;;;0,0,0,1;Input
+    = Vec2$Output = Vec2;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;75;-1568,-1440;Inherit;False;150;100;;;0,0,0,1;Input
+    = Float$Output = Float;0;0\nNode;AmplifyShaderEditor.RangedFloatNode;62;-1776,-1520;Inherit;False;Constant;_Vector1;Vector
+    1;0;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;41;-2832,-512;Inherit;False;uint
+    X = asuint(in_position.x)@$uint Y = asuint(in_position.y)@$uint Z = asuint(in_position.z)@$uint
+    H = X ^ 2747636419u@$H *= 2654435769u@$H >> 16@$H *= 2654435769u@$H ^= H >> 16@$H
+    *= 2654435769u@$H ^= Y@$H ^= Z@$out_hash = asfloat(H / 4294967295.0)@;1;Create;2;True;in_position;FLOAT3;0,0,0;In;;Inherit;False;True;seed;FLOAT;274769;In;;Inherit;False;SimpleHash;True;False;0;;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;274769;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;70;-1568,-368;Inherit;False;uint3
+    v = (uint3) (int3) round(p)@$    v.x ^= 1103515245U@$    v.y ^= v.x + v.z@$   
+    v.y = v.y * 134775813@$    v.z += v.x ^ v.y@$    v.y += v.x ^ v.z@$    v.x +=
+    v.y * v.z@$    v.x = v.x * 0x27d4eb2du@$    v.z ^= v.x << 3@$    v.y += v.z <<
+    3@ $$Out = v * (1.0 / float(0xffffffff))@;3;Create;1;True;P;FLOAT3;0,0,0;In;;Inherit;False;Tchou33;True;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;66;-1568,-656;Inherit;False;uint3
+    v = (uint3) (int3) round(p)@$    v.x ^= 1103515245U@$    v.y ^= v.x + v.z@$   
+    v.y = v.y * 134775813@$    v.z += v.x ^ v.y@$    v.y += v.x ^ v.z@$    v.x +=
+    v.y * v.z@$    v.x = v.x * 0x27d4eb2du@$$Out = v.x * (1.0 / float(0xffffffff))@;1;Create;1;True;P;FLOAT3;0,0,0;In;;Inherit;False;Tchou31;True;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;60;-1568,-944;Inherit;False;uint3
+    v@$    v.xy = (uint2) (int2) round(p)@$    v.y ^= 1103515245U@$    v.x += v.y@$   
+    v.x *= v.y@$    v.x ^= v.x >> 5u@$    v.x *= 0x27d4eb2du@$    v.y ^= (v.x <<
+    3u)@$    v.z = v.x ^ (v.y << 5u)@ $$Out = v * (1.0 / float(0xffffffff))@;3;Create;1;True;P;FLOAT3;0,0,0;In;;Inherit;False;Tchou23;True;False;0;;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.CustomExpressionNode;53;-1568,-1232;Inherit;False;uint
+    r@$uint2 v = (uint2) (int2) round(p)@$v.y ^= 1103515245U@$v.x += v.y@$v.x *=
+    v.y@                        $v.x ^= v.x >> 5u@             $v.x *= 0x27d4eb2du@    
+    $r = v.x@$Out = r * (1.0 / float(0xffffffff))@;1;Create;1;True;P;FLOAT2;0,0;In;;Inherit;False;Hash21Tchou;True;False;0;;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;47;-1552,-1520;Inherit;False;uint
+    v = (uint) (int) round(p)@$v ^= 1103515245U@$v += v@$v *= v@                       
+    $v ^= v >> 5u@             $v *= 0x27d4eb2du@     $Out = v * (1.0 / float(0xffffffff))@;1;Create;1;True;P;FLOAT;0;In;;Inherit;False;Hash11Tchou;True;False;0;;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;-832,256;Inherit;False;True;-1;Hash;0;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;36;0;31;0\nWireConnection;37;0;36;0\nWireConnection;37;1;38;0\nWireConnection;39;0;37;0\nWireConnection;31;0;30;0\nWireConnection;31;1;29;0\nWireConnection;31;2;33;0\nWireConnection;29;0;25;0\nWireConnection;29;1;28;0\nWireConnection;25;0;32;1\nWireConnection;25;1;32;0\nWireConnection;25;2;32;0\nWireConnection;33;0;34;0\nWireConnection;33;1;35;0\nWireConnection;34;0;32;0\nWireConnection;34;1;32;1\nWireConnection;34;2;32;1\nWireConnection;32;0;40;0\nWireConnection;40;0;24;0\nWireConnection;43;0;44;0\nWireConnection;26;0;32;0\nWireConnection;26;1;32;1\nWireConnection;26;2;32;0\nWireConnection;30;0;26;0\nWireConnection;30;1;27;0\nWireConnection;41;0;43;0\nWireConnection;41;1;45;0\nWireConnection;70;0;69;0\nWireConnection;66;0;65;0\nWireConnection;60;0;61;0\nWireConnection;53;0;56;0\nWireConnection;47;0;62;0\nWireConnection;0;0;39;0\nASEEND*/\n//CHKSM=B68006233198060268BB5592533BE2B574CBE08D"
+  m_functionName: 
+  m_description: 'Noise Hash Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.38039216, g: 0.24705882, b: 0.4627451, a: 1}
+  m_customNodeCategory: DESF Noise
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Radial Shear
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.DynamicAppendNode;16;107.9477,24.3405;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;9;480,-96;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;46;720,-96;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;27;1072,-96;Inherit;False;Option;False;0;2;-1;Vect2;Float;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;2;560,16;Inherit;False;Offset;2;4;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;1;-768,-96;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;18;-992,-96;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;12;-576,112;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DotProductOpNode;13;-352,96;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;14;-352,0;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;8;-240,176;Inherit;False;Strength;2;2;False;1;0;FLOAT2;10,10;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;17;-64,96;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NegateNode;15;-80,-16;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;272,80;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.GetLocalVarNode;38;608,560;Inherit;False;36;Offset;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.GetLocalVarNode;29;608,400;Inherit;False;28;Center;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;36;736,16;Inherit;False;Offset;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;10;-768,128;Inherit;False;Center;2;1;False;1;0;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;28;-576,224;Inherit;False;Center;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;47;-771.6345,-208;Inherit;False;137.6345;100;UV;;0,0,0,1;the
+    input UV coordinates;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;48;-784,208;Inherit;False;150;100;Center;;0,0,0,1;center
+    reference point;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;49;-240,256;Inherit;False;137.6345;100;Strength;;0,0,0,1;strength
+    of the effect;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;50;560,96;Inherit;False;150;100;Offset;;0,0,0,1;individual
+    channel offsets;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;51;816,-320;Inherit;False;421.2603;197.5668;UV
+    Radial Shear Node;;0,0,0,1;The Radial Shear Node applies a radial shear warping
+    effect similar to a wave to the value of input UV. $$The center reference point
+    of the warping effect is defined by input Center and the overall strength of
+    the effect is defined by the value of input Strength. $$Input Offset can be used
+    to offset the individual channels of the result.$$;0;0\nNode;AmplifyShaderEditor.GetLocalVarNode;44;608,320;Inherit;False;41;UV;1;0;OBJECT;;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RegisterLocalVarNode;41;-592,-144;Inherit;False;UV;-1;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;33;624,480;Inherit;False;Strength;1;3;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CustomExpressionNode;25;832,320;Float;False;float2
+    delta = UV - Center@$float delta2 = dot(delta.xy, delta.xy)@$float2 delta_offset
+    = delta2 * Strength@$Out = UV + float2(delta.y, -delta.x) * delta_offset + Offset@;7;Create;5;True;UV;FLOAT2;0,0;In;;Float;False;True;Center;FLOAT2;0,0;In;;Float;False;True;Strength;FLOAT;0;In;;Float;False;True;Offset;FLOAT2;0,0;In;;Float;False;True;Out;FLOAT2;0,0;Out;;Float;False;Unity_RadialShear_float;True;False;0;;False;6;0;FLOAT;0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;3;FLOAT;0;False;4;FLOAT2;0,0;False;5;FLOAT2;0,0;False;2;FLOAT;0;FLOAT2;6\nNode;AmplifyShaderEditor.FunctionOutput;0;1280,-96;Inherit;True;True;-1;Output;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;16;0;14;1\nWireConnection;16;1;15;0\nWireConnection;9;0;1;0\nWireConnection;9;1;4;0\nWireConnection;46;0;9;0\nWireConnection;46;1;2;0\nWireConnection;27;0;46;0\nWireConnection;27;1;25;6\nWireConnection;1;0;18;0\nWireConnection;12;0;1;0\nWireConnection;12;1;10;0\nWireConnection;13;0;12;0\nWireConnection;13;1;12;0\nWireConnection;14;0;12;0\nWireConnection;17;0;13;0\nWireConnection;17;1;8;0\nWireConnection;15;0;14;0\nWireConnection;4;0;16;0\nWireConnection;4;1;17;0\nWireConnection;36;0;2;0\nWireConnection;28;0;10;0\nWireConnection;41;0;1;0\nWireConnection;25;1;44;0\nWireConnection;25;2;29;0\nWireConnection;25;3;33;0\nWireConnection;25;4;38;0\nWireConnection;0;0;27;0\nASEEND*/\n//CHKSM=5CA1BA6429D9E696BFEA6A301C7E323F8166CFB2"
+  m_functionName: 
+  m_description: 'UV Radial Shear Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Parallax Mapping
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.3\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19303\nNode;AmplifyShaderEditor.CommentaryNode;381;-670.6491,3422;Inherit;False;1152.272;251.519;Super
+    Sampler;7;370;371;368;358;367;364;361;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;271;896,2656;Inherit;False;439.5477;106.7559;;;0,0,0,1;We
+    want to move the UV coordinates away in the view direction, so we start with
+    the view direction in Tangent Space and multiply that by the height map data.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;277;-320,2880;Inherit;False;424.1;122.8;;;0,0,0,1;The
+    heightmap is a black and white image that defines the depth of the texture. Tall
+    areas are white and low areas are black. Gradient images without hard edges between
+    black and white work best.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;278;1024,2336;Inherit;False;510.7963;258.9104;UV
+    Parallax Mapping Node;;0,0,0,1;The Parallax Mapping Node creates UV coordinates
+    used to sample a texture.  The UVs have been altered per pixel such that they
+    create the illusion that the sampled texture has thickness or depth rather than
+    just being flat.$$This illusion is most visible when moving the camera around.$$This
+    is effect is only slightly more expensive than plain normal mapping.  It's doing
+    one extra texture sample for the height map and a little bit of extra math, but
+    it's still considered pretty cheap.$$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;283;1072,3296;Inherit;False;296.8999;176.8;;;0,0,0,1;Amplitude
+    controls the maximum height range of the effect. Values that are too high tend
+    to pull the effect apart and break the illusion.  Values that are too low aren't
+    visible, so finding the right balance is important.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;298;1680,2688;Inherit;False;268.8818;135.25;;;0,0,0,1;The
+    resulting UVs are shifted away from the viewer in the view direciton when the
+    height map is white.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;376;-688,2896;Inherit;False;266;102;Enable
+    Custom Derivative;;0,0,0,1;Useful for optimization when daisy chaining Parallax
+    Mapping ;0;0\nNode;AmplifyShaderEditor.WireNode;295;-389.31,2616.661;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;360;-407.4117,3087.206;Inherit;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.WireNode;359;-428.4334,3070.128;Inherit;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.WireNode;362;-424.4919,3162.096;Inherit;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.WireNode;363;-402.1564,3181.802;Inherit;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.WireNode;379;-384.2859,2748.149;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;380;-385.2859,2849.149;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSubtitle;338;320,3056;Inherit;False;Standard;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;194;-1184,2576;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdxOpNode;146;-992,2688;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdyOpNode;147;-992,2784;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;377;-688,2688;Inherit;False;Enable
+    Custom Derivative;True;0;2;2;In 0;In 1;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;372;-848,2752;Inherit;False;DDX;2;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;373;-848,2848;Inherit;False;DDY;2;2;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;378;-688,2784;Inherit;False;Option;False;0;2;2;In
+    0;In 1;Instance;377;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;118;-640,3024;Inherit;False;Heightmap;9;3;False;1;0;SAMPLER2D;0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SamplerNode;239;-320,3024;Inherit;True;Property;_TextureSample01;Texture
+    Sample 01;21;0;Create;True;1;;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Derivative;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;214;-640,3120;Inherit;False;SS;13;4;False;1;0;SAMPLERSTATE;0;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.FunctionSwitch;284;0,3056;Inherit;False;Heightmap
+    Sample Channel;False;0;4;1;Red;Green;Blue;Alpha;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;297;-432,2608;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;365;-432,2608;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;366;-384,2624;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;296;-384,3056;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;275;864,3056;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;274;1024,3056;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;273;1216,2784;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SwizzleNode;335;1056,2784;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT3;0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;351;896,2784;Inherit;False;View
+    Dir;3;7;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;279;1408,2784;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;282;1088,3200;Inherit;False;Amplitude;1;5;False;1;0;FLOAT;4;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;281;1248,3200;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;280;1568,2592;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;361;-400,3488;Inherit;False;1;0;SAMPLER2D;;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.WireNode;364;-400,3520;Inherit;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nNode;AmplifyShaderEditor.WireNode;367;-384,3488;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionNode;358;-320,3488;Inherit;False;DESF
+    Sample Super Sample;-1;;3;1f88d5a51f7319c458fd3ca70a61bf4c;0;4;19;SAMPLER2D;0;False;6;FLOAT;0;False;17;FLOAT2;0,0;False;66;SAMPLERSTATE;;False;5;FLOAT4;21;FLOAT;34;FLOAT;35;FLOAT;36;FLOAT;37\nNode;AmplifyShaderEditor.FunctionInput;368;-608,3504;Inherit;False;Sample
+    Bias;1;6;False;1;0;FLOAT;4;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;322;528,3056;Inherit;False;Parallax
+    Type;False;1;2;0;Standard;Super Sampler;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;382;490.338,3144.382;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;383;488.403,3502.374;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSubtitle;371;272,3504;Inherit;False;Super
+    Sampler;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;370;-16,3504;Inherit;False;Option;False;0;2;1;In
+    0;In 1;Instance;284;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;219;-320,2688;Inherit;False;False;-1;DDX;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;220;-320,2784;Inherit;False;False;-1;DDY;2;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;218;1696,2592;Inherit;False;True;-1;UV;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;295;0;297;0\nWireConnection;360;0;359;0\nWireConnection;359;0;118;0\nWireConnection;362;0;214;0\nWireConnection;363;0;362;0\nWireConnection;379;0;377;0\nWireConnection;380;0;378;0\nWireConnection;338;0;284;0\nWireConnection;146;0;194;0\nWireConnection;147;0;194;0\nWireConnection;377;0;146;0\nWireConnection;377;1;372;0\nWireConnection;378;0;147;0\nWireConnection;378;1;373;0\nWireConnection;239;0;118;0\nWireConnection;239;1;296;0\nWireConnection;239;3;379;0\nWireConnection;239;4;380;0\nWireConnection;239;7;214;0\nWireConnection;284;0;239;1\nWireConnection;284;1;239;2\nWireConnection;284;2;239;3\nWireConnection;284;3;239;4\nWireConnection;297;0;194;0\nWireConnection;365;0;194;0\nWireConnection;366;0;365;0\nWireConnection;296;0;295;0\nWireConnection;275;0;322;0\nWireConnection;274;0;275;0\nWireConnection;273;0;335;0\nWireConnection;273;1;274;0\nWireConnection;335;0;351;0\nWireConnection;279;0;273;0\nWireConnection;279;1;281;0\nWireConnection;281;0;282;0\nWireConnection;280;0;194;0\nWireConnection;280;1;279;0\nWireConnection;361;0;360;0\nWireConnection;364;0;363;0\nWireConnection;367;0;366;0\nWireConnection;358;19;361;0\nWireConnection;358;6;368;0\nWireConnection;358;17;367;0\nWireConnection;358;66;364;0\nWireConnection;322;0;338;0\nWireConnection;322;1;382;0\nWireConnection;382;0;383;0\nWireConnection;383;0;371;0\nWireConnection;371;0;370;0\nWireConnection;370;0;358;34\nWireConnection;370;1;358;35\nWireConnection;370;2;358;36\nWireConnection;370;3;358;37\nWireConnection;219;0;377;0\nWireConnection;220;0;378;0\nWireConnection;218;0;280;0\nASEEND*/\n//CHKSM=FCE8D399BCF77546A6AB9B3DF4814BDDB12E0955"
+  m_functionName: 
+  m_description: 'UV Parallax Mapping Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

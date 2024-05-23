@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sample Texture Size
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;100;-629.2673,-3058;Inherit;False;896.379;634.146;Sample
+    Texture Size Node;8;91;99;98;97;96;95;94;93;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;93;-608,-2784;Inherit;False;512.1721;221.9854;;;0,0,0,1;The
+    Texel Size node outputs size information for a selected texture$$The Texture
+    Size node gives you the number of pixels in a texture's height and width dimensions
+    (512x512, 1024x1024 - for example), as well as the texel size height and width
+    in UV space - which is the reciprocal of the width and height.$$This information
+    is useful when you want to do something in the shader that depends on the resolution
+    of the texture being used.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;94;-32,-3008;Inherit;False;254.7104;102.0942;Output;;0,0,0,1;Vector
+    containing all available texture size information;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;95;-32,-2896;Inherit;False;254.7103;101.0471;1/Width;;0,0,0,1;Inverse
+    width of current referenced texture.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;96;-32,-2784;Inherit;False;256.8046;101.0471;1/Height;;0,0,0,1;Inverse
+    height of current referenced texture.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;97;-32,-2672;Inherit;False;254.7104;100;Width;;0,0,0,1;Width
+    value of current referenced texture.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;98;-32,-2560;Inherit;False;254.7104;100;Height;;0,0,0,1;Height
+    value of current referenced texture.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;99;-603.4785,-3008;Inherit;False;250.1716;115.812;Tex;;0.1981132,0.1635368,0.1635368,1;Reference
+    texture to retrieve size information from.;0;0\nNode;AmplifyShaderEditor.TexelSizeNode;91;-336,-3008;Inherit;True;-1;1;0;SAMPLER2D;;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;104;-96,-2304;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;102;-656,-2304;Inherit;True;Property;_Texture0;Texture
+    0;0;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.TexelSizeNode;103;-384,-2112;Inherit;True;-1;1;0;SAMPLER2D;;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;64;-32,-2096;Inherit;False;True;-1;Output;0;False;1;0;SAMPLERSTATE;;False;1;SAMPLERSTATE;0\nWireConnection;104;0;102;0\nWireConnection;104;7;102;1\nWireConnection;103;0;102;0\nASEEND*/\n//CHKSM=2D9EE651438C49A9CA228309D73792E00259CE37"
+  m_functionName: 
+  m_description: 'Sample Texture Size Node
+
+
+    Teaching Sample'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Sample
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

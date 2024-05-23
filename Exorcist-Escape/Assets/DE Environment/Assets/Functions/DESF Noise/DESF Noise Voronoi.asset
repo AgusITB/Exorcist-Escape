@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Noise Voronoi
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19302\nNode;AmplifyShaderEditor.CommentaryNode;98;-784,1152;Inherit;False;1348.036;736.7166;Smoothness;9;86;109;108;107;90;89;88;87;91;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;27;-768,-256;Inherit;False;852.6373;1355.727;Method
+    Cells;13;15;17;16;14;25;23;22;20;26;24;21;19;18;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;11;-768,-752;Inherit;False;961.7415;356.4501;Noise
+    Voronoi Node;2;10;12;;0.2169811,0.2169811,0.2169811,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;28;114.4731,-256;Inherit;False;831.631;1353.743;Method
+    Cristal;13;39;41;40;38;37;36;35;34;33;32;31;30;29;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;42;994.0947,-256;Inherit;False;832.0094;1357.148;Method
+    Glass;13;53;55;54;52;51;50;49;48;47;46;45;44;43;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;56;1869.972,-256;Inherit;False;836.1317;1355.722;Method
+    Caustics;13;65;67;66;69;68;64;63;62;61;60;59;58;57;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;70;2752,-256;Inherit;False;832.0765;1351.667;Method
+    Distance;7;79;84;78;77;76;85;71;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;12;-384,-704;Inherit;False;495;214;;;0.1886792,0.1886792,0.1886792,1;The
+    Voronoi node creates a voronoi pattern value under a [0 1] range based using
+    the method specified by Type according to the values specified by UV, Angle and
+    Scale.$$$NOTE: $Input data must vary across the the geometry since equal values
+    will generate the same voronoi value. A simply way to achieve this is to connect
+    a Texture Coordinates node into its input;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;18;-240,-208;Inherit;False;270.1041;114.1299;Cells;;0,0,0,1;Distance
+    Function = Euclidian^2;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;19;-240,48;Inherit;False;270.1041;114.1299;Cells;;0,0,0,1;Distance
+    Function = Euclidian;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;21;-240,304;Inherit;False;270.1041;114.1299;Cells;;0,0,0,1;Distance
+    Function = Manhattan;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;24;-240,560;Inherit;False;270.1041;114.1299;Cells;;0,0,0,1;Distance
+    Function = Chebyshev;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;26;-240,816;Inherit;False;270.1041;114.1299;Cells;;0,0,0,1;Distance
+    Function = Minkowski;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;29;640,-208;Inherit;False;270.1041;114.1299;Cristal;;0,0,0,1;Distance
+    Function = Euclidian^2;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;30;640,48;Inherit;False;270.1041;114.1299;Cristal;;0,0,0,1;Distance
+    Function = Euclidian;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;640,304;Inherit;False;270.1041;114.1299;Cristal;;0,0,0,1;Distance
+    Function = Manhattan;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;640,560;Inherit;False;270.1041;114.1299;Cristal;;0,0,0,1;Distance
+    Function = Chebyshev;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;640,816;Inherit;False;270.1041;114.1299;Cristal;;0,0,0,1;Distance
+    Function = Minkowski;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;43;1520,-208;Inherit;False;270.1041;114.1299;Glass;;0,0,0,1;Distance
+    Function = Euclidian^2;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;44;1520,48;Inherit;False;270.1041;114.1299;Glass;;0,0,0,1;Distance
+    Function = Euclidian;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;45;1520,304;Inherit;False;270.1041;114.1299;Glass;;0,0,0,1;Distance
+    Function = Manhattan;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;46;1520,560;Inherit;False;270.1041;114.1299;Glass;;0,0,0,1;Distance
+    Function = Chebyshev;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;47;1520,816;Inherit;False;270.1041;114.1299;Glass;;0,0,0,1;Distance
+    Function = Minkowski;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;57;2400,-208;Inherit;False;270.1041;114.1299;Caustics;;0,0,0,1;Distance
+    Function = Euclidian^2;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;58;2400,48;Inherit;False;270.1041;114.1299;Caustics;;0,0,0,1;Distance
+    Function = Euclidian;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;59;2400,304;Inherit;False;270.1041;114.1299;Caustics;;0,0,0,1;Distance
+    Function = Manhattan;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;2400,560;Inherit;False;270.1041;114.1299;Caustics;;0,0,0,1;Distance
+    Function = Chebyshev;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;61;2400,816;Inherit;False;270.1041;114.1299;Caustics;;0,0,0,1;Distance
+    Function = Minkowski;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;71;3280,-208;Inherit;False;270.1041;114.1299;Distance;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;85;3280,64;Inherit;False;249.1041;191.1299;;;0,0,0,1;Tileable$Forces
+    the generated pattern to be tileable$$Tile Scale$Amount of tiling to apply$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;91;-736,1568;Inherit;False;242;106;Smoothness;;0,0,0,1;Smoothness
+    value to be applied over a smooth step in the distance function;0;0\nNode;AmplifyShaderEditor.VoronoiNode;10;-656,-704;Inherit;True;0;0;1;0;1;True;1;False;True;True;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;20;-416,48;Inherit;True;0;1;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;22;-416,304;Inherit;True;0;2;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;23;-416,560;Inherit;True;0;3;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;25;-416,816;Inherit;True;0;4;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;34;176,-208;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;35;240,-80;Inherit;False;Constant;_Angle1;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;36;240,0;Inherit;False;Constant;_Scale1;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;48;1056,-208;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;49;1120,-80;Inherit;False;Constant;_Angle2;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;50;1120,0;Inherit;False;Constant;_Scale2;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;62;1936,-208;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;63;2000,-80;Inherit;False;Constant;_Angle3;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;64;2000,0;Inherit;False;Constant;_Scale3;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;76;2816,-208;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;77;2880,-80;Inherit;False;Constant;_Angle4;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;78;2880,0;Inherit;False;Constant;_Scale4;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.VoronoiNode;37;464,-208;Inherit;True;0;0;1;1;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;38;464,48;Inherit;True;0;1;1;1;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;40;464,560;Inherit;True;0;3;1;1;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;41;464,816;Inherit;True;0;4;1;1;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;51;1344,-208;Inherit;True;0;0;1;2;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;52;1344,48;Inherit;True;0;1;1;2;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;54;1344,560;Inherit;True;0;3;1;2;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;55;1344,816;Inherit;True;0;4;1;2;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;68;2224,560;Inherit;True;0;3;1;3;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;69;2224,816;Inherit;True;0;4;1;3;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;66;2224,48;Inherit;True;0;1;1;3;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;67;2224,304;Inherit;True;0;2;1;3;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;53;1344,304;Inherit;True;0;2;1;2;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;39;464,304;Inherit;True;0;2;1;1;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;84;3104,64;Inherit;True;0;0;1;4;1;True;4;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;79;3104,-208;Inherit;True;0;0;1;4;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;65;2224,-208;Inherit;True;0;0;1;3;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.VoronoiNode;14;-416,-208;Inherit;True;0;0;1;0;1;False;1;False;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.RangedFloatNode;16;-640,-80;Inherit;False;Constant;_Angle;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;17;-640,0;Inherit;False;Constant;_Scale;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;15;-704,-208;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;87;-624,1328;Inherit;False;Constant;_Angle5;Angle;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;88;-624,1408;Inherit;False;Constant;_Scale5;Scale;0;0;Create;True;0;0;0;False;0;False;10;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;89;-688,1200;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;90;-656,1488;Inherit;False;Constant;_Smoothness;Smoothness;0;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RelayNode;107;-64,1200;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RelayNode;108;-64,1424;Inherit;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RelayNode;109;-64,1648;Inherit;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.VoronoiNode;86;-400,1200;Inherit;True;0;0;1;0;1;False;1;False;True;True;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2\nNode;AmplifyShaderEditor.FunctionOutput;0;256,-752;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;20;0;15;0\nWireConnection;20;1;16;0\nWireConnection;20;2;17;0\nWireConnection;22;0;15;0\nWireConnection;22;1;16;0\nWireConnection;22;2;17;0\nWireConnection;23;0;15;0\nWireConnection;23;1;16;0\nWireConnection;23;2;17;0\nWireConnection;25;0;15;0\nWireConnection;25;1;16;0\nWireConnection;25;2;17;0\nWireConnection;37;0;34;0\nWireConnection;37;1;35;0\nWireConnection;37;2;36;0\nWireConnection;38;0;34;0\nWireConnection;38;1;35;0\nWireConnection;38;2;36;0\nWireConnection;40;0;34;0\nWireConnection;40;1;35;0\nWireConnection;40;2;36;0\nWireConnection;41;0;34;0\nWireConnection;41;1;35;0\nWireConnection;41;2;36;0\nWireConnection;51;0;48;0\nWireConnection;51;1;49;0\nWireConnection;51;2;50;0\nWireConnection;52;0;48;0\nWireConnection;52;1;49;0\nWireConnection;52;2;50;0\nWireConnection;54;0;48;0\nWireConnection;54;1;49;0\nWireConnection;54;2;50;0\nWireConnection;55;0;48;0\nWireConnection;55;1;49;0\nWireConnection;55;2;50;0\nWireConnection;68;0;62;0\nWireConnection;68;1;63;0\nWireConnection;68;2;64;0\nWireConnection;69;0;62;0\nWireConnection;69;1;63;0\nWireConnection;69;2;64;0\nWireConnection;66;0;62;0\nWireConnection;66;1;63;0\nWireConnection;66;2;64;0\nWireConnection;67;0;62;0\nWireConnection;67;1;63;0\nWireConnection;67;2;64;0\nWireConnection;53;0;48;0\nWireConnection;53;1;49;0\nWireConnection;53;2;50;0\nWireConnection;39;0;34;0\nWireConnection;39;1;35;0\nWireConnection;39;2;36;0\nWireConnection;84;0;76;0\nWireConnection;84;1;77;0\nWireConnection;84;2;78;0\nWireConnection;79;0;76;0\nWireConnection;79;1;77;0\nWireConnection;79;2;78;0\nWireConnection;65;0;62;0\nWireConnection;65;1;63;0\nWireConnection;65;2;64;0\nWireConnection;14;0;15;0\nWireConnection;14;1;16;0\nWireConnection;14;2;17;0\nWireConnection;107;0;86;0\nWireConnection;108;0;86;1\nWireConnection;109;0;86;2\nWireConnection;86;0;89;0\nWireConnection;86;1;87;0\nWireConnection;86;2;88;0\nWireConnection;86;3;90;0\nASEEND*/\n//CHKSM=4744226C35C38CAABD579236B2FEC1EAC1CE0BB6"
+  m_functionName: 
+  m_description: 'Noise Voronoi Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.38039216, g: 0.24705882, b: 0.4627451, a: 1}
+  m_customNodeCategory: DESF Noise
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

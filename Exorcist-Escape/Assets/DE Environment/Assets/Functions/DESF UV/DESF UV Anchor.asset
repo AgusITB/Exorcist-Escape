@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Anchor
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;25;-1248,-896;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.TransformPositionNode;29;-1216,-736;Inherit;False;World;Object;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldPosInputsNode;31;-1408,-736;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;24;-976,-896;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;28;-816,-896;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;26;-640,-976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;27;-640,-848;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ATanOpNode;11;-480,-976;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ATanOpNode;12;-480,-848;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;14;-320,-976;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;13;-320,-848;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PiNode;30;-704,-704;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;18;-512,-704;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;15;-160,-976;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;16;-160,-848;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;20;224,-1088;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;39;224,-1280;Inherit;False;377.4148;153.0635;UV
+    Anchor Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.DynamicAppendNode;17;48,-976;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;38;-864,-768;Inherit;False;Anchor
+    Y;1;3;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;37;-864,-1024;Inherit;False;Anchor
+    X;1;1;False;1;0;FLOAT;0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;36;-416,-576;Inherit;False;Anchor
+    Y Max;1;4;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;40;1,-1216;Inherit;False;181;101;Anchor
+    Center;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;34;16,-1088;Inherit;False;Anchor
+    Center;2;0;False;1;0;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;41;-452,-1216;Inherit;False;202;100;Anchor
+    X Max;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionInput;35;-416,-1104;Inherit;False;Anchor
+    X Max;1;2;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;42;-464,-496;Inherit;False;202;100;Anchor
+    Y Max;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;43;-944,-688;Inherit;False;202;100;Anchor
+    Y;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;44;-944,-1152;Inherit;False;202;100;Anchor
+    X;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;0;384,-1088;Inherit;False;True;-1;Anchor;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;29;0;31;0\nWireConnection;24;0;25;0\nWireConnection;24;1;29;0\nWireConnection;28;0;24;0\nWireConnection;26;0;37;0\nWireConnection;26;1;28;0\nWireConnection;27;0;38;0\nWireConnection;27;1;28;1\nWireConnection;11;0;26;0\nWireConnection;12;0;27;0\nWireConnection;14;0;11;0\nWireConnection;14;1;18;0\nWireConnection;13;0;12;0\nWireConnection;13;1;18;0\nWireConnection;18;0;30;0\nWireConnection;15;0;14;0\nWireConnection;15;1;35;0\nWireConnection;16;0;13;0\nWireConnection;16;1;36;0\nWireConnection;20;0;34;0\nWireConnection;20;1;17;0\nWireConnection;17;0;15;0\nWireConnection;17;1;16;0\nWireConnection;0;0;20;0\nASEEND*/\n//CHKSM=EE23463FA2D07C0EE20246A64ABF9DA2F6B1074E"
+  m_functionName: 
+  m_description: 'UV Anchor Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

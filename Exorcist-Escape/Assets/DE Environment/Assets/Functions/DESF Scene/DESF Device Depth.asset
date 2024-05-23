@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Device Depth
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;53;-512,-736;Inherit;False;995.7098;598.5085;Calculate
+    depth difference;6;52;51;50;49;48;54;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;46;-512,-1024;Inherit;False;532;259;Math;2;42;41;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;45;-512,-1376;Inherit;False;797.4;317.5911;Device
+    Depth Node;2;44;43;;0.01886791,0.01886791,0.01886791,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;43;-224,-1328;Inherit;False;381.4;123.4;;;0,0,0,1;Returns
+    Device Depth to be used as direct input, or to manipulate, Depth Value output.;0;0\nNode;AmplifyShaderEditor.FunctionNode;44;-464,-1328;Inherit;True;Device
+    Depth;-1;;1;406db1e975d44e5438890badc39ee7cf;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;42;-464,-976;Inherit;False;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionNode;48;-464,-560;Inherit;True;Device
+    Depth;-1;;2;406db1e975d44e5438890badc39ee7cf;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;51;-16,-672;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;54;-16,-448;Inherit;False;384.7438;209.6265;;;0,0,0,1;This
+    example shows a way to calculate the depth difference (in a transparent material)
+    between opaque geometry and transparent geometry. $$This can be used to create
+    a foam effect of the intersection part of the water and a rock/shore. $$We use
+    an One Minus node here so the closest part of two geometries will be 1.;0;0\nNode;AmplifyShaderEditor.ScreenDepthNode;50;-272,-672;Inherit;False;0;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NegateNode;49;-208,-560;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;52;176,-672;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;41;-240,-976;Inherit;True;True;-1;Depth
+    Offset;0;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;51;0;50;0\nWireConnection;51;1;49;0\nWireConnection;49;0;48;0\nWireConnection;52;0;51;0\nWireConnection;41;0;42;3\nASEEND*/\n//CHKSM=D5668C9B9661C4BD238E72D4AFDB310A3214387D"
+  m_functionName: 
+  m_description: 'Device Depth Node
+
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

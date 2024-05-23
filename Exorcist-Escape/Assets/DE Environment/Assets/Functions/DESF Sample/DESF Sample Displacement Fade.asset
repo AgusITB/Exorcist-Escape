@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sample Displacement Fade
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.SimpleAddOpNode;56;-456.8494,758.937;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;195;-768,384;Inherit;False;393.0859;194.4023;Sample
+    Displacement Fade Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;196;-1344,544;Inherit;False;178;103;Fade
+    Depth;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;197;-1840,1152;Inherit;False;177.5691;106.3622;Fade
+    Start;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;198;-528,960;Inherit;False;176;107;Enable
+    Fade;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;42;-1664,880;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;21;-1664,976;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;65;-1840,1072;Inherit;False;Fade
+    Start;1;3;False;1;0;FLOAT;500;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WorldSpaceCameraPos;55;-2144,880;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DistanceOpNode;52;-1840,880;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;30;-2048,1040;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldPosInputsNode;194;-2256,1040;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;48;-1840,992;Half;False;Constant;_FadeEnd;Fade
+    End;7;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;54;-1488,928;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;24;-1360,1024;Half;False;Constant;_Float2;Float
+    2;0;0;Create;True;1;;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;44;-1360,1104;Half;False;Constant;_Float3;Float
+    3;0;0;Create;True;1;;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;34;-1360,928;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector3Node;27;-1360,752;Half;False;Constant;_Vector0;Vector
+    0;4;0;Create;True;1;;0;0;False;0;False;0,1,0;0,1,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionInput;64;-1360,672;Inherit;False;Fade
+    Depth;1;2;False;1;0;FLOAT;-25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-1168,672;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;40;-1008,768;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;50;-816,768;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.Vector3Node;25;-816,896;Half;False;Constant;_Vector1;Vector
+    1;5;0;Create;True;1;;0;0;False;0;False;1,1,1;0,0.1,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleDivideOpNode;32;-640,768;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;63;-528,880;Inherit;False;Enable
+    Fade;1;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;191;-672,688;Inherit;False;Vertex
+    Position;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LerpOp;192;-304,688;Inherit;False;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SmoothstepOpNode;41;-1184,928;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;23;-1008,928;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;57;-128,688;Inherit;False;True;-1;Vertex
+    Position;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;56;0;191;0\nWireConnection;56;1;32;0\nWireConnection;42;0;52;0\nWireConnection;42;1;65;0\nWireConnection;21;0;48;0\nWireConnection;21;1;65;0\nWireConnection;52;0;55;0\nWireConnection;52;1;30;0\nWireConnection;30;0;194;1\nWireConnection;30;1;194;2\nWireConnection;30;2;194;3\nWireConnection;54;0;42;0\nWireConnection;54;1;21;0\nWireConnection;34;0;54;0\nWireConnection;37;0;64;0\nWireConnection;37;1;27;2\nWireConnection;40;0;27;1\nWireConnection;40;1;37;0\nWireConnection;40;2;27;3\nWireConnection;50;1;40;0\nWireConnection;50;2;23;0\nWireConnection;32;0;50;0\nWireConnection;32;1;25;0\nWireConnection;192;0;191;0\nWireConnection;192;1;56;0\nWireConnection;192;2;63;0\nWireConnection;41;0;34;0\nWireConnection;41;1;24;0\nWireConnection;41;2;44;0\nWireConnection;23;0;41;0\nWireConnection;57;0;192;0\nASEEND*/\n//CHKSM=98C4C5B79814088AC35432B4F8DBB71B22CC9710"
+  m_functionName: 
+  m_description: 'Sample Displacement Fade Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.11764706, g: 0.31764707, b: 0.63529414, a: 1}
+  m_customNodeCategory: DESF Sample
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

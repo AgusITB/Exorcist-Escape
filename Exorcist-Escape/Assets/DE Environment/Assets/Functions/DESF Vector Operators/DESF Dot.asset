@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Dot
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;237;928,1712;Inherit;False;892.655;529.9028;VdotH;6;230;235;234;233;232;231;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;227;928,1296;Inherit;False;890.5492;391.8232;NdotV;4;219;218;224;217;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;211;0,1584;Inherit;False;889.9229;399.2773;NdotL;4;208;207;203;191;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;187;928,768;Inherit;False;890.6902;513.7516;NdotH;6;186;185;184;183;182;181;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;179;0,1168;Inherit;False;890.5481;395.7673;LdotV;3;177;175;176;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;173;0,768;Inherit;False;887.2758;382.7793;LdotH;6;166;165;169;168;171;170;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;162;384,-352;Inherit;False;1045.343;497.9037;Math;11;0;148;151;144;143;145;146;149;147;150;152;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;157;384,176;Inherit;False;684.365;443.1796;Dot
+    Product used for channel selection;4;161;156;159;160;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;155;384,-672;Inherit;False;665.853;287.077;Dot
+    Node;2;154;141;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;141;592,-608;Inherit;False;400.1351;183.5544;;;0,0,0,1;Returns
+    the dot product, or scalar product, of the two input vectors A and B.$$The dot
+    product is a value equal to the magnitudes of the two vectors multiplied together
+    and then multiplied by the cosine of the angle between them;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;152;768,0;Inherit;False;327.8027;101.27;;;0,0,0,1;the
+    Dot Product node multiplies each of the components together and then adds up
+    the result.;0;0\nNode;AmplifyShaderEditor.SamplerNode;160;432,240;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;True;bump;Auto;True;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.Vector4Node;159;528,432;Inherit;False;Constant;_Vector0;Vector
+    0;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;0,0,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.DotProductOpNode;156;784,240;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;161;752,464;Inherit;False;223.0717;118.0177;;;0,0,0,1;The
+    user can put a 1 in the channel they want to use.  This will isolate the channel
+    they choose.;0;0\nNode;AmplifyShaderEditor.DotProductOpNode;154;464,-608;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;150;928,-224;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;147;768,-304;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;149;768,-112;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;146;592,-144;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.BreakToComponentsNode;145;592,-304;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;143;432,-304;Inherit;False;A;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;144;432,-144;Inherit;False;B;3;1;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;151;1056,-128;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;148;768,-208;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;163;-67.09998,-672;Inherit;False;393.1;185.8;Reference
+    Implementation;;0,0,0,1;dot for float4 vectors could be implemented this way:$$float
+    dot(float4 a, float4 b)${$  return a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w@$}$P;0;0\nNode;AmplifyShaderEditor.DotProductOpNode;181;1520,816;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.NormalizeNode;182;1344,976;Inherit;False;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;183;1216,976;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;184;1008,976;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;185;976,1120;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldNormalVector;186;1008,816;Inherit;False;True;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;203;320,1648;Inherit;False;2;0;FLOAT3;1,1,1;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;208;448,1648;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;168;288,896;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;169;400,896;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldNormalVector;224;976,1344;Inherit;False;True;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;218;1200,1344;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;219;1344,1344;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;232;1216,1920;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;233;1328,1920;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;234;1296,1760;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;235;1520,1760;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;217;976,1504;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;230;976,1920;Float;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;231;944,2080;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;177;96,1360;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;175;64,1216;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldNormalVector;191;96,1648;Inherit;False;True;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;207;64,1808;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;176;336,1216;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;170;96,976;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;171;64,816;Inherit;False;True;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SaturateNode;166;688,816;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DotProductOpNode;165;560,816;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1184,-128;Inherit;False;True;-1;Out;0;True;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;156;0;160;0\nWireConnection;156;1;159;0\nWireConnection;150;0;147;0\nWireConnection;150;1;148;0\nWireConnection;147;0;145;0\nWireConnection;147;1;146;0\nWireConnection;149;0;145;2\nWireConnection;149;1;146;2\nWireConnection;146;0;144;0\nWireConnection;145;0;143;0\nWireConnection;151;0;150;0\nWireConnection;151;1;149;0\nWireConnection;148;0;145;1\nWireConnection;148;1;146;1\nWireConnection;181;0;186;0\nWireConnection;181;1;182;0\nWireConnection;182;0;183;0\nWireConnection;183;0;184;0\nWireConnection;183;1;185;0\nWireConnection;203;0;191;0\nWireConnection;203;1;207;0\nWireConnection;208;0;203;0\nWireConnection;168;0;171;0\nWireConnection;168;1;170;0\nWireConnection;169;0;168;0\nWireConnection;218;0;224;0\nWireConnection;218;1;217;0\nWireConnection;219;0;218;0\nWireConnection;232;0;230;0\nWireConnection;232;1;231;0\nWireConnection;233;0;232;0\nWireConnection;235;0;234;0\nWireConnection;235;1;233;0\nWireConnection;176;0;175;0\nWireConnection;176;1;177;0\nWireConnection;166;0;165;0\nWireConnection;165;0;171;0\nWireConnection;165;1;169;0\nWireConnection;0;0;151;0\nASEEND*/\n//CHKSM=03011F227E136DEC5810B289D88D5322078C4F06"
+  m_functionName: 
+  m_description: 'Dot Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.21960784, g: 0.19607843, b: 0.44705883, a: 1}
+  m_customNodeCategory: DESF Vector Operators
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

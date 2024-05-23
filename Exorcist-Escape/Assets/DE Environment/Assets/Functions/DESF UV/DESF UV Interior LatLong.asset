@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Interior LatLong
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;123;-2419.801,2731.301;Inherit;False;1188.627;842.8054;Hash;15;164;159;158;151;134;133;132;131;130;129;128;127;126;125;124;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;1;-595.546,2279.329;Inherit;False;375.0465;133.3052;UV
+    Interior LatLong Node;;0,0,0,1;The UV Interior LatLong Node generates the direction
+    vector used to sample a LatLong Texture. The purpose is to simulate building
+    interiors through windows without using any geometry.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;53;-3008,2656;Inherit;False;224.3918;105.2247;Room
+    Count ;;0,0,0,1;Controls the number of rooms in the building.;0;0\nNode;AmplifyShaderEditor.DynamicAppendNode;124;-2202.058,3025.102;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;125;-1975.925,3023.009;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;126;-1809.674,2998.619;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;127;-1970.648,3269.181;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;128;-2207.614,3271.948;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SinOpNode;129;-1632.531,3002.103;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;133;-1478.768,3002.844;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FractNode;134;-1347.768,3001.844;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;136;-1203.576,2885.643;Inherit;False;286.28;108.0164;Random;;0,0,0,1;Random
+    creates variations in the room by using random sides for the left, right, font,
+    and back.;0;0\nNode;AmplifyShaderEditor.RoundOpNode;137;-1209.817,3001.494;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DotProductOpNode;158;-1982.786,2784.552;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;159;-2202.059,2781.301;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;160;-2604.736,2786.95;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FloorOpNode;163;-2540.851,2779.806;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;164;-2389.548,2779.804;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;167;-2248.184,2495.092;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;1,-1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;168;-2417.826,2494.986;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;2,-2;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FractNode;169;-2556.93,2495.098;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;170;-2729.425,2494.551;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;171;-2602.736,2545.952;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;172;-761.8805,2461.167;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdxOpNode;153;-2723.758,2346.438;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DdyOpNode;155;-2724.509,2418.729;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.Vector3Node;130;-2208.335,2891.167;Inherit;False;Constant;_Vector7;Vector
+    4;3;0;Create;True;0;0;0;False;0;False;127.1,311.7,74.7;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;131;-2204.15,3134.969;Inherit;False;Constant;_Vector8;Vector
+    5;3;0;Create;True;0;0;0;False;0;False;269.5,183.3,246.1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.Vector3Node;132;-2209.29,3384.048;Inherit;False;Constant;_Vector9;Vector
+    6;3;0;Create;True;0;0;0;False;0;False;113.5,271.9,124.6;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.RangedFloatNode;151;-1674.906,3079.645;Inherit;False;Constant;_Float5;Float
+    4;0;0;Create;True;0;0;0;False;0;False;43758.55;43758.55;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;62;-2912,2496;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;58;-2944,2576;Inherit;False;Room
+    Count;2;1;False;1;0;FLOAT2;1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;31;-3168,2496;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WorldNormalVector;181;-2896,2192;Inherit;False;True;1;0;FLOAT3;0,0,1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;174;-2896,2048;Inherit;False;World;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ReflectOpNode;203;-2688,2176;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.TransformDirectionNode;182;-2496,2176;Inherit;False;World;Tangent;False;Fast;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SwizzleNode;195;-1536,2176;Inherit;False;FLOAT;1;1;2;3;1;0;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ASinOpNode;194;-1280,2176;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PiNode;190;-1344,2064;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;193;-1504,2064;Inherit;False;Constant;_Float1;Float
+    1;0;0;Create;True;0;0;0;False;0;False;-0.5;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;191;-1152,2064;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;192;-992,2336;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;188;-1136,2336;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;189;-1312,2416;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;1.570796;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ATan2OpNode;198;-1456,2336;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;197;-1584,2320;Inherit;False;FLOAT3;1;0;FLOAT3;0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;176;-1744,2320;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.AbsOpNode;165;-1872,2320;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;166;-1904,2400;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;173;-2048,2320;Inherit;False;2;0;FLOAT3;1,1,1;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;200;-2224,2320;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;-1,1,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.DynamicAppendNode;199;-2080,2432;Inherit;False;FLOAT3;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;-1;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;196;-576,2464;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0.1591549,-0.3183099;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;61;-1042.714,3001.809;Inherit;False;False;-1;Random;3;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;201;-2572.153,2345.714;Inherit;False;False;-1;DDX;1;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;202;-2571.097,2418.547;Inherit;False;False;-1;DDY;2;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;56;-416,2464;Inherit;False;True;-1;UV;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;124;0;164;1\nWireConnection;124;1;164;0\nWireConnection;124;2;164;0\nWireConnection;125;0;124;0\nWireConnection;125;1;131;0\nWireConnection;126;0;158;0\nWireConnection;126;1;125;0\nWireConnection;126;2;127;0\nWireConnection;127;0;128;0\nWireConnection;127;1;132;0\nWireConnection;128;0;164;0\nWireConnection;128;1;164;1\nWireConnection;128;2;164;1\nWireConnection;129;0;126;0\nWireConnection;133;0;129;0\nWireConnection;133;1;151;0\nWireConnection;134;0;133;0\nWireConnection;137;0;134;0\nWireConnection;158;0;159;0\nWireConnection;158;1;130;0\nWireConnection;159;0;164;0\nWireConnection;159;1;164;1\nWireConnection;159;2;164;0\nWireConnection;160;0;171;0\nWireConnection;163;0;160;0\nWireConnection;164;0;163;0\nWireConnection;167;0;168;0\nWireConnection;168;0;169;0\nWireConnection;169;0;170;0\nWireConnection;170;0;62;0\nWireConnection;170;1;58;0\nWireConnection;171;0;170;0\nWireConnection;172;0;192;0\nWireConnection;172;1;167;0\nWireConnection;153;0;62;0\nWireConnection;155;0;62;0\nWireConnection;62;0;31;0\nWireConnection;203;0;174;0\nWireConnection;203;1;181;0\nWireConnection;182;0;203;0\nWireConnection;195;0;182;0\nWireConnection;194;0;195;0\nWireConnection;190;0;193;0\nWireConnection;191;0;190;0\nWireConnection;191;1;194;0\nWireConnection;192;0;188;0\nWireConnection;192;1;191;0\nWireConnection;188;0;198;0\nWireConnection;188;1;189;0\nWireConnection;198;0;197;2\nWireConnection;198;1;197;0\nWireConnection;197;0;176;0\nWireConnection;176;0;165;0\nWireConnection;176;1;166;0\nWireConnection;165;0;173;0\nWireConnection;166;0;173;0\nWireConnection;166;1;199;0\nWireConnection;173;1;200;0\nWireConnection;200;0;182;0\nWireConnection;199;0;167;0\nWireConnection;196;0;172;0\nWireConnection;61;0;137;0\nWireConnection;201;0;153;0\nWireConnection;202;0;155;0\nWireConnection;56;0;196;0\nASEEND*/\n//CHKSM=A49BDDCF6787FF816743CD4F8AF9DD5DBAACBBB9"
+  m_functionName: 
+  m_description: 'UV Interior LatLong Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

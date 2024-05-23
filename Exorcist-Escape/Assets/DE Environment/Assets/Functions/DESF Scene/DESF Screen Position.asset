@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Screen Position
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.3.3\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19303\nNode;AmplifyShaderEditor.CommentaryNode;61;-1021.494,1339.041;Inherit;False;1658.657;378.3412;Screen
+    Edge Mask - Center Distance;10;36;43;42;41;40;60;39;37;62;63;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;80;688,480;Inherit;False;1105.107;444.7252;SG;2;7;6;;0.01886791,0.01886791,0.01886791,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;77;-2208,480;Inherit;False;1114;611;Transform
+    Screen Postion to Tile Image;8;69;71;72;73;75;70;76;74;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;66;-1024,-32;Inherit;False;1059.979;420.222;Screen
+    Position Node ;5;65;81;82;68;67;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;63;-951,1376;Inherit;False;413.0672;253;Center;2;59;38;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;35;-1024,944;Inherit;False;1662.36;363.4575;Screen
+    Edge Mask - Rounded;10;26;33;34;32;31;30;29;25;27;28;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;20;-1022.285,473.5692;Inherit;False;1664.786;439.5775;Screen
+    Edge Mask - Square;12;8;18;12;19;11;16;17;10;9;14;13;21;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;6;960,528;Inherit;False;780.7211;388.4795;UV
+    Screen Position Node;;0,0,0,1;The Screen Position Node brings a value into the
+    shader that represents a pixel's position on the screen.$$Default$Returns Screen
+    Position. This mode divides Screen Position by the clip space position W component.$$Raw$Returns
+    Screen Position. This mode does not divide Screen Position by the clip space
+    position W component. This is useful for projection.$$Center$Returns Screen Position
+    offset so position float2(0,0) is at the center of the screen.$$Tiled$Returns
+    Screen Position offset so position float2(0,0) is at the center of the screen
+    and tiled using frac.$$Pixel$The default value but multiplied by the screen's
+    width and height pixel count.$$$$;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;21;-160,704;Inherit;False;557.8938;165.7642;;;0,0,0,1;This
+    set of nodes uses the Screen Position to create a mask that's black around the
+    edges of the screen and white in the middle. This could be used to mask an effect
+    that you only want to happen in the middle of the screen.$$This version of the
+    mask has straight, square edges.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;28;-320,1152;Inherit;False;250.2008;100;;;0,0,0,1;This
+    version of the edge mask has nice rounded edges.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;62;-194.7218,1536;Inherit;False;290.7218;126.0819;;;0,0,0,1;This
+    version of the edge mask is based on measuring the pixel's distance from the
+    center of the screen.;0;0\nNode;AmplifyShaderEditor.OneMinusNode;13;-512,624;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.RangedFloatNode;14;-512,704;Inherit;False;Constant;_Float0;Float
+    0;0;0;Create;True;0;0;0;False;0;False;6;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;9;-320,528;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;10;-320,624;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SaturateNode;17;-160,624;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SaturateNode;16;-160,528;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;11;0,528;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;19;144,528;Inherit;False;FLOAT4;1;0;FLOAT4;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;12;288,528;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;18;432,528;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;27;-352,992;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.OneMinusNode;25;-512,1072;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;29;-192,992;Inherit;False;FLOAT4;1;0;FLOAT4;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;30;-48,992;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;31;112,992;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;32;256,992;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;34;416,992;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;33;64,1120;Inherit;False;Constant;_Float1;Float
+    1;0;0;Create;True;0;0;0;False;0;False;1500;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-352,1440;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.LengthOpNode;39;-192,1440;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;60;-32,1440;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;40;128,1440;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;41;288,1440;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;42;128,1520;Inherit;False;Constant;_Float3;Float
+    3;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;43;448,1440;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;36;-512,1520;Inherit;False;Constant;_Float2;Float
+    0;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;8;-768,528;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;64;-1584,928;Inherit;False;231.9;114.3;Screen
+    Tiling;;0.1981132,0.1429779,0.1429779,1;;0;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;26;-752,992;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;59;-672,1440;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,1.5,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.StickyNoteNode;67;-464,32;Inherit;False;468.7752;178.6409;;;0,0,0,1;The
+    Screen Position node outputs the screen position of the current pixel.$$According
+    to the selected Type parameter the position value can be either in Screen Coordinates,
+    [ 0, Screen Width - 1 ] for X axis and [ 0, Screen Height -1 ] for Y axis, or
+    in a normalized [0,1] range for both axis.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;68;-992,224;Inherit;False;254.6302;102.3357;Normalized:;;0,0,0,1;Position
+    value is set on a [0,1] range for both x and y axis.;0;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;69;-2128,544;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;71;-1792,544;Inherit;False;3;3;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.ScreenParams;72;-2128,720;Inherit;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WireNode;73;-1936,656;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.SwizzleNode;70;-1600,544;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;76;-1888,704;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.TexelSizeNode;74;-2160,896;Inherit;False;75;1;0;SAMPLER2D;;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SwizzleNode;2;-1568,768;Inherit;False;FLOAT2;0;1;2;3;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;3;-1808,768;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.RangedFloatNode;78;-1600,848;Inherit;False;Constant;_ScreenTiling;Screen
+    Tiling;1;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-1408,768;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;7;752,528;Inherit;False;Option;False;0;5;-1;Default;Raw;Center;Tiled;Pixel;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;38;-912,1440;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;82;-704,224;Inherit;False;257.6302;104.3357;Screen:
+    ;;0,0,0,1;Position value is set according to actual screen size.;0;0\nNode;AmplifyShaderEditor.ScreenPosInputsNode;81;-992,32;Inherit;True;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.ScreenPosInputsNode;65;-704,32;Inherit;True;1;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SamplerNode;75;-1440,544;Inherit;True;Property;_ScreenTexture;Screen
+    Texture;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionOutput;0;-80,-112;Inherit;False;True;-1;Out;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nWireConnection;13;0;8;0\nWireConnection;9;0;8;0\nWireConnection;9;1;14;0\nWireConnection;10;0;13;0\nWireConnection;10;1;14;0\nWireConnection;17;0;10;0\nWireConnection;16;0;9;0\nWireConnection;11;0;16;0\nWireConnection;11;1;17;0\nWireConnection;19;0;11;0\nWireConnection;12;0;19;0\nWireConnection;12;1;19;1\nWireConnection;18;0;12;0\nWireConnection;27;0;26;0\nWireConnection;27;1;25;0\nWireConnection;25;0;26;0\nWireConnection;29;0;27;0\nWireConnection;30;0;29;0\nWireConnection;30;1;29;1\nWireConnection;31;0;30;0\nWireConnection;31;1;30;0\nWireConnection;32;0;31;0\nWireConnection;32;1;33;0\nWireConnection;34;0;32;0\nWireConnection;37;0;59;0\nWireConnection;37;1;36;0\nWireConnection;39;0;37;0\nWireConnection;60;0;39;0\nWireConnection;40;0;60;0\nWireConnection;41;0;40;0\nWireConnection;41;1;42;0\nWireConnection;43;0;41;0\nWireConnection;59;0;38;0\nWireConnection;71;0;69;0\nWireConnection;71;1;73;0\nWireConnection;71;2;76;0\nWireConnection;73;0;72;0\nWireConnection;70;0;71;0\nWireConnection;76;0;74;0\nWireConnection;2;0;3;0\nWireConnection;4;0;2;0\nWireConnection;4;1;78;0\nWireConnection;75;1;70;0\nASEEND*/\n//CHKSM=C2FAAF1FBF867DBFC6EB2BC568DCCCA550BA7DA2"
+  m_functionName: 
+  m_description: 'Screen Position Node
+
+
+    Teaching Sample
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.5882353, g: 0.078431375, b: 0.23921569, a: 1}
+  m_customNodeCategory: DESF Scene
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

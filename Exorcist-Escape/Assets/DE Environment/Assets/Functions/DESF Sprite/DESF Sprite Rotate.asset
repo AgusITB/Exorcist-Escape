@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Sprite Rotate
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.FunctionSubtitle;113;2060.381,501.298;Inherit;False;Sprite
+    Rotate;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;59;-921.8826,659.9316;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;13;476.4146,840.4202;Inherit;False;Opacity;1;7;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;62;1142.117,771.9316;Inherit;False;Use
+    Middle Point Cut;True;1;2;14;In 0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;14;198.1174,1027.932;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ComponentMaskNode;7;-1497.882,867.9316;Inherit;False;True;True;False;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StepOpNode;10;6.117432,947.9318;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SamplerNode;23;166.1174,723.9316;Inherit;True;Property;_RotateMaskSampler1;Rotate
+    Mask Sampler;11;1;[NoScaleOffset];Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;18;-41.88257,723.9316;Inherit;False;Rotation
+    Mask;9;4;False;1;0;SAMPLER2D;0.0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;29;-729.8826,659.9316;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;103;2244.967,655.4663;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionSwitch;38;422.1174,947.9318;Inherit;False;Invert
+    Middle Point;True;0;2;15;In 0;In 1;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LerpOp;37;931.5995,905.8618;Inherit;False;3;0;FLOAT;1;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;32;-1145.883,659.9316;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;35;662.1174,771.9316;Inherit;False;Mask
+    Type;False;0;2;13;Texture;Color;Object;-1;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;106;2063.966,745.4662;Inherit;False;Tint
+    Color;5;1;False;1;0;COLOR;1,1,1,1;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;100;3073.489,573.7871;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;99;3073.489,685.787;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleTimeNode;52;-989.3092,539.5319;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;39;-781.3092,539.5319;Inherit;False;Time;1;6;False;1;0;FLOAT;0.01;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;98;2449.489,493.7875;Inherit;False;Tint
+    Effect;True;0;2;1;In 0;In 1;Object;-1;10;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;109;2874.012,765.787;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.ComponentMaskNode;108;2635.217,785.1061;Inherit;False;False;False;False;True;1;0;COLOR;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;107;2455.489,648.787;Inherit;False;Color;5;0;False;1;0;COLOR;1,1,1,1;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionSwitch;102;3297.489,493.7875;Inherit;False;Blend
+    Mode;False;0;3;16;None;Additive;Additive With Alpha Blend;Object;-1;10;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.TexturePropertyNode;33;-329.8826,595.9317;Float;True;Property;_RotateMask1;Rotate
+    Mask;1;1;[NoScaleOffset];Create;True;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.VertexToFragmentNode;31;-370.4052,525.7191;Inherit;False;False;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RotatorNode;26;-569.2065,459.3532;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0.5,0.5;False;2;FLOAT;1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;25;-140.9481,450.868;Inherit;False;Vertex
+    UVs;False;0;2;3;Fragment;Vertex;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT2;0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SamplerNode;70;1114.764,434.0833;Inherit;True;Property;_RotateSampler1;Rotate
+    Sampler;4;1;[NoScaleOffset];Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;black;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.TexturePropertyNode;60;625.0425,219.8221;Float;True;Property;_FXTexture1;FX
+    Texture;0;1;[NoScaleOffset];Create;True;0;0;0;False;1;DE_DrawerTextureSingleLine;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1\nNode;AmplifyShaderEditor.FunctionSwitch;34;1690.764,434.0833;Inherit;False;Use
+    Mask;True;0;2;11;In 0;In 1;Object;-1;10;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;36;1467.44,548.6469;Inherit;False;3;3;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;1;COLOR;0\nNode;AmplifyShaderEditor.FunctionInput;24;881.2214,216.123;Inherit;False;Tex;9;2;False;1;0;SAMPLER2D;0.0;False;1;SAMPLER2D;0\nNode;AmplifyShaderEditor.ComponentMaskNode;44;-567.2209,947.9318;Inherit;False;False;True;True;True;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;41;-302.8538,950.7848;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-0.5;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionSwitch;72;-1408.807,748.0953;Inherit;False;Custom
+    UVs;True;0;2;4;In 0;In 1;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.NegateNode;55;-890.2828,976.0319;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.ScaleNode;19;-1037.283,977.3318;Inherit;False;0.5;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;64;-1180.383,977.3318;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.RangedFloatNode;80;-1335.483,1068.135;Float;False;Constant;_Float1;Float
+    0;3;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.ComponentMaskNode;61;-1497.882,972.6318;Inherit;False;False;False;True;True;1;0;FLOAT4;0,0,0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;30;-1570.66,768.8768;Inherit;False;UV;2;3;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;27;-1623.855,652.4875;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;82;-1698.099,963.8027;Inherit;False;Position
+    Scale;4;5;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0\nNode;AmplifyShaderEditor.Vector4Node;81;-1887.546,961.0317;Float;False;Constant;_Vector1;Vector
+    0;4;0;Create;True;0;0;0;False;0;False;0,0,1,1;0,0,0,0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.StickyNoteNode;114;2688,256;Inherit;False;384;158;Sprite
+    Rotate Node;;0,0,0,1;;0;0\nNode;AmplifyShaderEditor.FunctionOutput;104;3665.489,493.7875;Inherit;False;True;-1;RGBA;0;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nWireConnection;113;0;34;0\nWireConnection;59;0;32;0\nWireConnection;59;1;61;0\nWireConnection;62;0;35;0\nWireConnection;62;1;37;0\nWireConnection;14;0;10;0\nWireConnection;7;0;82;0\nWireConnection;10;0;41;0\nWireConnection;23;0;18;0\nWireConnection;23;1;72;0\nWireConnection;18;0;33;0\nWireConnection;29;0;59;0\nWireConnection;29;1;55;0\nWireConnection;103;0;113;0\nWireConnection;103;1;106;0\nWireConnection;38;0;10;0\nWireConnection;38;1;14;0\nWireConnection;37;1;35;0\nWireConnection;37;2;38;0\nWireConnection;32;0;72;0\nWireConnection;32;1;7;0\nWireConnection;35;0;23;2\nWireConnection;35;1;13;0\nWireConnection;100;0;98;0\nWireConnection;100;1;107;0\nWireConnection;99;0;107;0\nWireConnection;99;1;109;0\nWireConnection;39;0;52;0\nWireConnection;98;0;113;0\nWireConnection;98;1;103;0\nWireConnection;109;0;98;0\nWireConnection;109;1;108;0\nWireConnection;108;0;107;0\nWireConnection;102;0;98;0\nWireConnection;102;1;100;0\nWireConnection;102;2;99;0\nWireConnection;31;0;26;0\nWireConnection;26;0;29;0\nWireConnection;26;2;39;0\nWireConnection;25;0;26;0\nWireConnection;25;1;31;0\nWireConnection;70;0;24;0\nWireConnection;70;1;25;0\nWireConnection;34;0;70;0\nWireConnection;34;1;36;0\nWireConnection;36;0;70;0\nWireConnection;36;1;62;0\nWireConnection;36;2;70;4\nWireConnection;24;0;60;0\nWireConnection;44;0;29;0\nWireConnection;41;0;44;0\nWireConnection;72;0;27;0\nWireConnection;72;1;30;0\nWireConnection;55;0;19;0\nWireConnection;19;0;64;0\nWireConnection;64;0;61;0\nWireConnection;64;1;80;0\nWireConnection;61;0;82;0\nWireConnection;82;0;81;0\nWireConnection;104;0;102;0\nASEEND*/\n//CHKSM=3E2FCA5575C140DA95851CB36DF1BDB38C3129E2"
+  m_functionName: 
+  m_description: 'Sprite Rotate Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 1, g: 0.4, b: 0, a: 1}
+  m_customNodeCategory: DESF Sprite
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

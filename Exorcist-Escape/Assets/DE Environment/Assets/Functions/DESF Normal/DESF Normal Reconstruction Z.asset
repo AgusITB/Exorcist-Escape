@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF Normal Reconstruction Z
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;54;-384,640;Inherit;False;1978.486;419.4911;Exsample;15;43;42;41;40;39;38;37;50;44;45;49;53;52;51;36;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;28;-48.94824,-310.9252;Inherit;False;651.266;230.6802;Normal
+    Reconstruct Z Node;;0,0,0,1;The Normal Reconstruct Z Node calculates the Z component
+    of a normal vector when given the X and Y components.$$It's useful because in
+    some cases you only want to store the X and Y components of the normal in a texture
+    so that you can use the other texture channels for other data.  Using this node,
+    you can reconstruct the full normal using only the first two components.$$This
+    type of texture packing is a good way to reduce the number of texture samples
+    your shader is using to improve shader performance.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;31;-46.5125,-33.78385;Inherit;False;409.1208;100;;;0.05660379,0.05660379,0.05660379,1;This
+    is how the Normal is reconstructed from X and Y;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;32;-49.81346,225.3369;Inherit;False;412.4216;119.8054;;;0.01886791,0.01886791,0.01886791,1;This
+    is using the Pythagorean theorem to calculate Z.$$X sqaured + Y squared = Z squared;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;33;544,192;Inherit;False;329.8992;199.0271;;;0,0,0,1;You
+    could squeeze a tiny bit of performance improvement out of this if you skip this
+    normalize on the end.$$Assuming your original X and Y were created from a normalized
+    normal, this normalize is redundant.;0;0\nNode;AmplifyShaderEditor.FunctionSwitch;34;704,32;Inherit;False;normalize;True;1;2;-1;In
+    0;In 1;Object;-1;10;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;26;-384,32;Inherit;False;Normal;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;29;-192,32;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.DotProductOpNode;18;-192,144;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;19;-64,144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;20;80,144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SqrtOpNode;21;240,144;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;30;384,32;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;25;544,112;Inherit;False;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.StickyNoteNode;36;1216,880;Inherit;False;328.7224;130.7781;;;0,0,0,1;Finally,
+    we use the Normal Reconstruct Z Node to create our Normal. We pass in a Vector
+    2 that contains the expaned data from our red and green channels, and we get
+    a Normal as the result.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;51;-336,880;Inherit;False;313;161;;;0,0,0,1;This
+    texture has the X and Y data from a normal map in the red and green channels. 
+    The Z and alpha channels have other data in them.  We can use the Normal Reconstruct
+    Z Node to create a normal with just the X and Y.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;52;0,800;Inherit;False;200;107;;;0,0,0,1;First
+    we combine the red and green channels together into a Vector 2.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;53;256,800;Inherit;False;314;165;;;0,0,0,1;Then
+    we use the Remap node to exand the range of our data from 0 to 1 to the -1 to
+    1 range. Normally, if our texture is set to be a normal map, this is done automatically,
+    but since our texture is not set to be a normal map, we have to do this manually
+    here.;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;49;272,688;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;2,2;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.DynamicAppendNode;45;16,688;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SamplerNode;44;-288,688;Inherit;True;Property;_TextureSample0;Texture
+    Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;50;432,688;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;1,1;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;37;624,688;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.DotProductOpNode;38;624,784;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SaturateNode;39;752,784;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.OneMinusNode;40;896,784;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SqrtOpNode;41;1040,784;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;42;1152,688;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;43;1328,688;Inherit;True;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionOutput;27;928,32;Inherit;False;True;-1;Normal;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;34;0;30;0\nWireConnection;34;1;25;0\nWireConnection;29;0;26;0\nWireConnection;18;0;26;0\nWireConnection;18;1;26;0\nWireConnection;19;0;18;0\nWireConnection;20;0;19;0\nWireConnection;21;0;20;0\nWireConnection;30;0;29;0\nWireConnection;30;1;29;1\nWireConnection;30;2;21;0\nWireConnection;25;0;30;0\nWireConnection;49;0;45;0\nWireConnection;45;0;44;1\nWireConnection;45;1;44;2\nWireConnection;50;0;49;0\nWireConnection;37;0;50;0\nWireConnection;38;0;50;0\nWireConnection;38;1;50;0\nWireConnection;39;0;38;0\nWireConnection;40;0;39;0\nWireConnection;41;0;40;0\nWireConnection;42;0;37;0\nWireConnection;42;1;37;1\nWireConnection;42;2;41;0\nWireConnection;43;0;42;0\nWireConnection;27;0;34;0\nASEEND*/\n//CHKSM=FE12A6F54A136676E4C20B8F18014C379EB1E89C"
+  m_functionName: 
+  m_description: 'Normal Reconstruct Z Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0, g: 0.18039216, b: 0.4745098, a: 1}
+  m_customNodeCategory: DESF Normal
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 

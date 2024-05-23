@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Scene LED Backrop Screen - UV Reveal
+  m_Shader: {fileID: 4800000, guid: 9afad88a417e4997965b7bee061c5c3e, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: fe8cbe72c0ccdd647aee0fed3dbfd3a8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: -0.8, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: fe8cbe72c0ccdd647aee0fed3dbfd3a8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: -0.8, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RGBEmissiveColorMap:
+        m_Texture: {fileID: 2800000, guid: fe8cbe72c0ccdd647aee0fed3dbfd3a8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RGBMap:
+        m_Texture: {fileID: 2800000, guid: 0a444fbbf667aff4fa4f11a355e946ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UVLight00Map:
+        m_Texture: {fileID: 2800000, guid: 8f6c448a39169b44eae7369a3f4ec6e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UVLight01Map:
+        m_Texture: {fileID: 2800000, guid: 731dc6f98bb3534429e64d3e6926d637, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Brightness: 1
+    - _BumpScale: 1
+    - _CATEGORY_DISPLACEMENT: 0
+    - _CATEGORY_METALLIC: 1
+    - _CATEGORY_OCCLUSION: 1
+    - _CATEGORY_RGBMAP: 0
+    - _CATEGORY_SMOOTHNESS: 1
+    - _CATEGORY_SPECULAR: 0
+    - _CATEGORY_SURFACEINPUTS: 1
+    - _CATEGORY_SURFACEOPTIONS: 1
+    - _CATEGORY_UVLIGHTREVEAL00: 1
+    - _CATEGORY_UVLIGHTREVEAL01: 1
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionFlags: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _MetallicStrength: 0
+    - _MipBias: 1
+    - _Mode: 0
+    - _NormalStrength: 1
+    - _OcclusionSourceBaked: 0
+    - _OcclusionSourceInverted: 0
+    - _OcclusionStrength: 1
+    - _OcclusionStrengthAORemapMax: 0
+    - _OcclusionStrengthAORemapMin: 0
+    - _OffsetX: 0.2
+    - _OffsetY: 0
+    - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RGBEmissiveEnable: 1
+    - _RGBEmissiveIntensity: 2
+    - _RGBEmissiveMipBias: 0
+    - _RGBEmissiveOffset: 0
+    - _RGBEmissiveOffsetX: 0.2
+    - _RGBEmissiveOffsetY: 0
+    - _RGBEmissiveTiling: 1
+    - _RGBEmissiveTilingX: 1
+    - _RGBEmissiveTilingY: 1
+    - _RGBEnable: 1
+    - _RGBMipBias: 1
+    - _RGBTiling: 450
+    - _ReceiveShadows: 1
+    - _SPACE_METALLIC: 0
+    - _SPACE_OCCLUSION: 0
+    - _SPACE_RGB: 0
+    - _SPACE_SMOOTHNESS: 0
+    - _SPACE_SURFACEINPUTS: 0
+    - _SPACE_SURFACEOPTIONS: 0
+    - _SPACE_UVLIGHTREVEL00: 0
+    - _SPACE_UVLIGHTREVEL01: 0
+    - _SmoothnessFresnelEnable: 0
+    - _SmoothnessFresnelPower: 10
+    - _SmoothnessFresnelScale: 1.1
+    - _SmoothnessSource: 0
+    - _SmoothnessSourceTexture: 1
+    - _SmoothnessStrengthRemapMax: 0.0140836835
+    - _SmoothnessStrengthRemapMin: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TilingX: 1
+    - _TilingY: 1
+    - _UVLight00Brightness: 1.68
+    - _UVLight00EmissiveRenderFace: 2
+    - _UVLight00Enable: 1
+    - _UVLight00MainLightInfluence: 0
+    - _UVLight00OffsetX: 0.03
+    - _UVLight00OffsetY: 0.36
+    - _UVLight00Rotation: 0
+    - _UVLight00Threshold: 0.521
+    - _UVLight00ThresholdTemp: 0.359
+    - _UVLight00TilingX: 1.94
+    - _UVLight00TilingY: 0.72
+    - _UVLight01Brightness: 1
+    - _UVLight01EmissiveRenderFace: 2
+    - _UVLight01Enable: 1
+    - _UVLight01MainLightInfluence: 0
+    - _UVLight01OffsetX: -0.27
+    - _UVLight01OffsetY: 0
+    - _UVLight01Rotation: 0
+    - _UVLight01Threshold: 0.671
+    - _UVLight01ThresholdTemp: 0.25
+    - _UVLight01TilingX: 1
+    - _UVLight01TilingY: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    - __dirty: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.9882353, b: 0.8745098, a: 1}
+    - _EmissionColor: {r: 0.5411765, g: 0.015686275, b: 1.4980392, a: 1}
+    - _MainUVs: {r: 1, g: 1, b: 0.2, a: 0}
+    - _MetallicStrength: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionStrengthAO: {r: 0, g: 0, b: 0, a: 0}
+    - _RGBEmissiveColor: {r: 6.188679, g: 5.466088, b: 5.0501957, a: 1}
+    - _RGBEmissiveUVs: {r: 1, g: 1, b: 0.2, a: 0}
+    - _RGBUVs: {r: 450, g: 450, b: 0, a: 0}
+    - _SmoothnessStrength: {r: 0, g: 0.0140836835, b: 0, a: 0}
+    - _UVLight00Color: {r: 0.4403944, g: 1, b: 0, a: 1}
+    - _UVLight00FilteredColor: {r: 0.07058824, g: 1, b: 0, a: 1}
+    - _UVLight00UVs: {r: 1.81, g: 0.72, b: 0.78, a: 0.07}
+    - _UVLight01Color: {r: 1, g: 0, b: 0, a: 1}
+    - _UVLight01FilteredColor: {r: 0.9529412, g: 0.33333334, b: 0, a: 1}
+    - _UVLight01UVs: {r: 1.21, g: 0.67, b: -0.18, a: -0.17}
+  m_BuildTextureStacks: []

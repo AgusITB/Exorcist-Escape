@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: DESF UV Polar Coordinates
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor v1.9.2.2\n// Available at the
+    Unity Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=19202\nNode;AmplifyShaderEditor.CommentaryNode;69;-143,128;Inherit;False;525;529;scale
+    of angle value;9;1;8;71;70;6;9;4;2;27;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;68;-374.6235,-178;Inherit;False;168.9243;171.1504;CenteredUV;1;15;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;63;228.3638,-256;Inherit;False;238.1814;293.3632;Radius;1;18;;0.1698113,0.1698113,0.1698113,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;42;-80,688;Inherit;False;1753.542;675.9456;Repaet;16;49;43;41;40;39;37;36;33;46;32;48;35;34;47;38;106;;0,0,0,1;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;23;1104,-384;Inherit;False;433.0529;126.8049;UV
+    Polar Coordinates Node;;0,0,0,1;The Polar Coordinates node converts UV coordinates
+    to polar coordinates - so instead of U and V going in straight horizontal and
+    vertical lines, U goes around in a circle and V goes away from the center.;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;24;-1232,-240;Inherit;False;150;100;UV;;0,0,0,1;the
+    input UV coordinates;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;25;-624,64;Inherit;False;162.0815;100;Center;;0.0471698,0.0471698,0.0471698,1;center
+    reference point;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;26;-112,-320;Inherit;False;297.0754;102.5178;Radial
+    Scale;;0.1792453,0.1682538,0.1682538,1;scale of distance value$radius = length(delta)
+    * 2 * RadialScale;0;0\nNode;AmplifyShaderEditor.StickyNoteNode;27;-80,496;Inherit;False;439.6738;104.0697;;;0,0,0,1;angle
+    = atan2(delta.x, delta.y) * 1.0 / 6.28 * LengthScale;0;0\nNode;AmplifyShaderEditor.ATan2OpNode;38;256,736;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;47;128,736;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FmodOpNode;34;560,736;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;60;432,336;Inherit;False;178.8835;111.816;Length
+    Scale;;0,0,0,1;scale of angle value;0;0\nNode;AmplifyShaderEditor.WireNode;65;-176,752;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;51;-192,688;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;56;-192,176;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;32;416,848;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;37;784,736;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.CosOpNode;39;1024,736;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SinOpNode;40;1024,816;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;41;1152,736;Inherit;True;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;2;-96,176;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;192,176;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;9;-112,272;Inherit;False;Constant;_Float4;Float
+    3;0;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TauNode;6;-80,352;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;70;208,384;Inherit;False;149;101;;;0,0,0,1;1
+    * 6.28 ;0;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;8;64,272;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ATan2OpNode;1;32,176;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;71;64,384;Inherit;False;2;2;0;FLOAT;1;False;1;FLOAT;6.28;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;19;640,176;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;94;1088,176;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.DynamicAppendNode;13;1376,-208;Inherit;True;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;96;1312,-128;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;97;1312,160;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.StickyNoteNode;98;848,352;Inherit;False;178.8835;111.816;Length
+    Offset;;0,0,0,1;Offset of angle value;0;0\nNode;AmplifyShaderEditor.BreakToComponentsNode;52;1600,-112;Inherit;False;FLOAT2;1;0;FLOAT2;0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15\nNode;AmplifyShaderEditor.FunctionInput;95;864,256;Inherit;False;Length
+    Offset;1;4;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionInput;7;448,256;Inherit;False;Length
+    Scale;1;3;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;35;416,736;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;4.25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LengthOpNode;17;-128,-128;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;11;-128,-48;Inherit;False;Constant;_Float3;Float
+    2;0;0;Create;True;0;0;0;False;0;False;2;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;14;48,-128;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;57;-192,-48;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;58;-192,-48;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;59;-192,-48;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;18;256,-208;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleSubtractOpNode;15;-352,-128;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;12;16,-208;Inherit;False;Radial
+    Scale;1;2;False;1;0;FLOAT;1.02;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ScaleAndOffsetNode;100;-1040,-64;Inherit;False;3;0;FLOAT2;0,0;False;1;FLOAT2;8,0;False;2;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FractNode;101;-816,-64;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionSwitch;104;-688,-128;Inherit;False;Enable
+    Tilling Offset;True;0;2;-1;In 0;In 1;Object;-1;10;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;10;-1232,-128;Inherit;False;UV;2;0;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.TexCoordVertexDataNode;16;-1472,-128;Inherit;False;0;2;0;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;3;-592,-16;Inherit;False;Center;2;1;False;1;0;FLOAT2;0.5,0.5;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.StickyNoteNode;105;-1056,-320;Inherit;False;614.3094;173.3035;Enable
+    Tilling Offset;;0,0,0,1;The generated shape can be offset or tiled by connecting
+    a Scale And Offset Node.$$ Note that in order to preserve the ability to offset
+    the shape within the UV space the shape will not automatically repeat if tiled.$$To
+    achieve a repeating polar effect, first connect your input through a Fraction
+    Node $$$$$;0;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;48;-32,736;Inherit;False;2;2;0;FLOAT2;0,0;False;1;FLOAT2;4,4;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleDivideOpNode;36;560,992;Inherit;True;2;0;FLOAT;25.23;False;1;FLOAT;4.25;False;1;FLOAT;0\nNode;AmplifyShaderEditor.LengthOpNode;49;-32,1184;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;43;1424,1152;Inherit;True;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.SimpleTimeNode;106;176,1008;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0\nNode;AmplifyShaderEditor.RangedFloatNode;33;208,928;Inherit;False;Constant;_Repaet;Repaet;0;0;Create;True;0;0;0;False;0;False;12;0;0;0;0;1;FLOAT;0\nNode;AmplifyShaderEditor.TauNode;46;240,848;Inherit;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;64;-176,1184;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.WireNode;50;-192,1152;Inherit;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;102;-1232,-32;Inherit;False;Tilling;2;5;False;1;0;FLOAT2;2,2;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionInput;103;-1232,48;Inherit;False;Offset;2;6;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;0;1728,-208;Inherit;False;True;-1;UV;0;True;1;0;FLOAT2;0,0;False;1;FLOAT2;0\nNode;AmplifyShaderEditor.FunctionOutput;53;1728,-112;Inherit;False;False;-1;U;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;54;1728,-32;Inherit;False;False;-1;V;2;False;1;0;FLOAT;0;False;1;FLOAT;0\nWireConnection;38;0;47;1\nWireConnection;38;1;47;0\nWireConnection;47;0;48;0\nWireConnection;34;0;35;0\nWireConnection;34;1;32;0\nWireConnection;65;0;51;0\nWireConnection;51;0;58;0\nWireConnection;56;0;57;0\nWireConnection;32;0;46;0\nWireConnection;32;1;33;0\nWireConnection;37;0;34;0\nWireConnection;37;1;36;0\nWireConnection;39;0;37;0\nWireConnection;40;0;37;0\nWireConnection;41;0;39;0\nWireConnection;41;1;40;0\nWireConnection;2;0;56;0\nWireConnection;4;0;1;0\nWireConnection;4;1;8;0\nWireConnection;8;0;9;0\nWireConnection;8;1;6;0\nWireConnection;1;0;2;0\nWireConnection;1;1;2;1\nWireConnection;19;0;4;0\nWireConnection;19;1;7;0\nWireConnection;94;0;19;0\nWireConnection;94;1;95;0\nWireConnection;13;0;18;0\nWireConnection;13;1;96;0\nWireConnection;96;0;97;0\nWireConnection;97;0;94;0\nWireConnection;52;0;13;0\nWireConnection;35;0;38;0\nWireConnection;35;1;106;0\nWireConnection;17;0;15;0\nWireConnection;14;0;17;0\nWireConnection;14;1;11;0\nWireConnection;57;0;15;0\nWireConnection;58;0;15;0\nWireConnection;59;0;15;0\nWireConnection;18;0;12;0\nWireConnection;18;1;14;0\nWireConnection;15;0;104;0\nWireConnection;15;1;3;0\nWireConnection;100;0;10;0\nWireConnection;100;1;102;0\nWireConnection;100;2;103;0\nWireConnection;101;0;100;0\nWireConnection;104;0;10;0\nWireConnection;104;1;101;0\nWireConnection;10;0;16;0\nWireConnection;48;0;65;0\nWireConnection;36;0;32;0\nWireConnection;36;1;106;0\nWireConnection;49;0;64;0\nWireConnection;43;0;41;0\nWireConnection;43;1;49;0\nWireConnection;64;0;50;0\nWireConnection;50;0;59;0\nWireConnection;0;0;13;0\nWireConnection;53;0;52;0\nWireConnection;54;0;52;1\nASEEND*/\n//CHKSM=7D4B9A1BAFB6F0C33FC943FFCF33035B1923CE30"
+  m_functionName: 
+  m_description: 'UV Polar Coordinates Node
+
+'
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_customEdited: 0
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesIndex: -1
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 0
+  m_headerStyle: 2
+  m_headerColor: {r: 0.6627451, g: 0.4392157, b: 0, a: 1}
+  m_customNodeCategory: DESF UV
+  m_previewPosition: 0
+  m_hidden: 0
+  m_url: 
