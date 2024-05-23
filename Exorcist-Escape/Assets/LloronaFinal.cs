@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -63,7 +64,6 @@ public class LloronaFinal : PickableObject
                         if (agent != null)
                         {
                             float loudness = detector.GetLoudnessFromMicrohpone() * currentLoudnessSensibility;
-                            Debug.Log("Loudness: " + loudness);
                             if (loudness < threshold) loudness = 0.01f;
 
 
@@ -97,12 +97,15 @@ public class LloronaFinal : PickableObject
         {
             Collect();
             alreadyInteracted = true;
-            SceneManager.LoadScene("Creditos");
-            GameObject.FindGameObjectWithTag("Player").SetActive(false);
+            StartCoroutine(LoadSceneWait());
         }
-
     }
-
+    private IEnumerator LoadSceneWait()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Creditos");
+        GameObject.FindGameObjectWithTag("Player").SetActive(false);
+    }
     protected override void Collect()
     {
 
